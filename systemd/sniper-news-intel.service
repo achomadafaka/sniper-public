@@ -1,0 +1,22 @@
+[Unit]
+Description=Sniper News Intelligence (RSS → Polymarket trade ideas)
+After=network.target
+
+[Service]
+Environment=CLAUDECODE=
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/sniper/services/news_intel.py
+TimeoutStartSec=600
+TimeoutStopSec=30
+# No Restart= — the timer controls scheduling; one-shot only
+StandardOutput=journal
+StandardError=journal
+# Memory ceiling — oneshot run with --effort high; Claude subprocess can peak.
+# News-intel observed at ~300MB during Claude reasoning; 500MB ceiling is safe.
+MemoryMax=500M
+MemorySwapMax=100M
+
+[Install]
+WantedBy=default.target

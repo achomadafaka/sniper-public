@@ -1,0 +1,13 @@
+[Unit]
+Description=Sniper memecoin X forward correlator
+After=sniper-memecoin-x-receiver.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/scripts/run_memecoin_x_correlator.py --x-db /home/bigpapi/Desktop/Sniper/data/memecoin_x.db --fomo-db /home/bigpapi/Desktop/Sniper/sniper_tracker.db --once --clock-offset-file /home/bigpapi/Desktop/Sniper/data/clock_offset.json
+TimeoutStartSec=55
+StandardOutput=journal
+StandardError=journal
+UMask=0077

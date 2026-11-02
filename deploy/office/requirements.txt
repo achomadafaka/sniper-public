@@ -1,0 +1,2 @@
+# Office artifact download only; NEVER install into the shared pyenv.
+claude-agent-sdk==0.2.174 --hash=sha256:728592effdfe63e96fbad7ba3b2ddf642e3aad344e73692b429898fbfcb33f12

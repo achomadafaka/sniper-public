@@ -1,0 +1,30 @@
+/* Original pixel room; all rules stay inside the Office tab. */
+#tab-desk .office-heading{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin:12px 0 20px}
+#tab-desk .office-heading h1{font-family:ui-monospace,monospace;font-size:30px;letter-spacing:-1px;margin:0;color:#e6e8b2}
+#tab-desk .office-heading p{margin:7px 0;color:#b1beb1;font-size:13px;max-width:75ch}
+#tab-desk .office-heading a{color:#a8c58d;border-bottom:1px solid #44645b;text-decoration:none;white-space:nowrap}
+#tab-desk .office-room{background:#182f36;border:4px solid #44645b;box-shadow:inset 0 0 0 2px #182f36;position:relative;padding:10px;max-width:1050px;margin:0 auto}
+#tab-desk #office-scene{display:block;width:100%;height:auto;image-rendering:pixelated;image-rendering:crisp-edges;background:#182f36}
+#tab-desk .office-pause{padding:12px 18px;background:#d5a76a;color:#182f36;font-weight:700;border:3px solid #182f36;margin:0 0 10px;font-family:ui-monospace,monospace}
+#tab-desk .office-seats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin:20px 0}
+#tab-desk .office-seat{border-left:3px solid #44645b;background:#14252b;padding:15px 17px;min-width:0;overflow-wrap:anywhere}
+#tab-desk .office-seat[data-state=typing]{border-color:#a8c58d}
+#tab-desk .office-seat[data-state=waiting]{border-color:#d5a76a}
+#tab-desk .office-seat h3{font-size:16px;margin:0 0 6px;color:#e6e8b2}
+#tab-desk .office-seat>strong{color:#a8c58d;font:12px ui-monospace,monospace}
+#tab-desk .office-seat[data-state=paused]>strong,#tab-desk .office-seat[data-state=stale]>strong{color:#d5a76a}
+#tab-desk .office-muted{color:#a2b3ae;font-size:12px;line-height:1.5}
+#tab-desk .office-seat p{margin:6px 0}
+#tab-desk .office-seat blockquote{margin:14px 0 0;background:#e6e8b2;color:#182f36;padding:10px 12px;border:0;font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;position:relative}
+#tab-desk .office-seat blockquote:before{content:"";position:absolute;left:12px;top:-6px;width:10px;height:10px;background:#e6e8b2;transform:rotate(45deg)}
+#tab-desk .office-seat small{display:block;font-size:10px;margin-top:7px;opacity:.8;overflow-wrap:anywhere}
+#tab-desk .office-boards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin:24px 0}
+#tab-desk .office-board{border-top:3px solid #7b6d8d;padding-top:12px;min-width:0}
+#tab-desk .office-board h2{color:#e6e8b2;font:16px ui-monospace,monospace;margin:0 0 14px}
+#tab-desk .office-evidence-row{display:flex;flex-direction:column;gap:5px;border-bottom:1px solid #30443e;padding:11px 0;overflow-wrap:anywhere;font-size:12px}
+#tab-desk .office-evidence-row span{color:#a2b3ae;line-height:1.5}
+#tab-desk #office-legacy{border:1px solid #44645b;padding:16px;margin-top:24px}
+#tab-desk #office-legacy summary{cursor:pointer;color:#e6e8b2;font-size:14px}
+#tab-desk :is(a,summary,button):focus-visible{outline:2px solid #e6e8b2;outline-offset:5px}
+@media(max-width:700px){#tab-desk .office-boards{grid-template-columns:1fr}#tab-desk .office-heading{flex-direction:column;gap:8px}#tab-desk .office-room{border-width:2px;padding:3px}#tab-desk .office-seats{gap:8px}#tab-desk .office-heading h1{font-size:25px}}
+@media(prefers-reduced-motion:reduce){#tab-desk *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

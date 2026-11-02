@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer — snapshot system state into HANDOFF.md every 20 minutes
+Requires=sniper-handoff-snapshot.service
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=20min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

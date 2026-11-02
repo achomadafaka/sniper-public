@@ -1,0 +1,24 @@
+[Unit]
+Description=Sniper InsiderCopy Strategy Agent (analysis + wallet research)
+# Runs via the companion timer: sniper-agent-insider-copy.timer
+# Does NOT run continuously — starts, completes analysis, then exits.
+After=network.target
+
+[Service]
+Environment=CLAUDECODE=
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/scripts/run_strategy_agent.py insider_copy --quiet
+StandardOutput=append:/home/sniper/sniper/logs/agent_insider_copy.log
+StandardError=append:/home/sniper/sniper/logs/agent_insider_copy.log
+
+# Give the agent up to 15 minutes to complete analysis (web research can be slow)
+TimeoutStartSec=900
+TimeoutStopSec=30
+
+# Don't auto-restart — the timer handles scheduling
+Restart=no
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,44 @@
+{
+  "label": "pilot",
+  "evaluation": false,
+  "note": "Office PILOT book policy (operator order 2026-10-28 ~18:1xZ via Alpha): discovery only, nothing counts as evidence. clip_usd and rail_bounds are cohort D's (desk-judge-v29 policy: clip_usd 25, rail_bounds sl 10-40 / tp 15-150 / trail 8-30); sl/tp/trail sit inside those bounds; catastrophe, max hold, FX age and entry timeout are the Office ledger test defaults. Replaced by the evaluated policy when the full floor and its prereg exist.",
+  "policy": {
+    "enabled": true,
+    "clip_usd": 25.0,
+    "rail_bounds": {
+      "sl_pct": [
+        10.0,
+        40.0
+      ],
+      "tp_pct": [
+        15.0,
+        150.0
+      ],
+      "trail_pct": [
+        8.0,
+        30.0
+      ]
+    },
+    "max_concurrent": 3,
+    "daily_loss_usd": 100.0,
+    "fill_model_version": "office-ps-paper-v1",
+    "sl_pct": 30.0,
+    "tp_pct": 100.0,
+    "trail_pct": 20.0,
+    "catastrophe_pct": 60.0,
+    "max_hold_s": 3600.0,
+    "cap_min_headroom_pct": 0.0,
+    "fx_max_age_s": 120.0,
+    "entry_timeout_s": 60.0
+  },
+  "bootstrap": {
+    "epoch_id": "office-pilot-discovery-1",
+    "book_id": "pilot-floor",
+    "capital_usd": 1000.0,
+    "rule_version": "none",
+    "actor": "alpha:operator-pilot-order-2026-10-28",
+    "ruling": "Alpha 2026-10-28: 1000 paper USD (40 clips of 25), paper only; any change = new epoch",
+    "ledger_path": "data/office/ledger/ledger.db",
+    "note_paths": "relative to SNIPER_STATE_ROOT; the ledger has its own directory so the watcher's bwrap can bind it rw (WAL creates -wal/-shm)"
+  }
+}

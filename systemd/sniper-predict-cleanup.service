@@ -1,0 +1,22 @@
+[Unit]
+Description=Sniper — Expire ungradeable predictions (predict_tool.py cleanup)
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+# Expire predictions past verify_after + 7d grace with NULL verification_query.
+# One ExecStart per agent_type currently emitting predictions.
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent world_analyst
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent finance_analyst
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent insider_analyst
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent insider_copy
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent wallet_scout
+ExecStart=/home/sniper/sniper/.venv/bin/python3 agents/tools/predict_tool.py cleanup --agent strategy_reviewer
+StandardOutput=append:/home/sniper/sniper/logs/predict_cleanup.log
+StandardError=append:/home/sniper/sniper/logs/predict_cleanup.log
+TimeoutStartSec=300
+Restart=no
+
+[Install]
+WantedBy=default.target

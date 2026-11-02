@@ -1,0 +1,17 @@
+{
+  "version": "pilot-org-1",
+  "pilot": true,
+  "shared_seats": [
+    {"role": "Head", "count": 1, "family": "claude", "tier": "opus"}
+  ],
+  "deterministic_seats": ["Risk", "Trader", "Postmortem"],
+  "pod_template": {
+    "scouts": [{"lane": "intake_lists"}],
+    "scouts_per_pod": 1,
+    "analysts": [],
+    "analysts_per_pod": 0,
+    "judges_per_pod": 2,
+    "judge_families": ["claude", "gpt"]
+  },
+  "pods": 1
+}

@@ -1,0 +1,53 @@
+[package]
+name = "memecoin-tpu-sidecar"
+version = "0.1.0"
+edition = "2021"
+description = "Keyless local sidecar: delivers already-signed Solana wire bytes to upcoming leaders over QUIC TPU."
+license = "MIT"
+publish = false
+
+[workspace]
+members = ["vendor/solana-quic-client-4.1.2"]
+
+[[bin]]
+name = "memecoin-tpu-sidecar"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "=1.0.102"
+base64 = "=0.22.1"
+bs58 = "=0.5.1"
+libc = "=0.2.189"
+# Direct, not new: already in the graph at this exact version (Agave logs through it).
+log = "=0.4.33"
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+solana-client = "=4.1.2"
+solana-connection-cache = "=4.1.2"
+solana-quic-client = "=4.1.2"
+# Direct, not new: already in the graph via solana-client at this exact version. Needed for the
+# nonblocking TpuClient's `get_leader_tpu_service`, which solana-client's wrappers do not expose.
+solana-tpu-client = "=4.1.2"
+solana-transaction = "=4.1.1"
+tokio = { version = "=1.52.3", features = ["full"] }
+wincode = { version = "=0.5.3", features = ["derive"] }
+
+# Coherence pins to Agave 4.1.2's own Cargo.lock (commit 182084b8): a fresh independent resolution
+# pulls NEWER interface crates (solana-hash 4.6.0, solana-address 2.7.0, solana-account 4.3.1) that
+# jumped to wincode 0.6.0, producing a second, incompatible wincode copy. These pins hold the exact
+# Agave-4.1.2 versions so the whole graph uses a single wincode 0.5.3.
+solana-hash = "=4.3.0"
+solana-address = "=2.6.0"
+solana-account = "=4.3.0"
+
+[dev-dependencies]
+solana-signature = "=3.4.0"
+
+[patch.crates-io]
+solana-quic-client = { path = "vendor/solana-quic-client-4.1.2" }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

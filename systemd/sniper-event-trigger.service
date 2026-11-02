@@ -1,0 +1,27 @@
+[Unit]
+Description=Sniper Event Trigger — RSS keyword watcher (fires agents on breaking news)
+After=network.target
+
+[Service]
+Type=oneshot
+User=sniper
+Group=sniper
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+# Unset CLAUDECODE so any agents spawned via Popen (world_analyst, finance_analyst)
+# can launch their own Claude agent even during an active Claude Code session.
+Environment=CLAUDECODE=
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/scripts/event_trigger.py
+StandardOutput=journal
+StandardError=journal
+# IMPORTANT: subprocess.Popen(start_new_session=True) creates a new POSIX
+# session but the child STAYS in this cgroup, so its RSS counts against
+# MemoryMax here. Earlier 100M limit was OOM-killing the parent after a
+# world_analyst spawn on 2026-04-21, losing state and causing duplicate fires.
+# 1G covers the RSS watcher (~30M) plus one in-flight agent subprocess
+# (~200-400M peak) with comfortable headroom. Bumped 100M -> 1G 2026-04-21.
+MemoryMax=1G
+MemorySwapMax=256M
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Standalone CROWD pilot trigger reader; stored tape only, no Office jobs or orders
+
+[Service]
+WorkingDirectory=%h/Desktop/Sniper/.runtime/memecoin/current
+ExecStart=/usr/bin/env SNIPER_STATE_ROOT=%h/Desktop/Sniper %h/.pyenv/versions/3.13.0/bin/python3 scripts/memecoin_crowd_trigger_worker.py --db %h/Desktop/Sniper/data/office/v2/large-buyer-arm/arm.db --desk-dir %h/Desktop/Sniper/data/desk --heartbeat %h/Desktop/Sniper/data/office/v2/large-buyer-arm/crowd-trigger.heartbeat.json --period-s 0.5
+Restart=on-failure
+RestartSec=5
+Nice=15

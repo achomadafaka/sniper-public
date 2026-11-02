@@ -1,0 +1,16 @@
+[Unit]
+Description=Sniper Strategy Runner
+After=sniper-web.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONPATH=/home/bigpapi/Desktop/Sniper
+Environment=DB_PATH=sniper_tracker.db
+EnvironmentFile=-/home/bigpapi/Desktop/Sniper/.env
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/sniper/services/strategy_runner.py --interval 120
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

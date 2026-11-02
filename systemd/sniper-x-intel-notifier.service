@@ -1,0 +1,11 @@
+[Unit]
+Description=Sniper X Intel Telegram outbox delivery
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/home/bigpapi/Desktop/Sniper/.runtime/x-intel.env
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/scripts/run_memecoin_x_notifications.py --db /home/bigpapi/Desktop/Sniper/data/memecoin_x.db --send-if-enabled --limit 20 --clock-offset-file /home/bigpapi/Desktop/Sniper/data/clock_offset.json
+UMask=0077

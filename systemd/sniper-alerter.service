@@ -1,0 +1,22 @@
+[Unit]
+Description=Sniper Telegram Alerter
+After=sniper-web.service
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+Environment=DB_PATH=sniper_tracker.db
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/alerter.py
+Restart=always
+RestartSec=5
+MemoryMax=80M
+MemorySwapMax=20M
+
+[Install]
+WantedBy=default.target

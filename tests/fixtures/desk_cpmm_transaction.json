@@ -1,0 +1,123 @@
+{
+  "binding_accounts": {
+    "6qf9kEvtgoKgAjN6EW9tAidJWj8JXjaTDyNHZWDM6sWS": {
+      "data": [
+        "9+3j9dfD3kapsh8XfpuXbo7hKfQa7zeEqsUUlJCVsALmEX1Z0DaWjz5PhCp9CwyeyOJOoDoxyfh5o13DBHWJGqruXZ6wCC/5TPUPfr+l1cy0RAY7k9OFnE3QUsa5bcnN69XATbU7JaCkOIZYJFUw/H02T0Bk92KPLRkF3gvk4vVxXdtB7VSyKhv3olgvAr6StYY1qNS9x+glLbvHVx7Uz/rrxXAQ8cj0BpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAGbfr7OqgxbpFn0MMwpahIEeSyRoPGI3rP8X82rSGEJGAbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpBt324e51j94YQl285GzN2rYa/E2DuQ0n/r35KNihi/y9Mo6XyMYgCp973ABtHqO+aKUO83rzsM41OyBuxVHfdv0ACQkGK1SYZ9ADAAAAAAAAAAAAAH4GzFUAAAAAAAAAAAAAAAAAhBYQAAAAAO/7s2oAAAAAFAQAAAAAAAABAQAAAAAAAH0gHwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "base64"
+      ],
+      "executable": false,
+      "owner": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+    },
+    "BTzHfjKZnPpNaojtNs38eKReNssZM5LEbRrdK5ZrVyN7": {
+      "data": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "base64"
+      ],
+      "executable": false,
+      "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    },
+    "So11111111111111111111111111111111111111112": {
+      "data": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "base64"
+      ],
+      "executable": false,
+      "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+    }
+  },
+  "binding_context_slot": 449757533,
+  "binding_known_at": 999.0,
+  "frame": {
+    "account_keys": [
+      "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+      "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
+      "CRRS5ieQmBrZjWhcj99JuGrT5tyuWDaGAXLXLFjbAtjQ",
+      "6qf9kEvtgoKgAjN6EW9tAidJWj8JXjaTDyNHZWDM6sWS",
+      "DT2krA8vSP96D68nH86eAztZHVM18YB5i4gDXjLBDXm7",
+      "DQ9zkkgL79L7XCXTSczgQ9dURLBe26sqfazC1SFAGxX1",
+      "6BQidgxyTBdfq9v3WjoDVNkN2mFn9BRgGQn7JErnMp8X",
+      "C43rVHms8dtQF1Qgv4Ts2nBJ7JB649nGVxSnyqBytgzD",
+      "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "So11111111111111111111111111111111111111112",
+      "BTzHfjKZnPpNaojtNs38eKReNssZM5LEbRrdK5ZrVyN7",
+      "DjYmXhg2DHeVC6PETrhzwAXgcrUftByGv7TFM78ZKEqK",
+      "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+    ],
+    "block_time": null,
+    "clock_offset_s": 10.0,
+    "commitment": "confirmed",
+    "err": null,
+    "inner_instructions": [],
+    "instructions": [
+      {
+        "accounts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "data_b64": "j75a2sQeM968IYkPBgAAAAAAAAAAAAAA",
+        "program_id_index": 13
+      }
+    ],
+    "logs": [
+      "Program CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C invoke [1]",
+      "Program data: QMbN6CYIceJWwXNg5c8UTwrn2yOxvNstxleKwbkfIaiKFwHswdy6e4WqhdAWAAAATavT5B+pAAC8IYkPBgAAAAqFUHwlIwAAAAAAAAAAAAAAAAAAAAAAAAEGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAZt+vs6qDFukWfQwzClqEgR5LJGg8Yjes/xfzatIYQkYm/vgAwAAAABr7oMPAAAAAAE=",
+      "Program CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C success"
+    ],
+    "observed_at": 990.0,
+    "post_token_balances": [
+      {
+        "account_index": 4,
+        "amount": "1000000000",
+        "decimals": 9,
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+        "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      },
+      {
+        "account_index": 5,
+        "amount": "38643906413834",
+        "decimals": 6,
+        "mint": "BTzHfjKZnPpNaojtNs38eKReNssZM5LEbRrdK5ZrVyN7",
+        "owner": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+        "program_id": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+      }
+    ],
+    "pre_token_balances": [
+      {
+        "account_index": 4,
+        "amount": "27030449084",
+        "decimals": 9,
+        "mint": "So11111111111111111111111111111111111111112",
+        "owner": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+        "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      },
+      {
+        "account_index": 5,
+        "amount": "0",
+        "decimals": 6,
+        "mint": "BTzHfjKZnPpNaojtNs38eKReNssZM5LEbRrdK5ZrVyN7",
+        "owner": "ARu4n5mFdZogZAravu7CcizaojWnS6oqka37gdLT5SZn",
+        "program_id": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+      }
+    ],
+    "received_at": 1000.0,
+    "signature": "19wM6Y18wxjupPRUt2H2MLCdUQAAAfckmuToQoMgrxACeBU2pWKWehHZVXKnD94WD1atvMFWRWPEcUyY2KczFuq",
+    "signer_count": 1,
+    "slot": 449757534,
+    "tx_index": 7
+  },
+  "provenance": "Event, pool bytes, instruction account order from frozen census; full transaction envelope and mint bytes synthetic. Not organic execution or capture evidence.",
+  "source_fixture_sha256": "a6e3f90db7c3a9b3c50e34397d5b780737534182ec70d8c05cd6371fc5d8d420"
+}

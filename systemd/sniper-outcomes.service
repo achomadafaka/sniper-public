@@ -1,0 +1,16 @@
+[Unit]
+Description=Sniper Market Outcomes Poller
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pablo/.openclaw/workspace/sniper
+EnvironmentFile=-/home/pablo/.openclaw/workspace/sniper/.env
+Environment=DB_PATH=sniper_tracker.db
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/pablo/.openclaw/workspace/sniper/.venv/bin/python /home/pablo/.openclaw/workspace/sniper/sniper/services/market_outcome_poller.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

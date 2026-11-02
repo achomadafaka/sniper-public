@@ -1,0 +1,20 @@
+[Unit]
+Description=Sniper Sim WS Collector (Polymarket)
+After=network.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/sniper/sniper/.venv/bin/python -m sim.collector
+Restart=always
+RestartSec=10
+MemoryMax=100M
+MemorySwapMax=50M
+RuntimeMaxSec=86400
+
+[Install]
+WantedBy=default.target

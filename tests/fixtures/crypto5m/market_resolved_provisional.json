@@ -1,0 +1,12 @@
+{
+  "_provenance": "SYNTHETIC — hand-authored expected shape of a Polymarket market-channel `market_resolved` event. NOT a real capture. The settlement WS parser stays `provisional` (settlement.ws_parser_status()) until a real BTC 5m market_resolved event is captured during a read-only smoke and verified.",
+  "event_type": "market_resolved",
+  "condition_id": "0xBTCWINDOW",
+  "market": "0xBTCWINDOW",
+  "asset_ids": ["UPTOKEN", "DOWNTOKEN"],
+  "outcomes": ["Up", "Down"],
+  "winning_token_id": "UPTOKEN",
+  "winning_outcome": "Up",
+  "timestamp": 1781947800,
+  "status": "resolved"
+}

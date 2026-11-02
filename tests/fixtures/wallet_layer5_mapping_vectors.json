@@ -1,0 +1,528 @@
+[
+  {
+    "name": "validated_copy_clean_held",
+    "notes": "Clean held happy path: gate=pass, edge_detected, mode=held_analyst_only, no caveats, stationary+robust → high band.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000001",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": ["edge_detected", "primary_edge_type:entry_timing"],
+    "expected_confidence_band": "high"
+  },
+  {
+    "name": "validated_copy_clean_flipper",
+    "notes": "TradingMode pass-through: flipper-only branch, FH1 supported, stationary+robust → high.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000002",
+      "gate_result": "pass",
+      "trading_mode": "flipper_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "flipper_skill",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": null,
+      "flipper_branch": {
+        "branch": "flipper",
+        "is_active": true,
+        "hypotheses": [{"name": "FH1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      }
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": ["edge_detected", "primary_edge_type:flipper_skill"],
+    "expected_confidence_band": "high"
+  },
+  {
+    "name": "reverse_engineer_mixed_mode",
+    "notes": "edge_detected with mode=mixed_mode → mode_mixed downshift to reverse_engineer_candidate / medium.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000003",
+      "gate_result": "pass",
+      "trading_mode": "mixed_mode",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": {
+        "branch": "flipper",
+        "is_active": true,
+        "hypotheses": [{"name": "FH1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      }
+    },
+    "expected_action_decision": "reverse_engineer_candidate",
+    "expected_reason_codes": ["edge_detected", "mode_mixed", "primary_edge_type:entry_timing"],
+    "expected_confidence_band": "medium"
+  },
+  {
+    "name": "reverse_engineer_concentrated",
+    "notes": "edge_detected with held branch independence_check.flag=concentrated → caveat emits independence_concentrated + domain_specialization_caveat (paired emission); downshift_reasons separately appends independence_concentrated, so the final list contains it twice. Phase 3 plan vector 4.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000004",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": {
+          "n_clusters": 5,
+          "fraction_in_clusters_size_3plus": 0.7,
+          "flag": "concentrated"
+        }
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "reverse_engineer_candidate",
+    "expected_reason_codes": [
+      "domain_specialization_caveat",
+      "edge_detected",
+      "independence_concentrated",
+      "independence_concentrated",
+      "primary_edge_type:entry_timing"
+    ],
+    "expected_confidence_band": "medium"
+  },
+  {
+    "name": "reverse_engineer_edge_with_anti_pattern",
+    "notes": "edge_detected with F1_sloppy_operator + F2_concentration_top3 → hard_anti_pattern combo. Step 5 returns at hard_anti_pattern check before downshift, so F2 alone is NOT emitted; only F1_F2_combined is.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000005",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": ["F1_sloppy_operator", "F2_concentration_top3"],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "reverse_engineer_candidate",
+    "expected_reason_codes": ["F1_F2_combined", "edge_detected", "primary_edge_type:entry_timing"],
+    "expected_confidence_band": "medium"
+  },
+  {
+    "name": "study_underpowered",
+    "notes": "verdict=underpowered, H1 underpowered with reason=n_below_threshold → study / underpowered band; emits H1_underpowered:n_below_threshold.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000006",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "underpowered",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [
+          {
+            "name": "H1",
+            "verdict": "underpowered",
+            "underpowered_reason": "n_below_threshold"
+          }
+        ],
+        "stationarity": null,
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "study",
+    "expected_reason_codes": ["H1_underpowered:n_below_threshold", "underpowered"],
+    "expected_confidence_band": "underpowered"
+  },
+  {
+    "name": "monitor_data_insufficient",
+    "notes": "verdict=data_insufficient → monitor / underpowered band; only data_insufficient code emitted.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000007",
+      "gate_result": "pass",
+      "trading_mode": "n/a_routing",
+      "overall_verdict": "data_insufficient",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": null,
+      "flipper_branch": null
+    },
+    "expected_action_decision": "monitor",
+    "expected_reason_codes": ["data_insufficient"],
+    "expected_confidence_band": "underpowered"
+  },
+  {
+    "name": "exclude_for_copy_no_edge",
+    "notes": "verdict=no_edge clean → exclude_for_copy / low band; only no_edge code emitted.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000008",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "no_edge",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "refuted"}],
+        "stationarity": null,
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "exclude_for_copy",
+    "expected_reason_codes": ["no_edge"],
+    "expected_confidence_band": "low"
+  },
+  {
+    "name": "anti_pattern_no_edge_F1_F2",
+    "notes": "verdict=no_edge + F1_sloppy_operator + F2_concentration_top3 → hard_anti_pattern combo; verdict != edge_detected so step 3 routes to anti_pattern / low.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000009",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "no_edge",
+      "primary_edge_type": null,
+      "data_quality_flags": ["F1_sloppy_operator", "F2_concentration_top3"],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "refuted"}],
+        "stationarity": null,
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "anti_pattern",
+    "expected_reason_codes": ["F1_F2_combined", "no_edge"],
+    "expected_confidence_band": "low"
+  },
+  {
+    "name": "anti_pattern_underpowered_F1_F2",
+    "notes": "Cross-verdict anti_pattern (defect 4 fix): verdict=underpowered + F1+F2 still routes to anti_pattern / low — hard_anti_pattern set, verdict != edge_detected.",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000a",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "underpowered",
+      "primary_edge_type": null,
+      "data_quality_flags": ["F1_sloppy_operator", "F2_concentration_top3"],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "underpowered"}],
+        "stationarity": null,
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "anti_pattern",
+    "expected_reason_codes": ["F1_F2_combined", "underpowered"],
+    "expected_confidence_band": "low"
+  },
+  {
+    "name": "reject_dormant",
+    "notes": "Stage 1 reject_dormant → exclude_for_copy / n/a band.",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000b",
+      "gate_result": "reject_dormant",
+      "trading_mode": "n/a_routing",
+      "overall_verdict": "data_insufficient",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": null,
+      "flipper_branch": null
+    },
+    "expected_action_decision": "exclude_for_copy",
+    "expected_reason_codes": ["reject_dormant"],
+    "expected_confidence_band": "n/a"
+  },
+  {
+    "name": "reject_insufficient_sample",
+    "notes": "Stage 1 reject_insufficient_sample → exclude_for_copy / n/a (third Stage 1 reject per Phase 2 § 8 #6).",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000c",
+      "gate_result": "reject_insufficient_sample",
+      "trading_mode": "n/a_routing",
+      "overall_verdict": "data_insufficient",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": null,
+      "flipper_branch": null
+    },
+    "expected_action_decision": "exclude_for_copy",
+    "expected_reason_codes": ["reject_insufficient_sample"],
+    "expected_confidence_band": "n/a"
+  },
+  {
+    "name": "reject_hedge_archetype",
+    "notes": "Stage 1 reject_hedge_archetype → anti_pattern / n/a (anti_pattern severity per spec).",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000d",
+      "gate_result": "reject_hedge_archetype",
+      "trading_mode": "n/a_routing",
+      "overall_verdict": "data_insufficient",
+      "primary_edge_type": null,
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": null,
+      "flipper_branch": null
+    },
+    "expected_action_decision": "anti_pattern",
+    "expected_reason_codes": ["reject_hedge_archetype"],
+    "expected_confidence_band": "n/a"
+  },
+  {
+    "name": "dw_vs_ew_sign_flip_emit",
+    "notes": "Sign-flip dw=-0.04 / ew=+0.04: emits dw_negative + dw_vs_ew_divergent as DISPLAY-ONLY caveats. Stationary+robust → high band; no downshift (display-only demotion per spec § 4.2).",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000e",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": -0.04,
+      "ew_roi_point": 0.04,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": [
+      "dw_negative",
+      "dw_vs_ew_divergent",
+      "edge_detected",
+      "primary_edge_type:entry_timing"
+    ],
+    "expected_confidence_band": "high"
+  },
+  {
+    "name": "dw_vs_ew_diverges_no_downshift",
+    "notes": ">2× divergence dw=+0.50 / ew=+0.10: emits dw_vs_ew_divergent display-only; no sign-flip so no dw_negative; clean and robust → high band.",
+    "protocol_report": {
+      "wallet": "0x000000000000000000000000000000000000000f",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": 0.50,
+      "ew_roi_point": 0.10,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 60,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": [
+      "dw_vs_ew_divergent",
+      "edge_detected",
+      "primary_edge_type:entry_timing"
+    ],
+    "expected_confidence_band": "high"
+  },
+  {
+    "name": "stationary_robust_band_drop_low_cusum_n",
+    "notes": "Laundering fix (MIN_CUSUM_N=30 floor): stationarity.signaled=False, pre_regime_n=10 < MIN_CUSUM_N → _stationary_and_robust=False → band drops to medium even though no caveats fire.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000010",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": false,
+          "signal_index": null,
+          "pre_regime_n": 10,
+          "post_regime_n": 0,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": ["edge_detected", "primary_edge_type:entry_timing"],
+    "expected_confidence_band": "medium"
+  },
+  {
+    "name": "stationary_signaled_band_drop",
+    "notes": "stationarity.signaled=True on held branch → _h7_signaled=True caveat emits H7_regime_change_signaled; _stationary_and_robust=False → band=medium.",
+    "protocol_report": {
+      "wallet": "0x0000000000000000000000000000000000000011",
+      "gate_result": "pass",
+      "trading_mode": "held_analyst_only",
+      "overall_verdict": "edge_detected",
+      "primary_edge_type": "entry_timing",
+      "data_quality_flags": [],
+      "dw_roi_point": null,
+      "ew_roi_point": null,
+      "held_analyst_branch": {
+        "branch": "held_analyst",
+        "is_active": true,
+        "hypotheses": [{"name": "H1", "verdict": "supported"}],
+        "stationarity": {
+          "cusum_status": "calibrated",
+          "h_used": 25.0,
+          "k": 0.5,
+          "signaled": true,
+          "signal_index": 42,
+          "pre_regime_n": 42,
+          "post_regime_n": 18,
+          "inference_basis": "full_history"
+        },
+        "independence_check": null
+      },
+      "flipper_branch": null
+    },
+    "expected_action_decision": "validated_copy_candidate",
+    "expected_reason_codes": [
+      "H7_regime_change_signaled",
+      "edge_detected",
+      "primary_edge_type:entry_timing"
+    ],
+    "expected_confidence_band": "medium"
+  }
+]

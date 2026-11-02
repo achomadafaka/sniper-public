@@ -1,0 +1,23 @@
+{
+  "_note": "Jupiter swap/v1 /quote response SHAPES for the exotic warm leg (USDC -> quote token, ExactIn), built from the documented fields; amounts and keys are placeholders, no secret. 'ok' is a valid leg quote, 'no_route' the 400 body.",
+  "ok": {
+    "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "inAmount": "10000000",
+    "outputMint": "__QUOTE_MINT__",
+    "outAmount": "100",
+    "otherAmountThreshold": "90",
+    "swapMode": "ExactIn",
+    "slippageBps": 150,
+    "platformFee": null,
+    "priceImpactPct": "0.0012",
+    "routePlan": [
+      {"swapInfo": {"ammKey": "__POOL__", "label": "Raydium", "inputMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+                    "outputMint": "__QUOTE_MINT__", "inAmount": "10000000", "outAmount": "100",
+                    "feeAmount": "2500", "feeMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"},
+       "percent": 100}
+    ],
+    "contextSlot": 371000000,
+    "timeTaken": 0.0123
+  },
+  "no_route": {"error": "Could not find any route", "errorCode": "COULD_NOT_FIND_ANY_ROUTE"}
+}

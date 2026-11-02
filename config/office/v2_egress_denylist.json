@@ -1,0 +1,6 @@
+{"schema":"office-v2-egress-denylist-v1",
+ "domains":["solana.com","helius-rpc.com","helius.dev","jup.ag","geckoterminal.com","dexscreener.com","relay.link","li.quest","shyft.to",
+  "base.org","robinhood.com","blockscout.com","binance.com","blockrazor.io","48.club","flashbots.net","temporal.xyz","meowrpc.com",
+  "publicnode.com","tenderly.co","kyberswap.com","raydium.io","inkonchain.com","bnbchain.org","drpc.org","arc.io","pump.fun",
+  "fomo.family","gmgn.ai","axiom.trade","j7tracker.io","coinbase.com","helius.xyz","telegram.org"],
+ "read_only_host_exceptions":["docs.pump.fun"]}

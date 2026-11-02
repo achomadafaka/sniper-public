@@ -1,0 +1,26 @@
+[Unit]
+Description=Sniper Wallet Ledger Pipeline (run_analysis_pipeline)
+After=network.target
+
+# Operator-enable: systemctl --user enable --now sniper-ledger-pipeline.timer
+
+[Service]
+Environment=CLAUDECODE=
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/scripts/run_ledger_pipeline.py --from-followed --auto-window --write
+TimeoutStartSec=900
+TimeoutStopSec=30
+# No Restart= — the timer controls scheduling; one-shot only.
+StandardOutput=journal
+StandardError=journal
+# Memory ceiling — pipeline materializes one wallet at a time and
+# discards each bundle before the next iteration. 500MB matches the
+# news-intel ceiling and gives a comfortable margin for analyze_wallet's
+# bootstrap arrays.
+MemoryMax=500M
+MemorySwapMax=100M
+
+[Install]
+WantedBy=default.target

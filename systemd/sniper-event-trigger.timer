@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Sniper Event Trigger every 10 minutes
+After=network.target
+
+[Timer]
+# Fire every 10 minutes — fast enough to catch breaking news within one cycle
+OnCalendar=*:0/10
+# Small random jitter avoids thundering-herd with other timers firing on the hour
+RandomizedDelaySec=30
+# If missed while machine was off, run once at boot
+Persistent=true
+Unit=sniper-event-trigger.service
+
+[Install]
+WantedBy=timers.target

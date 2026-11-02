@@ -1,0 +1,7 @@
+{
+  "version": "cadence-1",
+  "role_cadence_s": {"Head": 1800, "Risk": 60, "Trader": 30, "Postmortem": 600, "Desk ops": 300, "Quant": 3600, "Scout": 120, "Analyst": 120, "Judge": 60},
+  "head_rhythm_utc": {"morning_plan_hour": 0, "midday_check_hour": 8, "end_of_day_review_hour": 16},
+  "max_turns_per_agent_per_hour": 240,
+  "runaway_pause_factor": 1.0
+}

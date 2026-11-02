@@ -1,0 +1,25 @@
+[Unit]
+Description=Sniper Web API
+After=network.target
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+Environment=DB_PATH=sniper_tracker.db
+Environment=FLASK_HOST=127.0.0.1
+Environment=FLASK_PORT=8080
+Environment=FLASK_THREADED=true
+ExecStartPre=-/bin/sh -c "fuser -k 8080/tcp || true"
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/sniper/web/server.py
+Restart=always
+RestartSec=5
+# 2026-03-18: cap added for memory budget tracking. Peak observed ~152MB; 300M ceiling.
+MemoryMax=500M
+MemorySwapMax=100M
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,42 @@
+{
+ "addresses": {
+  "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9": {
+   "name": "Binance Hot Wallet 2",
+   "type": "Centralized Exchange"
+  },
+  "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF": {
+   "name": "Kraken Hot Wallet 1",
+   "type": "Centralized Exchange"
+  },
+  "ASTyfSima4LLAdDgoFGkgqoKowG1LZFDr9fAQrg7iaJZ": {
+   "name": "MEXC Exchange",
+   "type": "Centralized Exchange"
+  },
+  "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51": {
+   "name": "FOMO Co-signer",
+   "type": "Authority"
+  },
+  "B48kNVXs4YK4amkBCH2XokQiv1SeiVQGHDR17xDeKAAn": {
+   "name": "ChangeNOW Hot Wallet 5",
+   "type": "Centralized Exchange"
+  },
+  "BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6": {
+   "name": "KuCoin Hot Wallet 2",
+   "type": "Centralized Exchange"
+  },
+  "J1BDJEdvTmmcjeTMVTHLPaaNvuQ3mdxeuWEM1YyMksLy": {
+   "name": "BingX Hot Wallet 3",
+   "type": "Centralized Exchange"
+  },
+  "iGdFcQoyR2MwbXMHQskhmNsqddZ6rinsipHc4TNSdwu": {
+   "name": "Bybit Hot Wallet 10",
+   "type": "Centralized Exchange"
+  },
+  "u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w": {
+   "name": "Gate Hot Wallet",
+   "type": "Centralized Exchange"
+  }
+ },
+ "note": "Funders that are shared INFRASTRUCTURE, not a same-entity signal: an owner funded by one of these is resolved but excluded from top_funder and clustered-share numerators. Seeded from the Helius funded-by labels (Centralized Exchange, Authority) of the 2026-10-22 100-owner probe; frozen by hash in the trigger cohort policy; NEVER read live from a provider at decision time. An address missing here is an ordinary funder (documented limit).",
+ "version": "cluster-known-funders-v1"
+}

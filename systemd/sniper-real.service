@@ -1,0 +1,16 @@
+[Unit]
+Description=Sniper Real Trader Exit Monitor
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONPATH=/home/bigpapi/Desktop/Sniper
+Environment=DB_PATH=sniper_tracker.db
+EnvironmentFile=-/home/bigpapi/Desktop/Sniper/.env
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/sniper/services/real_trader.py --real --exits-only --interval 120
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

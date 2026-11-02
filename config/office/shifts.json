@@ -1,0 +1,12 @@
+{
+  "version": "shifts-1",
+  "timezone": "UTC",
+  "shifts": [
+    {"id": "night", "start_hour": 0, "end_hour": 8, "crew": "small"},
+    {"id": "day", "start_hour": 8, "end_hour": 16, "crew": "full"},
+    {"id": "evening", "start_hour": 16, "end_hour": 24, "crew": "full"}
+  ],
+  "handover_window_minutes": 15,
+  "min_staffed_seats": ["Head_or_deputy", "Risk", "Trader", "Desk ops", "Postmortem"],
+  "handover_note_sections": ["open_positions", "theses_in_flight", "watchlists", "alerts"]
+}

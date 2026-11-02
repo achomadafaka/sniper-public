@@ -1,0 +1,61 @@
+{
+  "as_of": "capture host_received_at-clock_offset_s",
+  "attempts": 1,
+  "challenge_cooldown_s": 3600,
+  "challenge_scope": "GLOBAL; all mints unknown:challenged during cooldown; one probe after; third consecutive challenged cooldown disables until operator re-enables",
+  "clock": "source host receipt minus its stored finite clock_offset_s; compare with sheet_as_of; no implicit zero offset",
+  "consecutive_challenges_disable": 3,
+  "daily_request_cap": 1000,
+  "field_reasons": [
+    "not_reported"
+  ],
+  "freshness_s": 300,
+  "identity": "exact candidate network solana + mint + pool; another pair is not_served",
+  "known_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of",
+    "vol_24h",
+    "buys_24h",
+    "sells_24h",
+    "pair_age_s",
+    "label",
+    "field_unknown"
+  ],
+  "label": "provider_claim",
+  "max_rows": 100000,
+  "min_global_interval_s": 1,
+  "min_mint_interval_s": 300,
+  "not_served": "successful page read with no own-pair stats; no capture is unknown:no_capture",
+  "not_served_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of"
+  ],
+  "nullable_fields": [
+    "pair_age_s"
+  ],
+  "page_deadline_s": 10,
+  "partial_parse": "vol_24h/buys_24h/sells_24h mandatory; malformed/missing is unknown:not_served_unparsed; pair_age_s may be null with field_unknown.pair_age_s=not_reported",
+  "population": "desk candidates that passed cheap gates; never all intake",
+  "read_budget_s": 0.5,
+  "reasons": [
+    "no_capture",
+    "challenged",
+    "stale",
+    "not_served_unparsed",
+    "read_error",
+    "clock_unknown"
+  ],
+  "rounding": "public display quantities/pair-age are provider-rounded claims, not exact measurements",
+  "transport": "anonymous public rendered DexScreener page only; separate worker, local cache, no JUDGE fetch",
+  "unknown_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of"
+  ],
+  "version": "desk-dex-token-v1"
+}

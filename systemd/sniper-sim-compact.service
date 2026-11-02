@@ -1,0 +1,15 @@
+[Unit]
+Description=Sniper Sim Compactor — raw JSONL to Parquet
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/sniper/sniper/.venv/bin/python -m sim.compact.run \
+    --raw-dir /home/sniper/sniper/raw \
+    --output-dir /home/sniper/Desktop/polymarket-research/normalized \
+    --manifest /home/sniper/Desktop/polymarket-research/compact_manifest.json \
+    --venue polymarket
+MemoryMax=1200M

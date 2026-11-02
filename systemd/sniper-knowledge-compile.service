@@ -1,0 +1,17 @@
+[Unit]
+Description=Sniper — compile knowledge pages from live DB and commit to git
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/scripts/compile_knowledge_cron.sh
+StandardOutput=append:/home/sniper/sniper/logs/knowledge_compile.log
+StandardError=append:/home/sniper/sniper/logs/knowledge_compile.log
+TimeoutStartSec=600
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

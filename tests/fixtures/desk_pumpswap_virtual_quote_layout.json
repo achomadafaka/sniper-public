@@ -1,0 +1,31 @@
+{
+  "source": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump_amm.json",
+  "idl_sha256": "b7d8c57a4d9c4dd0109a9ab893052352333252d4eedced10ac091d4d66cab89b",
+  "BuyEvent": {
+    "prefix_fields": 34,
+    "prefix_sha256": "6cf07dd3319bd93bec687cf04948e3014e2327be467d2f1ec621dc58fc1bdc2d",
+    "previous": "buyback_fee",
+    "field": "virtual_quote_reserves",
+    "type": "i128"
+  },
+  "SellEvent": {
+    "prefix_fields": 27,
+    "prefix_sha256": "61d85b67289cce6b19596adca445958d28aedfcf8349555f4ef78315a77bd0cd",
+    "virtual_quote_offset": 392,
+    "previous": "buyback_fee",
+    "field": "virtual_quote_reserves",
+    "type": "i128"
+  },
+  "Pool": {
+    "virtual_quote_offset": 245,
+    "field": "virtual_quote_reserves",
+    "type": "i128"
+  },
+  "state_change_events": {
+    "BoostBuyAndBurnEvent": "3f451c16305cc2b9",
+    "DepositEvent": "78f83d531f8e6b90",
+    "InitBoostEvent": "ae7c4af90451f611",
+    "SweepPoolFeeEvent": "82a42461e48287a5",
+    "WithdrawEvent": "1609851aa02c47c0"
+  }
+}

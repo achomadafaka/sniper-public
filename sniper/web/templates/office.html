@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Trading Office · Sniper</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/vendor/fonts.css">
+<link rel="stylesheet" href="/static/css/mc-tokens.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1220;color:#e6edf3;font:14px/1.5 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}body>header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 28px;border-bottom:1px solid #243044}h1{font-size:23px;margin:0}header p{margin:4px 0 0;color:#97a6b5}.actions{display:flex;align-items:center;gap:20px}a{color:#86b8ce;text-decoration:none}button{font:inherit;color:inherit;background:#182333;border:1px solid #3b4c61;border-radius:5px;padding:7px 11px;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid #96c9f3;outline-offset:3px}.layout{width:100%;max-width:none;margin:auto;padding:20px 28px 48px}@media(max-width:600px){body>header{padding:14px 18px;align-items:flex-start}.actions{flex-direction:column-reverse;align-items:flex-end;gap:8px;font-size:12px}h1{font-size:20px}.layout{padding:14px 16px 36px}}
+</style>
+</head>
+<body>
+<header><div><h1>Trading Office</h1><p>Paper only · exploratory</p></div><div class="actions"><a href="/">Back to Sniper</a><button id="refresh" type="button">Refresh observations</button></div></header>
+<main class="layout"></main>
+<script defer src="/static/vendor/lightweight-charts.standalone.production.js"></script>
+<script defer src="/static/office-order-display.js?v={{ office_v2_js }}"></script>
+<script defer src="/static/office-charts.js?v={{ office_v2_js }}"></script>
+<script defer src="/static/office-floor.js?v={{ office_v2_js }}"></script>
+<script defer src="/static/office-communications.js?v={{ office_communications_js }}"></script>
+<script defer src="/static/wallet_universe.js?v={{ wallet_universe_js }}"></script>
+<script defer src="/static/office-network.js?v={{ office_network_js }}"></script>
+<script defer src="/static/office-v2.js?v={{ office_v2_js }}"></script>
+</body>
+</html>

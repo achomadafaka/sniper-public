@@ -1,0 +1,39 @@
+{
+ "baseline": {
+  "block_samples": {
+   "00-08Z": 478,
+   "08-16Z": 39,
+   "16-24Z": 418
+  },
+  "caveat": "15.6 h, block 08-16Z has 39 samples (below the 24 h / 3 equal-block bar, waived by the operator); Office OFF day; limit reflects ordinary operation only",
+  "dropped_in_windows": 9,
+  "file": "data/office/baselines/host-2026-10-28.jsonl",
+  "first_sample_utc": "2026-10-28T16:52:57Z",
+  "last_sample_utc": "2026-10-29T08:45Z",
+  "restart_exclusion_note": "Post-hoc ruling by Gamma on Delta evidence (/home/bigpapi/.cache/codex/delta-host-baseline-restarts-20261029/evidence.json): 2 samples (age 53.2 s, 67.8 s) were runner restart overlaps, not stalls. Not pre-logged maintenance windows. A runner restart will trip this limit and pause the Office until 15 min inside limits.",
+  "usable_samples": 935,
+  "windows_excluded": [
+   "2026-10-28T16:53:13Z/16:58:38Z",
+   "2026-10-28T17:32:32Z/17:33:44Z",
+   "2026-10-28T19:10:40Z/19:11:17Z",
+   "2026-10-28T19:46:10Z/19:47:26Z runner restart overlap (SIGTERM 19:46:10.69, loop 19:47:23.55)",
+   "2026-10-29T07:53:55Z/07:55:28Z runner restart overlap (SIGTERM 07:53:56.01, loop 07:55:25.34)"
+  ]
+ },
+ "cpu_pressure_max": 0.15,
+ "evaluation_allowed": true,
+ "heartbeat_max_age_s": 2.060516357421875,
+ "heartbeat_rule": "pause when 5-min p90 exceeds limit for 2 consecutive windows",
+ "io_pressure_max": 0.15,
+ "judge_error_rule": "D call_error CP upper bound after 100 calls; provisional 0.113 until then",
+ "latency_groups": "insufficient_sample until 30 organic attempts; not latency-guarded",
+ "memory_available_min_bytes": 8589934592,
+ "memory_rule": "max(2 x MemoryMax 4 GiB, 4 GB)",
+ "mode": "full",
+ "pressure_rule": "5-min mean of PSI some avg10; limit=max(baseline 5-min mean max, 0.05) rounded up: cpu 0.1298->0.15, io 0.1176->0.15",
+ "provisional": false,
+ "read_error_action": "pause",
+ "resume_inside_limits_s": 900,
+ "source": "operator_waived_baseline: Gamma computed per host-guard prereg section 3 rules 1-3 from data/office/baselines/host-2026-10-28.jsonl; operator order 2026-10-29 waived the 24 h bar",
+ "version": "office-host-guard-full-v1"
+}

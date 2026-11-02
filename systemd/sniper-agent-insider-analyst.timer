@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer — run Insider Scoring Analyst agent weekly (Sunday 14:00 UTC)
+Requires=sniper-agent-insider-analyst.service
+
+[Timer]
+OnCalendar=Sun *-*-* 14:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

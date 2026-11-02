@@ -1,0 +1,25 @@
+[Unit]
+Description=Trusted Office sibling child launcher (no network)
+ConditionPathExists=%h/Desktop/Sniper/.runtime/office/current/scripts/office_child_launcher.py
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Desktop/Sniper/.runtime/office/current
+# Private network is explicit; host user manager creates each sibling child service outside this namespace.
+ExecStart=/usr/bin/bwrap --unshare-user --unshare-net --die-with-parent --new-session --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp --ro-bind %h/.claude %h/.claude --bind %h/.codex %h/.codex --bind %h/Desktop/Sniper/data/office/launcher %h/Desktop/Sniper/data/office/launcher --bind %h/Desktop/Sniper/data/office-control %h/Desktop/Sniper/data/office-control --bind %h/Desktop/Sniper/data/desk/codex_call.lock %h/Desktop/Sniper/data/desk/codex_call.lock --cap-drop ALL /usr/bin/env -i HOME=%h PATH=%h/.npm-global/bin:/usr/local/bin:/usr/bin:/bin XDG_RUNTIME_DIR=/run/user/%U DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus %h/.pyenv/versions/3.13.0/bin/python3 %h/Desktop/Sniper/.runtime/office/current/scripts/office_child_launcher.py --config %h/Desktop/Sniper/data/office-control/launcher.json --config-sha256-file %h/Desktop/Sniper/data/office-control/launcher.sha256
+Slice=app.slice
+Nice=19
+IOSchedulingClass=idle
+NoNewPrivileges=no
+# Only the trusted host CAS helper writes auth.json, its checker temp, and auth.json.pre-checker.
+MemoryMax=128M
+CPUQuota=10%
+TasksMax=32
+LimitNOFILE=128
+KillMode=control-group
+TimeoutStopSec=5
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

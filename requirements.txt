@@ -1,0 +1,47 @@
+Flask==3.0.3
+flask-sock>=0.7.0
+httpx>=0.27.0
+requests==2.32.3
+websockets==12.0
+websocket-client>=1.8.0  # sync client used by the crypto5m RTDS/CLOB capture loop
+aiohttp>=3.9.0
+py-clob-client>=0.34.0
+python-dotenv>=1.0.0
+web3>=7.0.0
+simple-websocket>=1.0.0
+yfinance>=0.2.0
+feedparser>=6.0.0
+mcp>=1.26.0
+psutil>=5.9.0
+duckdb>=1.0
+
+# Testing
+pytest>=8.0
+pytest-xdist>=3.8
+pytest-timeout>=2.3
+
+# Brain semantic search (optional — bot/embeddings.py; degrades to FTS if absent)
+# Local ONNX embeddings, no API key. huggingface.co is DNS-blocked here, so seed
+# the model from GCS: curl -sL https://storage.googleapis.com/qdrant-fastembed/BAAI-bge-small-en.tar.gz | tar xz -C ~/.cache/fastembed
+fastembed>=0.3
+
+# Solana real-money memecoin execution (S2-S4) — signing + tx build
+solders>=0.21
+base58>=2.1
+grpcio==1.71.0
+protobuf==5.29.6
+
+# EVM real-money memecoin execution (S2-S4-EVM) — secp256k1 custody, tx signing, ABI eth_call reads
+eth-account>=0.13
+eth-utils>=5.0
+eth-abi>=5.0
+rlp>=4.0
+
+# Read-only X source-graph browser capture
+playwright==1.58.0
+beautifulsoup4==4.14.3
+hyperliquid-python-sdk==0.24.0
+
+# Office structured model responses (local validation; remote schema retrieval disabled)
+jsonschema==4.26.0
+referencing==0.37.0

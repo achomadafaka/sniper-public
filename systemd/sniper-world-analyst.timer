@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer — run Geopolitics Analyst every 4 hours
+Requires=sniper-world-analyst.service
+
+[Timer]
+# Geopolitics: every 4h at 00, 04, 08, 12, 16, 20 UTC
+OnCalendar=*-*-* 00,04,08,12,16,20:00:00
+Persistent=true
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

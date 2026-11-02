@@ -1,0 +1,84 @@
+{
+ "code_commit": "e0bfbec0c923009ed1ea8dba2080033bb1d9c502",
+ "created_at": 1793207570.2487006,
+ "generators": [
+  {
+   "method": "production",
+   "name": "adaptive_entry",
+   "power_claim": false,
+   "power_lower": 0.4178034919089019,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.002991249545095295
+  },
+  {
+   "method": "production",
+   "name": "day_cluster",
+   "power_claim": false,
+   "power_lower": 0.24498957051385967,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.009129952563871467
+  },
+  {
+   "method": "production",
+   "name": "heavy_tail",
+   "power_claim": true,
+   "power_lower": 0.9174323956683065,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.002991249545095295
+  },
+  {
+   "method": "production",
+   "name": "iid",
+   "power_claim": true,
+   "power_lower": 0.8990676705833045,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.002991249545095295
+  },
+  {
+   "method": "production",
+   "name": "pods_shifts",
+   "power_claim": false,
+   "power_lower": 0.6264134514017714,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.002991249545095295
+  },
+  {
+   "method": "production",
+   "name": "serial",
+   "power_claim": false,
+   "power_lower": 0.08107479342733873,
+   "reason": null,
+   "reps": 1000,
+   "supported": true,
+   "type1_upper": 0.016903175120562504
+  }
+ ],
+ "k": 1,
+ "params": {
+  "alpha_k": 0.025,
+  "alpha_scale": 0.1,
+  "block_days": 5,
+  "day_method": "t_block",
+  "days": 30,
+  "delta0": 1.0,
+  "delta1": 2.5,
+  "draws": 10000,
+  "n_coins": 240,
+  "sigma": 3.0
+ },
+ "plan_sha256": "d0375c8035b800ca450ff7579b6746fca488c92f784c591abe906322616593e9",
+ "power_claim_for_k": false,
+ "proof_id": "b9e8d0a9edb1c9397f29c6888a493d1f8787465abd64d862e8a212b6a20f27a1",
+ "schema": "office-calibration-proof-v1",
+ "supported_for_k": true
+}

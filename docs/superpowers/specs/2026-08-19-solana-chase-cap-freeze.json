@@ -1,0 +1,5 @@
+{
+  "docs/superpowers/specs/2026-08-19-solana-chase-cap-prospective.md": "03a0520766b2c3a940679d5d54374e3d7c9446b4b6850f0152bdbcccae5ec783",
+  "scripts/research/chase_cap_prospective.py": "2145249179c75f2c79694fe40469d77d21dedc55bfb0c3a795cbe814d25fbf45",
+  "tests/test_chase_cap_prospective_analyzer.py": "fc8144a1aa3817efefd8638ba2e2a986d9ab729699b91a0917c9ee813be2edcd"
+}

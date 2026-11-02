@@ -1,0 +1,18 @@
+{
+  "approval_status": "approved_alpha",
+  "files": {
+    "head.md": "8070aaa5a680457daf65e38768a52ed8f7f11f4d4d851c4c9da6b5561aa99dfe",
+    "judge_claude.md": "deb3bfeae93d7a0c6810c9efd1298bec943010a7a95f9d36303450237d194e62",
+    "judge_gpt.md": "c086a0bea41ba7346fae2d0c813cdde60dfb527aaf466d25cc9aee011aec7c62",
+    "scout.md": "47c50cfabac195bc4612faf11b52e31e01fbd2dbd5740458f18a3846bdb5ee84"
+  },
+  "source_pins": {
+    "pilot_org.json": "a1edd52ee9357fcbb6e28d3fdb78f0c375f9b5fd2f2146f33c97fd96e468ab22",
+    "limits_pilot.json": "c302c64ec0743f9e7f69068aa224da54c469124f619b514c901579e237bde03c",
+    "pilot_models.json": "e377d408261cec79ee2c65be20883856ea31c6af0dff805d367d3ee94cc9d706",
+    "book_policy_pilot.json": "71fb45a32cfca228fd1b8f41ac83e7429abba2cf2d8175ea90950fa586a0739a"
+  },
+  "approver": "alpha",
+  "approved_at": "2026-10-28T23:18:40Z",
+  "approved_commit": "abbf8a464d198115e881453ef7c184d1ae5bccc9"
+}

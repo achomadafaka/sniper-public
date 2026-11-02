@@ -1,0 +1,132 @@
+{
+  "provenance": "Exact confirmed source transaction for funded position 73924, recovered 2026-10-17; only top-level signed message is decoder input. TradeEvent is expected-output evidence, never pre-execution input.",
+  "slot": 458089626,
+  "transaction": {
+    "signatures": [
+      "4T52LVWkeXsLx1gdeE2KcDn77S3s8ZRKbCcPw6zVE6tvLnTtPqsZgmtrKPcbh2i4nkh5Bcq4hX9pgqtLtMAWYsYq"
+    ],
+    "message": {
+      "header": {
+        "numRequiredSignatures": 1,
+        "numReadonlySignedAccounts": 0,
+        "numReadonlyUnsignedAccounts": 13
+      },
+      "accountKeys": [
+        "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+        "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+        "4PVvvzvHhAyvcAHgqvYJajt5y9UvbBritR3jMeDnc4R8",
+        "545mCGBPXkxJASLM5BW8VEHdvVV9jddsqDRFND7FpEhY",
+        "5BXL3dN37fvDXhKMYm61VDhaTJaPeHqAb6NCegT2hrKz",
+        "6Y9FUfoq9VUhTiQBDybWT9iJFtKRWqVuQPJr4SqVGgGW",
+        "7VsPE7ceJ1s6PPdg63swPTxN7TrsRmS1Rnqssx2JtpRT",
+        "9uhnAoAjGcextZDgHefmCf7b4ZcmQMT3qWc5LexPgfK",
+        "A7hAgCzFw14fejgCp387JUJRMNyz4j89JKnhtKU8piqW",
+        "B5e99yTZtttaUesr4MY5EdPCKbZ1AMXMJQz1gnrgpzvk",
+        "B5FP82QU34BvWnKKBT6fULDZSWmDxegRKKGtuMkEDodX",
+        "C16CieiuGiBpQaDPWpBRWHZhMwXV5xzWJCm4udbJi93h",
+        "H2cDR3EkJjtTKDQKk8SJS48du9mhsdzQhy8xJx5UMqQK",
+        "Hj2hjN1EAe5pv676kUMf14zbj1ioWEHaiukbHDqw2P3D",
+        "J4PeVZhx2496eXjAMpbm7nrCxRBgAUfRDwhZ1YSdzTSE",
+        "11111111111111111111111111111111",
+        "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+        "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "6XsC91TSAWe4ma57cRKkMe3ut5wPUWnd5dyV2wAUpump",
+        "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+        "FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9",
+        "jitodontfrontG1111111TradeWithAxiomDotTrade",
+        "So11111111111111111111111111111111111111112",
+        "SysvarRecentB1ockHashes11111111111111111111",
+        "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+      ],
+      "recentBlockhash": "7s6p4jVkxJSNihH3qYAHYDBmXR8GDbjwqPGjPfQd47SS",
+      "instructions": [
+        {
+          "programIdIndex": 15,
+          "accounts": [
+            9,
+            25,
+            0
+          ],
+          "data": "6vx8P",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 22,
+          "accounts": [
+            0,
+            3,
+            0,
+            18,
+            15,
+            27,
+            20
+          ],
+          "data": "6",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 22,
+          "accounts": [
+            0,
+            0,
+            12,
+            15,
+            22,
+            17,
+            16,
+            18,
+            24,
+            27,
+            26,
+            6,
+            5,
+            4,
+            0,
+            3,
+            11,
+            13,
+            19,
+            8,
+            15,
+            21,
+            17,
+            22,
+            1,
+            10,
+            7,
+            2,
+            22
+          ],
+          "data": "112SF2tgUL311qEAXBtU99BhpqTvGT",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 15,
+          "accounts": [
+            0,
+            14,
+            23
+          ],
+          "data": "3Bxs4NN8M2Yn4TLb",
+          "stackHeight": 1
+        }
+      ],
+      "transactionConfig": {
+        "priorityFee": 5000000,
+        "computeUnitLimit": 176301,
+        "loadedAccountsDataSizeLimit": 67108864,
+        "heapSize": null
+      }
+    },
+    "version": 1
+  },
+  "owner": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+  "mint": "6XsC91TSAWe4ma57cRKkMe3ut5wPUWnd5dyV2wAUpump",
+  "holder": "545mCGBPXkxJASLM5BW8VEHdvVV9jddsqDRFND7FpEhY",
+  "spend_lamports": 1980000000,
+  "minimum_tokens_out": 16819212042447,
+  "trade_event_log": "Program data: vdt/007mYe5SMpx447xjF9tCKsccop99kYD9jgKh1k6ca+ZS+jSeH+Noj3QAAAAAdWQAdBAdAAABOmP7D3se8sB9oQhyXLpF2FlrbvR9dJ4zlt3iKhRd4HziltNqAAAAAPfBWZAKAAAA6kWj5UOFAgD3FTaUAwAAAOqtkJmyhgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfAAAAAAAAAHJ5GwEAAAAAtoGF96ABfyWldIIdMU8eDPd8N/pbXJswTXQBN3XvZ3geAAAAAAAAAKuEWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAGJ1eV9leGFjdF9xdW90ZV9pbgAAAAAAAAAAAAAAAAAAAAAAiBMAAAAAAAC5vI0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAONoj3QAAAAA98FZkAoAAAD3FTaUAwAAAAAAAAAAAAAAAAAAAAAAAABO1CoSAAAAAA=="
+}

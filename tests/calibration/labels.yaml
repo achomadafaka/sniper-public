@@ -1,0 +1,625 @@
+calibration_version: '3'
+labels:
+- wallet: '0xdbade4c82fb72780a0db9a38f821d8671aba9c95'
+  label_type: exact
+  expected: edge_detected
+  evidence:
+  - source: tests/calibration/fixtures/0xdbade4c82fb72780a0db9a38f821d8671aba9c95_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=992, open=33, activity=30405. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.0978, archetype_layer1=''tag_specialist_accumulator''.
+
+    Fixture counts: closed=992, open=33, activity=30405.
+
+    DW ROI 0.4155% (CI [-4.4017%, 4.8418%]); EW ROI 2.4966%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=inconclusive, H4=supported, H6=refuted.
+
+    data_quality_flags n=6; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.0978, archetype_layer1=''tag_specialist_accumulator''.
+
+    Fixture counts: closed=992, open=33, activity=30405.
+
+    DW ROI 0.4155% (CI [-4.4017%, 4.8418%]); EW ROI 2.4966%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=inconclusive, H4=supported, H6=refuted.
+
+    data_quality_flags n=6; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: exact
+    expected: edge_detected
+    rationale: 'SwissMiss was the canonical "wallet with edge" reference for the
+
+      protocol — large positive lifetime P&L on Polymarket (~$952K per
+
+      ADR-006), multi-year track record, dossier-documented entry-timing
+
+      pattern. The W6.3 author expected H1+H4 supported; in practice the
+
+      wallet''s behavior is buy-and-hold-to-resolution which the protocol
+
+      correctly flags as CERTAINTY_BUYER_DETECTED, and H4 is harness-
+
+      suppressed. Knowledge dossier line 37 recorded the protocol''s
+
+      actual underpowered verdict at authoring time; the original label
+
+      ignored it.
+
+      '
+- wallet: '0x1cc16713196d456f86fa9c7387dd326a7f73b8df'
+  label_type: exact
+  expected: edge_detected
+  evidence:
+  - source: tests/calibration/fixtures/0x1cc16713196d456f86fa9c7387dd326a7f73b8df_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=1015, open=18, activity=19338. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4946, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=1015, open=18, activity=19338.
+
+    DW ROI 6.7867% (CI [0.9680%, 13.3708%]); EW ROI 4.4505%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=supported, H3=inconclusive,
+    H4=inconclusive, H6=supported.
+
+    Flipper hypotheses: FH1=supported, FH2=refuted, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=5; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4946, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=1015, open=18, activity=19338.
+
+    DW ROI 6.7867% (CI [0.9680%, 13.3708%]); EW ROI 4.4505%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=supported, H3=inconclusive,
+    H4=inconclusive, H6=supported.
+
+    Flipper hypotheses: FH1=supported, FH2=refuted, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=5; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: exact
+    expected: edge_detected
+    rationale: 'eatpraylove (Wickier) — execution_bot strategy_group with 96.4% WR
+
+      over 296/307 closed and lifetime Polymarket P&L $125K. The W6.3
+
+      author expected the flipper branch to mint FH1/FH3 supported, but
+
+      the wallet''s flip_rate=0.01 puts it in held_analyst_only mode
+
+      where flipper-edge logic doesn''t fire.
+
+      '
+- wallet: '0x5bffcf561bcae83af680ad600cb99f1184d6ffbe'
+  label_type: exact
+  expected: data_insufficient
+  evidence:
+  - source: tests/calibration/fixtures/0x5bffcf561bcae83af680ad600cb99f1184d6ffbe_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=864, open=75, activity=18093. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=864, open=75, activity=18093.
+
+    DW ROI 0.7121% (CI [-0.5900%, 2.1868%]); EW ROI 2.8486%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=3; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=864, open=75, activity=18093.
+
+    DW ROI 0.7121% (CI [-0.5900%, 2.1868%]); EW ROI 2.8486%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=3; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: exact
+    expected: edge_detected
+    rationale: 'YatSen — documented Political NO Value edge ($2.4M lifetime P&L,
+
+      71.9% WR, $11M qualifying net P&L). Strategy 21 replicates the
+
+      underlying pattern at 80% WR (paper). The W6.3 author expected
+
+      primary_edge_type ∈ {tag_specialist, flipper_skill}; tag_specialist
+
+      is unreachable when --no-tags is active, and flipper_skill is
+
+      unreachable in held_analyst_only routing.
+
+      '
+- wallet: '0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee'
+  label_type: exact
+  expected: underpowered
+  evidence:
+  - source: tests/calibration/fixtures/0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=3979, open=29, activity=37009. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''underpowered'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4938, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=3979, open=29, activity=37009.
+
+    DW ROI 4.4985% (CI [1.4101%, 7.7196%]); EW ROI -0.3443%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=supported, H3=inconclusive,
+    H4=underpowered, H6=inconclusive.
+
+    Flipper hypotheses: FH1=refuted, FH2=inconclusive, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=4; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''underpowered'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4938, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=3979, open=29, activity=37009.
+
+    DW ROI 4.4985% (CI [1.4101%, 7.7196%]); EW ROI -0.3443%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=supported, H3=inconclusive,
+    H4=underpowered, H6=inconclusive.
+
+    Flipper hypotheses: FH1=refuted, FH2=inconclusive, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=3; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: exact
+    expected: edge_detected
+    rationale: 'execution_bot strategy_group; 97.4% WR; lifetime Polymarket P&L
+
+      $11M (highest in the dossier set). v2 baseline now agrees with
+
+      operator_prior — the gap was the permutation-verdict bug.
+
+      '
+- wallet: '0x22e4248bdb066f65c9f11cd66cdd3719a28eef1c'
+  label_type: exact
+  expected: edge_detected
+  evidence:
+  - source: tests/calibration/fixtures/0x22e4248bdb066f65c9f11cd66cdd3719a28eef1c_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=1088, open=44, activity=24484. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4651, archetype_layer1=''mixed_unresolved''.
+
+    Fixture counts: closed=1088, open=44, activity=24484.
+
+    DW ROI 2.8099% (CI [0.7460%, 5.4905%]); EW ROI 3.6423%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=inconclusive, H4=underpowered, H6=supported.
+
+    Flipper hypotheses: FH1=supported, FH2=refuted, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=1; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''mixed_mode'', flip_rate=0.4651, archetype_layer1=''mixed_unresolved''.
+
+    Fixture counts: closed=1088, open=44, activity=24484.
+
+    DW ROI 2.8099% (CI [0.7460%, 5.4905%]); EW ROI 3.6423%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=inconclusive, H4=underpowered, H6=supported.
+
+    Flipper hypotheses: FH1=supported, FH2=refuted, FH3=underpowered, FH5=descriptive_only,
+    FH6=supported.
+
+    data_quality_flags n=1; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: exact
+    expected: edge_detected
+    rationale: 'high_winrate_review classification, 99.4% WR, lifetime $264K. The
+
+      only legacy class with partially validated paper-trade edge
+
+      (61% paper WR per MEMORY.md). W6.3 author treated WR + lifetime P&L
+
+      as sufficient priors; the protocol disagrees because H2 explicitly
+
+      tests the buy-vs-implied edge and finds it negative.
+
+      '
+- wallet: '0x8493374739b45eb032382857feeb7ed025215366'
+  label_type: exact
+  expected: data_insufficient
+  evidence:
+  - source: tests/calibration/fixtures/0x8493374739b45eb032382857feeb7ed025215366_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=275, open=2, activity=1065. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=275, open=2, activity=1065.
+
+    DW ROI -0.0821% (CI [-0.2107%, -0.0018%]); EW ROI -4.9058%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=1; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=275, open=2, activity=1065.
+
+    DW ROI -0.0821% (CI [-0.2107%, -0.0018%]); EW ROI -4.9058%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=1; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: band
+    accepted_band:
+    - data_insufficient
+    rationale: 'W6.3 author saw n_closed=0 in the 2026-04-30 user_analysis snapshot
+
+      and labeled with band [data_insufficient] expecting Stage-1''s
+
+      reject_insufficient_sample rule to fire. The live fixture (captured
+
+      2026-05-01) shows n_closed=272 — wallet had filled positions
+
+      between snapshot and capture. Stage-1 now passes; verdict drifts
+
+      to held_analyst_only underpowered. The original prior is preserved
+
+      for context but is structurally stale.
+
+      '
+- wallet: '0x1eb06435d217aafbc511e5e0225b46c6e2dbd25b'
+  label_type: exact
+  expected: data_insufficient
+  evidence:
+  - source: tests/calibration/fixtures/0x1eb06435d217aafbc511e5e0225b46c6e2dbd25b_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=762, open=214, activity=31208. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=762, open=214, activity=31208.
+
+    DW ROI 8.3578% (CI [5.5428%, 11.1223%]); EW ROI 7.1131%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=2; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''data_insufficient'' via gate_result=''reject_hedge_archetype''.
+
+    Gate reason: Layer 1 archetype = ''two_sided_inventory_trader''. Structurally
+    non-copyable; tag-level inference invalid because winning and losing legs are
+    correlated by construction.
+
+    Mode: ''n/a_routing'', archetype_layer1=''two_sided_inventory_trader'' (flip_rate
+    not computed).
+
+    Fixture counts: closed=762, open=214, activity=31208.
+
+    DW ROI 8.3578% (CI [5.5428%, 11.1223%]); EW ROI 7.1131%.
+
+    Both branches absent (verdict produced before branch routing).
+
+    data_quality_flags n=2; applicable_limitations n=0. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: band
+    accepted_band:
+    - edge_detected
+    - no_edge
+    - operator_review
+    rationale: 'speculator_bot, win_rate=0.5 over n=500 closed, insider_score=4,
+
+      pnl=$307K (legacy snapshot). W6.3 author bracketed the verdict
+
+      between flipper-leg edge (edge_detected), refutation (no_edge), or
+
+      held vs flipper conflict (operator_review). underpowered was
+
+      precluded by n_closed=500 — incorrectly, because the held branch''s
+
+      single-branch fallback path can still produce underpowered when no
+
+      primary test fires.
+
+      '
+- wallet: '0x58f8f1138be2192696378629fc9aa23c7910dc70'
+  label_type: exact
+  expected: edge_detected
+  evidence:
+  - source: tests/calibration/fixtures/0x58f8f1138be2192696378629fc9aa23c7910dc70_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=2960, open=27, activity=16854. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.0537, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=2960, open=27, activity=16854.
+
+    DW ROI 3.6150% (CI [0.3840%, 6.6943%]); EW ROI 0.9558%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=inconclusive, H3=refuted,
+    H4=underpowered, H6=inconclusive.
+
+    data_quality_flags n=3; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.0537, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=2960, open=27, activity=16854.
+
+    DW ROI 3.6150% (CI [0.3840%, 6.6943%]); EW ROI 0.9558%.
+
+    Held-analyst hypotheses: H1=supported, H2=supported, H2_sub080=inconclusive, H3=refuted,
+    H4=underpowered, H6=inconclusive.
+
+    data_quality_flags n=3; applicable_limitations n=3. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: band
+    accepted_band:
+    - edge_detected
+    - operator_review
+    rationale: 'arb_fund, win_rate=1.0 over n=499, insider_score=79.3, pnl=$772K
+
+      (legacy snapshot). W6.3 author expected edge_detected (if M4 doesn''t
+
+      reject the arb pattern as hedge_archetype) or operator_review (if
+
+      held vs flipper conflict surfaces). Both required at least one
+
+      primary test to land ''supported''; none did under harness flags.
+
+      '
+- wallet: '0x2b46bb71681777202368d095196f266944a1684d'
+  label_type: exact
+  expected: underpowered
+  evidence:
+  - source: tests/calibration/fixtures/0x2b46bb71681777202368d095196f266944a1684d_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=2637, open=4, activity=7929. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''underpowered'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.1517, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=2637, open=4, activity=7929.
+
+    DW ROI 5.3894% (CI [0.4440%, 10.4875%]); EW ROI 2.3791%.
+
+    Held-analyst hypotheses: H1=inconclusive, H2=supported, H2_sub080=supported, H3=refuted,
+    H4=underpowered, H6=refuted.
+
+    data_quality_flags n=4; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''underpowered'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.1517, archetype_layer1=''directional_discretionary''.
+
+    Fixture counts: closed=2637, open=4, activity=7929.
+
+    DW ROI 5.3894% (CI [0.4440%, 10.4875%]); EW ROI 2.3791%.
+
+    Held-analyst hypotheses: H1=inconclusive, H2=supported, H2_sub080=supported, H3=refuted,
+    H4=underpowered, H6=refuted.
+
+    data_quality_flags n=4; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: band
+    accepted_band:
+    - edge_detected
+    - no_edge
+    - underpowered
+    rationale: 'low_signal classification, win_rate=1.0 over n=499 closed,
+
+      insider_score=48, pnl=$383K (legacy snapshot). W6.3 author
+
+      bracketed the verdict broadly because low_signal is a "we don''t
+
+      know" catchall; underpowered was included as a possible outcome.
+
+      '
+- wallet: '0xb3b50ef66acf4beefafa754a4e4b8b5cd5b6bef4'
+  label_type: exact
+  expected: edge_detected
+  evidence:
+  - source: tests/calibration/fixtures/0xb3b50ef66acf4beefafa754a4e4b8b5cd5b6bef4_2026-05-13.json
+    claim: 'v3 fetch snapshot (2026-05-13, post Phase A fetch rebuild + 408-retry
+      fix). Actual fixture counts: closed=809, open=4, activity=7917. Deterministic
+      input to protocol replay under seed=1 n_iter=2000.'
+  rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.2040, archetype_layer1=''mixed_unresolved''.
+
+    Fixture counts: closed=809, open=4, activity=7917.
+
+    DW ROI -2.6466% (CI [-7.4038%, 0.7837%]); EW ROI 0.5215%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=supported, H4=supported, H6=refuted.
+
+    data_quality_flags n=3; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  v2_historical_rationale: 'v3 verdict: ''edge_detected'' via gate_result=''pass''.
+
+    Mode: ''held_analyst_only'', flip_rate=0.2040, archetype_layer1=''mixed_unresolved''.
+
+    Fixture counts: closed=809, open=4, activity=7917.
+
+    DW ROI -2.6466% (CI [-7.4038%, 0.7837%]); EW ROI 0.5215%.
+
+    Held-analyst hypotheses: H1=supported, H2=inconclusive, H2_sub080=inconclusive,
+    H3=supported, H4=supported, H6=refuted.
+
+    data_quality_flags n=3; applicable_limitations n=2. Replay deterministic under
+    (seed=1, n_iter=2000) with the captured v3 fixture.
+
+    Re-baselined 2026-05-13 post Phase A fetch rebuild + 408-retry fix: DESC sort,
+    no client caps, walk_full_history=True. Wallets 1-2 retain --capital-ledger surface;
+    wallets 3-10 are Option B (no capital_ledger) due to Goldsky-bound walk performance.'
+  operator_prior:
+    label_type: band
+    accepted_band:
+    - edge_detected
+    - operator_review
+    rationale: 'high_winrate_review, win_rate=1.0 over n=492, insider_score=86,
+
+      pnl=$32K (legacy snapshot). W6.3 author expected edge_detected with
+
+      size_conviction caveats (because $32K net P&L on 100% WR means tiny
+
+      per-trade stakes), or operator_review if held vs flipper conflicted.
+
+      '

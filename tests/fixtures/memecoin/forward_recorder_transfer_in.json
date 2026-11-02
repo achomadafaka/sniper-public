@@ -1,0 +1,146 @@
+{
+ "_source": "mainnet getTransaction 2026-10-02 (research Helius key), first forward-recorder smoke: another wallet transfers 3,519,000,000 units of AJpYVowD into notdecu's token account; notdecu is not a signer",
+ "owner": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+ "mint": "AJpYVowD3ivhNcTRFjphVNWwjMvetNADhSxz2gMZfLv4",
+ "account": "7xpheGG924hfCcZhgyZW2kUNV59rJPfFzwGP16BbRXvk",
+ "signature": "33iaweA9XdMuB71YPtK6BEzNJgqnyVpYUgWhdMpJDcBmfnPoc9vcTnXwV5YJNSn4TF7h7pGPdWGRbRyxthg7zFDv",
+ "slot": 452567515,
+ "tx": {
+  "transaction": {
+   "signatures": [
+    "33iaweA9XdMuB71YPtK6BEzNJgqnyVpYUgWhdMpJDcBmfnPoc9vcTnXwV5YJNSn4TF7h7pGPdWGRbRyxthg7zFDv",
+    "2dZbzsp3MBNeye7tFMXZRuQeWiuEUbFbLRjyjodJDu7dDx6c7YirRT9vsk59YzJ71HNjCrcLcRihSxEsQrQf3ji6"
+   ],
+   "message": {
+    "header": {
+     "numRequiredSignatures": 2,
+     "numReadonlySignedAccounts": 1,
+     "numReadonlyUnsignedAccounts": 2
+    },
+    "accountKeys": [
+     "2qpSZAzAxwX8FvaJTnkXgpN3JryAB1sgvLoWpnkAhxBz",
+     "AaEkzMfpxeLPv53h4T8g8BZTGqsTVmt8PEwBecCisRC3",
+     "4ABpnfiijAfE68QtbyVuBgU9QhHf98hiWwdfnZxpwcWT",
+     "7xpheGG924hfCcZhgyZW2kUNV59rJPfFzwGP16BbRXvk",
+     "ComputeBudget111111111111111111111111111111",
+     "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    ],
+    "recentBlockhash": "9kfA234uJovb9CVtkAtozB36h5VLQJuAL8qAJH9TzyaR",
+    "instructions": [
+     {
+      "programIdIndex": 4,
+      "accounts": [],
+      "data": "3DTZbgwsozUF",
+      "stackHeight": 1
+     },
+     {
+      "programIdIndex": 5,
+      "accounts": [
+       2,
+       3,
+       1
+      ],
+      "data": "3mgne1buKi2s",
+      "stackHeight": 1
+     }
+    ],
+    "addressTableLookups": []
+   }
+  },
+  "meta": {
+   "err": null,
+   "status": {
+    "Ok": null
+   },
+   "fee": 10000,
+   "preBalances": [
+    91341099078,
+    18481160,
+    1513840,
+    1513840,
+    1,
+    70228638
+   ],
+   "postBalances": [
+    91341089078,
+    18481160,
+    1513840,
+    1513840,
+    1,
+    70228638
+   ],
+   "innerInstructions": [],
+   "logMessages": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [1]",
+    "Program log: Instruction: Transfer",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1879 of 202850 compute units",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success"
+   ],
+   "preTokenBalances": [
+    {
+     "accountIndex": 2,
+     "mint": "AJpYVowD3ivhNcTRFjphVNWwjMvetNADhSxz2gMZfLv4",
+     "uiTokenAmount": {
+      "uiAmount": 22973067.725813,
+      "decimals": 6,
+      "amount": "22973067725813",
+      "uiAmountString": "22973067.725813"
+     },
+     "owner": "AaEkzMfpxeLPv53h4T8g8BZTGqsTVmt8PEwBecCisRC3",
+     "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    },
+    {
+     "accountIndex": 3,
+     "mint": "AJpYVowD3ivhNcTRFjphVNWwjMvetNADhSxz2gMZfLv4",
+     "uiTokenAmount": {
+      "uiAmount": null,
+      "decimals": 6,
+      "amount": "0",
+      "uiAmountString": "0"
+     },
+     "owner": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+     "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    }
+   ],
+   "postTokenBalances": [
+    {
+     "accountIndex": 2,
+     "mint": "AJpYVowD3ivhNcTRFjphVNWwjMvetNADhSxz2gMZfLv4",
+     "uiTokenAmount": {
+      "uiAmount": 22969548.725813,
+      "decimals": 6,
+      "amount": "22969548725813",
+      "uiAmountString": "22969548.725813"
+     },
+     "owner": "AaEkzMfpxeLPv53h4T8g8BZTGqsTVmt8PEwBecCisRC3",
+     "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    },
+    {
+     "accountIndex": 3,
+     "mint": "AJpYVowD3ivhNcTRFjphVNWwjMvetNADhSxz2gMZfLv4",
+     "uiTokenAmount": {
+      "uiAmount": 3519.0,
+      "decimals": 6,
+      "amount": "3519000000",
+      "uiAmountString": "3519"
+     },
+     "owner": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+     "programId": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+    }
+   ],
+   "rewards": [],
+   "loadedAddresses": {
+    "writable": [],
+    "readonly": []
+   },
+   "computeUnitsConsumed": 2029,
+   "costUnits": 4717
+  },
+  "version": 0,
+  "slot": 452567515,
+  "transactionIndex": 189,
+  "blockTime": 1790932728
+ }
+}

@@ -1,0 +1,1 @@
+"""Simulation platform data collector."""

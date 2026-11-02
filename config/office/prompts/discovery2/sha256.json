@@ -1,0 +1,45 @@
+{
+  "approval_status": "approved_alpha",
+  "files": {
+    "head.md": "19610258638daa84d6278d20bc0731e4886ed2ced4a464626e82802498f7a2b7",
+    "judge_claude.md": "5c041586b62f966b9e7b7199edd6f601c6ba39736cdf6e45ab7c8fca8bd08a55",
+    "judge_gpt.md": "2e9b64801993124d4d247735ee3bf354547aeb612c496de01fa2a1a0d0a7593f",
+    "scout.md": "317dd538bf0f3a5a4c5344787f743afa1139a29b163faf00bb6544af05654484"
+  },
+  "source_pins": {
+    "pilot_org.json": "a1edd52ee9357fcbb6e28d3fdb78f0c375f9b5fd2f2146f33c97fd96e468ab22",
+    "limits_pilot.json": "c302c64ec0743f9e7f69068aa224da54c469124f619b514c901579e237bde03c",
+    "pilot_models.json": "e377d408261cec79ee2c65be20883856ea31c6af0dff805d367d3ee94cc9d706",
+    "book_policy_pilot.json": "71fb45a32cfca228fd1b8f41ac83e7429abba2cf2d8175ea90950fa586a0739a"
+  },
+  "approver": "alpha",
+  "approved_at": "2026-10-29T12:00:24.136494Z",
+  "epoch_id": "office-pilot-discovery-2",
+  "approval_messages": {
+    "alpha_dm": "3967cb49-2f99-4740-8e25-40788bd7b5f1",
+    "alpha_refs": "af36c99c-6455-4f37-b838-6a5089a6b6e3",
+    "gamma_dm": "35b71431-a142-4da1-ba4f-54fed88ba009",
+    "gamma_refs": "25d42ce8-c6c7-4117-8e60-e85c4c8d826d",
+    "alpha_near_pass": "f2f98f62-b827-4aff-8f3b-dde22784360c",
+    "gamma_near_pass": "70be6125-9341-4b9d-96d1-9e00c3f89920"
+  },
+  "paragraphs": {
+    "head": [
+      "dm_task",
+      "memo_refs"
+    ],
+    "scout": [
+      "dm_task",
+      "memo_refs",
+      "near_pass"
+    ],
+    "judge_claude": [
+      "dm_task",
+      "memo_refs"
+    ],
+    "judge_gpt": [
+      "dm_task",
+      "memo_refs"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Timer — run Wallet Scout agent twice daily
+Requires=sniper-agent-wallet-scout.service
+
+[Timer]
+# Run at 09:00 and 21:00 UTC (offset from insider_copy at 06:00/18:00)
+OnCalendar=*-*-* 09:00:00
+OnCalendar=*-*-* 21:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

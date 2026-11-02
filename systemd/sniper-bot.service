@@ -1,0 +1,50 @@
+[Unit]
+Description=Sniper AI Telegram Bot (Claude Code relay)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+# No EnvironmentFile: relay.py loads the repo .env itself via python-dotenv, which
+# parses comments/quotes correctly. systemd's EnvironmentFile parser is stricter and
+# would choke on some values in .env.
+Environment=PYTHONPATH=/home/bigpapi/Desktop/Sniper
+# The repo .venv is EMPTY on this host. pyenv 3.13.0 is the interpreter that actually
+# has python-telegram-bot + claude-agent-sdk (and is what every cron here uses).
+ExecStart=/home/bigpapi/.pyenv/versions/3.13.0/bin/python3 -u /home/bigpapi/Desktop/Sniper/bot/relay.py
+
+Restart=always
+RestartSec=10
+# Never stop retrying. The default start-rate limiter (5 starts / 10s) would give up and
+# leave the bot dead-and-silent after a burst of restarts — the worst failure mode, since
+# nothing on this host would tell you it's gone.
+StartLimitIntervalSec=0
+
+# --- Memory -----------------------------------------------------------------
+# The old note here ("relay.py leaks, 351MB after 25h") was WRONG and the 1200M cap that
+# came with it was dangerous. Measured 2026-07-14:
+#   relay.py itself      ~62 MB steady (it does not leak)
+#   Claude CLI child    ~353 MB for ONE trivial query
+# The SDK spawns a `claude` CLI child per query, and MemoryMax is enforced on the whole
+# cgroup — so the cap was really being spent on children, not on a leak. A real
+# conversation peaked at 497 MB against a 1200 MB ceiling.
+#
+# That headroom is now gone: the agent has the Task and Workflow tools, so it can fan out
+# subagents, and EACH subagent is another ~350 MB CLI process in this same cgroup. Four
+# parallel agents would blow the old cap and systemd would kill the ENTIRE service
+# mid-reply. Sized for real fan-out instead (host has 30 GB; the real-money memecoin
+# runner and the desktop must keep breathing, so this is still a hard bound, just an
+# honest one).
+MemoryHigh=6G
+MemoryMax=8G
+MemorySwapMax=2G
+
+# If a child (a subagent, or the CLI itself) gets OOM-killed, kill THAT child — do not
+# tear down the whole bot. Default is OOMPolicy=stop, which would take the service down
+# and, before sessions were persisted, silently drop the conversation with it. Now the
+# worst case is one failed query that the agent reports in chat, and it stays alive.
+OOMPolicy=continue
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,31 @@
+# Fresh research repair and three testable theses
+
+Authorized by the operator: repair measurements and paper logic, deploy, and leave a thesis to test. Supersedes the v4 experiment for new evidence only. Existing records remain forensic history. Source reads are paced to one new scanner evaluation per second, already-measured coins are not fetched again, and rate-limit/auth responses trigger 60-second source backoff while scheduled quotes continue. Radar and V6 remain archived. No funded execution changes.
+
+## Frozen questions
+
+1. **Buyer breadth:** Among scanner observations with at least 20 valid buy trades in the preceding 120 seconds, do at least 16 distinct addresses in the latest 20 buys predict a higher probability of a positive available +30s exact-quantity quote? Comparator: fewer than 16 addresses. Control for day, discovery source, mcap, age, momentum and the duration spanned by those 20 trades. This is an address-participation hypothesis, not entity resolution.
+2. **Quiet price before a source buy:** Among fresh Solana source buys with independent Pump OHLC bars covering the previous 60 seconds, does a high/low range of at most 5% predict a higher positive available +30s quote probability? Comparator: range over 5%. Require first bar within 15s of window start, last bar within 15s of event, no gap over 15s; only complete bars strictly before the provider-reported buy timestamp, which must be timezone-aware and within 15 seconds before local receipt. Receipt time governs admission; missing or unverified source clocks cannot qualify for the quiet comparison. No forward fill; missing history is outside this explicitly covered-tape population. Match day, source universe and mcap. Provider timestamp integrity remains a limitation.
+3. **Exit patience:** On the same source-buy entry and exact acquired quantity, does a scheduled +60s paper exit improve positive available quote probability by at least 5 percentage points over +30s? Every entered origin belongs to both arms. Compare paired outcomes; unavailable routes count as no positive quote, never as a fabricated price return.
+
+The fixed clip remains 100 USDC. Quoted return at +30s remains the primary price measurement. Available-positive-exit is a separately named bounded decision endpoint, not a renaming of profit: exact successful quote > entry spend is 1; exact successful quote <= spend or explicit supported-provider no-route is 0. Infrastructure/identity/timing failures remain unknown internally. Their full worst-case assignments widen test bounds; no surviving-case verdict. Entry failures never create acquired inventory.
+
+No-route classification applies only to explicit documented Jupiter routing codes on quote responses, with the exact original quantity and timing. 429/auth/server/request/malformed errors never become no-route. Expected proceeds and floor stay separate; there are no signed transactions or modeled network fees. All outcomes remain provider-quoted, not realized PnL.
+
+## Test and stop rules
+
+One new seven-day cohort; first 72h collection/feasibility and last 96h untouched holdout. All three definitions and thresholds frozen at activation; no outcome-driven selection. Maximum three formal tests, familywise alpha .05. Stratified binary comparisons use simultaneous Wilson bounds widened for all unknown outcomes; unsupported strata do not generate an overall-population claim. Paired patience uses a bounded [-1,1] difference interval widened for unknown pairs. At least three UTC days and direction consistent by day are required. Support needs lower difference bound >5pp; harmful needs upper <-5pp; practical equivalence needs entire interval inside [-5,+5]pp. Otherwise no conclusion. No automatic funded promotion.
+
+The holdout is computed once in its scheduled five-minute read allowance. Its verified saved result remains visible until its oldest included observation reaches seven days of age; viewing never recomputes or extends the test. Public UI shows the thesis, comparator, rejection rule, recorder status and trustworthy completed measurement count. No invalid-result statistics or charts. Performance becomes visible only after a verified saved holdout verdict. Generic provider failure is an engineering repair, never a trading conclusion.
+
+## Lane mapping
+
+Scanner owns shared features/quotes and Golden/Conviction labels. Source-buy collector owns independent prehistory and shared 30s/60s paper legs. Old scalp/hold/confirmed books cannot reconstruct counterfactual continuous stops from endpoints; they are retired from current evidence. Existing funded-coupled clone/refusal ledgers remain operational history, excluded from these tests. This replacement source-buy paper experiment includes eligible buy events independently of funded admission, so gate acceptance cannot decide the sample. No change to their funded producer or legacy records.
+
+## Reliability and rollout
+
+Keep existing 40/min scanner and 10/min source-buy quote caps, 2/1 in-flight caps, 6/2 open limits, exact TEXT amounts, same-boot monotonic plus corrected UTC, 2-second completion windows, no retries, no custody keys. Independent history reads run on a bounded research thread, never on the scheduler or funded thread. Pre-admission feature errors do not consume primary identity; post-admission failures never retry as a new coin. Feature snapshots freeze before entry. Restart retains cohort dedupe and missed windows as internal diagnostics. Current producer PIDs do not define identity for the new independent paper experiment.
+
+Stage new immutable release, run calibration, start two research readers, require current acknowledgements, atomically activate a fresh boundary, verify fresh organic rows and both clocks, then deploy the web release. Preserve previous manifest for rollback; no backup or DB deletion. Rollback sets failed experiment invalid, stops only research PIDs, and restores the prior valid release/manifest. No funded restart. Watchdog errors and heartbeat lag remain engineering diagnostics.
+
+Not handled: actual fills, gas/slippage/MEV net PnL, execution between sampled horizons, causal proof of a funded filter, entity resolution, guaranteed provider uptime, or proof of a trading edge before the forward test completes.

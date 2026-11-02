@@ -1,0 +1,223 @@
+import os
+import re
+from sniper.settings.known_group import KNOWN_GROUP_LAUNCH_V1
+
+from sniper.settings.paper import (
+    PAPER_MAX_CONCURRENT,
+    PAPER_POSITION_SIZE_USDC,
+    PAPER_STOP_LOSS_PCT,
+    PAPER_TAKE_PROFIT_PCT,
+)
+from sniper.services.sync import SyncConfig
+
+MIN_ORDER_NOTIONAL = float(os.getenv("MIN_ORDER_NOTIONAL", "2000"))
+MIN_UI_TRADE_NOTIONAL = float(
+    os.getenv("MIN_UI_TRADE_NOTIONAL", os.getenv("MIN_TRADE_NOTIONAL", str(MIN_ORDER_NOTIONAL)))
+)
+MIN_UI_IMPACT_RATIO = float(os.getenv("MIN_UI_IMPACT_RATIO", os.getenv("MIN_TRADE_IMPACT_RATIO", "0.005")))
+MIN_UI_ORDER_NOTIONAL = float(os.getenv("MIN_UI_ORDER_NOTIONAL", str(MIN_ORDER_NOTIONAL)))
+MIN_UI_TOP_POSITION_VALUE = float(os.getenv("MIN_UI_TOP_POSITION_VALUE", os.getenv("MIN_POSITION_VALUE", "2000")))
+HIGH_WINRATE_MIN_PNL = float(
+    os.getenv(
+        "HIGH_WINRATE_MIN_PNL",
+        os.getenv("INSIDER_MIN_REALIZED_PNL_SOFT_TARGET", os.getenv("INSIDER_MIN_TOTAL_PNL", "20000")),
+    )
+)
+HIGH_WINRATE_MIN_MAX_POSITION_VALUE = float(
+    os.getenv(
+        "HIGH_WINRATE_MIN_MAX_POSITION_VALUE",
+        os.getenv("INSIDER_MIN_SERIOUS_TRADE_NOTIONAL", str(MIN_ORDER_NOTIONAL)),
+    )
+)
+EMERGING_MIN_INSIDER_SCORE = float(os.getenv("EMERGING_MIN_INSIDER_SCORE", os.getenv("EMERGING_SCORE_THRESHOLD", "65")))
+EMERGING_MIN_MAX_POSITION_VALUE = float(
+    os.getenv(
+        "EMERGING_MIN_MAX_POSITION_VALUE",
+        os.getenv("EMERGING_MIN_TOP_OPEN_VALUE", os.getenv("INSIDER_MIN_TOP_OPEN_VALUE", str(MIN_UI_TOP_POSITION_VALUE))),
+    )
+)
+EMERGING_MIN_TOTAL_OPEN_VALUE = float(
+    os.getenv("EMERGING_MIN_TOTAL_OPEN_VALUE", os.getenv("INSIDER_MIN_TOTAL_OPEN_VALUE", "10000"))
+)
+FLOW_MOVER_MIN_SPECULATOR_SCORE = float(os.getenv("FLOW_MOVER_MIN_SPECULATOR_SCORE", "55"))
+FLOW_MOVER_MIN_POSITION_SPECULATOR_SCORE = float(os.getenv("FLOW_MOVER_MIN_POSITION_SPECULATOR_SCORE", "65"))
+FLOW_MOVER_MIN_MAX_POSITION_VALUE = float(
+    os.getenv("FLOW_MOVER_MIN_MAX_POSITION_VALUE", str(MIN_UI_TOP_POSITION_VALUE))
+)
+FLOW_MOVER_MIN_TOTAL_OPEN_VALUE = float(os.getenv("FLOW_MOVER_MIN_TOTAL_OPEN_VALUE", "5000"))
+FLOW_MOVER_MIN_ABS_PNL = float(os.getenv("FLOW_MOVER_MIN_ABS_PNL", "5000"))
+HARD_FILTER_TOP_POSITION = str(os.getenv("HARD_FILTER_TOP_POSITION", "true")).strip().lower() not in {
+    "0",
+    "false",
+    "no",
+}
+MAX_UI_TRADES = int(os.getenv("MAX_UI_TRADES", "250"))
+WATCHLIST_TRADE_FETCH_LIMIT = int(os.getenv("WATCHLIST_TRADE_FETCH_LIMIT", "300"))
+WATCHLIST_SYNC_MIN_INTERVAL_SECONDS = int(os.getenv("WATCHLIST_SYNC_MIN_INTERVAL_SECONDS", "30"))
+WATCHLIST_MAX_SYNC_WALLETS_PER_REQUEST = int(os.getenv("WATCHLIST_MAX_SYNC_WALLETS_PER_REQUEST", "6"))
+MAX_WATCHLIST_UI_TRADES = int(os.getenv("MAX_WATCHLIST_UI_TRADES", "500"))
+FOLLOWED_TRADE_SYNC_MIN_INTERVAL_SECONDS = int(os.getenv("FOLLOWED_TRADE_SYNC_MIN_INTERVAL_SECONDS", "45"))
+FOLLOWED_MAX_SYNC_WALLETS_PER_REQUEST = int(os.getenv("FOLLOWED_MAX_SYNC_WALLETS_PER_REQUEST", "6"))
+MAX_FOLLOWED_UI_TRADES = int(os.getenv("MAX_FOLLOWED_UI_TRADES", "500"))
+FOLLOWED_POSITION_SYNC_MIN_INTERVAL_SECONDS = int(os.getenv("FOLLOWED_POSITION_SYNC_MIN_INTERVAL_SECONDS", "60"))
+FOLLOWED_POSITION_MAX_SYNC_WALLETS_PER_REQUEST = int(
+    os.getenv("FOLLOWED_POSITION_MAX_SYNC_WALLETS_PER_REQUEST", "6")
+)
+MAX_FOLLOWED_POSITION_UI_ROWS = int(os.getenv("MAX_FOLLOWED_POSITION_UI_ROWS", "1000"))
+POSITION_MIN_OPEN_VALUE = float(os.getenv("POSITION_MIN_OPEN_VALUE", "2000"))
+EXEC_CLUSTER_MAX_GAP_SECONDS = int(os.getenv("EXEC_CLUSTER_MAX_GAP_SECONDS", "120"))
+EXEC_CLUSTER_MAX_SPAN_SECONDS = int(os.getenv("EXEC_CLUSTER_MAX_SPAN_SECONDS", "900"))
+EXEC_RAPID_MIN_TRADES = int(os.getenv("EXEC_RAPID_MIN_TRADES", "6"))
+SUSPICIOUS_PATTERN_TRADE_FETCH_LIMIT = int(
+    os.getenv("SUSPICIOUS_PATTERN_TRADE_FETCH_LIMIT", "500")
+)
+SUSPICIOUS_PATTERN_SYNC_MIN_INTERVAL_SECONDS = int(
+    # Cache for 5 minutes — no need to re-fetch patterns every 30s
+    os.getenv("SUSPICIOUS_PATTERN_SYNC_MIN_INTERVAL_SECONDS", "300")
+)
+SUSPICIOUS_PATTERN_MAX_WALLET_FETCHES_PER_REQUEST = int(
+    # Reduced from 20 — each fetch is a live API call, 20 × ~500ms = 10s timeout
+    os.getenv("SUSPICIOUS_PATTERN_MAX_WALLET_FETCHES_PER_REQUEST", "3")
+)
+SUSPICIOUS_STATUS_SYNC_MIN_INTERVAL_SECONDS = int(
+    # Cache for 2 minutes — reduces API hammering
+    os.getenv("SUSPICIOUS_STATUS_SYNC_MIN_INTERVAL_SECONDS", "120")
+)
+SUSPICIOUS_STATUS_MAX_WALLET_FETCHES_PER_REQUEST = int(
+    # Reduced from 20 — first load shows cached data, gradually fills in live status
+    os.getenv("SUSPICIOUS_STATUS_MAX_WALLET_FETCHES_PER_REQUEST", "3")
+)
+POSITION_SETTLEMENT_PRICE_EPS = float(os.getenv("POSITION_SETTLEMENT_PRICE_EPS", "0.001"))
+POSITION_SETTLEMENT_END_GRACE_SECONDS = int(os.getenv("POSITION_SETTLEMENT_END_GRACE_SECONDS", "21600"))
+OPEN_SIGNALS_FOCUSED_DEFAULT = str(os.getenv("OPEN_SIGNALS_FOCUSED_DEFAULT", "true")).strip().lower() not in {
+    "0",
+    "false",
+    "no",
+}
+OPEN_SIGNALS_FOCUS_MIN_INSIDER_SCORE = float(os.getenv("OPEN_SIGNALS_FOCUS_MIN_INSIDER_SCORE", "55"))
+OPEN_SIGNALS_FOCUS_MIN_SPECULATOR_SCORE = float(os.getenv("OPEN_SIGNALS_FOCUS_MIN_SPECULATOR_SCORE", "60"))
+OPEN_SIGNALS_FOCUS_MIN_POSITION_VALUE = float(os.getenv("OPEN_SIGNALS_FOCUS_MIN_POSITION_VALUE", "4000"))
+OPEN_SIGNALS_FOCUS_MIN_ABS_NET_NOTIONAL_24H = float(os.getenv("OPEN_SIGNALS_FOCUS_MIN_ABS_NET_NOTIONAL_24H", "1500"))
+THESIS_SIGNAL_WINDOW_HOURS = int(os.getenv("THESIS_SIGNAL_WINDOW_HOURS", "48"))
+THESIS_SIGNAL_MAX_ENTRY_PRICE = float(os.getenv("THESIS_SIGNAL_MAX_ENTRY_PRICE", "0.50"))
+THESIS_SIGNAL_MIN_POSITION_VALUE = float(os.getenv("THESIS_SIGNAL_MIN_POSITION_VALUE", "10000"))
+THESIS_SIGNAL_HIGH_CONVICTION_MIN_POSITION_VALUE = float(
+    os.getenv("THESIS_SIGNAL_HIGH_CONVICTION_MIN_POSITION_VALUE", "100000")
+)
+THESIS_SIGNAL_MAX_ACCOUNT_AGE_DAYS = float(os.getenv("THESIS_SIGNAL_MAX_ACCOUNT_AGE_DAYS", "14"))
+THESIS_SIGNAL_MAX_LIFETIME_POSITIONS = int(os.getenv("THESIS_SIGNAL_MAX_LIFETIME_POSITIONS", "5"))
+THESIS_SIGNAL_ALLOWED_CATEGORIES = tuple(
+    part.strip().lower()
+    for part in str(os.getenv("THESIS_SIGNAL_ALLOWED_CATEGORIES", "politics,sports")).split(",")
+    if part.strip()
+)
+THESIS_SIGNAL_EXCLUDE_SPECULATOR_BOTS = str(
+    os.getenv("THESIS_SIGNAL_EXCLUDE_SPECULATOR_BOTS", "true")
+).strip().lower() not in {"0", "false", "no"}
+THESIS_SIGNAL_SINGLE_MARKET_ONLY = str(
+    os.getenv("THESIS_SIGNAL_SINGLE_MARKET_ONLY", "true")
+).strip().lower() not in {"0", "false", "no"}
+AGENT_FEED_DEFAULT_LIMIT = int(os.getenv("AGENT_FEED_DEFAULT_LIMIT", "200"))
+AGENT_FEED_MAX_LIMIT = int(os.getenv("AGENT_FEED_MAX_LIMIT", "1000"))
+# === OPTIMIZED FOR $200 BANKROLL (Lower thresholds = more signals) ===
+AGENT_SIGNAL_MIN_INSIDER_SCORE = float(os.getenv("AGENT_SIGNAL_MIN_INSIDER_SCORE", "60"))
+AGENT_SIGNAL_MIN_POSITION_INSIDER_SCORE = float(os.getenv("AGENT_SIGNAL_MIN_POSITION_INSIDER_SCORE", "55"))
+AGENT_SIGNAL_MIN_POSITION_VALUE = float(os.getenv("AGENT_SIGNAL_MIN_POSITION_VALUE", "800"))
+
+# === PAPER TRADING CONFIG (Shared) ===
+
+# === PROOF BAR CONFIG ===
+PROOF_MIN_TRADES = int(os.getenv("PROOF_MIN_TRADES", "150"))
+PROOF_MIN_INSIDER = int(os.getenv("PROOF_MIN_INSIDER", "55"))
+PROOF_MIN_WIN_RATE = float(os.getenv("PROOF_MIN_WIN_RATE", "60.0"))
+PROOF_SLIPPAGE_PCT = float(os.getenv("PROOF_SLIPPAGE_PCT", "0.025"))
+PROOF_MIN_MONTHS = int(os.getenv("PROOF_MIN_MONTHS", "2"))
+
+# === REPLAY ENGINE DEFAULTS ===
+REPLAY_DEFAULT_BANKROLL = float(os.getenv("REPLAY_DEFAULT_BANKROLL", "1000.0"))
+REPLAY_DEFAULT_BASE_SIZE = float(os.getenv("REPLAY_DEFAULT_BASE_SIZE", "25.0"))
+REPLAY_DEFAULT_MIN_INSIDER = float(os.getenv("REPLAY_DEFAULT_MIN_INSIDER", "55.0"))
+REPLAY_DEFAULT_MAX_SPEC = float(os.getenv("REPLAY_DEFAULT_MAX_SPEC", "70.0"))
+REPLAY_DEFAULT_MAX_PRICE = float(os.getenv("REPLAY_DEFAULT_MAX_PRICE", "0.70"))
+REPLAY_DEFAULT_MAX_CONCURRENT = int(os.getenv("REPLAY_DEFAULT_MAX_CONCURRENT", "20"))
+REPLAY_DEFAULT_MAX_MARKET_EXPOSURE = float(os.getenv("REPLAY_DEFAULT_MAX_MARKET_EXPOSURE", "200.0"))
+REPLAY_DEFAULT_MAX_TOTAL_EXPOSURE = float(os.getenv("REPLAY_DEFAULT_MAX_TOTAL_EXPOSURE", "1000.0"))
+
+AGENT_ALERT_DEDUPE_SECONDS = int(os.getenv("AGENT_ALERT_DEDUPE_SECONDS", "900"))
+SPECULATOR_SCORE_HIGH = float(os.getenv("SPECULATOR_SCORE_HIGH", "65"))
+SNIPER_API_KEY = str(os.getenv("SNIPER_API_KEY") or "").strip()
+SNIPER_API_VERSION = str(os.getenv("SNIPER_API_VERSION") or "2026.02-sniper-v1").strip()
+SNIPER_API_KEY_PROTECT_MUTATING = str(os.getenv("SNIPER_API_KEY_PROTECT_MUTATING", "false")).strip().lower() not in {
+    "0",
+    "false",
+    "no",
+    "",
+}
+# Every mutating /api/memecoin (and x-analysis) route requires X-CSRF-Token (2026-09-27). 0 drops the
+# blanket guard with a loud warning at startup; .env only, never settable from the web.
+MEMECOIN_WEB_CSRF_ENFORCE_ALL = str(os.getenv("MEMECOIN_WEB_CSRF_ENFORCE_ALL", "1")).strip().lower() not in {
+    "0",
+    "false",
+    "no",
+    "off",
+}
+BACKGROUND_SYNC_WORKERS = int(os.getenv("BACKGROUND_SYNC_WORKERS", "2"))
+EXTERNAL_LEADERBOARD_SYNC_INTERVAL_SECONDS = int(os.getenv("EXTERNAL_LEADERBOARD_SYNC_INTERVAL_SECONDS", "3600"))
+WALLET_RE = re.compile(r"^0x[a-fA-F0-9]{40}$")
+
+SYNC_CONFIG = SyncConfig(
+    watchlist_trade_fetch_limit=WATCHLIST_TRADE_FETCH_LIMIT,
+    watchlist_sync_min_interval_seconds=WATCHLIST_SYNC_MIN_INTERVAL_SECONDS,
+    watchlist_max_sync_wallets_per_request=WATCHLIST_MAX_SYNC_WALLETS_PER_REQUEST,
+    max_followed_ui_trades=MAX_FOLLOWED_UI_TRADES,
+    followed_trade_sync_min_interval_seconds=FOLLOWED_TRADE_SYNC_MIN_INTERVAL_SECONDS,
+    followed_max_sync_wallets_per_request=FOLLOWED_MAX_SYNC_WALLETS_PER_REQUEST,
+    followed_position_sync_min_interval_seconds=FOLLOWED_POSITION_SYNC_MIN_INTERVAL_SECONDS,
+    followed_position_max_sync_wallets_per_request=FOLLOWED_POSITION_MAX_SYNC_WALLETS_PER_REQUEST,
+    max_followed_position_ui_rows=MAX_FOLLOWED_POSITION_UI_ROWS,
+    position_min_open_value=POSITION_MIN_OPEN_VALUE,
+    position_settlement_price_eps=POSITION_SETTLEMENT_PRICE_EPS,
+    position_settlement_end_grace_seconds=POSITION_SETTLEMENT_END_GRACE_SECONDS,
+    external_leaderboard_sync_interval_seconds=EXTERNAL_LEADERBOARD_SYNC_INTERVAL_SECONDS,
+)
+
+# === INSTANCE PROFILE (Multi-Strategy / Multi-VPS) ===
+# See instance_profile.py for the typed InstanceProfile dataclass and load_instance_profile() function.
+# These env vars control multi-strategy multi-VPS deployment profiles.
+INSTANCE_TAG = os.getenv("INSTANCE_TAG", "default-local")
+INSTANCE_DISPLAY_NAME = os.getenv("INSTANCE_DISPLAY_NAME", "")
+INSTANCE_ROLE = os.getenv("INSTANCE_ROLE", "paper")
+INSTANCE_ENABLED = os.getenv("INSTANCE_ENABLED", "1")
+ENABLED_STRATEGIES = os.getenv("ENABLED_STRATEGIES", "")
+ENABLED_FEEDS = os.getenv("ENABLED_FEEDS", "")
+PAPER_ONLY = os.getenv("PAPER_ONLY", "1")
+REAL_TRADING_ENABLED = os.getenv("REAL_TRADING_ENABLED", "0")
+INSTANCE_BANKROLL_USDC = os.getenv("INSTANCE_BANKROLL_USDC", "1000")
+INSTANCE_MAX_TOTAL_EXPOSURE_USDC = os.getenv("INSTANCE_MAX_TOTAL_EXPOSURE_USDC", "1000")
+INSTANCE_MAX_MARKET_EXPOSURE_USDC = os.getenv("INSTANCE_MAX_MARKET_EXPOSURE_USDC", "200")
+INSTANCE_MAX_CONCURRENT_POSITIONS = os.getenv("INSTANCE_MAX_CONCURRENT_POSITIONS", "20")
+INSTANCE_DAILY_LOSS_LIMIT_USDC = os.getenv("INSTANCE_DAILY_LOSS_LIMIT_USDC", "50")
+STRATEGY_LOOP_SECONDS = os.getenv("STRATEGY_LOOP_SECONDS", "60")
+
+# --- Hyperliquid WebSocket feed ---
+HL_WS_URL = os.getenv("HL_WS_URL", "wss://api.hyperliquid.xyz/ws")
+HL_TRACKED_ASSETS = os.getenv("HL_TRACKED_ASSETS", "BTC,ETH,SOL,HYPE")
+HL_WS_WORKERS = int(os.getenv("HL_WS_WORKERS", "5"))
+HL_WS_RECONNECT_DELAY = float(os.getenv("HL_WS_RECONNECT_DELAY", "1.0"))
+HL_WS_RECONNECT_MAX = float(os.getenv("HL_WS_RECONNECT_MAX", "20.0"))
+HL_WS_QUEUE_SIZE = int(os.getenv("HL_WS_QUEUE_SIZE", "20000"))
+HL_WS_BATCH_SIZE = int(os.getenv("HL_WS_BATCH_SIZE", "50"))
+HL_WS_BATCH_INTERVAL = float(os.getenv("HL_WS_BATCH_INTERVAL", "2.0"))
+HL_WS_HEARTBEAT_PATH = os.getenv("HL_WS_HEARTBEAT_PATH", "/tmp/sniper_stream_hl_heartbeat.json")
+HL_WS_HEARTBEAT_INTERVAL = float(os.getenv("HL_WS_HEARTBEAT_INTERVAL", "15.0"))
+
+# --- Hyperliquid whale position polling ---
+HL_WHALE_POLL_SECONDS = int(os.getenv("HL_WHALE_POLL_SECONDS", "60"))
+
+# --- Calibration loop v1 (see docs/superpowers/specs/2026-04-20-calibration-loop-v1-design.md) ---
+CALIBRATION_WINDOW_DAYS = 30
+CALIBRATION_MIN_SAMPLE = 10
+CALIBRATION_CATASTROPHIC_THRESHOLD = 0.20
+CALIBRATION_COVERAGE_THRESHOLD = 0.60
+CALIBRATION_HIGH_CONF_THRESHOLD = 0.50
+CALIBRATION_ENABLED_AGENTS = ["insider_copy"]  # extended one-at-a-time per spec §7.2

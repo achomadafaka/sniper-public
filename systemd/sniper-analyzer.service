@@ -1,0 +1,35 @@
+[Unit]
+Description=Sniper Analyzer Loop
+After=network.target
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=DB_PATH=sniper_tracker.db
+Environment=ANALYSIS_SOURCE=hybrid
+# 2026-03-27: reduced from 150/120 to 50 — 150-wallet batches peak at ~725MB,
+# exceeding MemoryMax and causing OOM kills on sniper-stream.service.
+# 50-wallet batches peak at ~240MB, well under the 350M ceiling.
+Environment=POSITION_SCAN_BATCH_SIZE=50
+Environment=ANALYSIS_BATCH_SIZE=50
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/analyze_users.py
+Restart=always
+# 2026-03-18: increased from 5s to 30s — rapid restarts compete with stream for
+# memory immediately after reclaim. 30s gap lets swap reclaim complete cleanly.
+RestartSec=30
+# Memory ceiling — Python allocator retains RSS across batches even after GC.
+# After several hours of 150-wallet batches, RSS was observed at 562MB causing
+# heavy swap thrashing on a 2GB VPS. Reduced from 500M to 350M — lower ceiling
+# means more frequent recycling (every ~7 min) but frees memory before stream
+# peaks, preventing combined OOM on a 2GB VPS.
+# 2026-03-28: bumped 350M → 450M — observed steady-state at 328-331MB with
+# 50-wallet batches, meaning 350M left <20MB headroom and triggered frequent OOM
+# kills. Stream baseline is ~200MB; combined 650MB is safe on 2GB VPS.
+MemoryMax=700M
+MemorySwapMax=50M
+
+[Install]
+WantedBy=default.target

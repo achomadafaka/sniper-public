@@ -1,0 +1,18 @@
+[Unit]
+Description=Run Sniper Wallet Ledger Pipeline hourly
+After=network.target
+
+# Operator-enable: systemctl --user enable --now sniper-ledger-pipeline.timer
+
+[Timer]
+# Fire at the top of every hour.
+OnCalendar=hourly
+# If a run was missed while the machine was off, catch up once at boot.
+Persistent=true
+# Randomise start by up to 5 minutes so multiple Sniper services don't
+# all hit Supabase at the same instant (D5).
+RandomizedDelaySec=300
+Unit=sniper-ledger-pipeline.service
+
+[Install]
+WantedBy=timers.target

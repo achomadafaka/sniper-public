@@ -1,0 +1,61 @@
+{
+  "pairs": [
+    {
+      "chainId": "ethereum",
+      "pairAddress": "0x7fb8efe103ad1d2e21675374673a33db28af447c9889e34e6559104cbbe9faa8",
+      "baseToken": {
+        "address": "0xc9eef266834730340A55B6CC24621B31BAF55581",
+        "name": "SpaceX (Ondo Tokenized)",
+        "symbol": "SPCXon"
+      },
+      "quoteToken": {
+        "address": "0xD4419C2d3DAA986Dc30444Fa333a846be44Fd1eb",
+        "name": "ZIK coin",
+        "symbol": "ZIK"
+      },
+      "liquidity": {
+        "usd": 4748.56,
+        "base": 5.8162,
+        "quote": 29555539
+      }
+    },
+    {
+      "chainId": "ethereum",
+      "pairAddress": "0xc68a72ae81a7e38dfae957c3b208ef5454e51eab5f583086bdca56e7a313fbf7",
+      "baseToken": {
+        "address": "0xc9eef266834730340A55B6CC24621B31BAF55581",
+        "name": "SpaceX (Ondo Tokenized)",
+        "symbol": "SPCXon"
+      },
+      "quoteToken": {
+        "address": "0xD4419C2d3DAA986Dc30444Fa333a846be44Fd1eb",
+        "name": "ZIK coin",
+        "symbol": "ZIK"
+      },
+      "liquidity": {
+        "usd": 3945.81,
+        "base": 4.7138,
+        "quote": 24370338
+      }
+    },
+    {
+      "chainId": "ethereum",
+      "pairAddress": "0x1ebfcafaa2ffe376338cd2200d90abd2b936415d82ce63b5e6f934c9997457eb",
+      "baseToken": {
+        "address": "0x92F169881FB5CC112d3bb8416dB9c340dB839669",
+        "name": "Incognito69420",
+        "symbol": "INCOGNITO"
+      },
+      "quoteToken": {
+        "address": "0xc9eef266834730340A55B6CC24621B31BAF55581",
+        "name": "SpaceX (Ondo Tokenized)",
+        "symbol": "SPCXon"
+      },
+      "liquidity": {
+        "usd": 19485.47,
+        "base": 330878150,
+        "quote": 48.8306
+      }
+    }
+  ]
+}

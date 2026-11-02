@@ -1,0 +1,18 @@
+[Unit]
+Description=Sniper memecoin X read-only capture receiver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/scripts/run_memecoin_x_receiver.py --db /home/bigpapi/Desktop/Sniper/data/memecoin_x.db --port 8787 --bind 127.0.0.1 --clock-offset-file /home/bigpapi/Desktop/Sniper/data/clock_offset.json
+Restart=on-failure
+RestartSec=15
+StandardOutput=journal
+StandardError=journal
+UMask=0077
+
+[Install]
+WantedBy=default.target

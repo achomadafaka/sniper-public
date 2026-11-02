@@ -1,0 +1,18 @@
+# Dependencies for the bounded offline public review checks.
+pytest>=8.0,<10
+pytest-xdist>=3.8,<4
+pytest-timeout>=2.3,<3
+python-dotenv>=1.0,<2
+numpy>=2.0,<3
+requests==2.32.3
+httpx>=0.27,<1
+websocket-client>=1.8,<2
+Flask==3.0.3
+flask-sock>=0.7,<1
+eth-utils>=5,<7
+eth-abi>=5,<7
+eth-account>=0.13,<0.15
+solders>=0.21,<1
+base58>=2.1,<3
+grpcio==1.71.0
+protobuf==5.29.6

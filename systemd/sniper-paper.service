@@ -1,0 +1,27 @@
+[Unit]
+Description=Sniper Paper Trader
+After=sniper-web.service
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+Environment=DB_PATH=sniper_tracker.db
+Environment=SNIPER_API_BASE=http://127.0.0.1:8080
+Environment=PAPER_POSITION_SIZE_USDC=25
+Environment=PAPER_MAX_CONCURRENT=25
+Environment=PAPER_STOP_LOSS_PCT=0.15
+Environment=PAPER_TAKE_PROFIT_PCT=0.50
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/paper_trader.py --interval 30
+Restart=always
+RestartSec=10
+# 2026-03-18: cap added for memory budget tracking. Peak observed ~52MB; 200M ceiling.
+MemoryMax=350M
+MemorySwapMax=50M
+
+[Install]
+WantedBy=default.target

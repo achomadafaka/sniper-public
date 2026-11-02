@@ -1,0 +1,15 @@
+{
+  "project": "Sniper",
+  "source_commit": "10e529f77e8a94be2e9c506f1593a022877db97e",
+  "snapshot_date": "2026-11-02",
+  "included_files": 6965,
+  "omitted": [
+    "Git history",
+    "operational data and databases",
+    "private research and audit artifacts",
+    "local environment files and credentials",
+    "agent handoffs and personal notes",
+    "legacy archives"
+  ],
+  "validation_scope": "See README.md; focused checks only, not full-system or live-trading validation."
+}

@@ -1,0 +1,58 @@
+# Local replacement for the Supabase brain (operator 2026-10-14: the Supabase project was
+# restricted for exceed_egress_quota; no plan upgrade). Postgres 17 + pgvector, PostgREST, and an
+# nginx gateway that serves PostgREST under /rest/v1 exactly like Supabase, so every client that
+# builds f"{SUPABASE_URL}/rest/v1/..." works unchanged with SUPABASE_URL=http://127.0.0.1:54321.
+#
+# Secrets live outside the repo in ~/.config/sniper-brain/brain.env (deploy/brain-local/setup.sh
+# writes them). Data lives in the named volume sniper-brain-pg. Everything binds to 127.0.0.1.
+name: sniper-brain
+
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    restart: unless-stopped
+    env_file: ${HOME}/.config/sniper-brain/brain.env
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+    volumes:
+      - sniper-brain-pg:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "127.0.0.1:54329:5432"
+    shm_size: 256mb
+    mem_limit: 2g
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  rest:
+    image: postgrest/postgrest:latest
+    restart: unless-stopped
+    env_file: ${HOME}/.config/sniper-brain/brain.env
+    environment:
+      PGRST_DB_SCHEMAS: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_DB_EXTRA_SEARCH_PATH: public,extensions
+      PGRST_DB_MAX_ROWS: "1000"
+      PGRST_DB_POOL: "20"
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 256m
+
+  gateway:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "127.0.0.1:54321:80"
+    depends_on:
+      - rest
+    mem_limit: 64m
+
+volumes:
+  sniper-brain-pg:

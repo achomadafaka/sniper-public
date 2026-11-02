@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer — run Brain Health Checker every 6 hours
+Requires=sniper-brain-health.service
+
+[Timer]
+OnCalendar=*-*-* 00,06,12,18:30:00
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

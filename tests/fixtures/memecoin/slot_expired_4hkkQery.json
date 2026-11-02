@@ -1,0 +1,172 @@
+{
+  "slot": 458801408,
+  "transaction": {
+    "signatures": [
+      "4hkkQeryH2GV4sbDVx85WjHDERX5hcY8h3ukT6aBprsicgnHeUm1bpSMN6QSTpziXbzW5CU56tfUZxGDznYnqiHq"
+    ],
+    "message": {
+      "header": {
+        "numRequiredSignatures": 1,
+        "numReadonlySignedAccounts": 0,
+        "numReadonlyUnsignedAccounts": 18
+      },
+      "accountKeys": [
+        "3EKhb6kyNvNhoAtF9CXxBfneTn4A31TxWvKn5Ppj9bLH",
+        "23RHb9TWppfnYvHjyYCT73UZuwkrCKzJnpqmdKN7mBy6",
+        "265TvMFYi3P6B1AxLRsGgmYwc8KQtQimZoxkQQgDnSy4",
+        "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+        "ARofhQYmZSji2YLHnu2GLYeT4x2qY58H4KjGkniCGM1X",
+        "DHui8G8J8KstAe3FDNnVbh23bjHvRySm7w1VhJMRW4kH",
+        "Dhu4qe8HgUaMNqjvaoRHg8Hcw3iz5Az84d3KCWiP5Hvh",
+        "FrhMexcph3TxfsBE6tXTNBeXehv8ru6s4oJ9F6esVtBM",
+        "HjQjngTDqoHE6aaGhUqfz9aQ7WZcBRjy5xB8PScLSr8i",
+        "HroaiWX15T35kAgZSNAoiME9mfV161kmaEoZdpqCmtR5",
+        "11111111111111111111111111111111",
+        "ComputeBudget111111111111111111111111111111",
+        "So11111111111111111111111111111111111111112",
+        "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+        "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+        "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+        "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+        "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+        "68xW3Bpf5ax6ML91yLbAHCRNjxPAo4R5XTyLqA5bNPtM",
+        "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+        "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+        "Ab4vjkqTamr9NYMGxSoreWuYFo82jLfuuLgnC1xxujxe",
+        "BbXsjvtUze2ireqrcmgLVcG5izsX5XSX8t1zN27d3p3y",
+        "C2aFPdENg4A2HQsmrd5rTw5TaYBX5Ku887cWjbFKtZpw",
+        "GS4CU59F31iL7aR2Q8zVS8DRrcRnXX1yjQ66TqNVQnaR",
+        "L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95"
+      ],
+      "recentBlockhash": "6uUshsSAcqDP6caUnF5yGhEh9jbJVne7zNpqvZYajwv",
+      "instructions": [
+        {
+          "programIdIndex": 11,
+          "accounts": [],
+          "data": "JoLwDy",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 11,
+          "accounts": [],
+          "data": "3mwa9wKcxpXH",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 22,
+          "accounts": [
+            0,
+            6,
+            0,
+            12,
+            10,
+            13
+          ],
+          "data": "2",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 10,
+          "accounts": [
+            0,
+            6
+          ],
+          "data": "3Bxs4K6S9xqtkwWo",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 13,
+          "accounts": [
+            6
+          ],
+          "data": "J",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 22,
+          "accounts": [
+            0,
+            7,
+            0,
+            20,
+            10,
+            14
+          ],
+          "data": "2",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 15,
+          "accounts": [
+            2,
+            0,
+            21,
+            20,
+            12,
+            7,
+            6,
+            4,
+            1,
+            19,
+            3,
+            14,
+            13,
+            10,
+            22,
+            26,
+            15,
+            9,
+            23,
+            25,
+            5,
+            17,
+            16,
+            24,
+            18,
+            8
+          ],
+          "data": "2Nk86asu1ki8tBbQoEVTz2DfGq4rqHYpLxP",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 27,
+          "accounts": [],
+          "data": "HRE2dZCgJwtPpgqH",
+          "stackHeight": 1
+        },
+        {
+          "programIdIndex": 27,
+          "accounts": [],
+          "data": "HRE2eJ2CWWY26MKi",
+          "stackHeight": 1
+        }
+      ],
+      "addressTableLookups": []
+    }
+  },
+  "meta": {
+    "err": {
+      "InstructionError": [
+        8,
+        {
+          "Custom": 6001
+        }
+      ]
+    },
+    "fee": 10005000,
+    "loadedAddresses": {
+      "writable": [],
+      "readonly": []
+    },
+    "logMessages": [
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 invoke [1]",
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 consumed 508 of 24034 compute units",
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 success",
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 invoke [1]",
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 consumed 544 of 23526 compute units",
+      "Program L2TExMFKdjpN9kozasaurPirfHy9P8sbXoAN1qA3S95 failed: custom program error: 0x1771"
+    ]
+  }
+}

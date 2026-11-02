@@ -1,0 +1,10 @@
+[Unit]
+Description=Recheck Office supervisor readiness on the host
+
+[Service]
+Type=oneshot
+ExecStart=%h/.pyenv/versions/3.13.0/bin/python3 %h/Desktop/Sniper/.runtime/office/current/scripts/office_supervisor_wake.py --guard %h/Desktop/Sniper/data/office-control/guard/guard.json
+Slice=app.slice
+Nice=19
+IOSchedulingClass=idle
+TimeoutStartSec=15

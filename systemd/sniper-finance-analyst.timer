@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer — run Finance Analyst every 4 hours (offset 2h from geo)
+Requires=sniper-finance-analyst.service
+
+[Timer]
+# Finance: every 4h at 02, 06, 10, 14, 18, 22 UTC (offset 2h from geopolitics)
+OnCalendar=*-*-* 02,06,10,14,18,22:00:00
+Persistent=true
+RandomizedDelaySec=180
+
+[Install]
+WantedBy=timers.target

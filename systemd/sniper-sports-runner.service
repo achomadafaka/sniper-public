@@ -1,0 +1,22 @@
+[Unit]
+Description=Sniper Sports Feed/Strategy Runner
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+EnvironmentFile=-/home/sniper/sniper/.env.sports
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/sniper/services/strategy_runner.py --interval 60
+Restart=always
+RestartSec=10
+TimeoutStopSec=20
+# 2026-03-18: added to prevent sports-runner from competing with stream+analyzer
+# during memory pressure spikes. Peak observed 300MB at startup; ceiling at 450M
+# gives headroom while still bounding worst-case.
+MemoryMax=450M
+MemorySwapMax=100M
+
+[Install]
+WantedBy=default.target

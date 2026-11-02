@@ -1,0 +1,74 @@
+{
+  "version": "default-org-1",
+  "shared_seats": [
+    {
+      "role": "Head",
+      "count": 1,
+      "family": "claude",
+      "tier": "opus"
+    },
+    {
+      "role": "Risk",
+      "count": 1,
+      "family": "mixed"
+    },
+    {
+      "role": "Trader",
+      "count": 1,
+      "family": "mixed"
+    },
+    {
+      "role": "Postmortem",
+      "count": 1,
+      "family": "mixed"
+    },
+    {
+      "role": "Desk ops",
+      "count": 1,
+      "family": "mixed"
+    },
+    {
+      "role": "Quant",
+      "count": 1,
+      "family": "mixed"
+    }
+  ],
+  "pod_template": {
+    "scouts": [
+      {
+        "lane": "intake_lists"
+      },
+      {
+        "lane": "x_narrative"
+      },
+      {
+        "lane": "sympathy"
+      },
+      {
+        "lane": "dexscreener_json"
+      }
+    ],
+    "scouts_per_pod": 2,
+    "analysts": [
+      {
+        "lens": "flow_buyers"
+      },
+      {
+        "lens": "chart"
+      },
+      {
+        "lens": "creator_history"
+      },
+      {
+        "lens": "narrative_heat"
+      }
+    ],
+    "analysts_per_pod": 2,
+    "judges_per_pod": 3,
+    "judge_families": [
+      "claude",
+      "gpt"
+    ]
+  },
+  "pods": 2
+}

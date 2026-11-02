@@ -1,0 +1,19 @@
+[Unit]
+Description=Sniper Insider Scoring Analyst Agent (paper trade calibration + threshold sweeps)
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+# Unset CLAUDECODE so analyst can launch its own Claude agent during active sessions.
+Environment=CLAUDECODE=
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/scripts/run_strategy_agent.py insider_analyst --quiet
+StandardOutput=append:/home/sniper/sniper/logs/agent_insider_analyst.log
+StandardError=append:/home/sniper/sniper/logs/agent_insider_analyst.log
+TimeoutStartSec=900
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

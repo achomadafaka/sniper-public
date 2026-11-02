@@ -1,0 +1,177 @@
+{
+ "_source": "live mainnet, read 2026-09-26 on the research Helius key; tx-level signer/writable flags (a union across the tx)",
+ "direct_buy_exact_sol_in": {
+  "signature": "3oW9nU7jezDMKMBazVPFCNjmqcGaMoZXMBmE9QZz52rxfVsgxosdCmgKpDZ8dqwzYuzXd1ZMD3kz5XvFmqZF84p4",
+  "slot": 450780443,
+  "data_hex": "38fc74089edfcd5fc0c62d000000000097c3efb61d020000",
+  "accounts": [
+   [
+    "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+    false,
+    false
+   ],
+   [
+    "GesfTA3X2arioaHp8bbKdjG9vJtskViWACZoYvxp4twS",
+    false,
+    true
+   ],
+   [
+    "7JDnDA1U46iiSfibfwHJGVFmmtCusaqxPE1Sfh51pump",
+    false,
+    false
+   ],
+   [
+    "6P3hmUgtGAgBsqJz59GJSVD5PKsPKhzcxPb36NdBAnLW",
+    false,
+    true
+   ],
+   [
+    "EiBFU2JAR1GeHvcwLz2tqGLiBLNnhL8NfSHxdkAd9zfH",
+    false,
+    true
+   ],
+   [
+    "Atnc821Dw75GPQ4p1waqbW6qVUJyhG6TQ1auwGy67V1A",
+    false,
+    true
+   ],
+   [
+    "GktATGBbUuBXGGrSoHt4P8U8wwTZBbcH5utSagB8a32Q",
+    true,
+    true
+   ],
+   [
+    "11111111111111111111111111111111",
+    false,
+    false
+   ],
+   [
+    "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    false,
+    false
+   ],
+   [
+    "BUtNjj85eQTVB4PUuTxChr6Fws5g4Bi8AdFcE6NsMHc7",
+    false,
+    true
+   ],
+   [
+    "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+    false,
+    false
+   ],
+   [
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    false,
+    false
+   ],
+   [
+    "Hq2wp8uJ9jCPsYgNHex8RtqdvMPfVGoYwjvF1ATiwn2Y",
+    false,
+    true
+   ],
+   [
+    "3QxE1mJ1gNqoweXQ7sTNbb8qrXY2Ega3CZVXzBVRhFRH",
+    false,
+    true
+   ],
+   [
+    "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt",
+    false,
+    false
+   ],
+   [
+    "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    false,
+    false
+   ],
+   [
+    "DuvD4b9ETocDadH23qwMNYnxRfHQZv3YoAdKdPSbUEmC",
+    false,
+    false
+   ],
+   [
+    "A7hAgCzFw14fejgCp387JUJRMNyz4j89JKnhtKU8piqW",
+    false,
+    true
+   ]
+  ],
+  "trade_event_log": "Program data: vdt/007mYe5dj3Hy0KZZXcYB54jt/1hazOCdy/jq24bW3bjzt7DvTxI2LQAAAAAAYRdkFFACAAAB6h0g/FeZoy9+/Eumvy1Y/dEejfjscmCatvsHh6jUUrEyKbhqAAAAAHthIkAAAAAAhCMvypRFAwCuhOMCAAAAAISLHH4DRwIA6JMUH7GOnxV02BDheOGeMGBOMXWqLkoy38hgByfRBwlfAAAAAAAAAPVtAAAAAAAAIpqT9pon3TVBDNcLZwVvJ3UDQR6E0ERUugpbVTlS/voeAAAAAAAAALkiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAGJ1eV9leGFjdF9zb2xfaW4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASNi0AAAAAAHthIkAAAAAAroTjAgAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "logs": [
+   "Program 11111111111111111111111111111111 invoke [1]",
+   "Program 11111111111111111111111111111111 success",
+   "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+   "Program ComputeBudget111111111111111111111111111111 success",
+   "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+   "Program ComputeBudget111111111111111111111111111111 success",
+   "Program 11111111111111111111111111111111 invoke [1]",
+   "Program 11111111111111111111111111111111 success",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [1]",
+   "Program log: Instruction: InitializeAccount3",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2108 of 91900 compute units",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+   "Program log: Instruction: BuyExactSolIn",
+   "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ invoke [2]",
+   "Program log: Instruction: GetFeesWithQuoteMint",
+   "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ consumed 3360 of 51560 compute units",
+   "Program return: pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ AAAAAAAAAABfAAAAAAAAAB4AAAAAAAAA",
+   "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ success",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+   "Program log: Instruction: TransferChecked",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2442 of 43353 compute units",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program 11111111111111111111111111111111 success",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program 11111111111111111111111111111111 success",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program 11111111111111111111111111111111 success",
+   "Program data: vdt/007mYe5dj3Hy0KZZXcYB54jt/1hazOCdy/jq24bW3bjzt7DvTxI2LQAAAAAAYRdkFFACAAAB6h0g/FeZoy9+/Eumvy1Y/dEejfjscmCatvsHh6jUUrEyKbhqAAAAAHthIkAAAAAAhCMvypRFAwCuhOMCAAAAAISLHH4DRwIA6JMUH7GOnxV02BDheOGeMGBOMXWqLkoy38hgByfRBwlfAAAAAAAAAPVtAAAAAAAAIpqT9pon3TVBDNcLZwVvJ3UDQR6E0ERUugpbVTlS/voeAAAAAAAAALkiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAGJ1eV9leGFjdF9zb2xfaW4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASNi0AAAAAAHthIkAAAAAAroTjAgAAAAAAAAAAAAAAAAAAAAAAAAAA",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2149 of 21516 compute units",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 72458 of 89792 compute units",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success"
+  ]
+ },
+ "router_v2_buy_logs": {
+  "signature": "53M4xhPXJ9taR5ZRkARuNJFWD12TcqDmJSUZJX7hq7eqwzfrgGQvSAU4GjTdN38Mr9t221haqMVuf5dhPPoFmtNP",
+  "note": "a classic Tokenkeg invoke precedes the pump CPI, whose coin moves with Token-2022",
+  "logs": [
+   "Program term9YPb9mzAsABaqN71A4xdbxHmpBNZavpBiQKZzN3 invoke [1]",
+   "Program log: Instruction: ValidateNonce",
+   "Program term9YPb9mzAsABaqN71A4xdbxHmpBNZavpBiQKZzN3 invoke [1]",
+   "Program log: Instruction: Route",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+   "Program 11111111111111111111111111111111 invoke [2]",
+   "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+   "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+   "Program log: Instruction: GetAccountDataSize",
+   "Program 11111111111111111111111111111111 invoke [3]",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+   "Program log: Instruction: InitializeImmutableOwner",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+   "Program log: Instruction: InitializeAccount3",
+   "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+   "Program log: Instruction: BuyExactQuoteInV2",
+   "Program pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ invoke [3]",
+   "Program log: Instruction: GetFeesWithQuoteMint",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+   "Program log: Instruction: TransferChecked",
+   "Program 11111111111111111111111111111111 invoke [3]",
+   "Program 11111111111111111111111111111111 invoke [3]",
+   "Program 11111111111111111111111111111111 invoke [3]",
+   "Program 11111111111111111111111111111111 invoke [3]",
+   "Program data: vdt/007mYe5XIN6ldWOgxntmk0Y9a8l9SB5aM/ALsHzHs/Ar1olXSiuatw4AAAAAoWGTLk8CAAABzvKa2BFv6ap6/Igajn+dN4xfWZIoViOKpdeU5ybL5joyKbhqAAAAAPMkMA4NAAAAvXDxux4KAgDzeAwSBgAAAL3Y3m+NCwEASsL40N1cvJfjKJwZfLUGKlTz2Va5zm5RFfllZ6pcs+ZfAAAAAAAAANDKIwAAAAAAjBv8jstvHD4NERM+ybLXAIaEN+B6P2RPbZ/2kmvKpwEeAAAAAAAAAIVNCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAGJ1eV9leGFjdF9xdW90ZV9pbgAAAAAAAAAAAAAAAAAAAAAAiBMAAAAAAABo5REAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACuatw4AAAAA8yQwDg0AAADzeAwSBgAAAAAAAAAAAAAAAAAAAAAAAAA=",
+   "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+   "Program 11111111111111111111111111111111 invoke [1]",
+   "Program 11111111111111111111111111111111 invoke [1]"
+  ]
+ }
+}

@@ -1,0 +1,183 @@
+# Survivorship-correction surface — design
+
+> **RETIRED 2026-05-29.** The live `cohort_survivorship_surface` was removed.
+> Rationale: the surface matched wallets on a *behavioral shape* (buy
+> prices/sizes/counts), not the actual *mechanism*, so its base-rate comparison
+> couldn't isolate edge — two wallets with the same shape can have opposite
+> causal processes. It was also display-only with no consumer and narrow
+> 3-archetype coverage. The correct survivorship discipline is
+> mechanism-replication + out-of-sample / forward validation (analyzer doctrine
+> pipeline + the SwissMiss paper-copy spec), which supersedes shape-based cohort
+> comparison. The underlying **cohort studies and findings remain valid**
+> (research repo + brain) — only the runtime surface is gone. Kept for history.
+
+**Spec:** v1 design (this doc)
+**Status:** RETIRED — superseded by mechanism-replication + OOS/forward validation
+**Authors:** Claude (after running cohort studies on SwissMiss + 0x20ad75)
+**Empirical basis:** Two completed cohort studies — `studies/survivorship_swissmiss.md` and `studies/survivorship_0x20ad75.md` (in the polymarket-research repo); brain memories `finding/survivorship-cohort-swissmiss-2026-05-27` and `finding/survivorship-cohort-0x20ad75-2026-05-27`.
+
+---
+
+## Why this exists
+
+Discovery is winner-biased. Leaderboards, watchlists, and operator-curated wallets are all selected on observed PnL. Any "edge" we measure on these is conditional on success. The wallet's actual forward expected value — what a copier or strategy derivation would inherit — depends on whether the wallet is:
+
+- A top-1% outlier within a net-losing strategy class (e.g. SwissMiss in the underdog-accumulator cohort: 71.9% of similar wallets lost money)
+- A top-tail performer within a net-profitable strategy class (e.g. 0x20ad75 in the $0.99-scraper cohort: 82.7% of similar wallets are profitable)
+
+These two read identically on the wallet's own PnL, but mean completely different things for "would I make money copying / mimicking this?" — the load-bearing question the analyzer is supposed to inform.
+
+## What this surface does
+
+For a curated wallet, produce a display-only `survivorship_surface` field on `ProtocolReport` that:
+
+1. **Names a reference cohort** ("wallets whose lifetime fingerprint matches this archetype")
+2. **Reports the cohort's outcome distribution** (mean PnL, % positive, % large winner, % busted)
+3. **Places the target wallet in the distribution** (percentile rank)
+4. **Carries a methodology note** (held-to-resolution accounting, Becker dataset, lifetime-fingerprint anchor)
+
+Like the existing 7 display-only surfaces (`capital_risk_surface`, `sizing_outcome_surface`, etc.), this is **hard-walled from mutation of `overall_verdict` / `gate_result` / `primary_edge_type` / `copyability_note` / SPA outputs**. The operator integrates the signal manually.
+
+## Schema (proposed)
+
+```python
+@dataclass(frozen=True)
+class SurvivorshipSurface:
+    """Outcome distribution of a cohort whose lifetime trading fingerprint
+    matches the target wallet's archetype. Sourced from a precomputed
+    reference dataset built from the Becker Polymarket trade history.
+
+    NOT a copyability judgment. NOT a forward-edge prediction. Read as
+    'of wallets that started doing what this wallet did, here's what
+    happened to them.'"""
+
+    data_state: Literal["ok", "no_cohort_match", "data_unavailable"]
+    cohort_fingerprint_name: str
+    # Anchor identity — for traceability + audit
+    cohort_anchor_wallet: str | None
+    cohort_anchor_pnl_usdc: float | None
+    # Cohort statistics
+    cohort_size: int
+    cohort_mean_pnl_usdc: float
+    cohort_median_pnl_usdc: float
+    cohort_pct_positive: float          # 0.0–1.0; e.g. 0.281 for SwissMiss cohort
+    cohort_pct_large_winner: float      # ≥ $50K
+    cohort_pct_busted: float            # < -$10K
+    # Target wallet placement
+    target_in_cohort: bool              # often False for scale outliers
+    target_pnl_held_to_resolution_usdc: float | None
+    target_rank_in_cohort: int | None    # 1 = top
+    target_pct_rank_in_cohort: float | None  # 0.0 = top, 1.0 = bottom
+    # Provenance
+    methodology_note: str               # e.g. "Becker held-to-resolution, lifetime fingerprint"
+    dataset_fingerprint: str            # parquet hash anchor
+    cohort_built_at: int                 # unix epoch
+```
+
+## Cohort matching — two-tier design
+
+**Tier 1: precomputed catalog** (the deliverable bulk of this surface).
+
+Each named archetype gets a precomputed cohort entry stored as a dataset row:
+- `fingerprint_name` (e.g. `underdog_accumulator_v1`, `dollar99_scraper_v1`, `hybrid_trader_v1`)
+- `filter_criteria` (the SQL-equivalent thresholds applied to wallet fingerprints)
+- `outcome_distribution` (the full bucket table + percentiles)
+- `built_from_anchor` (the curated wallet whose fingerprint inspired the criteria)
+
+Catalog format: a single JSON file at `data/survivorship/cohort_catalog.json`, regenerated by a script on demand.
+
+**Tier 2: target-wallet lookup** (per-dossier, fast).
+
+When generating a `ProtocolReport`:
+1. Compute the target wallet's lifetime fingerprint from its own activity (cheap — single GROUP BY)
+2. Match against each catalog entry's `filter_criteria` (predicate evaluation, no SQL needed)
+3. Pick the best-matching cohort (first match? closest centroid? — see open questions)
+4. Populate the surface fields from the catalog's outcome distribution
+5. Compute target's rank by comparing its held-to-resolution PnL to the catalog's distribution
+
+If no fingerprint matches → `data_state = "no_cohort_match"`.
+
+## Data source decision
+
+Becker historical trades dataset (404M rows, 1.95M wallets, Dec 2022 – Feb 2026). Already on disk at `~/Desktop/polymarket-research/prediction-market-analysis/data/`.
+
+Pros: complete coverage of the live-on-Polymarket period, no API rate limits, no winner-bias in row selection.
+
+Cons:
+- **Not a live feed.** Cohort distributions go stale as the market evolves
+- **Misses Kalshi and any post-Feb-2026 activity**
+- **Held-to-resolution PnL math differs from Polymarket's leaderboard math** (the latter includes in-flight realized PnL from sells). Anchor wallets often appear with lower numbers in Becker than on their leaderboard profile
+
+Refresh policy (recommended): regenerate catalog **monthly** if Becker has new data; else just re-run the existing snapshot. Surface stamps `cohort_built_at` so consumers know when it last updated.
+
+## Anchor catalog (initial)
+
+Three archetypes empirically validated:
+
+| Archetype | Anchor | Cohort fingerprint signature | n | mean PnL | % positive |
+|---|---|---|---|---|---|
+| `underdog_accumulator_v1` | SwissMiss | ≥70% buys, ≥40% sub-$0.55, $0.30-$0.65 avg buy, $5-$500 fill, $5K-$10M total | 4,713 | **-$13,261** | 28.1% |
+| `dollar99_scraper_v1` | 0x20ad75 | ≥55% buys, ≥50% buys at price ≥$0.95, $0.85-$1.00 avg, $5-$5K fill, $10K-$50M total | 7,447 | **+$3,059** | 82.7% |
+| `hybrid_trader_v1` | SmallFish (pending) | 50-85% buys, 10-60% near-cert + 15-65% sub-$0.55, $0.50-$0.80 avg | TBD | TBD | TBD |
+
+(Hybrid trader cohort study running concurrently; will be added once results land.)
+
+The catalog is intentionally **small to start**. Adding new archetypes requires (a) a curated anchor wallet, (b) an empirical cohort run with the script template at `scripts/survivorship_cohort_<anchor>.py`, (c) reasonable cohort size (≥1,000 to make percentile claims), and (d) a hand-tuned filter that captures the archetype's shape without over-fitting to the anchor's quirks.
+
+## Hard rules (operator-enforced doctrine)
+
+- **Display-only.** This surface does NOT modify `overall_verdict`, `gate_result`, `primary_edge_type`, `copyability_note`, SPA outputs, or any downstream-consumed verdict. Same rule as the existing 7 surfaces. Wired tests required to prove the no-mutation guarantee.
+- **No forward prediction.** The cohort distribution is HISTORICAL. The surface does not estimate "expected forward edge" or any other forecast. It says "of wallets that started doing this, here's the historical distribution."
+- **No sizing guidance.** Even if the cohort is 80% profitable, the surface does NOT suggest copy size, risk budget, or position multiplier. That's the operator's call against the full report.
+- **Honest empty state.** Wallets that don't match any catalog archetype → `data_state = "no_cohort_match"`. We do NOT force-fit to the closest archetype (force-fitting is exactly the compounding error the platform direction memo warns against).
+
+## Failure modes + edge cases
+
+| Failure | Surface behavior |
+|---|---|
+| Target wallet has <100 lifetime trades | `data_state = "data_unavailable"` (can't compute fingerprint reliably) |
+| Target fingerprint matches multiple catalog entries | Use the most-specific match (smallest cohort size); if tied, alphabetical first |
+| Target wallet's Becker activity is sparse but has substantial trades elsewhere | Surface notes `cohort_anchor_pnl_usdc` may understate actual PnL; methodology footnote explicit |
+| Catalog is stale (Becker hasn't been re-snapshotted in >3 months) | Surface still serves the cached values; methodology note flags staleness |
+| Target wallet's held-to-resolution PnL > catalog p99 | Report rank as `1 of N` (top); no extrapolation beyond catalog tail |
+
+## Methodology footnotes (carried in `methodology_note` field)
+
+- **Lifetime fingerprint, not first-N.** Materializing first-100 fingerprints across 800M Becker rows hits 250GB temp. Lifetime fingerprint asks a slightly different question ("wallets whose CAREER trading shape matches the anchor's") but the survivorship interpretation is intact.
+- **Held-to-resolution PnL** (Batch 1 v2 amendment): `held_qty = max(0, bought - sold)` per (wallet, token), held cost basis prorated, payout = 1/0 by outcome resolution.
+- **APPROX_COUNT_DISTINCT** for token diversity (HLL ±2%).
+- **avg_buy_usdc** replaces median (median sketch can't be merged across maker/taker GROUP BYs).
+
+## Open questions for v2
+
+1. **Multi-archetype membership.** Some wallets straddle two archetypes. Should the surface report MULTIPLE cohort placements? Or pick one canonical match?
+2. **Sensitivity testing.** Loosening/tightening fingerprint thresholds by ±20% changes cohort size meaningfully. Is the surface's qualitative read (cohort mean sign) stable across this perturbation? Worth running.
+3. **Time-windowed cohort.** Markets evolve. A cohort built from 2022-2024 trades may not represent 2025-2026 conditions. Should we have time-windowed cohort variants (e.g. "trailing 12 months only")?
+4. **Live vs Becker distribution drift.** The Polymarket-leaderboard PnL math differs from Becker held-to-resolution math (sell-side activity). For wallets whose actual edge depends heavily on sell-side timing, the Becker number could mislead. Worth documenting the gap per anchor.
+5. **Reference-distribution Monte Carlo.** Is the cohort's positive mean PnL statistically significant, or could it be explained by selection on "wallets with enough activity to make a fingerprint" (which already filters out abandoners)? Probably yes for positive cohorts; the SwissMiss negative cohort is unambiguous.
+
+## Implementation plan (when prioritized)
+
+Not part of this design doc — gated on operator green-light. When time comes:
+
+1. Create `data/survivorship/cohort_catalog.json` builder script (one-shot for now)
+2. Add `SurvivorshipSurface` dataclass to `sniper/analysis/wallet_protocol/types.py`
+3. Add producer module at `sniper/analysis/wallet_protocol/surfaces/survivorship.py`
+4. Wire into `compute_protocol_report()` alongside existing 7 surfaces
+5. Tests: wire test for surface hard-wall (no mutation of verdict); golden test for one wallet × one cohort
+6. Calibration fixture for SwissMiss: cohort placement should remain stable across re-runs
+7. Display in the analyzer's text report output (formatted note, hard-walled from verdict line)
+
+## What this surface explicitly does NOT do
+
+- Recommend a copy size or strategy parameter — that's strategy-derivation territory
+- Predict future PnL — historical-only, with explicit caveat
+- Replace the existing copyability analysis — orthogonal signal
+- Override `wallet_quality_score` or any scoring — different question (entry timing vs strategy-level survivorship)
+
+## Cross-references
+
+- Methodology kin: [`studies/batch1_killed.md`](../../../../Desktop/polymarket-research/studies/batch1_killed.md) (held-to-resolution PnL accounting)
+- Empirical basis: [`studies/survivorship_swissmiss.md`](../../../../Desktop/polymarket-research/studies/survivorship_swissmiss.md), [`studies/survivorship_0x20ad75.md`](../../../../Desktop/polymarket-research/studies/survivorship_0x20ad75.md)
+- Hard-wall doctrine: `analyzer-measurement-layer.md` (brain) — establishes the "display-only, never mutate verdict" rule for all measurement surfaces
+- Platform direction: `project_platform_direction_2026-04-21.md` (brain) — "validator-first, wallet-behavior observatory" reframe

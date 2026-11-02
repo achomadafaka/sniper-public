@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Sniper News Intel every 2 hours
+After=network.target
+
+[Timer]
+# Fire at :00 of every even hour UTC
+OnCalendar=*-*-* 00,02,04,06,08,10,12,14,16,18,20,22:00:00
+# If a run was missed while the machine was off, catch up once at boot
+Persistent=true
+# Randomise start by up to 3 minutes to avoid thundering-herd with other services
+RandomizedDelaySec=180
+Unit=sniper-news-intel.service
+
+[Install]
+WantedBy=timers.target

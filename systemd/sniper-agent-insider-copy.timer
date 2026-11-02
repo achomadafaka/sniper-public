@@ -1,0 +1,17 @@
+[Unit]
+Description=Timer — run InsiderCopy strategy agent twice daily
+Requires=sniper-agent-insider-copy.service
+
+[Timer]
+# Run at 6:00 AM and 6:00 PM every day
+OnCalendar=*-*-* 06:00:00
+OnCalendar=*-*-* 18:00:00
+
+# If the system was off during the scheduled time, run as soon as it's back
+Persistent=true
+
+# Randomize start by up to 5 minutes to avoid hammering services at exact :00
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,30 @@
+{
+  "version": "metric-registry-1",
+  "event": "net_pnl_positive_at_horizon",
+  "event_note": "y = 1 if the fixed-clip round trip under the pinned fill model, after the execution-cost bound B on every fill and exit, nets > 0 USD at the frozen horizon; else 0. SKIP, veto and uncovered predictions are graded on the same event counterfactually.",
+  "calibration_min_graded": 100,
+  "calibration_baseline": "climatology",
+  "censored_share_ceiling": 0.2,
+  "probability_bounds": [
+    0.0,
+    1.0
+  ],
+  "economics": {
+    "clip": "unmeasured",
+    "bound_usd_per_fill": "unmeasured",
+    "exec_bound_evidence_id": "unmeasured",
+    "loss_bound_components": "unmeasured",
+    "horizon_s": "unmeasured",
+    "n_upper_rule": "unmeasured",
+    "venue": "unmeasured",
+    "clip_band": "unmeasured",
+    "latency_regime": "unmeasured",
+    "mark_max_age_s": 60
+  },
+  "credit_metrics": [
+    "entered_coins",
+    "skips_graded",
+    "net_pnl_per_entered_coin_fixed_clip",
+    "brier_skill"
+  ]
+}

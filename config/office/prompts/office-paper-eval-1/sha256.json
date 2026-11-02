@@ -1,0 +1,19 @@
+{
+  "approval_status": "approved_alpha",
+  "epoch_id": "office-paper-eval-1",
+  "files": {
+    "head.md": "aa8620f2c6b8e800c498cac6a1b98936519293d712c0c41c724de547e80b6159",
+    "judge_claude.md": "7b1e9734e6c9f8ea8e2db191862db49235cd9dc02f083d2596da058a05f64533",
+    "judge_gpt.md": "e07c9e134b3d3bb2e68063a12ae3e4283d6283a0cd3b6cd731df8e0c6ef25747",
+    "postmortem.md": "ddc00daf083d176eee7a6bb55c18483b896d95996b0222af17c6459439c99c80",
+    "scout.md": "7dddac91af6dd93d0e8aa3b91986439ed8c9f4b6d74c6b407f314bc5d35ea5d3"
+  },
+  "source_epoch": "office-pilot-discovery-2",
+  "activation_authority": "Alpha; Beta owns epoch/activation spec and manifest; no activation from this manifest",
+  "source_pins": {
+    "book_policy_pilot.json": "71fb45a32cfca228fd1b8f41ac83e7429abba2cf2d8175ea90950fa586a0739a",
+    "limits_pilot.json": "c302c64ec0743f9e7f69068aa224da54c469124f619b514c901579e237bde03c",
+    "pilot_models_eval1.json": "f70c06439758e736c2a8e4e8715d3e670289964a2f8d6aabb1af62bf17bba87a",
+    "pilot_org.json": "a1edd52ee9357fcbb6e28d3fdb78f0c375f9b5fd2f2146f33c97fd96e468ab22"
+  }
+}

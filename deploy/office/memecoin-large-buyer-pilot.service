@@ -1,0 +1,11 @@
+[Unit]
+Description=Funded large-buyer pilot worker; does nothing unless MEMECOIN_LARGE_BUYER_ENABLED=1
+
+[Service]
+Slice=app.slice
+WorkingDirectory=%h/Desktop/Sniper/.runtime/memecoin/current
+EnvironmentFile=%h/Desktop/Sniper/.env
+ExecStart=/usr/bin/env SNIPER_STATE_ROOT=%h/Desktop/Sniper %h/.pyenv/versions/3.13.0/bin/python3 scripts/memecoin_large_buyer_pilot.py --arm %h/Desktop/Sniper/data/office/v2/large-buyer-arm/arm.db --ledger %h/Desktop/Sniper/sniper_tracker.db --desk-dir %h/Desktop/Sniper/data/desk
+Restart=on-failure
+RestartSec=10
+Nice=5

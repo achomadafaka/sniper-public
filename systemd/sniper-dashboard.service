@@ -1,0 +1,14 @@
+[Unit]
+Description=Sniper Dashboard (Deprecated - use sniper-web on :8080)
+After=sniper-web.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pablo/.openclaw/workspace/sniper
+Environment=PYTHONPATH=/home/pablo/.openclaw/workspace/sniper
+ExecStart=/home/pablo/.openclaw/workspace/sniper/.venv/bin/python /home/pablo/.openclaw/workspace/sniper/dashboard.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

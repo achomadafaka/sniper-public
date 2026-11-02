@@ -1,0 +1,16 @@
+[Unit]
+Description=Sniper Sim Metadata Sync (Polymarket)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/sniper/sniper/.venv/bin/python -m sim.collector.meta
+Restart=always
+RestartSec=30
+MemoryMax=80M
+
+[Install]
+WantedBy=default.target

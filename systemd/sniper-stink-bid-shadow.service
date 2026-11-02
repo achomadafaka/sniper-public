@@ -1,0 +1,21 @@
+[Unit]
+Description=Sniper Stink Bid Live Shadow Monitor
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/scripts/stink_bid_shadow_daemon.py --output data/live_shadow/stink_bid_shadow.jsonl --dip-pct 0.15 --min-favorite 0.65 --max-favorite 0.90 --min-fill-size 50 --discover-seconds 900 --snapshot-seconds 60
+Restart=always
+RestartSec=10
+TimeoutStopSec=20
+MemoryMax=350M
+MemorySwapMax=50M
+
+[Install]
+WantedBy=default.target

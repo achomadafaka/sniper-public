@@ -1,0 +1,166 @@
+{
+  "basis": "diagnostic_normalized_pre_execution",
+  "version": "v0",
+  "keys": [
+    "7zzSHm5bNMUwgg4dxaHWJdtB8Z9fUM8wFd2zFeor74W8",
+    "45EjcUmq45enVo2NtoLUVbLozYAXNARqkFKDPjuHpump",
+    "moonF2sz7qwAtdETnrgxNbjonnhGGjd6r4W4UC9284s",
+    "Egfvitr91oMA9DQU5aHJDS5JSoj7R5cDjTULCevkqZXC",
+    "259zgQpSodVGEgMB9p8r8quYgptcDAKojC4Tkak4Pmzk",
+    "FhQEMydFJBa9RzMm5tJXKnK24MsYffxFqKgs8qiPK82F",
+    "UaUy9BPad4F8YzMDVcuhQ62SD1yxxGohSqkKRZz36gd",
+    "7nGUYiA4X622JbmyCktT7gNXo7BnYViDTNJJpnxb9rjD",
+    "HBw87wFzDsbVxzoousWaxqFXuPGJjfkxqtnW28Y4BA5P",
+    "CGyGDHBjmWUWtaqqoDoqRRuhHC7RyPa28prXfvEpsT3C",
+    "4c92NnPkgbjKU6LhDsKiySaSAoMM3HgwWm1rvjG9CrmL",
+    "11111111111111111111111111111111",
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    "AShqTnrSMRpBBwkFr1N2sfwCHYby1KBgpqGS142zkeWW",
+    "uxtoRPdPjRekYmxs1uUqVRZWh38iqonc9KgPuZXPeSY",
+    "MAyhSmzXzV1pTf7LsNkrNwkWKTo4ougAJ1PPg47MD4e",
+    "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+    "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+    "Hq2wp8uJ9jCPsYgNHex8RtqdvMPfVGoYwjvF1ATiwn2Y",
+    "pfeeUxB6jkeY1Hxd7CsFCAjcbHA9rWtchMGdZ6VojVZ",
+    "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+    "TSLvdd1pWpHVjahSpsvCXUbgwsL3JAcvokwaKt1eokM",
+    "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+    "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "13ec7XdrjF3h3YcqBTFDSReRcUFwbCnJaAQspM4j6DDJ",
+    "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1",
+    "So11111111111111111111111111111111111111112",
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "8Wf5TiAheLUqBrKXeYg2JtAFFMWtKdG2BSFgqUcPVwTt"
+  ],
+  "signer_indices": [
+    0,
+    1
+  ],
+  "writable": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "instructions": [
+    {
+      "program": 11,
+      "accounts": [
+        0,
+        2
+      ],
+      "data_hex": "02000000c0c62d0000000000"
+    },
+    {
+      "program": 11,
+      "accounts": [
+        0,
+        15
+      ],
+      "data_hex": "020000000051250200000000"
+    },
+    {
+      "program": 12,
+      "accounts": [
+        1,
+        22,
+        3,
+        4,
+        23,
+        0,
+        11,
+        24,
+        13,
+        16,
+        25,
+        17,
+        5,
+        6,
+        26,
+        12,
+        27,
+        7,
+        28
+      ],
+      "data_hex": "d6904cec5f8b31b40d000000492043686f6f736520596f75210800000043686f6f736f6f724000000068747470733a2f2f6d6574612e7578656e746f2e696f2f646174612f30653834303033632d646365332d343562662d623530342d63336330343133346436623668012bb8a92fa850574e6f8a2b6f971a7ca1674299dbd8dc621e050c1ba47b050000"
+    },
+    {
+      "program": 12,
+      "accounts": [
+        3,
+        0,
+        11,
+        26,
+        12
+      ],
+      "data_hex": "ea66c2cb96483ee5"
+    },
+    {
+      "program": 13,
+      "accounts": [
+        0,
+        8,
+        0,
+        1,
+        11,
+        24
+      ],
+      "data_hex": "01"
+    },
+    {
+      "program": 12,
+      "accounts": [
+        23,
+        18,
+        1,
+        3,
+        4,
+        8,
+        0,
+        11,
+        24,
+        9,
+        26,
+        12,
+        19,
+        10,
+        29,
+        20,
+        14,
+        21
+      ],
+      "data_hex": "38fc74089edfcd5f00286bee000000001faeaa9d8370000000"
+    }
+  ],
+  "signature": "3Tc721JkVzFkg2ouJ5ynQ8G6y7wj8fb6sZ3wqBTHB6JYY1zN7UwhcmmGCmfL8ZC2TodAW8Vnxguk36JvNFo7P5gS",
+  "owner": "7zzSHm5bNMUwgg4dxaHWJdtB8Z9fUM8wFd2zFeor74W8",
+  "slot": 459151436,
+  "source": "Recorded normalized Rabbit packet, memecoin_runner.log line 117172; original wire blockhash and lookup-table layout were not retained."
+}

@@ -1,0 +1,347 @@
+{
+ "captured": "2026-10-02",
+ "source": "research Helius key, getTransaction json + accounts",
+ "buys": [
+  {
+   "quote_key": "EPjFWdd5",
+   "signature": "mhRTBjUJwSAaSsJGBJBekeGiMrcdfo2ijbpa9YZpQeoZFv2YWDGiYB4vQpWhW4njYuFDrdK9aLLVPcAv6D3DfeN",
+   "slot": 451779097,
+   "pool": "FFwYzQCxhGGeARtyDr77nsCHbXqSnKd3neUWKLaanwdc",
+   "quote_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "handle": "Roveryaps",
+   "buy_event_log": "Program data: Z/RSHyz1d3e/PrxqAAAAAHfPtd3/AAAAcITcCwAAAAAAAAAAAAAAAMLbX2YAAAAA4KzRgyhuAAAecB1qBAAAAHCE3AsAAAAAFAAAAAAAAABEAAYAAAAAAAUAAAAAAAAAEYABAAAAAAAgg74LAAAAANyCuAsAAAAA09duD5iUDIwmUNOKBeKIZz2uuJYkdMja4LfGCGaCSluMGf3yZ1P5N00S9cFaOxWJyADe8TlLeXQyLM6XXdY3kcXlXo40zrgRkZOEtN9Tl3ul6tGxsfnzzumHylntudZ2b+mi+wTRK4xVbo3/RBaSz9xPOZvdM6FH3Uevp/9N341KwvjQ3Vy8l+MonBl8tQYqVPPZVrnOblEV+WVnqlyz5qEI5CrzFl4Yln3NDKIWs/ApsdEXfwZIT4j1EHP1D2Z5mtNNYIXHfg+G6+0lXBPXu4fN38/CM/Y2lPCXSoj5C6FfAAAAAAAAAD+BHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAASAAAAYnV5X2V4YWN0X3F1b3RlX2luAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAACMAAAAAAAACbLPqVAAAAAAAAAAAAAAAAAWxfws0+gwMAAAAAAAAAAAAAAAAAAAAAAA==",
+   "n_buy_events": 1,
+   "pool_account_b64": "8ZptBBGxbbz+AACcKkvjKOdB79xUlvkogrDo4G8BC1l1qHa1/DUOvugRs79tieLu2ysVkdr8dMH5p2k6o3Rn/hAlmRJSXGr50Fz4xvp6877brTo9ZfNqq8l0MbG75MLS9uDkfKYCA0UvXWFlMI4lOnPyyg6rMwwmfaHI8ijGaj7l8eOmCvUzq8JDvF/ih068GaYjhYSk+xAkaijKiIfMgyz0qJAsZIewq8bK2ZLvG6e74pB0TQgK+UjxFmhjao3HVotFTdVsMP0l2yTRqBVUcQEAAJrTTWCFx34PhuvtJVwT17uHzd/PwjP2NpTwl0qI+QuhAACbLPqVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "pool_owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+   "base_mint": "DtFkKBC3Cmi9j3SxBGRUd8gvBLw7nAasrvUJFB69yubM"
+  },
+  {
+   "quote_key": "SPCXxcqX",
+   "signature": "3vd8Z1vEqGzxnEqMhFL7BrvkzVFJBESUZPmDWBu3ZRaVLb7eKSWyDcUwFfb8yYRfcMtf2D78Pt3G3J94KJtVQUpP",
+   "slot": 452038243,
+   "pool": "Bq6qtrFcr1GdVhmZYCNKBBi9oeN1MTvET26J66zf9giT",
+   "quote_mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
+   "handle": "probablyinsider",
+   "buy_event_log": "Program data: Z/RSHyz1d3dvTb1qAAAAAG4/4v/cBQAANQYyAAAAAAAAAAAAAAAAAC1JMgAAAAAAbV01LZytAAC6eoQEAAAAADUGMgAAAAAAFAAAAAAAAABMGQAAAAAAAAUAAAAAAAAAUwYAAAAAAABmgTEAAAAAABpoMQAAAAAAoOda1CEhe3DNHB6HSlkgOPzoBEPcmmMh3R9rW5aFxuCMGf3yZ1P5N00S9cFaOxWJyADe8TlLeXQyLM6XXdY3kSQesnR5XI4GQiaGODwvUp+j9E0kiSH+BXBZHueExb8rUVacMCW0dYTut4W5T1IPgcEVm1638CIfKZqQzVgdwdFKwvjQ3Vy8l+MonBl8tQYqVPPZVrnOblEV+WVnqlyz5u4iOHtaAB7lLum5tDStwtqNFBLSrUhedhTzDF81axqzB8eJE6vJ14GchcM+Fn1qwclmJHgT9jUaD06bDVdOw5tkAAAAAAAAAHx+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAASAAAAYnV5X2V4YWN0X3F1b3RlX2luAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAKQMAAAAAAADPBwEBAAAAAAAAAAAAAAAAAdtPwcy5bAMAAAAAAAAAAAAAAAAAAAAAAA==",
+   "n_buy_events": 1,
+   "pool_account_b64": "8ZptBBGxbbz9AAAY9XihDwaD7LfbjXfAmMEV5+3pKu+L13cR2N42n/GZe59W3EC/VO4SODmWx+QcT0DWRSI6ejxtrkRpIybo/8hqBoCe3L90JaszWF3JHL7s4XoW/hSwqj214uF5VCHvhYDIDtT0Zi02RL0O+5r+kkWCa7KQ3lcjPFWVjQxbnbBuH0PjSOMPn5WuCGS31G4/QsO9FTAOQdB6vpvVS8uooiBrxYSNgR4ra9WrlAbI/dKfV47xQ4NzDglUw0nEa2KvaR8hi+03HgAAAAfHiROrydeBnIXDPhZ9asHJZiR4E/Y1Gg9Omw1XTsObAADPBwEBAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "pool_owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+   "base_mint": "BizeLNXEQjrTjmtQbNA6Qi22h5HKQe9Gjwys3ZkT1Nc9"
+  },
+  {
+   "quote_key": "pumpCmXq",
+   "signature": "2N65K2Dpwn36E87FSBZQ5wm2dMF1vDJMecT7SjPRaZJaQxUoN7Te1MY7T1PWUyABHPhoQHHoBGKVm6x11qzZ13hE",
+   "slot": 451695833,
+   "pool": "5d1MwACzebHE96bX8ZN3jQGjwPuBjQF7vcbmmhr5Gskb",
+   "quote_mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+   "handle": "DexGemsReal",
+   "buy_event_log": "Program data: Z/RSHyz1d3d257tqAAAAAG5yT6S8AAAAfC0fhQ4AAAAAAAAAAAAAAOFoqAkSAAAAb9w8vyFQAAAtdUxHlgUAAHwtH4UOAAAAFAAAAAAAAAClq1cHAAAAAAUAAAAAAAAA6urVAQAAAABc6JJeDgAAALc8O1cOAAAARKgQn35KxFQMMP9SGhLKzLGQgAWRBMDvmf2k7enM9yCMGf3yZ1P5N00S9cFaOxWJyADe8TlLeXQyLM6XXdY3kYFveLPPkRZ11Dtpq5Lue6+aYXT5WcVBLA/gsn0heuopUzbr+O1rozigaruVXJtBv5GVlR5h5v3EsbHbfTFobElKwvjQ3Vy8l+MonBl8tQYqVPPZVrnOblEV+WVnqlyz5tdGNJx429gHvoCeOEd0peoZ5CElld7QVhuYkCARyls+/nt9I9Bqr1teYig5IznLV0B47r/IE0PFA9LQ+u/0YtdkAAAAAAAAADZatiQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAASAAAAYnV5X2V4YWN0X3F1b3RlX2luAAAAAAAAAAAAAAAAAAAAAIgTAAAAAAAAdfXqAAAAAAAxRmXbcgAAAAAAAAAAAAAAAbD923NSfQMAZAAAAAAAAAA2WrYkAAAAAA==",
+   "n_buy_events": 1,
+   "pool_account_b64": "8ZptBBGxbbz/AABNrNbLYv6iFq3gu82JcC04KTUTkd7Mbg6twlE+mA4+JO6UoYy3rq3hsZiQZLwn4MxCqQ/yQoGF/IclDzuPP0DVDEX3342ecpVihJM/bZi3VwMug9+EYE+14Rf/9h1bEvmYCIdx7gWUQze3jjuJvhbqgcfcxzGIOsKXK2ShPV8ZbnUOlK3aUrbL9pX79ZL6AY0ebxH/apVB1T8hcdMRrko2mZ1ALSyJ40pEiF/5rmA+5kDJvBgBRBSWJDn2TNgnMEKNVQxKMxQAAP57fSPQaq9bXmIoOSM5y1dAeO6/yBNDxQPS0Prv9GLXAAAxRmXbcgAAAAAAAAAAAAAAZAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+   "pool_owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+   "base_mint": "H4KUxsEgCp2yDpFvyDuGM5k6XevSKKrrKUxZ3Zr6nyJc"
+  }
+ ],
+ "mints": {
+  "BizeLNXEQjrTjmtQbNA6Qi22h5HKQe9Gjwys3ZkT1Nc9": {
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "data_b64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvKHDUbdsAwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ9W3EC/VO4SODmWx+QcT0DWRSI6ejxtrkRpIybo/8hqEwCsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn1bcQL9U7hI4OZbH5BxPQNZFIjp6PG2uRGkjJuj/yGoIAAAARWxvbmNvaW4EAAAARUxPTlAAAABodHRwczovL2lwZnMuaW8vaXBmcy9iYWZrcmVpZ3NvdG1oZHR1ZTJraGE0dDZzMnBmNXRrNXoyMnBwanFpeGNqNjRpd2xqd25kZnV6b3dpbQAAAAA=",
+   "parsed": {
+    "lamports": 2733040,
+    "data": {
+     "program": "spl-token-2022",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "extensions": [
+        {
+         "extension": "metadataPointer",
+         "state": {
+          "authority": null,
+          "metadataAddress": "BizeLNXEQjrTjmtQbNA6Qi22h5HKQe9Gjwys3ZkT1Nc9"
+         }
+        },
+        {
+         "extension": "tokenMetadata",
+         "state": {
+          "additionalMetadata": [],
+          "mint": "BizeLNXEQjrTjmtQbNA6Qi22h5HKQe9Gjwys3ZkT1Nc9",
+          "name": "Eloncoin",
+          "symbol": "ELON",
+          "updateAuthority": null,
+          "uri": "https://ipfs.io/ipfs/bafkreigsotmhdtue2kha4t6s2pf5tk5z22ppjqixcj64iwljwndfuzowim"
+         }
+        }
+       ],
+       "freezeAuthority": null,
+       "isInitialized": true,
+       "mintAuthority": null,
+       "supply": "963959536722364"
+      },
+      "type": "mint"
+     },
+     "space": 410
+    },
+    "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 410
+   }
+  },
+  "DtFkKBC3Cmi9j3SxBGRUd8gvBLw7nAasrvUJFB69yubM": {
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "data_b64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3xoTagN+AwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL9tieLu2ysVkdr8dMH5p2k6o3Rn/hAlmRJSXGr50Fz4EwC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv22J4u7bKxWR2vx0wfmnaTqjdGf+ECWZElJcavnQXPgSAAAAU3VwZXIgSW50ZWxsaWdlbmNlAgAAAFNJUAAAAGh0dHBzOi8vaXBmcy5pby9pcGZzL2JhZmtyZWlleHJvaDNwZjNjMjNkeWQ1YXVra3Jya3RxaWNveWlvamx3dWdhZHlhaGNiamJrY2lpcnNhAAAAAA==",
+   "parsed": {
+    "lamports": 2773680,
+    "data": {
+     "program": "spl-token-2022",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "extensions": [
+        {
+         "extension": "metadataPointer",
+         "state": {
+          "authority": null,
+          "metadataAddress": "DtFkKBC3Cmi9j3SxBGRUd8gvBLw7nAasrvUJFB69yubM"
+         }
+        },
+        {
+         "extension": "tokenMetadata",
+         "state": {
+          "additionalMetadata": [],
+          "mint": "DtFkKBC3Cmi9j3SxBGRUd8gvBLw7nAasrvUJFB69yubM",
+          "name": "Super Intelligence",
+          "symbol": "SI",
+          "updateAuthority": null,
+          "uri": "https://ipfs.io/ipfs/bafkreiexroh3pf3c23dyd5aukkrrktqicoyiojlwugadyahcbjbkciirsa"
+         }
+        }
+       ],
+       "freezeAuthority": null,
+       "isInitialized": true,
+       "mintAuthority": null,
+       "supply": "982978059770591"
+      },
+      "type": "mint"
+     },
+     "space": 418
+    },
+    "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 418
+   }
+  },
+  "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "data_b64": "AQAAAJj+huiNm+Lqi8HMpIeLKYjCQPUrhCS/tA7Rot3LXhmbku9QbnMkHQAGAQEAAABicKqKWcWUBbRShshncubNEm6bil06OFNtN/e0FOi2Zw==",
+   "parsed": {
+    "lamports": 535325803497,
+    "data": {
+     "program": "spl-token",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "freezeAuthority": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
+       "isInitialized": true,
+       "mintAuthority": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
+       "supply": "8202852515245970"
+      },
+      "type": "mint"
+     },
+     "space": 82
+    },
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 82
+   }
+  },
+  "H4KUxsEgCp2yDpFvyDuGM5k6XevSKKrrKUxZ3Zr6nyJc": {
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "data_b64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA57zWalB9AwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO6UoYy3rq3hsZiQZLwn4MxCqQ/yQoGF/IclDzuPP0DVEwCUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7pShjLeureGxmJBkvCfgzEKpD/JCgYX8hyUPO48/QNUJAAAAY29ja3JvYWNoCQAAAENPQ0tST0FDSDIAAABodHRwczovL3BmLmpha2UtOThmLndvcmtlcnMuZGV2L20vSDRLVXhzRWdDcDJ5RHBGdgAAAAA=",
+   "parsed": {
+    "lamports": 7199176,
+    "data": {
+     "program": "spl-token-2022",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "extensions": [
+        {
+         "extension": "metadataPointer",
+         "state": {
+          "authority": null,
+          "metadataAddress": "H4KUxsEgCp2yDpFvyDuGM5k6XevSKKrrKUxZ3Zr6nyJc"
+         }
+        },
+        {
+         "extension": "tokenMetadata",
+         "state": {
+          "additionalMetadata": [],
+          "mint": "H4KUxsEgCp2yDpFvyDuGM5k6XevSKKrrKUxZ3Zr6nyJc",
+          "name": "cockroach",
+          "symbol": "COCKROACH",
+          "updateAuthority": null,
+          "uri": "https://pf.jake-98f.workers.dev/m/H4KUxsEgCp2yDpFv"
+         }
+        }
+       ],
+       "freezeAuthority": null,
+       "isInitialized": true,
+       "mintAuthority": null,
+       "supply": "982209273445607"
+      },
+      "type": "mint"
+     },
+     "space": 386
+    },
+    "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 386
+   }
+  },
+  "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb": {
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "data_b64": "AQAAAPJd7CRZ9QLf4kl46/WjWFQyHR7BsvRazw5RFssYbLk6lvPysQkAAAAGAQEAAAAX80uXa+rt4TKHeP4P0KXOfYzd/VZdEzYuovU7eFMWDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAX80uXa+rt4TKHeP4P0KXOfYzd/VZdEzYuovU7eFMWDwaAnty/dCWrM1hdyRy+7OF6Fv4UsKo9teLheVQh74WADAAgABfzS5dr6u3hMod4/g/Qpc59jN39Vl0TNi6i9Tt4UxYPBgABAAEaACEAF/NLl2vq7eEyh3j+D9Clzn2M3f1WXRM2LqL1O3hTFg8ABABBABfzS5dr6u3hMod4/g/Qpc59jN39Vl0TNi6i9Tt4UxYPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgBAABfzS5dr6u3hMod4/g/Qpc59jN39Vl0TNi6i9Tt4UxYPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZADgA8l3sJFn1At/iSXjr9aNYVDIdHsGy9FrPDlEWyxhsuToAAAAAAADwPwAAAAAAAAAAAAAAAAAA8D8TAK4AF/NLl2vq7eEyh3j+D9Clzn2M3f1WXRM2LqL1O3hTFg8GgJ7cv3QlqzNYXckcvuzhehb+FLCqPbXi4XlUIe+FgBwAAABTcGFjZVggLSBCYWNrcGFjayBTZWN1cml0aWVzBAAAAFNQQ1g+AAAAaHR0cHM6Ly90cmVrLWxhYnMuZ2l0aHViLmlvL2hlYXJ0LW1ldGFkYXRhL3N0b2Nrcy9zcGN4LnVzLmpzb24AAAAA",
+   "parsed": {
+    "lamports": 1812619292,
+    "data": {
+     "program": "spl-token-2022",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "extensions": [
+        {
+         "extension": "metadataPointer",
+         "state": {
+          "authority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+          "metadataAddress": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb"
+         }
+        },
+        {
+         "extension": "permanentDelegate",
+         "state": {
+          "delegate": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a"
+         }
+        },
+        {
+         "extension": "defaultAccountState",
+         "state": {
+          "accountState": "initialized"
+         }
+        },
+        {
+         "extension": "pausableConfig",
+         "state": {
+          "authority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+          "paused": false
+         }
+        },
+        {
+         "extension": "confidentialTransferMint",
+         "state": {
+          "auditorElgamalPubkey": null,
+          "authority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+          "autoApproveNewAccounts": false
+         }
+        },
+        {
+         "extension": "transferHook",
+         "state": {
+          "authority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+          "programId": null
+         }
+        },
+        {
+         "extension": "scaledUiAmountConfig",
+         "state": {
+          "authority": "HK6jF79duLLLfCMRQFBSgo6CgQ5mF4tFMFU7CmKcXctZ",
+          "multiplier": "1",
+          "newMultiplier": "1",
+          "newMultiplierEffectiveTimestamp": 0
+         }
+        },
+        {
+         "extension": "tokenMetadata",
+         "state": {
+          "additionalMetadata": [],
+          "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
+          "name": "SpaceX - Backpack Securities",
+          "symbol": "SPCX",
+          "updateAuthority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+          "uri": "https://trek-labs.github.io/heart-metadata/stocks/spcx.us.json"
+         }
+        }
+       ],
+       "freezeAuthority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
+       "isInitialized": true,
+       "mintAuthority": "HK6jF79duLLLfCMRQFBSgo6CgQ5mF4tFMFU7CmKcXctZ",
+       "supply": "41640194966"
+      },
+      "type": "mint"
+     },
+     "space": 687
+    },
+    "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 687
+   }
+  },
+  "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn": {
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "data_b64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa/B3+001hgsGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ4AQAC3lMVNLXVgZz3rXJPfO/JJlboUKTQHyWPvpdl+vE+u3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEX3342ecpVihJM/bZi3VwMug9+EYE+14Rf/9h1bEvkTAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMRfffjZ5ylWKEkz9tmLdXAy6D34RgT7XhF//2HVsS+QQAAABQdW1wBAAAAFBVTVBQAAAAaHR0cHM6Ly9pcGZzLmlvL2lwZnMvYmFma3JlaWJjZ2xsZGtmZGVrZGt4Z3VtbHZlb2U2cXYzcGJpY2V5cGt3dGxpMzNjbGJ6dWw3bGVvNG0AAAAA",
+   "parsed": {
+    "lamports": 8426655782,
+    "data": {
+     "program": "spl-token-2022",
+     "parsed": {
+      "info": {
+       "decimals": 6,
+       "extensions": [
+        {
+         "extension": "transferHook",
+         "state": {
+          "authority": "DMdBa812dBW1CHVhmTyUyVcrBnSbZbfoFC7U14k4riH1",
+          "programId": null
+         }
+        },
+        {
+         "extension": "metadataPointer",
+         "state": {
+          "authority": null,
+          "metadataAddress": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn"
+         }
+        },
+        {
+         "extension": "tokenMetadata",
+         "state": {
+          "additionalMetadata": [],
+          "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
+          "name": "Pump",
+          "symbol": "PUMP",
+          "updateAuthority": null,
+          "uri": "https://ipfs.io/ipfs/bafkreibcglldkfdekdkxgumlveoe6qv3pbiceypkwtli33clbzul7leo4m"
+         }
+        }
+       ],
+       "freezeAuthority": null,
+       "isInitialized": true,
+       "mintAuthority": null,
+       "supply": "830409790344130667"
+      },
+      "type": "mint"
+     },
+     "space": 474
+    },
+    "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "executable": false,
+    "rentEpoch": 18446744073709551615,
+    "space": 474
+   }
+  }
+ }
+}

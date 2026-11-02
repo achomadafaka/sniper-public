@@ -1,0 +1,21 @@
+[Unit]
+Description=Sniper Geopolitics & Political Intelligence Analyst
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+# Unset CLAUDECODE so the analyst can launch its own Claude agent even during
+# an active Claude Code session. Without this, nested session detection blocks
+# every timer fire while a Claude Code terminal is open.
+Environment=CLAUDECODE=
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/scripts/world_analyst.py --quiet
+StandardOutput=append:/home/sniper/sniper/logs/world_analyst.log
+StandardError=append:/home/sniper/sniper/logs/world_analyst.log
+TimeoutStartSec=1200
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

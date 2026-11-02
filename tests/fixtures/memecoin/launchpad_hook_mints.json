@@ -1,0 +1,206 @@
+{
+ "_doc": "Real getAccountInfo (jsonParsed, commitment confirmed) mint accounts, captured 2026-09-27T13:47Z on the research Helius key. dbc_hook_ZrueWB1Y: a Meteora DBC Token-2022 coin whose transferHook (program eyesEswW, authority FhVo3mqL = the DBC pool_authority PDA) requires the launchpad's co-sign; it passed token safety as 'ok' and died at the quote (Jupiter TOKEN_NOT_TRADABLE). null_program_hook_Xs78JED6: a transferHook extension with programId null (a no-op hook); it refuses on its live freeze authority. funded_t22_65986: a funded Token-2022 coin with a 1% transfer fee and no hook.",
+ "dbc_hook_ZrueWB1Y": {
+  "context_slot": 451014728,
+  "mint": "ZrueWB1YvjruJpTGiJSYYfyuL71FZeeSUwJY1ZPeyes",
+  "value": {
+   "data": {
+    "parsed": {
+     "info": {
+      "decimals": 6,
+      "extensions": [
+       {
+        "extension": "metadataPointer",
+        "state": {
+         "authority": null,
+         "metadataAddress": "ZrueWB1YvjruJpTGiJSYYfyuL71FZeeSUwJY1ZPeyes"
+        }
+       },
+       {
+        "extension": "transferHook",
+        "state": {
+         "authority": "FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM",
+         "programId": "eyesEswWscHeKNT9HKWyohA5htBhmgLsJBEuswZiinJ"
+        }
+       },
+       {
+        "extension": "tokenMetadata",
+        "state": {
+         "additionalMetadata": [],
+         "mint": "ZrueWB1YvjruJpTGiJSYYfyuL71FZeeSUwJY1ZPeyes",
+         "name": "\ud83d\udc40",
+         "symbol": "EYES",
+         "updateAuthority": null,
+         "uri": "https://gateway.irys.xyz/9HHQyrQod8ycotcqrZeRC2qdvUX9FK6SVczgECuzzRgK"
+        }
+       }
+      ],
+      "freezeAuthority": null,
+      "isInitialized": true,
+      "mintAuthority": null,
+      "supply": "959878182179330"
+     },
+     "type": "mint"
+    },
+    "program": "spl-token-2022",
+    "space": 463
+   },
+   "executable": false,
+   "lamports": 3002280,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "rentEpoch": 18446744073709551615,
+   "space": 463
+  }
+ },
+ "funded_t22_65986": {
+  "context_slot": 451014729,
+  "mint": "ATqKVVa4h5WqjAMqJdG3mjtWXsW5SshyyUY7dXdvSvRs",
+  "value": {
+   "data": {
+    "parsed": {
+     "info": {
+      "decimals": 6,
+      "extensions": [
+       {
+        "extension": "metadataPointer",
+        "state": {
+         "authority": null,
+         "metadataAddress": "ATqKVVa4h5WqjAMqJdG3mjtWXsW5SshyyUY7dXdvSvRs"
+        }
+       },
+       {
+        "extension": "transferFeeConfig",
+        "state": {
+         "newerTransferFee": {
+          "epoch": 1038,
+          "maximumFee": 1000000000000000,
+          "transferFeeBasisPoints": 100
+         },
+         "olderTransferFee": {
+          "epoch": 1038,
+          "maximumFee": 1000000000000000,
+          "transferFeeBasisPoints": 100
+         },
+         "transferFeeConfigAuthority": "5KXDF6QnqhBj72hDtJNkkpFaQVUfbFXNybMsp3DiK6tD",
+         "withdrawWithheldAuthority": "5KXDF6QnqhBj72hDtJNkkpFaQVUfbFXNybMsp3DiK6tD",
+         "withheldAmount": 205512844609
+        }
+       },
+       {
+        "extension": "tokenMetadata",
+        "state": {
+         "additionalMetadata": [],
+         "mint": "ATqKVVa4h5WqjAMqJdG3mjtWXsW5SshyyUY7dXdvSvRs",
+         "name": "Backpack Cat",
+         "symbol": "BackCat",
+         "updateAuthority": "WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh",
+         "uri": "https://metadata.j7tracker.io/metadata/25c4870c0a0946e7.json"
+        }
+       }
+      ],
+      "freezeAuthority": null,
+      "isInitialized": true,
+      "mintAuthority": null,
+      "supply": "999943037768526"
+     },
+     "type": "mint"
+    },
+    "program": "spl-token-2022",
+    "space": 509
+   },
+   "executable": false,
+   "lamports": 3235960,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "rentEpoch": 18446744073709551615,
+   "space": 509
+  }
+ },
+ "null_program_hook_Xs78JED6": {
+  "context_slot": 451014729,
+  "mint": "Xs78JED6PFZxWc2wCEPspZW9kL3Se5J7L5TChKgsidH",
+  "value": {
+   "data": {
+    "parsed": {
+     "info": {
+      "decimals": 8,
+      "extensions": [
+       {
+        "extension": "metadataPointer",
+        "state": {
+         "authority": "5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq",
+         "metadataAddress": "Xs78JED6PFZxWc2wCEPspZW9kL3Se5J7L5TChKgsidH"
+        }
+       },
+       {
+        "extension": "permanentDelegate",
+        "state": {
+         "delegate": "5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq"
+        }
+       },
+       {
+        "extension": "defaultAccountState",
+        "state": {
+         "accountState": "initialized"
+        }
+       },
+       {
+        "extension": "scaledUiAmountConfig",
+        "state": {
+         "authority": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
+         "multiplier": "1.0808929977256367",
+         "newMultiplier": "1.0863570205637327",
+         "newMultiplierEffectiveTimestamp": 1789432200
+        }
+       },
+       {
+        "extension": "pausableConfig",
+        "state": {
+         "authority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
+         "paused": false
+        }
+       },
+       {
+        "extension": "confidentialTransferMint",
+        "state": {
+         "auditorElgamalPubkey": null,
+         "authority": "5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq",
+         "autoApproveNewAccounts": false
+        }
+       },
+       {
+        "extension": "transferHook",
+        "state": {
+         "authority": "5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq",
+         "programId": null
+        }
+       },
+       {
+        "extension": "tokenMetadata",
+        "state": {
+         "additionalMetadata": [],
+         "mint": "Xs78JED6PFZxWc2wCEPspZW9kL3Se5J7L5TChKgsidH",
+         "name": "Strategy PP Variable xStock",
+         "symbol": "STRCx",
+         "updateAuthority": "5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq",
+         "uri": "https://xstocks-metadata.backed.fi/tokens/Solana/STRCx/metadata.json"
+        }
+       }
+      ],
+      "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
+      "isInitialized": true,
+      "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
+      "supply": "46991946909738"
+     },
+     "type": "mint"
+    },
+    "program": "spl-token-2022",
+    "space": 693
+   },
+   "executable": false,
+   "lamports": 5714160,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "rentEpoch": 18446744073709551615,
+   "space": 693
+  }
+ }
+}

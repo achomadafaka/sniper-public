@@ -1,0 +1,65 @@
+{
+  "as_of": "intake host_received_at-clock_offset_s; row_age_s=sheet_as_of-as_of",
+  "bad_cell": "known block, parse_ok=false, null value and field_unknown[field]=parse_cell; absent provider field is not_reported",
+  "clock": "source host receipt minus its stored finite clock_offset_s; compare with sheet_as_of; no implicit zero offset",
+  "field_reasons": [
+    "parse_cell",
+    "not_reported"
+  ],
+  "fomo_cells": {
+    "0": "symbol/name (not a numeric claim)",
+    "1": "mcap USD",
+    "2": "24h percent change; triangle sign",
+    "3": "24h volume USD",
+    "4": "holders followed by total holders"
+  },
+  "freshness_s": 300,
+  "known_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of",
+    "source",
+    "row_age_s",
+    "parse_ok",
+    "vol_24h_usd",
+    "change_24h_pct",
+    "holders",
+    "holders_total",
+    "mcap_claim_usd",
+    "label",
+    "field_unknown"
+  ],
+  "label": "provider_claim",
+  "max_rows": 100000,
+  "nullable_fields": [
+    "vol_24h_usd",
+    "change_24h_pct",
+    "holders",
+    "holders_total",
+    "mcap_claim_usd"
+  ],
+  "numeric": "finite signed percent; nonnegative USD/counts; K/M/B suffixes and comma thousands; count must resolve to integer",
+  "pumpfun": "only explicit vol_24h_usd/volume_24h, change_24h_pct/price_change_24h, holders, holders_total, market_cap_usd/usd_market_cap; market_cap is not USD",
+  "read_budget_s": 0.5,
+  "reasons": [
+    "no_source",
+    "source_unreadable",
+    "source_mismatch",
+    "unsupported_source",
+    "clock_unknown",
+    "future_source",
+    "stale",
+    "read_budget",
+    "parse_failed"
+  ],
+  "selection": "feed/filter listed this coin using these provider cells; feed-specific descriptive evidence",
+  "source": "exact ticket intake row, poll and candidate identities bound; never latest-row substitution",
+  "unknown_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of"
+  ],
+  "version": "desk-list-claims-v1"
+}

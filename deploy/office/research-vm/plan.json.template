@@ -1,0 +1,15 @@
+{
+  "version": "office-research-vm-offline-v1",
+  "enabled": false,
+  "image": {
+    "path": "/home/bigpapi/Desktop/Sniper/data/office/vm/images/debian-13-nocloud-amd64-20261026-2643.qcow2",
+    "bytes": 409731072,
+    "sha512": "129471badafeff16e59f7e95cb0fcc91828d570ecc7803ca06a05160176e65e61dd5c770310531cd68e6863b8dd102d939519002943e0bc77a4a5fe6a724f8a9"
+  },
+  "snapshots": [],
+  "quarantine_review_commit": null,
+  "network": {"mode": "offline", "allowlist": []},
+  "exports_root": "/home/bigpapi/Desktop/Sniper/data/office/vm/exports",
+  "memory_mib": 1024,
+  "vcpus": 1
+}

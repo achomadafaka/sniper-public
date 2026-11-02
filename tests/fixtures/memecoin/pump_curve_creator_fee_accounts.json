@@ -1,0 +1,58 @@
+[
+ {
+  "mint": "5U82bLTK1sLYQoiwrLwC2Z1HDRZhAk9Sdi819Mqfpump",
+  "curve_b64": "F7f4N2DYrGDYt9D77L8DAK1xz3l8EQAA2B++r1vBAgDrMCw4SQAAAACAxqR+jQMAAPaKFSK1AXY+vJXKtkgOzvk3fYpZuiu/SxNEwI86gxfPAAAOmt7B5Y/aKRGRjm8fxWYb7XpbhRi4HyxF8CaQ/1k//ywBAAAAAAAAAACT3+z3CAAAAEdyo9cIAAAAAcJAo0EzEQAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 300,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ },
+ {
+  "mint": "6KaivAoq6fnhNDwQ1u8NPwRAhM5SuuchrSsfjpDVnNUT",
+  "curve_b64": "F7f4N2DYrGBb37d43mABACnwsBIAAAAAW0elLE1iAAAGxO4LAAAAAACAxqR+jQMAAGoPPjp2y0d2uZDaL3toTcFN071imeUuDzcNzNcE2nXoAAD4UuoHg0VLCxts4LrKeyM1tYTzIfg1tAFYnwhY4t29v2QAAAAAAAAAAAHBNHMAAAAAAIO5NgAAAAAAACMswgYAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 100,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ },
+ {
+  "mint": "DeNEwMQMkCrSnB57nAp1Fy9rCfyM6dUbc6jyTjAm7Kpm",
+  "curve_b64": "F7f4N2DYrGCJSfp4kAsDANaAsWgZBgAAibHnLP8MAgDakX8dOgEAAACAxqR+jQMAAJb5YL9siaef7aoVw7N4La+oFXgWZyfBXCsQ5uKXUXcPAAAHkCmxYtbQJgKNNr29CgDOYVuhnS1JJNFKk1XJCZTZJcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPzuMUvfBAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 200,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ },
+ {
+  "mint": "8tDxTL7GCpu5ZgNLe1PSQDajw6oeYoUYvYXeV6ZLQvxv",
+  "curve_b64": "F7f4N2DYrGA281y/KuUBAD2OrSBrAwAANltKc5nmAACsFdUNuAEAAACAxqR+jQMAALhMjX9HoOBoaTWJH+JxSdzn6ZTZzWB8IRudtRr2dJc0AADvSBfI2LKaDvPVIb4Bg8NYl++uj2NPhiJ3wvFhm4CJ3woAAAAAAAAAAAEO5gcAAAAAAMCEJQAAAAAAAJF42BKzAQAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 10,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ },
+ {
+  "mint": "72t8N1v7J7EbDdsYHc7LhnAUZoVxNhTSzci5ppFuzARs",
+  "curve_b64": "F7f4N2DYrGAAENhH488DABCsI/wGAAAAAHjF+1HRAgAQAAAAAAAAAACAxqR+jQMAAAlzjK1Ssp4Ms2GecKFZc2E5ADTRrPVSaHQ9zPp3Gm9cAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 0,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": true
+ },
+ {
+  "mint": "29uaNz2nVJ38ic7RqL5KFcoZyAvxi2yiTbKzsUEfpump",
+  "curve_b64": "F7f4N2DYrGCnM5OShHsDAFC+XKUHAAAAp5uARvN8AgBQEjmpAAAAAACAxqR+jQMAAMjQywEXTjPaGovksDCPmkxmZS+DHwetD1ZLblK5nycBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABadgUAAAAAAA6mCAAAAAAAAACsI/wGAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": false,
+  "tape_creator_bps": 30,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ },
+ {
+  "mint": "By8QjFFLsYeG8q4UBxRxsgiE2S3dREaE8K9q3YYSpump",
+  "curve_b64": "F7f4N2DYrGDe/jfJ8XkGAH1a0wcAAAAA3mYlfWB7BQBRq/EAAAAAAACAxqR+jQMAAGIqEyP7jo99lMIuYO38xOriT2qPuIst5DL0j8V+uftFAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqo6wAAAAAADSxIgIAAAAAAACsI/wGAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "mayhem": true,
+  "tape_creator_bps": 30,
+  "tape_protocol_bps": 95,
+  "is_cashback_coin": false
+ }
+]

@@ -1,0 +1,620 @@
+{
+  "provenance": {
+    "idl_program": "DF1ow4tspfHX9JwWJsAb9epbkA8hmpSEAtxXy1V27QBH",
+    "idl_account": "Cp2dCjxCWdktak2JiSrh87X6sz31EnDVKoTGtsHJvhYq",
+    "idl_decompressed_sha256": "e9e1382b42816ef93615e788a8588bc3b53e7051d0f27fdbb0a02664d028cdc1",
+    "source": "Confirmed authenticated Amsterdam Shyft account read 2026-10-13; public on-chain IDL and transaction fields only. Current account read is preparation validation, not historical source reserves."
+  },
+  "idl": {
+    "swap": {
+      "name": "swap",
+      "docs": [
+        "Executes a token swap"
+      ],
+      "discriminator": [
+        248,
+        198,
+        158,
+        145,
+        225,
+        117,
+        135,
+        200
+      ],
+      "accounts": [
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "user_token_authority",
+          "signer": true
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "SwapParams"
+            }
+          }
+        }
+      ]
+    },
+    "action_variants": [
+      "WhirlpoolsSwap",
+      "ClearpoolsSwap",
+      "RaydiumAmmSwap",
+      "LifinityV2Swap",
+      "MeteoraDlmmSwap",
+      "RaydiumClmmSwap",
+      "RaydiumClmmSwapV2",
+      "PhoenixSwap",
+      "PumpFunBuy",
+      "PumpFunSell",
+      "GammaSwap",
+      "ObricV2Swap",
+      "PumpFunAmmBuy",
+      "PumpFunAmmSell",
+      "SolFiSwap",
+      "RubiconSwap",
+      "MeteoraDammV1Swap",
+      "RaydiumCpSwap",
+      "StabbleStableSwap",
+      "TesseraVSwap",
+      "MeteoraDammV2Swap",
+      "RaydiumLaunchlabSwap",
+      "MeteoraDbcSwap",
+      "HumidiFiSwap",
+      "WhirlpoolsSwapV2",
+      "MeteoraDlmmSwapV2",
+      "ZeroFiSwap",
+      "AlphaQSwap",
+      "TokenSwap",
+      "SolFiV2Swap",
+      "MozartSwap",
+      "DFlowDynamicRouteV1",
+      "HeavenSwap",
+      "NexusSwap",
+      "SarosDlmmSwap",
+      "TransferFee",
+      "TransferFeeWithMint",
+      "RecordId",
+      "RecordId2",
+      "ManifestSwap",
+      "BisonFiSwap",
+      "SanctumInfinitySwap",
+      "SanctumInfinityLiquidity",
+      "OpenPredictionsOrder",
+      "ScorchSwap",
+      "IncludeAccount",
+      "StabbleWeightedSwap",
+      "VertigoSwap",
+      "SetMinimumLegOutputs",
+      "SetMinimumLegPrices",
+      "SetSponsor",
+      "WrapSol",
+      "UnwrapSol",
+      "KDEXSwap",
+      "DeriverseSwap",
+      "VaultSwap",
+      "MetaDaoSwap",
+      "D",
+      "XoCashExchangeSwap",
+      "LemmingsFiSwap",
+      "InitAtaIdempotent",
+      "SetMaxUnderconsumptionBps",
+      "GhostSwap",
+      "TransferFeeV2",
+      "TransferFeeWithMintV2",
+      "PumpFunBuyV2",
+      "PumpFunSellV2",
+      "DopplerLaunchSwap",
+      "DopplerCpmmSwap",
+      "ByrealClmmSwapV3Dyn",
+      "SanctumStakedexStakeWSOL",
+      "SanctumStakedexWithdrawWSOL",
+      "SanctumStakedexPrefund",
+      "SanctumStakedexReserve",
+      "SuperisSwap",
+      "GatorSwapSwap",
+      "JupLendAmmSwap",
+      "C",
+      "SetSponsorIntermediateCloseAuthority",
+      "MeteoraDbcSwapWithHook",
+      "PumpFunBuyV3",
+      "PumpFunSellV3",
+      "PumpFunAmmBuyV2",
+      "PumpFunAmmSellV2",
+      "TransferHookAccounts"
+    ],
+    "dynamic_variants": [
+      "SolFi",
+      "Rubicon",
+      "TesseraV",
+      "HumidiFi",
+      "SolFiV2",
+      "Mozart",
+      "ObricV2",
+      "Nexus",
+      "BisonFi",
+      "ZeroFi",
+      "Manifest",
+      "AlphaQ",
+      "Scorch"
+    ],
+    "types": {
+      "SwapParams": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "actions",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Action"
+                }
+              }
+            }
+          },
+          {
+            "name": "quoted_out_amount",
+            "docs": [
+              "Quoted output amount for the swap after platform fee"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "slippage_bps",
+            "docs": [
+              "Max allowed slippage in basis points. Along with `quoted_out_amount`, this is used to",
+              "calculate the minimum allowed output amount for the swap."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "platform_fee_bps",
+            "docs": [
+              "Platform fee in basis points. If nonzero, this percentage of the output amount will be",
+              "transferred to the platform fee account, and the instruction must include the platform fee",
+              "account as the last account. The platform fee account must be a valid token account for the",
+              "output mint, and it must specify the public key of the Referral program's DFlow project as",
+              "its owner."
+            ],
+            "type": "u16"
+          }
+        ]
+      },
+      "OrchestratorFlags": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "flags",
+            "type": "u8"
+          }
+        ]
+      },
+      "RecordIdOptions": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "array": [
+                "u8",
+                76
+              ]
+            }
+          }
+        ]
+      },
+      "RecordId2Options": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "array": [
+                "u8",
+                4
+              ]
+            }
+          }
+        ]
+      },
+      "SetMinimumLegPricesOptions": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "minimum_prices",
+            "docs": [
+              "Minimum allowed price for each swap leg"
+            ],
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "LegPrice"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "LegPrice": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "output_atoms_per_input_token",
+            "type": "u64"
+          },
+          {
+            "name": "input_mint_decimals",
+            "type": "u8"
+          }
+        ]
+      },
+      "DFlowDynamicRouteV1Options": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "candidate_actions",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "DynamicRouteV1CandidateAction"
+                }
+              }
+            }
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "orchestrator_flags",
+            "docs": [
+              "Optional flags for the swap"
+            ],
+            "type": {
+              "defined": {
+                "name": "OrchestratorFlags"
+              }
+            }
+          }
+        ]
+      },
+      "DeriverseSwapOptions": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "orchestrator_flags",
+            "docs": [
+              "Optional flags for the swap"
+            ],
+            "type": {
+              "defined": {
+                "name": "OrchestratorFlags"
+              }
+            }
+          }
+        ]
+      },
+      "PumpFunAmmBuyOptions": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "orchestrator_flags",
+            "docs": [
+              "Optional flags for the swap"
+            ],
+            "type": {
+              "defined": {
+                "name": "OrchestratorFlags"
+              }
+            }
+          }
+        ]
+      },
+      "PumpFunAmmBuyV2Options": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "orchestrator_flags",
+            "docs": [
+              "Optional flags for the swap"
+            ],
+            "type": {
+              "defined": {
+                "name": "OrchestratorFlags"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "source": {
+    "slot": 456490108,
+    "version": 1,
+    "transaction": {
+      "signatures": [
+        "4tGELCeA67s5Gi6HnUFpYdqpKqMDWJtULF2hyQejrpkxWQidagib2nvXeRNPBTkYHHrskrLhCoe6f7zpTzyvGNKR",
+        "4LGtddCrFpxyKuCXzcQMF8vVPCxVaqRNjTFJpaaDkQ8u4MgQ5cyHndyZ3QZUHqKhJihxW7K6gv4ffYggKk8qpzaL"
+      ],
+      "message": {
+        "header": {
+          "numRequiredSignatures": 2,
+          "numReadonlySignedAccounts": 0,
+          "numReadonlyUnsignedAccounts": 23
+        },
+        "accountKeys": [
+          "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51",
+          "Cqu5uKfKh6mSfqasYKGDYghGc7J54FAp9WCus9QnQSsR",
+          "2Y7HATmn9aJBcxCskE5V2U2epmjvkZmB51zTJBbhj4cU",
+          "3UQ3pgHiFukwoSCAvUkWKn96LuZLQ31kLE2ZWzAFWk7L",
+          "5DMkwX1edkbAywTecSjP2nyPjzmi8dCKvWfQXybVLvCw",
+          "5pVN5XZB8cYBjNLFrsBCPWkCQBan5K5Mq2dWGzwPgGJV",
+          "6d9rveyiLB1UPqTNj5CEFXR85fugvoZQ4kni8HqYvjwN",
+          "7sJf1SmKDDAFtBmMtg253rTbjG7zVFm3zTNounSgSNc9",
+          "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+          "8sQfM9TytDNZUVvDqQyxuomfHYJ8g1bSJQ8UxomCGHiP",
+          "9ggCmz5iwQDUhkcfdYBv3drTnZFdiAHVGSydNzpbM7Gb",
+          "9t4P5wMwfFkyn92Z7hf463qYKEZf8ERVZsGBEPNp8uJx",
+          "ATRsNGv2nDw7hSMfkUTBoVUDsFDwN7po7KbecyiGWNB4",
+          "AYhievvcVNZ8ATrSeVTUPeEX2JAz1RhAnBp5CUmxYjy4",
+          "C9jjhzojE16zJ296tEPinA35rB1okyMVspE7FnR4idMf",
+          "Ci3HZCb6fr5YiYLG9R6XbxHcjm2mDb1R3ugQ3bPZ7oKZ",
+          "CyK3Nsj8T3QUS3hAzR3QiZurkLsqmqVadR1bKVmHB1tc",
+          "EPUHjseXG3izk3MVUJ1PcyWT9xeBhtAnq8gUpq3j8Uni",
+          "F2zDmA4GLsHtSDtEAFo9wWr5VBHLXtZjYzhRoGybWsFM",
+          "FCgtbMQPyLVNnvd7mpxc3SCE8Ne8qEL9xkU2gwf7xceA",
+          "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+          "FLckHLGMJy5gEoXWwcE68Nprde1D4araK4TGLw4pQq2n",
+          "FNd6xYbdRP9PcBMgjhHTeP1phFERLY1P4RDvLAeiDDxY",
+          "FnY6vckud6Vtgimzdhq5KYswTMa7uGsep4oHEH3JtPyo",
+          "GUGu95pqRvUk1NeZTmadqrUa1RxFcmTMCCrqTXK6976V",
+          "H6mmDwnQHBq68tqEhBConeRBBDUobqHrQbDUcBVNTW9M",
+          "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+          "HcZ2WqJAPeyteQvhz2cETzCCjP3z7HSCanY2Q3yFQB74",
+          "HjQjngTDqoHE6aaGhUqfz9aQ7WZcBRjy5xB8PScLSr8i",
+          "HrTf9CzXR1dRH4Sof5QrpmGWwpwAf3qZzwCsEjQpXcSq",
+          "UUUXQdoC85FmgUgDMfYj3UsBWMLSjU7gVj4QmYGdMRx",
+          "11111111111111111111111111111111",
+          "4cG31VNF9TzFinNc7BmnjhFvGjxkY3sCETVMtMgbrhPs",
+          "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+          "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+          "8ekCy2jHHUbW2yeNGFWYJT9Hm9FW7SvZcZK66dSZCDiF",
+          "8xeaWCsJYxRoudEZGJWURdfrtFhLYZz9b4iHJnW5tb3d",
+          "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+          "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+          "BAT1Ndpu5gbLTp2AZkSXP79LJBZfCH4B3zGhi6LtvdhK",
+          "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi",
+          "DF1ow4tspfHX9JwWJsAb9epbkA8hmpSEAtxXy1V27QBH",
+          "DRVSpZ2YUYYKgZP8XtLhAGtT1zYSCKzeHfb4DgRnrgqD",
+          "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "GMogeMjrWFaEceasCPathoibjAh8qwhTC3Chw4Bfpump",
+          "GS4CU59F31iL7aR2Q8zVS8DRrcRnXX1yjQ66TqNVQnaR",
+          "jitodontfront1111111111111111111TradeonFomo",
+          "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+          "So11111111111111111111111111111111111111112",
+          "Sysvar1nstructions1111111111111111111111111",
+          "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH",
+          "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+        ],
+        "recentBlockhash": "Wg2tdrtMojv9mY25YxFRuCwG5oUzrpZ8q2hxogCi5Pn",
+        "instructions": [
+          {
+            "programIdIndex": 41,
+            "accounts": [
+              52,
+              38,
+              31,
+              1,
+              36,
+              41,
+              41,
+              50,
+              53,
+              41,
+              45,
+              0,
+              22,
+              1,
+              45,
+              0,
+              1,
+              6,
+              10,
+              43,
+              49,
+              50,
+              40,
+              8,
+              12,
+              2,
+              32,
+              51,
+              35,
+              21,
+              5,
+              11,
+              39,
+              32,
+              42,
+              43,
+              44,
+              30,
+              17,
+              26,
+              13,
+              24,
+              25,
+              4,
+              19,
+              6,
+              16,
+              1,
+              16,
+              10,
+              44,
+              49,
+              50,
+              40,
+              20,
+              14,
+              18,
+              32,
+              51,
+              35,
+              7,
+              5,
+              15,
+              39,
+              32,
+              48,
+              3,
+              1,
+              37,
+              45,
+              49,
+              22,
+              10,
+              27,
+              9,
+              23,
+              33,
+              34,
+              28,
+              46
+            ],
+            "data": "Luu3hKSPFpieQertNWbqVmvTftC4w5JHoS3PGfoK3qZhZnkqRAjuq72cNfDa9R97yHXGsKPe7fuULHrMDAVFRD8Q2N6uTqWC37LsWdsnj4j8Dz4MNc3yMx972oLdgbUY4KArMHpE4AXW9y3AVmJ7Eq4poVRV9BcPZgYio4FzuzGszMz4XnUU1VPiXcrKxopv5fbwqXrz66niKdtfucRihpUakMD8hAJtqE3ALNXtihLtbpxGjimV3NLRrNkNUKr23",
+            "stackHeight": 1
+          },
+          {
+            "programIdIndex": 52,
+            "accounts": [
+              6,
+              43,
+              29,
+              1
+            ],
+            "data": "jAVgNoqS3AMPK",
+            "stackHeight": 1
+          },
+          {
+            "programIdIndex": 31,
+            "accounts": [
+              0,
+              0,
+              47
+            ],
+            "data": "3Bxs3zrfFUZbEPqZ",
+            "stackHeight": 1
+          }
+        ],
+        "transactionConfig": {
+          "priorityFee": 744434,
+          "computeUnitLimit": 744434,
+          "loadedAccountsDataSizeLimit": 67108864,
+          "heapSize": null
+        }
+      }
+    }
+  },
+  "owner": "Cqu5uKfKh6mSfqasYKGDYghGc7J54FAp9WCus9QnQSsR",
+  "pool": "3UQ3pgHiFukwoSCAvUkWKn96LuZLQ31kLE2ZWzAFWk7L",
+  "mint": "GMogeMjrWFaEceasCPathoibjAh8qwhTC3Chw4Bfpump",
+  "static_read": {
+    "slot": 456505361,
+    "accounts": {
+      "3UQ3pgHiFukwoSCAvUkWKn96LuZLQ31kLE2ZWzAFWk7L": {
+        "data": [
+          "8ZptBBGxbbz/AABoS0Q+K/ejOieeIcCnxWAQJ1yWEEuJ9r4HaVEee5d1ieQztI6IgP5MypoAmUbnHFHe58liO0sqYGVKZCP2oFsvBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAGoT44paIMN4aa5FpRyMr3bDqt7enU/DaRvL4A6VlLOlfbWh/s0dWYPFwQMLsBLbAYNE9m04S/wKz2nP1t7KYE/dOuaSnC+4SVKkPGOIBLjL7UEG1GzyCFBmArIZeCvsSg5/2tZ0AMAALWJpDjSCqH5Sh1Qfm1VkmmLxkPZL9DPREHHtKHifqI7AAAVsA0YBAAAAAAAAAAAAAAAAAAAAAAAAAAAAM5sAAAAAAAAeSYQAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 2985840,
+        "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+        "rentEpoch": 18446744073709551615,
+        "space": 301
+      },
+      "GMogeMjrWFaEceasCPathoibjAh8qwhTC3Chw4Bfpump": {
+        "data": [
+          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPNjllelXAwAGAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOQztI6IgP5MypoAmUbnHFHe58liO0sqYGVKZCP2oFsvEwCSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5DO0joiA/kzKmgCZRuccUd7nyWI7SypgZUpkI/agWy8GAAAAcXVhY2tkBgAAAFFVQUNLRDYAAABodHRwczovL21ldGFkYXRhLmo3dHJhY2tlci5pby9tZXRhZGF0YS9yRnZvS2cwbGtVLmpzb24AAAAA",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 3563520,
+        "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "rentEpoch": 18446744073709551615,
+        "space": 384
+      },
+      "So11111111111111111111111111111111111111112": {
+        "data": [
+          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "base64"
+        ],
+        "executable": false,
+        "lamports": 1852116092148,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "rentEpoch": 18446744073709551615,
+        "space": 82
+      }
+    }
+  }
+}

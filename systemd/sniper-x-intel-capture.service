@@ -1,0 +1,19 @@
+[Unit]
+Description=Sniper X Intel official API read capture
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bigpapi/Desktop/Sniper
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/home/bigpapi/Desktop/Sniper/.runtime/x-intel.env
+ExecStart=/home/bigpapi/Desktop/Sniper/.venv/bin/python /home/bigpapi/Desktop/Sniper/scripts/run_memecoin_x_api_capture.py
+Restart=on-failure
+RestartSec=15
+StandardOutput=journal
+StandardError=journal
+UMask=0077
+
+[Install]
+WantedBy=default.target

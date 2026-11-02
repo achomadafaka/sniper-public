@@ -1,0 +1,37 @@
+{
+  "data": {
+    "id": "101",
+    "text": "Watching $MEME on Robinhood chain 4663 0x1111111111111111111111111111111111111111",
+    "author_id": "1001",
+    "created_at": "2026-07-26T11:59:58.000Z",
+    "edit_history_tweet_ids": ["101"],
+    "entities": {
+      "cashtags": [{"start": 9, "end": 14, "tag": "MEME"}],
+      "urls": []
+    },
+    "public_metrics": {
+      "retweet_count": 2,
+      "reply_count": 1,
+      "like_count": 8,
+      "quote_count": 1,
+      "bookmark_count": 0,
+      "impression_count": 100
+    }
+  },
+  "includes": {
+    "users": [{
+      "id": "1001",
+      "username": "alpha",
+      "name": "Alpha",
+      "public_metrics": {
+        "followers_count": 1000,
+        "following_count": 100,
+        "tweet_count": 500,
+        "listed_count": 5,
+        "like_count": 100
+      }
+    }],
+    "tweets": []
+  },
+  "matching_rules": [{"id": "rule-1", "tag": "sniper-x-intel:abc:0"}]
+}

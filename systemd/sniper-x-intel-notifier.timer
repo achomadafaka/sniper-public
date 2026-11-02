@@ -1,0 +1,12 @@
+[Unit]
+Description=Deliver X Intel Telegram outbox every 15 seconds
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=15s
+AccuracySec=1s
+Persistent=true
+Unit=sniper-x-intel-notifier.service
+
+[Install]
+WantedBy=timers.target

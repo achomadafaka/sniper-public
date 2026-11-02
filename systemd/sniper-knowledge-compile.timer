@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer — nightly knowledge page compile
+Requires=sniper-knowledge-compile.service
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Run the memecoin X forward correlator every minute
+
+[Timer]
+OnBootSec=60s
+OnUnitActiveSec=60s
+AccuracySec=5s
+Persistent=true
+Unit=sniper-memecoin-x-correlator.service
+
+[Install]
+WantedBy=timers.target

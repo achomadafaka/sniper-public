@@ -1,0 +1,3583 @@
+{
+ "agent_cross": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 0.0
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 0.0
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    -4444,
+    -4444,
+    -4444,
+    -4444,
+    10,
+    0,
+    1
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -2222,
+    -2222,
+    -2222,
+    -2222,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    -1111,
+    -1111,
+    -1111,
+    -1111,
+    10,
+    0,
+    1
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    -5,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 10.0,
+  "price_usd": 1.8,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "volatility",
+    "tp": "range_extension",
+    "trail": "volatility"
+   },
+   "sl_pct": 0.0,
+   "tp_pct": 40.0,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": null,
+   "state": "ok",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 4,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 14.2857,
+   "true_range_bars": 3
+  },
+  "volume_accel": 0.0,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 40,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": null,
+    "buy_usd": 0,
+    "buyers": 0,
+    "delta_trend": null,
+    "high": null,
+    "low": null,
+    "n_agent_swaps": 1,
+    "n_swaps": 0,
+    "net_delta_usd": 0,
+    "pos_in_range_pct": null,
+    "range_pct": null,
+    "reason": null,
+    "return_pct": null,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": null,
+    "trend": null
+   },
+   "300s": {
+    "agent_buy_usd": 40,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 1,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 40,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 1,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 40,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 1,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   }
+  }
+ },
+ "base": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 19.5122
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 5.4545
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    -1176,
+    -1176,
+    -1176,
+    -1176,
+    20,
+    0,
+    1
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -1765,
+    -1765,
+    -1765,
+    -1765,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    -588,
+    -588,
+    -588,
+    -588,
+    30,
+    0,
+    1
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    588,
+    588,
+    588,
+    588,
+    40,
+    0,
+    1
+   ],
+   [
+    -5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    1
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.7,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "support",
+    "tp": "resistance",
+    "trail": "volatility"
+   },
+   "sl_pct": 19.4118,
+   "tp_pct": 5.8824,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": 5.8824,
+   "state": "ok",
+   "support_below_pct": 17.6471
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 7,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 13.3929,
+   "true_range_bars": 6
+  },
+  "volume_accel": 2.1818,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 50.0,
+    "buy_usd": 40,
+    "buyers": 1,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.7,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 32,
+    "pos_in_range_pct": 0.0,
+    "range_pct": 5.8824,
+    "reason": null,
+    "return_pct": -5.5556,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 0,
+     "higher_lows": 0,
+     "label": "down",
+     "slope_pct_per_min": -68.5714,
+     "strength": 68.5714
+    }
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 75.0,
+    "buy_usd": 80,
+    "buyers": 3,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.4,
+    "n_agent_swaps": 0,
+    "n_swaps": 4,
+    "net_delta_usd": 72,
+    "pos_in_range_pct": 75.0,
+    "range_pct": 28.5714,
+    "reason": null,
+    "return_pct": 21.4286,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 90.9091,
+    "trend": {
+     "higher_highs": 2,
+     "higher_lows": 2,
+     "label": "up",
+     "slope_pct_per_min": 37.8863,
+     "strength": 37.8863
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   }
+  }
+ },
+ "base_launch": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 19.5122
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 5.4545
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    -1176,
+    -1176,
+    -1176,
+    -1176,
+    20,
+    0,
+    1
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -1765,
+    -1765,
+    -1765,
+    -1765,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    -588,
+    -588,
+    -588,
+    -588,
+    30,
+    0,
+    1
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    588,
+    588,
+    588,
+    588,
+    40,
+    0,
+    1
+   ],
+   [
+    -5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    1
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.7,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "support",
+    "tp": "resistance",
+    "trail": "volatility"
+   },
+   "sl_pct": 19.4118,
+   "tp_pct": 5.8824,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": 5.8824,
+   "state": "ok",
+   "support_below_pct": 17.6471
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 7,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 13.3929,
+   "true_range_bars": 6
+  },
+  "volume_accel": 2.1818,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 50.0,
+    "buy_usd": 40,
+    "buyers": 1,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.7,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 32,
+    "pos_in_range_pct": 0.0,
+    "range_pct": 5.8824,
+    "reason": null,
+    "return_pct": -5.5556,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 0,
+     "higher_lows": 0,
+     "label": "down",
+     "slope_pct_per_min": -68.5714,
+     "strength": 68.5714
+    }
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 75.0,
+    "buy_usd": 80,
+    "buyers": 3,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.4,
+    "n_agent_swaps": 0,
+    "n_swaps": 4,
+    "net_delta_usd": 72,
+    "pos_in_range_pct": 75.0,
+    "range_pct": 28.5714,
+    "reason": null,
+    "return_pct": 21.4286,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 90.9091,
+    "trend": {
+     "higher_highs": 2,
+     "higher_lows": 2,
+     "label": "up",
+     "slope_pct_per_min": 37.8863,
+     "strength": 37.8863
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   }
+  }
+ },
+ "cross_sell_recover": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": false,
+    "reason": null,
+    "seconds_since": 12.0,
+    "state": "ok",
+    "volume_vs_avg": 28.5714
+   },
+   "60s": {
+    "broke": true,
+    "holding": false,
+    "reason": null,
+    "seconds_since": 12.0,
+    "state": "ok",
+    "volume_vs_avg": 5.7143
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    -4737,
+    -4737,
+    -4737,
+    -4737,
+    10,
+    0,
+    1
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -2632,
+    -2632,
+    -2632,
+    -2632,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    -1579,
+    -1579,
+    -1579,
+    -1579,
+    10,
+    0,
+    1
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -15,
+    -526,
+    -526,
+    -526,
+    -526,
+    40,
+    0,
+    1
+   ],
+   [
+    -10,
+    -2105,
+    0,
+    -2105,
+    0,
+    9,
+    5,
+    2
+   ],
+   [
+    -5,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 6.0,
+  "price_usd": 1.9,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "volatility",
+    "tp": "range_extension",
+    "trail": "volatility"
+   },
+   "sl_pct": 0.0,
+   "tp_pct": 45.0,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": null,
+   "state": "ok",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 5,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 20.4762,
+   "true_range_bars": 4
+  },
+  "volume_accel": 2.5714,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 66.6667,
+    "buy_usd": 49,
+    "buyers": 2,
+    "delta_trend": "falling",
+    "high": 1.9,
+    "low": 1.5,
+    "n_agent_swaps": 0,
+    "n_swaps": 3,
+    "net_delta_usd": 44,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 26.6667,
+    "reason": null,
+    "return_pct": 5.5556,
+    "sell_usd": 5,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 1,
+     "higher_lows": 0,
+     "label": "up",
+     "slope_pct_per_min": 57.6923,
+     "strength": 57.6923
+    }
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 83.3333,
+    "buy_usd": 79,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.9,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 6,
+    "net_delta_usd": 74,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 90.0,
+    "reason": null,
+    "return_pct": 90.0,
+    "sell_usd": 5,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 71.4286,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 58.7133,
+     "strength": 58.7133
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 83.3333,
+    "buy_usd": 79,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.9,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 6,
+    "net_delta_usd": 74,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 90.0,
+    "reason": null,
+    "return_pct": 90.0,
+    "sell_usd": 5,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 71.4286,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 58.7133,
+     "strength": 58.7133
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 83.3333,
+    "buy_usd": 79,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "high": 1.9,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 6,
+    "net_delta_usd": 74,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 90.0,
+    "reason": null,
+    "return_pct": 90.0,
+    "sell_usd": 5,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 71.4286,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 58.7133,
+     "strength": 58.7133
+    }
+   }
+  }
+ },
+ "empty": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "reason": "no_reference",
+    "state": "unknown"
+   },
+   "60s": {
+    "reason": "no_reference",
+    "state": "unknown"
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -5,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": null,
+  "price_usd": null,
+  "rails": {
+   "advisory": true,
+   "basis": {},
+   "sl_pct": null,
+   "tp_pct": null,
+   "trail_pct": null
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": null,
+   "state": "ok",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 0,
+   "median_5s_swing_pct": null,
+   "median_5s_true_range_pct": null,
+   "true_range_bars": 0
+  },
+  "volume_accel": null,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": null,
+    "buy_usd": 0,
+    "buyers": 0,
+    "delta_trend": null,
+    "high": null,
+    "low": null,
+    "n_agent_swaps": 0,
+    "n_swaps": 0,
+    "net_delta_usd": 0,
+    "pos_in_range_pct": null,
+    "range_pct": null,
+    "reason": null,
+    "return_pct": null,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": null,
+    "trend": null
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": null,
+    "buy_usd": 0,
+    "buyers": 0,
+    "delta_trend": null,
+    "high": null,
+    "low": null,
+    "n_agent_swaps": 0,
+    "n_swaps": 0,
+    "net_delta_usd": 0,
+    "pos_in_range_pct": null,
+    "range_pct": null,
+    "reason": null,
+    "return_pct": null,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": null,
+    "trend": null
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": null,
+    "buy_usd": 0,
+    "buyers": 0,
+    "delta_trend": null,
+    "high": null,
+    "low": null,
+    "n_agent_swaps": 0,
+    "n_swaps": 0,
+    "net_delta_usd": 0,
+    "pos_in_range_pct": null,
+    "range_pct": null,
+    "reason": null,
+    "return_pct": null,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": null,
+    "trend": null
+   },
+   "launch": {
+    "reason": "no_swaps",
+    "state": "unknown"
+   }
+  }
+ },
+ "gap": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "reason": "tape_gap",
+    "state": "unknown"
+   },
+   "60s": {
+    "reason": "tape_gap",
+    "state": "unknown"
+   }
+  },
+  "chart": null,
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.7,
+  "rails": {
+   "advisory": true,
+   "basis": {},
+   "sl_pct": null,
+   "tp_pct": null,
+   "trail_pct": null
+  },
+  "reason": null,
+  "swings": {
+   "reason": "tape_gap",
+   "resistance_above_pct": null,
+   "state": "unknown",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 0,
+   "median_5s_swing_pct": null,
+   "median_5s_true_range_pct": null,
+   "true_range_bars": 0
+  },
+  "volume_accel": null,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 50.0,
+    "buy_usd": 40,
+    "buyers": 1,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.7,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 32,
+    "pos_in_range_pct": 0.0,
+    "range_pct": 5.8824,
+    "reason": null,
+    "return_pct": -5.5556,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 0,
+     "higher_lows": 0,
+     "label": "down",
+     "slope_pct_per_min": -68.5714,
+     "strength": 68.5714
+    }
+   },
+   "300s": {
+    "reason": "tape_gap",
+    "state": "unknown"
+   },
+   "60s": {
+    "reason": "tape_gap",
+    "state": "unknown"
+   },
+   "launch": {
+    "reason": "tape_gap",
+    "state": "unknown"
+   }
+  }
+ },
+ "lost": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 19.5122
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 5.4545
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    -1176,
+    -1176,
+    -1176,
+    -1176,
+    20,
+    0,
+    1
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -1765,
+    -1765,
+    -1765,
+    -1765,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    -588,
+    -588,
+    -588,
+    -588,
+    30,
+    0,
+    1
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    588,
+    588,
+    588,
+    588,
+    40,
+    0,
+    1
+   ],
+   [
+    -5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    1
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.7,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "support",
+    "tp": "resistance",
+    "trail": "volatility"
+   },
+   "sl_pct": 19.4118,
+   "tp_pct": 5.8824,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": 5.8824,
+   "state": "ok",
+   "support_below_pct": 17.6471
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 7,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 13.3929,
+   "true_range_bars": 6
+  },
+  "volume_accel": null,
+  "windows": {
+   "15s": {
+    "reason": "swaps_lost",
+    "state": "unknown"
+   },
+   "300s": {
+    "reason": "swaps_lost",
+    "state": "unknown"
+   },
+   "60s": {
+    "reason": "swaps_lost",
+    "state": "unknown"
+   },
+   "launch": {
+    "reason": "swaps_lost",
+    "state": "unknown"
+   }
+  }
+ },
+ "one_lost": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 19.5122
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 5.4545
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    -1176,
+    -1176,
+    -1176,
+    -1176,
+    20,
+    0,
+    1
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -1765,
+    -1765,
+    -1765,
+    -1765,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    -588,
+    -588,
+    -588,
+    -588,
+    30,
+    0,
+    1
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    588,
+    588,
+    588,
+    588,
+    40,
+    0,
+    1
+   ],
+   [
+    -5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8,
+    1
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.7,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "support",
+    "tp": "resistance",
+    "trail": "volatility"
+   },
+   "sl_pct": 19.4118,
+   "tp_pct": 5.8824,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": 5.8824,
+   "state": "ok",
+   "support_below_pct": 17.6471
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 7,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 13.3929,
+   "true_range_bars": 6
+  },
+  "volume_accel": 2.1818,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 50.0,
+    "buy_usd": 40,
+    "buyers": 1,
+    "delta_trend": "falling",
+    "flow_is_lower_bound": true,
+    "high": 1.8,
+    "low": 1.7,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 32,
+    "pos_in_range_pct": 0.0,
+    "range_pct": 5.8824,
+    "reason": null,
+    "return_pct": -5.5556,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "swaps_lost": 1,
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 0,
+     "higher_lows": 0,
+     "label": "down",
+     "slope_pct_per_min": -68.5714,
+     "strength": 68.5714
+    }
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "flow_is_lower_bound": true,
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "swaps_lost": 1,
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 75.0,
+    "buy_usd": 80,
+    "buyers": 3,
+    "delta_trend": "rising",
+    "flow_is_lower_bound": true,
+    "high": 1.8,
+    "low": 1.4,
+    "n_agent_swaps": 0,
+    "n_swaps": 4,
+    "net_delta_usd": 72,
+    "pos_in_range_pct": 75.0,
+    "range_pct": 28.5714,
+    "reason": null,
+    "return_pct": 21.4286,
+    "sell_usd": 8,
+    "sellers": 1,
+    "state": "ok",
+    "swaps_lost": 1,
+    "top3_trade_share_pct": 90.9091,
+    "trend": {
+     "higher_highs": 2,
+     "higher_lows": 2,
+     "label": "up",
+     "slope_pct_per_min": 37.8863,
+     "strength": 37.8863
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 71.4286,
+    "buy_usd": 110,
+    "buyers": 5,
+    "delta_trend": "rising",
+    "flow_is_lower_bound": true,
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 7,
+    "net_delta_usd": 97,
+    "pos_in_range_pct": 87.5,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 70.0,
+    "sell_usd": 13,
+    "sellers": 2,
+    "state": "ok",
+    "swaps_lost": 1,
+    "top3_trade_share_pct": 73.1707,
+    "trend": {
+     "higher_highs": 4,
+     "higher_lows": 4,
+     "label": "up",
+     "slope_pct_per_min": 9.8361,
+     "strength": 9.8361
+    }
+   }
+  }
+ },
+ "price_only": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 0.0
+   },
+   "60s": {
+    "broke": true,
+    "holding": true,
+    "reason": null,
+    "seconds_since": 10.0,
+    "state": "ok",
+    "volume_vs_avg": 0.0
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    -4444,
+    -4444,
+    -4444,
+    -4444,
+    10,
+    0,
+    1
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    -2222,
+    -2222,
+    -2222,
+    -2222,
+    10,
+    0,
+    1
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    -1111,
+    -1111,
+    -1111,
+    -1111,
+    10,
+    0,
+    1
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    -5,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 10.0,
+  "price_usd": 1.8,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "sl": "volatility",
+    "tp": "range_extension",
+    "trail": "volatility"
+   },
+   "sl_pct": 0.0,
+   "tp_pct": 40.0,
+   "trail_pct": 0.0
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": null,
+   "state": "ok",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 4,
+   "median_5s_swing_pct": 0.0,
+   "median_5s_true_range_pct": 14.2857,
+   "true_range_bars": 3
+  },
+  "volume_accel": 0.0,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": null,
+    "buy_usd": 0,
+    "buyers": 0,
+    "delta_trend": null,
+    "high": null,
+    "low": null,
+    "n_agent_swaps": 0,
+    "n_swaps": 0,
+    "net_delta_usd": 0,
+    "pos_in_range_pct": null,
+    "range_pct": null,
+    "reason": null,
+    "return_pct": null,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": null,
+    "trend": null
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "rising",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 30,
+    "buyers": 3,
+    "delta_trend": "falling",
+    "high": 1.8,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 3,
+    "net_delta_usd": 30,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 80.0,
+    "reason": null,
+    "return_pct": 80.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 3,
+     "higher_lows": 3,
+     "label": "up",
+     "slope_pct_per_min": 78.0296,
+     "strength": 78.0296
+    }
+   }
+  }
+ },
+ "thin": {
+  "as_of": 1000000.0,
+  "breakout": {
+   "300s": {
+    "reason": "no_reference",
+    "state": "unknown"
+   },
+   "60s": {
+    "reason": "no_reference",
+    "state": "unknown"
+   }
+  },
+  "chart": [
+   [
+    -120,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -115,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -110,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -105,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -100,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -95,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -90,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -85,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -80,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -75,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -70,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -65,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -60,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -55,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -50,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -45,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -40,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -35,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -30,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -25,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -20,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -15,
+    null,
+    null,
+    null,
+    null,
+    0,
+    0,
+    0
+   ],
+   [
+    -10,
+    -909,
+    -909,
+    -909,
+    -909,
+    10,
+    0,
+    1
+   ],
+   [
+    -5,
+    0,
+    0,
+    0,
+    0,
+    10,
+    0,
+    1
+   ]
+  ],
+  "cut_slot": 2000,
+  "last_swap_age_s": 5.0,
+  "price_usd": 1.1,
+  "rails": {
+   "advisory": true,
+   "basis": {
+    "tp": "range_extension"
+   },
+   "sl_pct": null,
+   "tp_pct": 5.0,
+   "trail_pct": null
+  },
+  "reason": null,
+  "swings": {
+   "reason": null,
+   "resistance_above_pct": null,
+   "state": "ok",
+   "support_below_pct": null
+  },
+  "tape": "ok",
+  "version": "structure-v1",
+  "volatility": {
+   "bars": 2,
+   "median_5s_swing_pct": null,
+   "median_5s_true_range_pct": 10.0,
+   "true_range_bars": 1
+  },
+  "volume_accel": 4.0,
+  "windows": {
+   "15s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 20,
+    "buyers": 2,
+    "delta_trend": "flat",
+    "high": 1.1,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 20,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 10.0,
+    "reason": null,
+    "return_pct": 10.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 1,
+     "higher_lows": 1,
+     "label": "up",
+     "slope_pct_per_min": 142.8571,
+     "strength": 142.8571
+    }
+   },
+   "300s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 20,
+    "buyers": 2,
+    "delta_trend": "rising",
+    "high": 1.1,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 20,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 10.0,
+    "reason": null,
+    "return_pct": 10.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 1,
+     "higher_lows": 1,
+     "label": "up",
+     "slope_pct_per_min": 142.8571,
+     "strength": 142.8571
+    }
+   },
+   "60s": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 20,
+    "buyers": 2,
+    "delta_trend": "rising",
+    "high": 1.1,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 20,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 10.0,
+    "reason": null,
+    "return_pct": 10.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 1,
+     "higher_lows": 1,
+     "label": "up",
+     "slope_pct_per_min": 142.8571,
+     "strength": 142.8571
+    }
+   },
+   "launch": {
+    "agent_buy_usd": 0,
+    "agent_sell_usd": 0,
+    "buy_share_trades_pct": 100.0,
+    "buy_usd": 20,
+    "buyers": 2,
+    "delta_trend": "falling",
+    "high": 1.1,
+    "low": 1.0,
+    "n_agent_swaps": 0,
+    "n_swaps": 2,
+    "net_delta_usd": 20,
+    "pos_in_range_pct": 100.0,
+    "range_pct": 10.0,
+    "reason": null,
+    "return_pct": 10.0,
+    "sell_usd": 0,
+    "sellers": 0,
+    "state": "ok",
+    "top3_trade_share_pct": 100.0,
+    "trend": {
+     "higher_highs": 0,
+     "higher_lows": 0,
+     "label": "up",
+     "slope_pct_per_min": 142.8571,
+     "strength": 142.8571
+    }
+   }
+  }
+ }
+}

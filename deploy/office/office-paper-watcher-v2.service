@@ -1,0 +1,32 @@
+[Unit]
+Description=Office v2 paper watcher, office-v2-explore-1 only
+ConditionPathExists=/srv/sniper-office/release/scripts/office_paper_watcher.py
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/sniper-office/release
+ExecStartPre=/usr/bin/mkdir -p %h/Desktop/Sniper/data/office/v2/explore-ledger %h/Desktop/Sniper/data/office/v2/watcher
+# The sandbox is bwrap. Only the ledger directory (ledger.db + its runtime -wal/-shm) and the watcher directory
+# (heartbeat + lock) are writable; / is read-only (tape, clock sample, release tree).
+ExecStart=/usr/bin/bwrap --unshare-user --unshare-pid --die-with-parent --new-session --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp --bind %h/Desktop/Sniper/data/office/v2/explore-ledger %h/Desktop/Sniper/data/office/v2/explore-ledger --bind %h/Desktop/Sniper/data/office/v2/watcher %h/Desktop/Sniper/data/office/v2/watcher --cap-drop ALL /usr/bin/env -i HOME=%h PATH=%h/.npm-global/bin:/usr/local/bin:/usr/bin:/bin SNIPER_STATE_ROOT=%h/Desktop/Sniper %h/.pyenv/versions/3.13.0/bin/python3 /srv/sniper-office/release/scripts/office_paper_watcher.py --ledger %h/Desktop/Sniper/data/office/v2/explore-ledger/ledger.db --expect-epoch office-v2-explore-1 --desk-dir %h/Desktop/Sniper/data/desk --clock-file %h/Desktop/Sniper/data/clock_offset.json --heartbeat %h/Desktop/Sniper/data/office/v2/watcher/paper-watcher.json --mark-every-s 3
+Nice=19
+Slice=app.slice
+KillMode=control-group
+TimeoutStopSec=5
+Restart=on-failure
+RestartSec=5
+# bwrap cannot create its namespaces under NoNewPrivileges=yes on this host (Delta); bwrap sets no_new_privs itself
+# after setup, and the watcher refuses to run unless its own NoNewPrivs is 1 and CapEff is 0.
+NoNewPrivileges=no
+LimitNOFILE=256
+TasksMax=16
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+MemoryMax=134217728
+# 50%: one integrity exit quote at p90 ~1.2 s CPU finishes in ~2.4 s wall, inside the ledger's 5 s exit grace;
+# marks are throttled to every 15 s per position, so the average load stays low (Alpha 2026-10-28).
+CPUQuota=50%
+IOWeight=1
+
+[Install]
+WantedBy=default.target

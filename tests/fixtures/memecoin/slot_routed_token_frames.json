@@ -1,0 +1,488 @@
+{
+ "source": "Captured 2026-09-27 15:40-15:5xZ on the research key, processed: per owner programSubscribe Token (dataSize 165 + memcmp owner@32) and Token-2022 (memcmp owner@32), jsonParsed, and logsSubscribe mentions, one socket, request ids 1..9 in the order listed in `requests`. Frames unchanged. Slot 451040320 is a pump DistributeFeeToHolders HANDOUT to Tekkerrss: a Token-2022 coin rises with no USDC leg and one successful logs frame.",
+ "requests": [
+  {
+   "id": 1,
+   "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+   "kind": "token"
+  },
+  {
+   "id": 2,
+   "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+   "kind": "token2022"
+  },
+  {
+   "id": 3,
+   "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+   "kind": "logs"
+  },
+  {
+   "id": 4,
+   "owner": "Hv3a4PaPvMPE5inwNoS27uFBRoeoJJMRSCJsKtExNH54",
+   "kind": "token"
+  },
+  {
+   "id": 5,
+   "owner": "Hv3a4PaPvMPE5inwNoS27uFBRoeoJJMRSCJsKtExNH54",
+   "kind": "token2022"
+  },
+  {
+   "id": 6,
+   "owner": "Hv3a4PaPvMPE5inwNoS27uFBRoeoJJMRSCJsKtExNH54",
+   "kind": "logs"
+  },
+  {
+   "id": 7,
+   "owner": "498g1rVnFcnjBjpfw1xyqA1WvgQXUU8RWuELjxkjAayQ",
+   "kind": "token"
+  },
+  {
+   "id": 8,
+   "owner": "498g1rVnFcnjBjpfw1xyqA1WvgQXUU8RWuELjxkjAayQ",
+   "kind": "token2022"
+  },
+  {
+   "id": 9,
+   "owner": "498g1rVnFcnjBjpfw1xyqA1WvgQXUU8RWuELjxkjAayQ",
+   "kind": "logs"
+  }
+ ],
+ "frames": [
+  {
+   "recv": 1790523617.6966567,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": 27036050
+   }
+  },
+  {
+   "recv": 1790523617.6966867,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": 27036051
+   }
+  },
+  {
+   "recv": 1790523617.6968257,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": 27036052
+   }
+  },
+  {
+   "recv": 1790523617.6968422,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": 27036053
+   }
+  },
+  {
+   "recv": 1790523617.6968548,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "result": 27036054
+   }
+  },
+  {
+   "recv": 1790523617.696964,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 6,
+    "result": 27036055
+   }
+  },
+  {
+   "recv": 1790523617.6969779,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 7,
+    "result": 27036056
+   }
+  },
+  {
+   "recv": 1790523617.6969945,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 8,
+    "result": 27036057
+   }
+  },
+  {
+   "recv": 1790523617.6972783,
+   "frame": {
+    "jsonrpc": "2.0",
+    "id": 9,
+    "result": 27036058
+   }
+  },
+  {
+   "recv": 1790523728.1386118,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036050,
+     "result": {
+      "context": {
+       "slot": 451040300
+      },
+      "value": {
+       "pubkey": "3KtvWij1yDU1W1XcRPqF1cimarKFK1rBjT1zpvUxQixY",
+       "account": {
+        "lamports": 2039280,
+        "data": {
+         "program": "spl-token",
+         "parsed": {
+          "info": {
+           "isNative": false,
+           "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "338409524767",
+            "decimals": 6,
+            "uiAmount": 338409.524767,
+            "uiAmountString": "338409.524767"
+           }
+          },
+          "type": "account"
+         },
+         "space": 165
+        },
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 165
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523728.3671281,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036050,
+     "result": {
+      "context": {
+       "slot": 451040301
+      },
+      "value": {
+       "pubkey": "3KtvWij1yDU1W1XcRPqF1cimarKFK1rBjT1zpvUxQixY",
+       "account": {
+        "lamports": 2039280,
+        "data": {
+         "program": "spl-token",
+         "parsed": {
+          "info": {
+           "isNative": false,
+           "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "338409904767",
+            "decimals": 6,
+            "uiAmount": 338409.904767,
+            "uiAmountString": "338409.904767"
+           }
+          },
+          "type": "account"
+         },
+         "space": 165
+        },
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 165
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523731.908495,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036050,
+     "result": {
+      "context": {
+       "slot": 451040316
+      },
+      "value": {
+       "pubkey": "3KtvWij1yDU1W1XcRPqF1cimarKFK1rBjT1zpvUxQixY",
+       "account": {
+        "lamports": 2039280,
+        "data": {
+         "program": "spl-token",
+         "parsed": {
+          "info": {
+           "isNative": false,
+           "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "338409976862",
+            "decimals": 6,
+            "uiAmount": 338409.976862,
+            "uiAmountString": "338409.976862"
+           }
+          },
+          "type": "account"
+         },
+         "space": 165
+        },
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 165
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523733.1927464,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "logsNotification",
+    "params": {
+     "subscription": 27036052,
+     "result": {
+      "context": {
+       "slot": 451040320
+      },
+      "value": {
+       "signature": "isVPtim8vcV9Wi1Xw5ymm6HW3d87mVJBFBjHsTKPLQx5R6CJM7qLKoEGXs3XhvnowHKdKqWQqj6LDqU2DocxPbx",
+       "err": null,
+       "logs": [
+        "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+        "Program ComputeBudget111111111111111111111111111111 success",
+        "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+        "Program ComputeBudget111111111111111111111111111111 success",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]",
+        "Program log: Instruction: DistributeFeeToHolders",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 380377 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+        "Program log: Create",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+        "Program log: Instruction: GetAccountDataSize",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 2116 of 342649 compute units",
+        "Program return: TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb swAAAAAAAAA=",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program 11111111111111111111111111111111 invoke [3]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: Initialize the associated token account",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+        "Program log: Instruction: InitializeImmutableOwner",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 736 of 335711 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]",
+        "Program log: Instruction: InitializeAccount3",
+        "Program log: Warning: Mint has a permanent delegate, so tokens in this account may be seized at any time",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3682 of 332637 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 26833 of 355484 compute units",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 326176 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 316794 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 308912 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 301030 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 293148 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 285266 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]",
+        "Program log: Instruction: TransferChecked",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3710 of 275884 compute units",
+        "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb success",
+        "Program data: 477XzrC0pYRUOblqAAAAAChXPekDO3n9IyKoRKsgD5Abt/fWAVgYs0HAcwA8rb8fBnwyCe62gS+h2yGIp6rAy3f9QUMS1XX61XqCA5TB9LwIAAAAAAAAANIFAAAAAAAA",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2149 of 269150 compute units",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 133359 of 399700 compute units",
+        "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success"
+       ]
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523733.1958451,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036051,
+     "result": {
+      "context": {
+       "slot": 451040320
+      },
+      "value": {
+       "pubkey": "7pSJZrSyCoztaJAXYQ6Z4YuoXFsMk7tbcxWRQxCs17aa",
+       "account": {
+        "lamports": 2136720,
+        "data": {
+         "program": "spl-token-2022",
+         "parsed": {
+          "info": {
+           "extensions": [
+            {
+             "extension": "immutableOwner"
+            },
+            {
+             "extension": "pausableAccount"
+            },
+            {
+             "extension": "transferHookAccount",
+             "state": {
+              "transferring": false
+             }
+            }
+           ],
+           "isNative": false,
+           "mint": "SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "603064",
+            "decimals": 6,
+            "uiAmount": 0.603064,
+            "uiAmountString": "0.603064"
+           }
+          },
+          "type": "account"
+         },
+         "space": 179
+        },
+        "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 179
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523743.1743155,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036050,
+     "result": {
+      "context": {
+       "slot": 451040358
+      },
+      "value": {
+       "pubkey": "3KtvWij1yDU1W1XcRPqF1cimarKFK1rBjT1zpvUxQixY",
+       "account": {
+        "lamports": 2039280,
+        "data": {
+         "program": "spl-token",
+         "parsed": {
+          "info": {
+           "isNative": false,
+           "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "338410356862",
+            "decimals": 6,
+            "uiAmount": 338410.356862,
+            "uiAmountString": "338410.356862"
+           }
+          },
+          "type": "account"
+         },
+         "space": 165
+        },
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 165
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "recv": 1790523771.387204,
+   "frame": {
+    "jsonrpc": "2.0",
+    "method": "programNotification",
+    "params": {
+     "subscription": 27036050,
+     "result": {
+      "context": {
+       "slot": 451040465
+      },
+      "value": {
+       "pubkey": "3KtvWij1yDU1W1XcRPqF1cimarKFK1rBjT1zpvUxQixY",
+       "account": {
+        "lamports": 2039280,
+        "data": {
+         "program": "spl-token",
+         "parsed": {
+          "info": {
+           "isNative": false,
+           "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+           "owner": "7UBjMaYsE3tKcanfgGrtso6aHAMhVNSVHkkX5j3t7f5y",
+           "state": "initialized",
+           "tokenAmount": {
+            "amount": "338410756862",
+            "decimals": 6,
+            "uiAmount": 338410.756862,
+            "uiAmountString": "338410.756862"
+           }
+          },
+          "type": "account"
+         },
+         "space": 165
+        },
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "executable": false,
+        "rentEpoch": 18446744073709551615,
+        "space": 165
+       }
+      }
+     }
+    }
+   }
+  }
+ ]
+}

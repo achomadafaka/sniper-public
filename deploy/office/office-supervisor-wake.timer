@@ -1,0 +1,10 @@
+[Unit]
+Description=Recheck Office supervisor readiness every minute
+
+[Timer]
+OnBootSec=60s
+OnUnitActiveSec=60s
+Unit=office-supervisor-wake.service
+
+[Install]
+WantedBy=timers.target

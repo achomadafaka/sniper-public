@@ -1,0 +1,21 @@
+/* Memecoin operator-cockpit design tokens. Status/text = current app values (so class
+   migration is pure indirection, no visual change); surfaces re-themed navy/slate to kill
+   the Matrix-green base. Spec: docs/superpowers/specs/2026-07-16-memecoin-operator-cockpit-design.md §4 */
+:root {
+  /* surfaces — re-themed (navy/slate) */
+  --surface-0:#0b1220; --surface-1:#0f172a; --surface-2:#131c31;
+  --border-subtle:#243044; --border-strong:#33405a;
+  /* status — CURRENT values, so class migration is pure indirection */
+  --gain:#3fb950; --gain-bg:rgba(63,185,80,.14);
+  --loss:#f85149; --loss-bg:rgba(248,81,73,.14);
+  --warn:#d29922; --warn-bg:rgba(210,153,34,.14);
+  --info:#58a6ff; --info-bg:rgba(88,166,255,.14);
+  --neutral:#8b949e; --neutral-bg:rgba(139,148,158,.12);
+  /* text */
+  --text-1:#e6edf3; --text-2:#c9d1d9; --text-3:#8b949e;
+  /* freshness (honesty rail) */
+  --fresh:#3fb950; --stale:#d29922; --unknown:#6e7681;
+  /* type + spacing */
+  --fs-lg:20px; --fs-md:14px; --fs-sm:12px; --fs-xs:11px;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+}

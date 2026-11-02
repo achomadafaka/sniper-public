@@ -1,0 +1,22 @@
+[Unit]
+Description=Sniper Tennis Inverse Paper Trader (strategy %i)
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+Environment=DB_PATH=sniper_tracker.db
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/scripts/tennis_inverse_paper_daemon.py --db sniper_tracker.db --strategy-id %i --state data/live_shadow/tennis_inverse_state_%i.json
+Restart=always
+RestartSec=10
+TimeoutStopSec=20
+MemoryMax=350M
+MemorySwapMax=50M
+
+[Install]
+WantedBy=default.target

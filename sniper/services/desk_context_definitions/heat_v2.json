@@ -1,0 +1,91 @@
+{
+  "ambiguity": "true for length<=3/digits/common-word/proven prior collision; null if past-only24h intake symbol map capped/unreadable/any symbol missing; false only when complete map and no rule fired",
+  "author_accounts": "distinct provider author_id; missing IDs count only in mentions and author_unknown_n",
+  "clock": "source host receipt minus its stored finite clock_offset_s; compare with sheet_as_of; no implicit zero offset",
+  "common_word_list_sha256": "c5f4453d768a0df3cd4d0adbc7d9c5fc0fb81210573fa5542bad45952d49e9ac",
+  "coverage": "new per-process epoch, connection intervals and committed heartbeat continuity; any pre-epoch window unknown; post-epoch known at >=90%; positive gap/unknown author/unknown ticker implies lower_bound",
+  "coverage_gap_limit_s": 30,
+  "deletions": "do not erase an already observed post",
+  "empty_promoters": "promoter_mentions=null; field_unknown.promoter_mentions=promoter_list_empty",
+  "field_reasons": [
+    "author_missing",
+    "followers_missing",
+    "promoter_list_empty",
+    "no_mentions",
+    "ticker_unknown",
+    "symbol_map_incomplete"
+  ],
+  "first_mention_age_s": "integer floor of sheet_as_of minus earliest matched_at in retained tape",
+  "freshness_s": 60,
+  "initialTweets": "excluded from mentions/accounts; distinct matching backfill IDs in backfill_n",
+  "known_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of",
+    "match_basis",
+    "ticker_ambiguous",
+    "windows",
+    "first_mention_age_s",
+    "backfill_n",
+    "promoter_list_sha256",
+    "common_word_list_sha256",
+    "field_unknown"
+  ],
+  "match": "UNION: text version or mint link known by sheet_as_of; once per tweet_id; matched_at is first matching text receipt or causal mint-link receipt, never earlier unrelated text",
+  "match_basis": "enabled channels: both when ticker known, else mint",
+  "max_history_days": 30,
+  "max_rows": 100000,
+  "minimum_coverage_fraction": 0.9,
+  "missing_ticker": "mint-only lower bound; ticker_ambiguous=null with field_unknown.ticker_ambiguous=ticker_unknown",
+  "nullable_fields": [
+    "first_mention_age_s",
+    "windows.*.top_author_followers",
+    "windows.*.promoter_mentions",
+    "ticker_ambiguous"
+  ],
+  "p7_zero_proof": "gap_s==0 and author_unknown_n==0 and scan_loss==false and accounts==0 and non-ambiguous; positive mint match can qualify despite ticker ambiguity per Am11",
+  "promoter_list_sha256": "c19fddb2511a75f74f66ffc04d1998fee5aed79a980b6d2a0f0da1eeec70eeff",
+  "read_budget_s": 0.5,
+  "reasons": [
+    "no_x_tape",
+    "x_tape_unreadable",
+    "no_coverage_proof",
+    "tape_stale",
+    "ticker_unknown",
+    "read_budget",
+    "clock_unknown"
+  ],
+  "scan_loss": "true when unlocatable pre-epoch matching versions can hide prior membership; row/read budget exhaustion is whole unknown:read_budget",
+  "top_author_followers": "provider-reported followersCount; null if any matched author followers are missing",
+  "unknown_keys": [
+    "state",
+    "reason",
+    "definition_sha256",
+    "as_of"
+  ],
+  "version": "desk-heat-v2",
+  "window": "(sheet_as_of-window_s,sheet_as_of]",
+  "window_known_keys": [
+    "state",
+    "mentions",
+    "accounts",
+    "top_author_followers",
+    "promoter_mentions",
+    "author_unknown_n",
+    "covered_s",
+    "gap_s",
+    "lower_bound",
+    "field_unknown",
+    "scan_loss"
+  ],
+  "window_unknown_keys": [
+    "state",
+    "reason"
+  ],
+  "windows_s": {
+    "15m": 900,
+    "1h": 3600,
+    "6h": 21600
+  }
+}

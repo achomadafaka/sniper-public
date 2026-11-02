@@ -1,0 +1,1765 @@
+{
+ "code": 0,
+ "data": {
+  "list": [
+   {
+    "amount_usd": 34.2506357728452,
+    "balance": 0,
+    "base_address": "CehKYf8jXN2E6dx4aLkekQZ6TGPLihcGkkaWj8PDVmJK",
+    "base_amount": 700225.110596,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/4a09ac7eef1f9bd0923996a8dfc39f6d_v2.webp",
+     "symbol": "40169K",
+     "total_supply": "999579838.798177"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.03229431261291471,
+    "price_usd": 4.8913749670720335e-05,
+    "quote_amount": 22613.288621,
+    "side": "sell",
+    "timestamp": 1790175905,
+    "token_amount": 700225.110596,
+    "transaction_hash": "CMnD59iY7QNKt93CD7ZiNR75XuLzxi9t7n4HW1UzFwtaHhMnRkCWQyMear72j4w17F86SufDaYfctCgqutRdp2n"
+   },
+   {
+    "amount_usd": 49.9,
+    "balance": 0,
+    "base_address": "CehKYf8jXN2E6dx4aLkekQZ6TGPLihcGkkaWj8PDVmJK",
+    "base_amount": 707411.56247,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/4a09ac7eef1f9bd0923996a8dfc39f6d_v2.webp",
+     "symbol": "40169K",
+     "total_supply": "999579838.798177"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.0001438219755905031,
+    "price_usd": 6.828160940348834e-05,
+    "quote_amount": 105.10467818,
+    "side": "buy",
+    "timestamp": 1790175905,
+    "token_amount": 707411.56247,
+    "transaction_hash": "CMnD59iY7QNKt93CD7ZiNR75XuLzxi9t7n4HW1UzFwtaHhMnRkCWQyMear72j4w17F86SufDaYfctCgqutRdp2n"
+   },
+   {
+    "amount_usd": 49.9,
+    "balance": 0,
+    "base_address": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+    "base_amount": 105.10467818,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/5fa0360a5a8cba9b772b8ac23ac4e94b_v2.webp",
+     "symbol": "SPX",
+     "total_supply": "82820829.861601"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.4747647855839712,
+    "price_usd": 0.4747647855839712,
+    "quote_amount": 49.9,
+    "side": "buy",
+    "timestamp": 1790175905,
+    "token_amount": 105.10467818,
+    "transaction_hash": "CMnD59iY7QNKt93CD7ZiNR75XuLzxi9t7n4HW1UzFwtaHhMnRkCWQyMear72j4w17F86SufDaYfctCgqutRdp2n"
+   },
+   {
+    "amount_usd": 113.78077619818,
+    "balance": 0,
+    "base_address": "34izpwCZcRwaMULTjBNdheEKm7qV4kAhUc5Q18Jyby5M",
+    "base_amount": 9044429.139898,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/f6d5f418a34896b364cda1bffa34f805_v2.webp",
+     "symbol": "CHICK",
+     "total_supply": "966637240.924119"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "9iaawVBEsFG35PSwd4PahwT8fYNQe9XYuRdWm872dUqY",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/ff4500dd6836401b19083bef4352ed71.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "meechie",
+     "twitter_username": "meechie"
+    },
+    "price": 1.0922213394787e-07,
+    "price_usd": 1.2580205388115667e-05,
+    "quote_amount": 0.987851851,
+    "side": "buy",
+    "timestamp": 1790175900,
+    "token_amount": 9044429.139898,
+    "transaction_hash": "2pgfAJwoxwNbC7icxLWkRP3qQtDEtBb72u59KzeGrrN5sviPWKdzR5dWsdu3rsoxmsquExdaZFfb6qyUhNKBMFbT"
+   },
+   {
+    "amount_usd": 11.483664763731818,
+    "balance": 0,
+    "base_address": "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW",
+    "base_amount": 5267.326894,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/bb32e4b87d679aecb67cd9a87433760b_v2.webp",
+     "symbol": "LEVERCAT",
+     "total_supply": "993704126.855876"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.025787616134993578,
+    "price_usd": 0.002180169371453447,
+    "quote_amount": 135.831804,
+    "side": "buy",
+    "timestamp": 1790175899,
+    "token_amount": 5267.326894,
+    "transaction_hash": "2xvmgHeFTgPXaWTLyv8StwxMJYCyWcBuPk7sJFasKdAiMyTJLFhqnkcywrKmq2drcw2K5iTSu1q2tbhtjn7hyfij"
+   },
+   {
+    "amount_usd": 11.49197,
+    "balance": 0,
+    "base_address": "4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs",
+    "base_amount": 135.831804,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/1ab6309bb58bc2e77bc1e0f0a28d7635.png",
+     "symbol": "xSOL",
+     "total_supply": "165263116.36945"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.0007347321986535642,
+    "price_usd": 0.08460441267495793,
+    "quote_amount": 0.0998,
+    "side": "buy",
+    "timestamp": 1790175899,
+    "token_amount": 135.831804,
+    "transaction_hash": "2xvmgHeFTgPXaWTLyv8StwxMJYCyWcBuPk7sJFasKdAiMyTJLFhqnkcywrKmq2drcw2K5iTSu1q2tbhtjn7hyfij"
+   },
+   {
+    "amount_usd": 11.488516400184162,
+    "balance": 0,
+    "base_address": "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW",
+    "base_amount": 5275.604318,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/bb32e4b87d679aecb67cd9a87433760b_v2.webp",
+     "symbol": "LEVERCAT",
+     "total_supply": "993704126.855876"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.025780957176022995,
+    "price_usd": 0.0021776683215202724,
+    "quote_amount": 136.010129,
+    "side": "buy",
+    "timestamp": 1790175894,
+    "token_amount": 5275.604318,
+    "transaction_hash": "3uHyEjLCPUV6WpdP1zmWHunygHA9G6of4HpHWsAqgAZfcQbssxXDBQrWgfPLECr9Ejcm1zYdH648ZGTHjpdsefRL"
+   },
+   {
+    "amount_usd": 1.0127063284,
+    "balance": 0,
+    "base_address": "4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs",
+    "base_amount": 11.966978,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/1ab6309bb58bc2e77bc1e0f0a28d7635.png",
+     "symbol": "xSOL",
+     "total_supply": "165263116.36945"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.0007347201607623913,
+    "price_usd": 0.08462506811661223,
+    "quote_amount": 0.00879238,
+    "side": "buy",
+    "timestamp": 1790175894,
+    "token_amount": 11.966978,
+    "transaction_hash": "3uHyEjLCPUV6WpdP1zmWHunygHA9G6of4HpHWsAqgAZfcQbssxXDBQrWgfPLECr9Ejcm1zYdH648ZGTHjpdsefRL"
+   },
+   {
+    "amount_usd": 10.46129157138,
+    "balance": 0,
+    "base_address": "4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs",
+    "base_amount": 124.043151,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/1ab6309bb58bc2e77bc1e0f0a28d7635.png",
+     "symbol": "xSOL",
+     "total_supply": "165263116.36945"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.0007322096404984101,
+    "price_usd": 0.08433590639260688,
+    "quote_amount": 0.090825591,
+    "side": "buy",
+    "timestamp": 1790175894,
+    "token_amount": 124.043151,
+    "transaction_hash": "3uHyEjLCPUV6WpdP1zmWHunygHA9G6of4HpHWsAqgAZfcQbssxXDBQrWgfPLECr9Ejcm1zYdH648ZGTHjpdsefRL"
+   },
+   {
+    "amount_usd": 563.102072406857,
+    "balance": 0,
+    "base_address": "Bkh8XJgkWhya53cQ1dny3GdC7Ds8Yy9YvBbNW9UbL3qQ",
+    "base_amount": 19663212.477101,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/d80266e33e61e6e4987e7b98a542534c_v2.webp",
+     "symbol": "CloudCat",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/c31d52b648eb8b383079b31e55fa43e5.jpg",
+     "name": "",
+     "tags": [
+      "photon",
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "decu",
+     "twitter_username": "notdecu"
+    },
+    "price": 2.8554637277804e-07,
+    "price_usd": 2.8637338535736845e-05,
+    "quote_amount": 5.614759,
+    "side": "buy",
+    "timestamp": 1790175889,
+    "token_amount": 19663212.477101,
+    "transaction_hash": "418qwSYQrZDm6E3Z6oq9wQKbhw5Mv8QdbsR3s8TJs3kvECFNFhwygzN5JmCAQZ9DnSccy73d9noaqzwrPw984wqa"
+   },
+   {
+    "amount_usd": 570.141,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 5.684945,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/c31d52b648eb8b383079b31e55fa43e5.jpg",
+     "name": "",
+     "tags": [
+      "photon",
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "decu",
+     "twitter_username": "notdecu"
+    },
+    "price": 0.8707208249156324,
+    "price_usd": 100.28962461378255,
+    "quote_amount": 4.95,
+    "side": "buy",
+    "timestamp": 1790175889,
+    "token_amount": 5.684945,
+    "transaction_hash": "418qwSYQrZDm6E3Z6oq9wQKbhw5Mv8QdbsR3s8TJs3kvECFNFhwygzN5JmCAQZ9DnSccy73d9noaqzwrPw984wqa"
+   },
+   {
+    "amount_usd": 163.29111146517286,
+    "balance": 0,
+    "base_address": "71pFYsQprpfut1q6A3v954udMu3GUotqANX8aeLnw6dg",
+    "base_amount": 8631952.812384,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/e695301a22768bb63abe203e14f0ec4e_v2.webp",
+     "symbol": "CloudCat",
+     "total_supply": "979145093.757492"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 1.8840893078873e-07,
+    "price_usd": 1.8917053303501395e-05,
+    "quote_amount": 1.626337,
+    "side": "buy",
+    "timestamp": 1790175880,
+    "token_amount": 8631952.812384,
+    "transaction_hash": "V4ZKgT6do7UGNhrvbkGdShyNmEDLFy2XfNLYrdQph4UAWFRbTHNEVJFKJmSwdQXuXgP4vqqBh5NRrEgJ41kB78P"
+   },
+   {
+    "amount_usd": 163.38900558778,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.627312,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8714131948882574,
+    "price_usd": 100.40422831502502,
+    "quote_amount": 1.418061149,
+    "side": "buy",
+    "timestamp": 1790175880,
+    "token_amount": 1.627312,
+    "transaction_hash": "V4ZKgT6do7UGNhrvbkGdShyNmEDLFy2XfNLYrdQph4UAWFRbTHNEVJFKJmSwdQXuXgP4vqqBh5NRrEgJ41kB78P"
+   },
+   {
+    "amount_usd": 155.00282696193096,
+    "balance": 0,
+    "base_address": "71pFYsQprpfut1q6A3v954udMu3GUotqANX8aeLnw6dg",
+    "base_amount": 8614735.563118,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/e695301a22768bb63abe203e14f0ec4e_v2.webp",
+     "symbol": "CloudCat",
+     "total_supply": "979145093.757492"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 1.7921699263874e-07,
+    "price_usd": 1.7992755067902584e-05,
+    "quote_amount": 1.543907,
+    "side": "buy",
+    "timestamp": 1790175880,
+    "token_amount": 8614735.563118,
+    "transaction_hash": "kkgfQ6yndR6LoswpgUcaeYL37Cip4bKqHkqCMhXuP1z4GEVb4E3H7GeiSzHKtszZwWqAkd2cnoYff2DjkuN1ERx"
+   },
+   {
+    "amount_usd": 155.09579410164,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.544833,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8713459396582025,
+    "price_usd": 100.3964791674181,
+    "quote_amount": 1.346083962,
+    "side": "buy",
+    "timestamp": 1790175880,
+    "token_amount": 1.544833,
+    "transaction_hash": "kkgfQ6yndR6LoswpgUcaeYL37Cip4bKqHkqCMhXuP1z4GEVb4E3H7GeiSzHKtszZwWqAkd2cnoYff2DjkuN1ERx"
+   },
+   {
+    "amount_usd": 389.9309663096,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 4.213979,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 431.8860536230396,
+    "is_open_or_close": 0,
+    "maker": "9iaawVBEsFG35PSwd4PahwT8fYNQe9XYuRdWm872dUqY",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/ff4500dd6836401b19083bef4352ed71.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "meechie",
+     "twitter_username": "meechie"
+    },
+    "price": 0.802956668744671,
+    "price_usd": 92.53272650613589,
+    "quote_amount": 3.38364254,
+    "side": "sell",
+    "timestamp": 1790175867,
+    "token_amount": 4.213979,
+    "transaction_hash": "vdVhrvgu4ytMNohHdJadcsRBQGfxnZfbEHUvWS3QNWS3E6FVW7uFbfQ5xVyAiuguif28bJnHshskTFi2E98Q9h9"
+   },
+   {
+    "amount_usd": 389.9309663096,
+    "balance": 0,
+    "base_address": "71pFYsQprpfut1q6A3v954udMu3GUotqANX8aeLnw6dg",
+    "base_amount": 26252819.571896,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/e695301a22768bb63abe203e14f0ec4e_v2.webp",
+     "symbol": "CloudCat",
+     "total_supply": "979145093.757492"
+    },
+    "buy_cost_usd": 570.4824020781855,
+    "is_open_or_close": 1,
+    "maker": "9iaawVBEsFG35PSwd4PahwT8fYNQe9XYuRdWm872dUqY",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/ff4500dd6836401b19083bef4352ed71.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "meechie",
+     "twitter_username": "meechie"
+    },
+    "price": 1.6051529202262e-07,
+    "price_usd": 1.4852917616781633e-05,
+    "quote_amount": 4.213979,
+    "side": "sell",
+    "timestamp": 1790175867,
+    "token_amount": 26252819.571896,
+    "transaction_hash": "vdVhrvgu4ytMNohHdJadcsRBQGfxnZfbEHUvWS3QNWS3E6FVW7uFbfQ5xVyAiuguif28bJnHshskTFi2E98Q9h9"
+   },
+   {
+    "amount_usd": 121.10342250061,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.308527,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 134.7315139210507,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8033107005052246,
+    "price_usd": 92.54942580520692,
+    "quote_amount": 1.051153741,
+    "side": "sell",
+    "timestamp": 1790175861,
+    "token_amount": 1.308527,
+    "transaction_hash": "486SyJiHssDHvCStsgggP39n1N1DFrDJMv7qx7zvGYwE8GNizeSXm8DdzpNjdtHHh36HANRE9vaKiXuL8nHapZ74"
+   },
+   {
+    "amount_usd": 121.10342250061,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 11427998.029603,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 1.145018573341e-07,
+    "price_usd": 1.0597081149900676e-05,
+    "quote_amount": 1.308527,
+    "side": "sell",
+    "timestamp": 1790175861,
+    "token_amount": 11427998.029603,
+    "transaction_hash": "486SyJiHssDHvCStsgggP39n1N1DFrDJMv7qx7zvGYwE8GNizeSXm8DdzpNjdtHHh36HANRE9vaKiXuL8nHapZ74"
+   },
+   {
+    "amount_usd": 127.93956200159,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.3822,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 141.95065405259686,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8034221378961076,
+    "price_usd": 92.56226450701057,
+    "quote_amount": 1.110490079,
+    "side": "sell",
+    "timestamp": 1790175861,
+    "token_amount": 1.3822,
+    "transaction_hash": "4mhCaqg5PBu1P3LpccPMn78thrJRgyKdCtaeEjC6ZR5vPK1DQUqq73vm928h9fqGLJaQWxkDkdLyx77qzUuVnYPZ"
+   },
+   {
+    "amount_usd": 127.93956200159,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 11135862.078497,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 1.2412150853314e-07,
+    "price_usd": 1.1488967903853673e-05,
+    "quote_amount": 1.3822,
+    "side": "sell",
+    "timestamp": 1790175861,
+    "token_amount": 11135862.078497,
+    "transaction_hash": "4mhCaqg5PBu1P3LpccPMn78thrJRgyKdCtaeEjC6ZR5vPK1DQUqq73vm928h9fqGLJaQWxkDkdLyx77qzUuVnYPZ"
+   },
+   {
+    "amount_usd": 49.801865789159045,
+    "balance": 0,
+    "base_address": "AGi2s9zPRPHs3zEDPhPTroumTEXK5ufymYSfEFndCSSW",
+    "base_amount": 22923.491625,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/bb32e4b87d679aecb67cd9a87433760b_v2.webp",
+     "symbol": "LEVERCAT",
+     "total_supply": "993704126.855876"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.025748489656623155,
+    "price_usd": 0.0021725253117568667,
+    "quote_amount": 590.245287,
+    "side": "buy",
+    "timestamp": 1790175859,
+    "token_amount": 22923.491625,
+    "transaction_hash": "BfGcL9rVpsKEunrxD9u4TF28nkDGNYsozsNXpQBQoVhkzzxbfyYHxW7VThZ51Xcb7jC2Ww4nHXY68WogtxqiQbP"
+   },
+   {
+    "amount_usd": 49.9,
+    "balance": 0,
+    "base_address": "4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs",
+    "base_amount": 590.245287,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/1ab6309bb58bc2e77bc1e0f0a28d7635.png",
+     "symbol": "xSOL",
+     "total_supply": "165263116.36945"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "ART5dr4bDic2sQVZoFheEmUxwQq5VGSx9he7JxHcXNQD",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/905c4addb6108b39368c0d21125623ef.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "degen poet",
+     "twitter_username": "solanapoet"
+    },
+    "price": 0.08454112400223197,
+    "price_usd": 0.08454112400223197,
+    "quote_amount": 49.9,
+    "side": "buy",
+    "timestamp": 1790175859,
+    "token_amount": 590.245287,
+    "transaction_hash": "BfGcL9rVpsKEunrxD9u4TF28nkDGNYsozsNXpQBQoVhkzzxbfyYHxW7VThZ51Xcb7jC2Ww4nHXY68WogtxqiQbP"
+   },
+   {
+    "amount_usd": 57.52471988472456,
+    "balance": 0,
+    "base_address": "6k2xSqeGBr5s56xUahsNW7F9Zkw7tJgzXcpqfBS4hQBd",
+    "base_amount": 2656379.225328,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/d332625458d74b4be493725480f13bc8_v2.webp",
+     "symbol": "GROYPER",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "AEeJUPCiGR3yCoukTh1G58o4LYsUEyzrXtfmfMc2kJMX",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/5cb7671d9ba55175459cc6c43044b91e.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre"
+     ],
+     "twitter_name": "Damian Prosalendis",
+     "twitter_username": "DamianProsa"
+    },
+    "price": 4.7672379830241844,
+    "price_usd": 2.165531161222721e-05,
+    "quote_amount": 12663591.9403,
+    "side": "buy",
+    "timestamp": 1790175837,
+    "token_amount": 2656379.225328,
+    "transaction_hash": "4V9kmbo7L5afVVAFBuQJHKFXfjrYzT1pt3fwRhduyE4WmEBzF1xo3zNt95jfPJqbuuFBmVK6Q5KJKVWwufXBKC4Y"
+   },
+   {
+    "amount_usd": 57.52471988472,
+    "balance": 0,
+    "base_address": "PEPEqnuuCDbBC89p1u9vpnP1KQ2oj1xTcQBsjt9X55m",
+    "base_amount": 12663591.9403,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "PEPE",
+     "total_supply": "319556379646.0363"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "AEeJUPCiGR3yCoukTh1G58o4LYsUEyzrXtfmfMc2kJMX",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/5cb7671d9ba55175459cc6c43044b91e.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre"
+     ],
+     "twitter_name": "Damian Prosalendis",
+     "twitter_username": "DamianProsa"
+    },
+    "price": 3.940430182467e-08,
+    "price_usd": 4.542527914347957e-06,
+    "quote_amount": 0.498999999,
+    "side": "buy",
+    "timestamp": 1790175837,
+    "token_amount": 12663591.9403,
+    "transaction_hash": "4V9kmbo7L5afVVAFBuQJHKFXfjrYzT1pt3fwRhduyE4WmEBzF1xo3zNt95jfPJqbuuFBmVK6Q5KJKVWwufXBKC4Y"
+   },
+   {
+    "amount_usd": 52.840250180367896,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 2063492.440742,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.530816152698e-07,
+    "price_usd": 2.560719348279663e-05,
+    "quote_amount": 0.522232,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 2063492.440742,
+    "transaction_hash": "4zXq6UgcNc86Ex6q58Y5VJeZ6WtXFVbnu1ytDds3T3e4BF5qE9dtGMfpmhbgaipeNbqghqA69sUyVQrDhEFhg8Bp"
+   },
+   {
+    "amount_usd": 52.86825081208,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.522232,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8781677702630248,
+    "price_usd": 101.2351805559215,
+    "quote_amount": 0.458607311,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 0.522232,
+    "transaction_hash": "4zXq6UgcNc86Ex6q58Y5VJeZ6WtXFVbnu1ytDds3T3e4BF5qE9dtGMfpmhbgaipeNbqghqA69sUyVQrDhEFhg8Bp"
+   },
+   {
+    "amount_usd": 49.3802454407735,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 1988108.861509,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.4547750349524e-07,
+    "price_usd": 2.48377975657191e-05,
+    "quote_amount": 0.488036,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 1988108.861509,
+    "transaction_hash": "3DZcVB9KMWvhrMd8GZBVEFJxJNEetHc8kZAKrodJv1ivtAjeJuJ8d26J9FuRzrGoGCs2AG11gh7ZkScEq4D4t7Hh"
+   },
+   {
+    "amount_usd": 49.39921369592,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.488036,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8780398146858018,
+    "price_usd": 101.22042983697924,
+    "quote_amount": 0.428515039,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 0.488036,
+    "transaction_hash": "3DZcVB9KMWvhrMd8GZBVEFJxJNEetHc8kZAKrodJv1ivtAjeJuJ8d26J9FuRzrGoGCs2AG11gh7ZkScEq4D4t7Hh"
+   },
+   {
+    "amount_usd": 24.67061548424,
+    "balance": 0,
+    "base_address": "tWcfrmw9PexGap69U2Ub55cBzFvevd6ZuMQ42dbb7tf",
+    "base_amount": 556108.450487,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/d642dc66f1d27cb5e2f7e3c55729cc6f_v2.webp",
+     "symbol": "CX",
+     "total_supply": "978151671.695326"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "BbHzAW4fXHkfkYxnmshtLmgPkcSCoaAsGnpzydEDiBEi",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/ca471032ef0ced3c2ce0df1b7b9309fa.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "arbitrager"
+     ],
+     "twitter_name": "Clutch (\ud83e\udd77)",
+     "twitter_username": "ClutchPBCFO"
+    },
+    "price": 3.8482787451367e-07,
+    "price_usd": 4.436295737393588e-05,
+    "quote_amount": 0.214006033,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 556108.450487,
+    "transaction_hash": "2QRTpuh5gzQKVV6NzJTw5MMMUBGmQyAfzh51HwVkVe1sQGNBMTXYpSYoveVvkjbZWYsp66Hq2efYLM8y3qgtYeVL"
+   },
+   {
+    "amount_usd": 45.20644193795399,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 2104726.847446,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.307182999016e-07,
+    "price_usd": 2.1478531521945344e-05,
+    "quote_amount": 0.485599,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 2104726.847446,
+    "transaction_hash": "V941JDzE3iWeehC6Q547b6DRAhseZKjXtykVGwqtZRfzM43ucn5GTDAmygWGc8nKxE46zPWPzFPiArXFetXPozw"
+   },
+   {
+    "amount_usd": 49.13915838568,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.485599,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8778007800675043,
+    "price_usd": 101.19287392618189,
+    "quote_amount": 0.426259181,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 0.485599,
+    "transaction_hash": "V941JDzE3iWeehC6Q547b6DRAhseZKjXtykVGwqtZRfzM43ucn5GTDAmygWGc8nKxE46zPWPzFPiArXFetXPozw"
+   },
+   {
+    "amount_usd": 45.30763531435418,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 2197842.640732,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.2143805520031e-07,
+    "price_usd": 2.0614594727885076e-05,
+    "quote_amount": 0.486686,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 2197842.640732,
+    "transaction_hash": "5G9R4pL9sdaBSL5LFPbUMW7A19NNBSu8pUZS41MY85Vgfh96VMP21h6AD6jrzA1n3NCukoUtKn7W62osEeXqHaQs"
+   },
+   {
+    "amount_usd": 49.239889358,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.486686,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8776356315981968,
+    "price_usd": 101.17383561064013,
+    "quote_amount": 0.427132975,
+    "side": "buy",
+    "timestamp": 1790175835,
+    "token_amount": 0.486686,
+    "transaction_hash": "5G9R4pL9sdaBSL5LFPbUMW7A19NNBSu8pUZS41MY85Vgfh96VMP21h6AD6jrzA1n3NCukoUtKn7W62osEeXqHaQs"
+   },
+   {
+    "amount_usd": 1.08424987776,
+    "balance": 0,
+    "base_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+    "base_amount": 0.536558,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/a991867e56007925f1aaaafb4f37fda4_v2.webp",
+     "symbol": "TRUMP",
+     "total_supply": "999998937.795467"
+    },
+    "buy_cost_usd": 1.0866545199195927,
+    "is_open_or_close": 1,
+    "maker": "97K6nsFhBWDKwQf6heDDhDtsCRC4779LPHSFZkc2zqK4",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/52500820a939c438393cb3725c75bc6b.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn"
+     ],
+     "twitter_name": "Nikolai",
+     "twitter_username": "NikolaiHauckx"
+    },
+    "price": 0.017527544086566597,
+    "price_usd": 2.020750557740263,
+    "quote_amount": 0.009404544,
+    "side": "sell",
+    "timestamp": 1790175827,
+    "token_amount": 0.536558,
+    "transaction_hash": "hLJRw5vR5e4oBey3z1FcsQKHozXSvL7orAmQ17J8u77te8QbqNKcF4P7UcU7kGzmT8ARZTLgpV6bXQo318o9dsX"
+   },
+   {
+    "amount_usd": 101.87617098736,
+    "balance": 0,
+    "base_address": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+    "base_amount": 50.41204,
+    "base_token": {
+     "launchpad": "",
+     "logo": "https://gmgn.ai/external-res/a991867e56007925f1aaaafb4f37fda4_v2.webp",
+     "symbol": "TRUMP",
+     "total_supply": "999998937.795467"
+    },
+    "buy_cost_usd": 102.09608490483281,
+    "is_open_or_close": 0,
+    "maker": "97K6nsFhBWDKwQf6heDDhDtsCRC4779LPHSFZkc2zqK4",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/52500820a939c438393cb3725c75bc6b.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn"
+     ],
+     "twitter_name": "Nikolai",
+     "twitter_username": "NikolaiHauckx"
+    },
+    "price": 0.017530099198524798,
+    "price_usd": 2.0208698356059385,
+    "quote_amount": 0.883728062,
+    "side": "sell",
+    "timestamp": 1790175825,
+    "token_amount": 50.41204,
+    "transaction_hash": "qksVdM2hUWvvzt7aYNi3CQdnitWn2bK2uFgmNPAqpufLgygg9UoUURDECUvP6FoMUpeyVWQasrbnWnrucdVXer7"
+   },
+   {
+    "amount_usd": 103.96907106768585,
+    "balance": 0,
+    "base_address": "4LUeUqfLoFZPsqg7xtYayrCCkSLfLMWJJxua9Gzgpump",
+    "base_amount": 25027711.531433,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/99b98d3ec010fea3ded6c47cc9594ccf_v2.webp",
+     "symbol": "PMURT",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 102.92741103394249,
+    "is_open_or_close": 1,
+    "maker": "97K6nsFhBWDKwQf6heDDhDtsCRC4779LPHSFZkc2zqK4",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/52500820a939c438393cb3725c75bc6b.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn"
+     ],
+     "twitter_name": "Nikolai",
+     "twitter_username": "NikolaiHauckx"
+    },
+    "price": 2.05430791926089e-06,
+    "price_usd": 4.154158119375318e-06,
+    "quote_amount": 51.414626,
+    "side": "sell",
+    "timestamp": 1790175825,
+    "token_amount": 25027711.531433,
+    "transaction_hash": "qksVdM2hUWvvzt7aYNi3CQdnitWn2bK2uFgmNPAqpufLgygg9UoUURDECUvP6FoMUpeyVWQasrbnWnrucdVXer7"
+   },
+   {
+    "amount_usd": 55.0674165152,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.590007,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "4uCT4g7YHH4xxfmfNfKUDenwGrRNGoZ9Ay1XFxfUGhQG",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/8cdadf94d36cc1dedac91401b4010aa4.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn",
+      "padre",
+      "arbitrager",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "chingchong",
+     "twitter_username": "chingchong6257"
+    },
+    "price": 0.8094839281567846,
+    "price_usd": 93.33349691647726,
+    "quote_amount": 0.477601184,
+    "side": "sell",
+    "timestamp": 1790175822,
+    "token_amount": 0.590007,
+    "transaction_hash": "5Cn4FzgwSXKcR3qCiCCGU347GpgmMRjH3rQa43unh6q8VQjYSiwXaqckNUy4kdKQAeSapCzorfxf1Q7TVYaMoVdV"
+   },
+   {
+    "amount_usd": 55.07237424639693,
+    "balance": 0,
+    "base_address": "DKpZcN5M7mwQco1tsAcTbC55HTHwD72TSHV2SkzApncW",
+    "base_amount": 16091194.628545,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/81d4c53824009e90c1cd501b473de7ba_v2.webp",
+     "symbol": "Cloudy",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "4uCT4g7YHH4xxfmfNfKUDenwGrRNGoZ9Ay1XFxfUGhQG",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/8cdadf94d36cc1dedac91401b4010aa4.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn",
+      "padre",
+      "arbitrager",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "chingchong",
+     "twitter_username": "chingchong6257"
+    },
+    "price": 3.666645103859e-08,
+    "price_usd": 3.4225161970695567e-06,
+    "quote_amount": 0.590007,
+    "side": "sell",
+    "timestamp": 1790175822,
+    "token_amount": 16091194.628545,
+    "transaction_hash": "5Cn4FzgwSXKcR3qCiCCGU347GpgmMRjH3rQa43unh6q8VQjYSiwXaqckNUy4kdKQAeSapCzorfxf1Q7TVYaMoVdV"
+   },
+   {
+    "amount_usd": 167.040210036,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 7080126.245649,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.3173202610734e-07,
+    "price_usd": 2.3592829314117403e-05,
+    "quote_amount": 1.640692,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 7080126.245649,
+    "transaction_hash": "E85S1sBJm1DqZMjw1jvsgE51MiH77KLx37fZTRDui987ccHGZQJJ38PjfYMdun8Cc6RGvGxENDubARMazZ7b78h"
+   },
+   {
+    "amount_usd": 167.040210036,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.640692,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "2fg5QD1eD7rzNNCsvnhmXFm5hqNgwTTG8p7kQ6f3rx6f",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "wash_trader",
+      "kol",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.882548781245962,
+    "price_usd": 101.81082740453418,
+    "quote_amount": 1.447990725,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 1.640692,
+    "transaction_hash": "E85S1sBJm1DqZMjw1jvsgE51MiH77KLx37fZTRDui987ccHGZQJJ38PjfYMdun8Cc6RGvGxENDubARMazZ7b78h"
+   },
+   {
+    "amount_usd": 167.51347120592,
+    "balance": 0,
+    "base_address": "FCHQbb4GDjMX6jbkEpGKX4Kyc1HmvPZqmM3qmzbuisHf",
+    "base_amount": 7357480.850895,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/4ce0d7fd2642d1b3804c6f5e7082daf6_v2.webp",
+     "symbol": "COMPUTE",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 2.2366446251774e-07,
+    "price_usd": 2.276777535690661e-05,
+    "quote_amount": 1.645607,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 7357480.850895,
+    "transaction_hash": "sE6BYNsZ4QTchxmou8Qe4snmQkn3tBnUqVi95Aevtns7oPB5wDdEBjP2kUqid3uX8Hky1Tz84G9PMZ2YVF2vYA8"
+   },
+   {
+    "amount_usd": 167.51347120592,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.645607,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "suqh5sHtr8HyJ7q8scBimULPkPpA557prMG47xCHQfK",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/932b36f3577f905616376bd1e670047f.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "photon",
+      "wash_trader",
+      "arbitrager",
+      "axiom"
+     ],
+     "twitter_name": "Cupsey",
+     "twitter_username": "Cupseyy"
+    },
+    "price": 0.8824058216816044,
+    "price_usd": 101.79433558918988,
+    "quote_amount": 1.452093197,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 1.645607,
+    "transaction_hash": "sE6BYNsZ4QTchxmou8Qe4snmQkn3tBnUqVi95Aevtns7oPB5wDdEBjP2kUqid3uX8Hky1Tz84G9PMZ2YVF2vYA8"
+   },
+   {
+    "amount_usd": 11.50654302133259,
+    "balance": 0,
+    "base_address": "24N9tF9jComW2qLoEyH9qt8M8RLENdY8z7946v3EoZhN",
+    "base_amount": 299704.685358,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/44b9eba9a8241558dcf9a38962fd4cd7_v2.webp",
+     "symbol": "cloudinu",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "AsEqwGCNfnB4LK7ewMGc9i9LJ1nsQRNzBGrADY1GNm8Z",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/f61d65687cf4dcb0ecfd82dbe4f9a9a7.jpg",
+     "name": "",
+     "tags": [
+      "gmgn",
+      "trojan",
+      "bullx",
+      "kol",
+      "arbitrager",
+      "padre",
+      "axiom"
+     ],
+     "twitter_name": "Jay Jones",
+     "twitter_username": "iprintcash"
+    },
+    "price": 4.1196219489368e-07,
+    "price_usd": 3.8392936725657295e-05,
+    "quote_amount": 0.123467,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 299704.685358,
+    "transaction_hash": "8hFFe48J7rjPV2WLz6CDkz321nWYSrZqTUtfGZa7scnuyQ2tMd8eSpEe6tkns4HzZ1oLjfaaampAUnmkMgXZ9Ab"
+   },
+   {
+    "amount_usd": 12.561615,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 0.123467,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "AsEqwGCNfnB4LK7ewMGc9i9LJ1nsQRNzBGrADY1GNm8Z",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/f61d65687cf4dcb0ecfd82dbe4f9a9a7.jpg",
+     "name": "",
+     "tags": [
+      "gmgn",
+      "trojan",
+      "bullx",
+      "kol",
+      "arbitrager",
+      "padre",
+      "axiom"
+     ],
+     "twitter_name": "Jay Jones",
+     "twitter_username": "iprintcash"
+    },
+    "price": 0.8820170571893704,
+    "price_usd": 101.74066754679389,
+    "quote_amount": 0.1089,
+    "side": "buy",
+    "timestamp": 1790175818,
+    "token_amount": 0.123467,
+    "transaction_hash": "8hFFe48J7rjPV2WLz6CDkz321nWYSrZqTUtfGZa7scnuyQ2tMd8eSpEe6tkns4HzZ1oLjfaaampAUnmkMgXZ9Ab"
+   },
+   {
+    "amount_usd": 116.4839096481,
+    "balance": 0,
+    "base_address": "DKpZcN5M7mwQco1tsAcTbC55HTHwD72TSHV2SkzApncW",
+    "base_amount": 16253731.948026,
+    "base_token": {
+     "launchpad": "ray_launchpad",
+     "logo": "https://gmgn.ai/external-res/81d4c53824009e90c1cd501b473de7ba_v2.webp",
+     "symbol": "Cloudy",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "4uCT4g7YHH4xxfmfNfKUDenwGrRNGoZ9Ay1XFxfUGhQG",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/8cdadf94d36cc1dedac91401b4010aa4.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn",
+      "padre",
+      "arbitrager",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "chingchong",
+     "twitter_username": "chingchong6257"
+    },
+    "price": 7.028890372089e-08,
+    "price_usd": 7.166594725480391e-06,
+    "quote_amount": 1.142457,
+    "side": "buy",
+    "timestamp": 1790175817,
+    "token_amount": 16253731.948026,
+    "transaction_hash": "3fULh5fdhzJt392A7DqbvLTqyNdLvWZgMu7SdYUyUVd8ZUg2kPyUWGNzQbiLygPz6Kn8c7Dm5uEViM7tWAmxGRjT"
+   },
+   {
+    "amount_usd": 116.4839096481,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 1.142457,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 0,
+    "maker": "4uCT4g7YHH4xxfmfNfKUDenwGrRNGoZ9Ay1XFxfUGhQG",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/8cdadf94d36cc1dedac91401b4010aa4.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn",
+      "padre",
+      "arbitrager",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "chingchong",
+     "twitter_username": "chingchong6257"
+    },
+    "price": 0.8839108745449501,
+    "price_usd": 101.95911937876,
+    "quote_amount": 1.009830166,
+    "side": "buy",
+    "timestamp": 1790175817,
+    "token_amount": 1.142457,
+    "transaction_hash": "3fULh5fdhzJt392A7DqbvLTqyNdLvWZgMu7SdYUyUVd8ZUg2kPyUWGNzQbiLygPz6Kn8c7Dm5uEViM7tWAmxGRjT"
+   },
+   {
+    "amount_usd": 353.56493911044,
+    "balance": 0,
+    "base_address": "CRWVJeR2yEZuDUKYfGuKCHvLz8ywn4LGvovHfy5WiFmi",
+    "base_amount": 3.775211,
+    "base_token": {
+     "launchpad": "",
+     "logo": "",
+     "symbol": "CRWV",
+     "total_supply": "4999.987998"
+    },
+    "buy_cost_usd": 395.1411854842934,
+    "is_open_or_close": 0,
+    "maker": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/c31d52b648eb8b383079b31e55fa43e5.jpg",
+     "name": "",
+     "tags": [
+      "photon",
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "decu",
+     "twitter_username": "notdecu"
+    },
+    "price": 0.8119850164666292,
+    "price_usd": 93.65435179926102,
+    "quote_amount": 3.065414766,
+    "side": "sell",
+    "timestamp": 1790175816,
+    "token_amount": 3.775211,
+    "transaction_hash": "5ouzrLimUQXzp4NRg6SSFwut6nmQL31PiFHTmD6xbPjvqPhqdmcdTp33vLneZDgcAMvqDPKLTsok3Frj2WMcBub7"
+   },
+   {
+    "amount_usd": 358.0404932742231,
+    "balance": 0,
+    "base_address": "Bkh8XJgkWhya53cQ1dny3GdC7Ds8Yy9YvBbNW9UbL3qQ",
+    "base_amount": 11804524.605647,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/d80266e33e61e6e4987e7b98a542534c_v2.webp",
+     "symbol": "CloudCat",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 370.72179378420077,
+    "is_open_or_close": 1,
+    "maker": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/c31d52b648eb8b383079b31e55fa43e5.jpg",
+     "name": "",
+     "tags": [
+      "photon",
+      "kol",
+      "wash_trader",
+      "arbitrager",
+      "padre",
+      "top_followed",
+      "top_renamed",
+      "axiom"
+     ],
+     "twitter_name": "decu",
+     "twitter_username": "notdecu"
+    },
+    "price": 3.238587853145e-07,
+    "price_usd": 3.033078461312553e-05,
+    "quote_amount": 3.822999,
+    "side": "sell",
+    "timestamp": 1790175816,
+    "token_amount": 11804524.605647,
+    "transaction_hash": "5ouzrLimUQXzp4NRg6SSFwut6nmQL31PiFHTmD6xbPjvqPhqdmcdTp33vLneZDgcAMvqDPKLTsok3Frj2WMcBub7"
+   },
+   {
+    "amount_usd": 102.92771697207013,
+    "balance": 0,
+    "base_address": "4LUeUqfLoFZPsqg7xtYayrCCkSLfLMWJJxua9Gzgpump",
+    "base_amount": 25027711.531433,
+    "base_token": {
+     "launchpad": "pump",
+     "logo": "https://gmgn.ai/external-res/99b98d3ec010fea3ded6c47cc9594ccf_v2.webp",
+     "symbol": "PMURT",
+     "total_supply": "1000000000"
+    },
+    "buy_cost_usd": 0,
+    "is_open_or_close": 1,
+    "maker": "97K6nsFhBWDKwQf6heDDhDtsCRC4779LPHSFZkc2zqK4",
+    "maker_info": {
+     "avatar": "https://gmgn.ai/defi/images/twitter/52500820a939c438393cb3725c75bc6b.jpg",
+     "name": "",
+     "tags": [
+      "kol",
+      "wash_trader",
+      "gmgn_go",
+      "arbitrager",
+      "gmgn"
+     ],
+     "twitter_name": "Nikolai",
+     "twitter_username": "NikolaiHauckx"
+    },
+    "price": 2.03277966249945e-06,
+    "price_usd": 4.112550076454265e-06,
+    "quote_amount": 50.875823,
+    "side": "buy",
+    "timestamp": 1790175815,
+    "token_amount": 25027711.531433,
+    "transaction_hash": "4mKTAreaTZw8rEmVF1TrZMmXonpi2F2joc9x5Si4Sa6m7VNMra5bJkV8Ds3B9WArmbCLP4YJBx1FcBkwxTCC6iz2"
+   }
+  ]
+ },
+ "message": "success",
+ "reason": ""
+}

@@ -1,0 +1,13 @@
+# Operator pilot caps; Gamma manifest office-host-guard-pilot-v2.
+[Unit]
+Description=Office disposable pilot model and research workload
+
+[Slice]
+MemoryAccounting=yes
+TasksAccounting=yes
+CPUQuota=200%
+MemoryHigh=3G
+MemoryMax=4G
+TasksMax=256
+IOAccounting=yes
+IOWeight=10

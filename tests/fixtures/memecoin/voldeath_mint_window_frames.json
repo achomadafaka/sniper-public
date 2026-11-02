@@ -1,0 +1,1936 @@
+{
+ "method": "getTransactionsForAddress(mint, transactionDetails=signatures, filters.blockTime=[fired-60, fired+5], sortOrder=desc) on the research key; each row has the getSignaturesForAddress fields (signature, slot, err, blockTime). Captured 2026-09-28 by Gamma for the mint-wide vol_death veto.",
+ "positions": [
+  {
+   "position_id": 63382,
+   "handle": "arangotrades",
+   "mint": "C9GVVfB6P67FEMvhD1YHyCVPrGLGbpAHtXgnJrig4MKY",
+   "fired_at": "2026-09-22T16:47:06.261141+00:00",
+   "audit_detail": "measured_state_still silence=31.1s",
+   "our_sale_sig": "64nHHwCAMY39kPfcsrfFLdHf3NxS91LFgFTH7f1UQzhM2yMKph6hMjHXkb4tJCku3i9n22KdcX7f1fPgE2tDsy5M",
+   "expected": "mint_moving",
+   "signatures": [
+    {
+     "signature": "47EbG4xQEMLC2wwrGwkdWVqQwxTF3h6UuUqzpsCcmoVTtEDxteyJ9NBbmX3JzaEQYCBM3t17ChcBzBZG4bFFEKkR",
+     "slot": 449436925,
+     "err": null,
+     "blockTime": 1790095629,
+     "transactionIndex": 518
+    },
+    {
+     "signature": "ohMuE4DW9RenfawA8JbDzyuPgwJ3ghB8q47B67XdC4otPVuZU36CgjXsiNAJfG9gQCzjv7CvemXrFoyPXCHCg2x",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       2,
+       {
+        "Custom": 15
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 555
+    },
+    {
+     "signature": "3WXMySzBjveZGg3KspihCpsZYzwoD1fPis1GRgCdD7aGtSY2qbJkhnWZcSpo7toBahu9cJTqYkLjE5na6qN2D8R8",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       4,
+       {
+        "Custom": 6001
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 204
+    },
+    {
+     "signature": "5YHgUqreBhV1tkhfe8zNf88ASGeKfG34H8Zz3Tp1a1XT5jeAx3vkziQALY4n5yoYgY4mrHwXX12u53geRuZ7P1nA",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       4,
+       {
+        "Custom": 202
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 200
+    },
+    {
+     "signature": "4swoTgfgF3bx4i5zbzxeEwHoCHmeWFCDhFkngtScg8RwXSpXktSfVvToCt5DBLFFAeb6dBxSS74Ho6aDhnfSBJ7c",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       4,
+       {
+        "Custom": 202
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 189
+    },
+    {
+     "signature": "3xqPjQRLSFTAuFcUwz3AddwiMrkfQXCTnTsZ6wzGMe9QKuyqLhFJWEgXzcHWDeMCNCK9YsmeqBjiAzNkGgmmUCtq",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       0,
+       {
+        "Custom": 1006
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 176
+    },
+    {
+     "signature": "27mpeS4wTxSeWQ4utf2DnUxQz5RcbEU5RpD6x7KF1wfN9Tx1xPKRiGZDgLLVitBebT4BpoDrBRc6uwFAdGKXCe6K",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       4,
+       {
+        "Custom": 0
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 128
+    },
+    {
+     "signature": "5CiC56TLt6Xa5buvL3rcwmA4eEWH4HwH7u8BHmsKHAQM4jC5e9NqPqKCdYbkPi5FT8qSvmJB71Q1mADYD4oCADN5",
+     "slot": 449436921,
+     "err": null,
+     "blockTime": 1790095628,
+     "transactionIndex": 126
+    },
+    {
+     "signature": "5cXkmBfJRYYTdvhcDykXXzbpCrWhNXPm7KXVdakW4HnVyRM5ui5n71CucffXwvRHxsJgSkWCBiXQde8zrPWrJM2n",
+     "slot": 449436921,
+     "err": null,
+     "blockTime": 1790095628,
+     "transactionIndex": 124
+    },
+    {
+     "signature": "3wKDFj9KZs8V5XhRB4NApxjEVycSJvW4swpGqasPzWrwCQfoLtoKHJtsFUm5z5n1o5oVXxFmdbRYUdAv3u3mCYTP",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       3,
+       {
+        "Custom": 6000
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 122
+    },
+    {
+     "signature": "5ZsRhsXYRxD72FMA1acTmFeZgGH3qyDXc518vFcPyYTpcUxVDenshLYedqCtn35QK6cDUCobujmij3iBZx4rkGVj",
+     "slot": 449436921,
+     "err": {
+      "InstructionError": [
+       4,
+       {
+        "Custom": 3
+       }
+      ]
+     },
+     "blockTime": 1790095628,
+     "transactionIndex": 98
+    },
+    {
+     "signature": "sYREHUmaznYmbXj1jkcnUGJ9854ioh994abtbY1ZbQAKGL9qbELHR3ejzSAphNhaCXgii7zudwXoWeVWKt3dwN8",
+     "slot": 449436920,
+     "err": null,
+     "blockTime": 1790095627,
+     "transactionIndex": 611
+    },
+    {
+     "signature": "64nHHwCAMY39kPfcsrfFLdHf3NxS91LFgFTH7f1UQzhM2yMKph6hMjHXkb4tJCku3i9n22KdcX7f1fPgE2tDsy5M",
+     "slot": 449436920,
+     "err": null,
+     "blockTime": 1790095627,
+     "transactionIndex": 608
+    },
+    {
+     "signature": "5D2dyQzBpdCTHJaqGm2pjQF1vbTufKr8vuZZ6c1V6XUmvxNihFfUA5zjqwhdSZoAFNNrT9Rh4SPgw6Xo63m6htpk",
+     "slot": 449436915,
+     "err": null,
+     "blockTime": 1790095626,
+     "transactionIndex": 951
+    },
+    {
+     "signature": "4uNAUtQYjUf8pb8cKHcUcdrGeri24Tup4efRnuGThoPKi7nVLAZ5WL9Y5yVz4MzzDWW4Z6sY5W22KJbjo5NDuCwz",
+     "slot": 449436890,
+     "err": null,
+     "blockTime": 1790095619,
+     "transactionIndex": 990
+    },
+    {
+     "signature": "3b8Ku8CGsmch54RHhwRsqvH766XYUNUf94Cs4x7b66e5A7gpKx2j8d7WFcyvwxWfhDRZvUhC3vHUHLz5A9KGRQUx",
+     "slot": 449436861,
+     "err": null,
+     "blockTime": 1790095611,
+     "transactionIndex": 588
+    },
+    {
+     "signature": "5cCKXMR3asFpDbd6y7ye9BfohuLuMu8n7qEF8XbXwQEig83vJiuULRfzEy9nFK9skbntotxy8v7Cek61Mh9vvp4c",
+     "slot": 449436843,
+     "err": null,
+     "blockTime": 1790095607,
+     "transactionIndex": 271
+    },
+    {
+     "signature": "2Wuu5Q4YJpaYr2e3DKxCS8UV9uvh85ABjvYr9iisM3uup9EFVFyQSbSiXcR95Pwz9agtqbuxFLRA1UjrA5QX2RfV",
+     "slot": 449436836,
+     "err": null,
+     "blockTime": 1790095605,
+     "transactionIndex": 512
+    },
+    {
+     "signature": "4FSU2mtaUiWrZQumLDEmnywNgFxvedrULoiq6RWABp6tqyhh9sFmjbFmzYsSp6jhQvQSrm3LnPASKygpmGC9rh8B",
+     "slot": 449436821,
+     "err": null,
+     "blockTime": 1790095600,
+     "transactionIndex": 342
+    },
+    {
+     "signature": "4SmQgJS8WWRCSwP6kUZhBNPykMRZsAqyyPJ43JxuPR4izyozdFArkWxCEZGvCGPhPcbD2hiVKGDNQogoFi4SrPRf",
+     "slot": 449436816,
+     "err": null,
+     "blockTime": 1790095599,
+     "transactionIndex": 313
+    },
+    {
+     "signature": "gMjEJkmAhRtkasVPc8WFa5pCz3vz8FX8oR7ArzCyGP6mKUtMn96AwAkiLpuHEXYZuFasHwF2Yq6vRNMh5WJkZxq",
+     "slot": 449436815,
+     "err": null,
+     "blockTime": 1790095599,
+     "transactionIndex": 790
+    },
+    {
+     "signature": "3YCpjBJktgQegpyCMLuryPmtY4HmxyhQtsiEwWQbAQKH66Rsm7DsK1bPYq93BHkBKfyfohFKntRr2HgbPbEVVcw",
+     "slot": 449436811,
+     "err": null,
+     "blockTime": 1790095598,
+     "transactionIndex": 376
+    },
+    {
+     "signature": "56jd96cPWm4bJFHbpjhxMveMaZSwPqdAxB4Z5CPaWrTwq4GpQ3VPWZukYBwFZNYfn8fYXNP2mxoEXrZX1FNgAvqx",
+     "slot": 449436811,
+     "err": null,
+     "blockTime": 1790095598,
+     "transactionIndex": 374
+    },
+    {
+     "signature": "2zgL3YTY3YPukcXUPEsxLjcitPyw8ECm9s1yuPuCJ5v14gnZJNizePgAhBEhapjNXFaRcUA3946JHqmFdhQ1GhMp",
+     "slot": 449436811,
+     "err": null,
+     "blockTime": 1790095598,
+     "transactionIndex": 373
+    },
+    {
+     "signature": "NzKpkaB4dD9qGfX1hbLnoPSMdSuQariKtGGMQjtAA2qu2DmMdHxquWpvZvjBxkmKgeM1u1WK49ZKeshKcgG6DoS",
+     "slot": 449436811,
+     "err": null,
+     "blockTime": 1790095598,
+     "transactionIndex": 372
+    },
+    {
+     "signature": "2grsSiHyuZnieEp3u5q1Uva7bBJT7VbafYXijkEADPnDfRiByzKP8KNwSjyTWzbss8Dd4Dovh62AoXXYRc6C85pj",
+     "slot": 449436797,
+     "err": null,
+     "blockTime": 1790095594,
+     "transactionIndex": 234
+    },
+    {
+     "signature": "5zbu159mLwrf22msvmsLNdNt4mAk9n7Jjfg1BW1yoUMw1igoXRZGugK7ZnT7CCbcCBJ3KU2hXT79wFxAPJcsT4Fb",
+     "slot": 449436796,
+     "err": null,
+     "blockTime": 1790095594,
+     "transactionIndex": 495
+    },
+    {
+     "signature": "c1D5dkTWRYqcP77XRmQKvziW2vPEZMxACPvt1yzz9p9ddP8msFmiVpPQF4M9EUjseuUfUrdWitJkCkw8jiia145",
+     "slot": 449436789,
+     "err": null,
+     "blockTime": 1790095592,
+     "transactionIndex": 1243
+    },
+    {
+     "signature": "XxMhuJYALTnMUK7wKk5maZxHQ4ekZgp4ztjPj3Eb5v9uP8bMpjpnxfXumribb516JxfEZM72PjRf9QiHivXu23N",
+     "slot": 449436773,
+     "err": null,
+     "blockTime": 1790095588,
+     "transactionIndex": 527
+    },
+    {
+     "signature": "597dpW7czC2mhjRiS84cKzstzmqDVU8Fn2rSWWqkWFYpkHqP29ECt8X6mddw7TnzeJ74332Hn851uL1U6ytSiNWp",
+     "slot": 449436763,
+     "err": null,
+     "blockTime": 1790095585,
+     "transactionIndex": 450
+    },
+    {
+     "signature": "3Xudk7gEaxSSBKQWaQJ12CnF6hJduCz2UUQsAKWDqnhEHe5RN6xLEeCpr58eizGQyQDbdcQobSxm1sMvrgHXpEpT",
+     "slot": 449436760,
+     "err": null,
+     "blockTime": 1790095585,
+     "transactionIndex": 1423
+    },
+    {
+     "signature": "3mtBCiozoPRayiv9muAbwozSzq25rAa9mUzWtPWvbFSMWkT2678YUwy48W8YeNe5GNPU2yD86gEfssV9dQQ6P3uN",
+     "slot": 449436756,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 1214
+    },
+    {
+     "signature": "3tzanabdWf2rp2KhSKaxjvikrgPKfbC5w3H8YDBDbNH2x6yjuXisNsuJLHqMdxyMZKiwiRY5GfipnMQ3Xyr1ifHB",
+     "slot": 449436755,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 675
+    },
+    {
+     "signature": "64XED3mTfVCLLAwiPiGn9eU93pyuf1fqUJYb14vrvRRa3fUricanKXYTNeVGwVoncQfKtVFh4fW7PDHH1yTKtKmp",
+     "slot": 449436755,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 551
+    },
+    {
+     "signature": "LaZdr3yRuc1V4UBvmsc5S9utSSWG3eVi3jVACZkVhjcPYzMjU2uhk4NTRcV52VoFHwMprDwT2kj5bQ36REJTA5Q",
+     "slot": 449436755,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 540
+    },
+    {
+     "signature": "4nEWA5A26r6QQEz2AvtQgQRrPpGfHpz6Q1wm2DLppDiUE56qajqMu71tgHn8hM54M7jwkgrdq3oeAxX5LBLF16Vu",
+     "slot": 449436755,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 472
+    },
+    {
+     "signature": "5ojWBimYUG8tkKip8a5rL3dRRZeYG3i5aGjw2xb7BcPER3EHYJE3eyqhJ2Cq9FQmfbP1mQj3HcfWDr2QErCLvX8a",
+     "slot": 449436755,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 220
+    },
+    {
+     "signature": "4Lshnb5q5aijrZ4ZgWMz7ax7q19Skc9CmBBrtRWGKtJTrLNcZXz5yZZXM6ZBhNwgLmKDX5Zhemqd1PrQhu7Uqmq8",
+     "slot": 449436754,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 60
+    },
+    {
+     "signature": "4KYaZC3saHmiANNShDcC45C55qRwSTdc5xGVoVYQ4jiaFWkF1Bow6fKtKTtHvG1e4Eh3gU7JyhZB3H96AHGsWsx7",
+     "slot": 449436753,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 538
+    },
+    {
+     "signature": "3Tv7XYcuiReKEXaiFqHeJwxYwUuyCcFvsJCuoXgKghukrmZyXi8PBtnCvp9Arefib5VNvGHBF3hRGB48UeqUeSi4",
+     "slot": 449436753,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 537
+    },
+    {
+     "signature": "36pPCGH2vai7u6mYk5pcX3PC1vCKdfEiCvm8oqR6wGSx3VDvvmKJnWLMmFsCpGTY5NqfMocZLP3UxaumafJhorph",
+     "slot": 449436753,
+     "err": null,
+     "blockTime": 1790095583,
+     "transactionIndex": 535
+    },
+    {
+     "signature": "2ScarVbSJjdd7hWbxpfiNdEDQhPJMx8Xg3fEEfkTuA9XNHneDA7eWvioVP8RYUag4mKuNfS1gwyTwFaKSBYREfpe",
+     "slot": 449436752,
+     "err": null,
+     "blockTime": 1790095582,
+     "transactionIndex": 650
+    },
+    {
+     "signature": "5ZPEEymybgXqt3o6iKx6TAt99zvSecRZ6X1w3kupEPmZVVPuqjFx6u2n3dRnvt64qirnoyBQyaamhhCvLaFNwf2x",
+     "slot": 449436752,
+     "err": null,
+     "blockTime": 1790095582,
+     "transactionIndex": 543
+    },
+    {
+     "signature": "4F2qARRx9G9CqzrmHXuPAJWETnDKYJgtFcR8ZZQLhCq5wBJStcograQUbUZDUWtqroarzKrig3cxYkNqsFgJoAap",
+     "slot": 449436752,
+     "err": null,
+     "blockTime": 1790095582,
+     "transactionIndex": 87
+    },
+    {
+     "signature": "jAond6KqmKAPiykJ1yyNWani4NXPgLcPKcg7tQNxJbufjLL2v6kGiXBgRhxcNof79f1XCzzqj1aPCstMdWVnnHq",
+     "slot": 449436752,
+     "err": null,
+     "blockTime": 1790095582,
+     "transactionIndex": 86
+    },
+    {
+     "signature": "5a9f4ySuEkaddAByGSE6TQQrSgQrqN7uvcugzWwDgU5hxgRiGiiYt7WpVvfHna4pWg48ApbFh4uUBE3ZPx9xnrDp",
+     "slot": 449436751,
+     "err": null,
+     "blockTime": 1790095582,
+     "transactionIndex": 303
+    },
+    {
+     "signature": "2WBeaUNejJTU1kw2hXkqj5sD1JGu9emipPAqKVSp1ntF7k1ASouQNvw5CXBogcEnQMjVLqfDdomXB2ikr6DXF6Jb",
+     "slot": 449436747,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 857
+    },
+    {
+     "signature": "5dbkSAUZ6pJEubth76eRYs2tj7V7Zt14i1hWeqTha5P8ng2WtbkVxcs8mdhLbfQfDK1TtN1cXv1EChajB3EL3LAq",
+     "slot": 449436747,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 752
+    },
+    {
+     "signature": "2NbjaYZzwK19J39ophFTuKdKeqfEZ1wQPknmVXLgAsbDKWdxhfQvZdt6KM9Bun1qALr9q1vDdHagr9z51yMrKtim",
+     "slot": 449436746,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 751
+    },
+    {
+     "signature": "27P5LnacuYidhMdF6tfVEVNhifpwu6KzD3N33vRxbxaE9FcURX6GRi8ejjzRegEFVo16SrWfZd2NhdxFcR8XfLS2",
+     "slot": 449436746,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 357
+    },
+    {
+     "signature": "5xDiVg7ZAoeRojzaZ4GQpneVoP8jpLmds2hYE1EZRZ7UThBNvuHL6ZPFZRFphHFUYtYewJRXJTyx7EhSajZoczMf",
+     "slot": 449436746,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 111
+    },
+    {
+     "signature": "3SrNcdYWb1og572AZqJiddQ7qfobA1zpMrCFaC5FKJgfZYxm4ECF5VUSq9Yf1i8oGWFgDmePeKgrKuhSNDuDCeQX",
+     "slot": 449436745,
+     "err": null,
+     "blockTime": 1790095581,
+     "transactionIndex": 483
+    },
+    {
+     "signature": "PxfFDqyzD5k9Zap8hsFF1m58n2HQZXAfe9i5H1FQtBXaYjEdG8Bb5qAsYVMvLPMjWVTWuzscUzE73fFaHqmXiFg",
+     "slot": 449436743,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 2000
+    },
+    {
+     "signature": "5k5oan16Q1gnetob5WYjodtPPZYAzbgnu3nPA4vMk6FTTR5rfkmgu1ngzinn1RxHcNd7HRYvWj4RUAXsKtaxyTDL",
+     "slot": 449436743,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 343
+    },
+    {
+     "signature": "3tgx3FQubEnLYZ5zNKgf9ztvmQ9qTESHVUUR6t7dtK8Dg7wGKEHmpMjr8oRUcWardd6VYe2Bah3Lknbz1Fh5e4PR",
+     "slot": 449436743,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 82
+    },
+    {
+     "signature": "3VRdhbpsU2SEDCBkXeTC7skfjqSryQ5hcmTA9EQckUdy7KzrCXKH1DqEddCmfbZoH3892tEnuRnka3cv3W546Fdt",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1861
+    },
+    {
+     "signature": "4q7vgmo85jH5QP4gy2oKJbJUeHTocb2c4tN961dFLM55AudyFJCsCfkuCDzVXEojK2G1Cir8Jf9ZnfMLMJpQNBn",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1805
+    },
+    {
+     "signature": "3WhTFaKJe1MUkRgEG97FXoFCsbvz9nb6PkRzfhMUy1WTyxWrUEpvfmNQ3DtDnXkJpJAa9QgGgsnyaZdoiDcx5J1u",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1289
+    },
+    {
+     "signature": "3boP4jmoJk2FG6NTqg2HPUzFD8WcLAMx4jjfZ1Qt7Psiyyq6e16ufn2spTPGLiizUk52iU3fpqmvETA5NrqyLq1K",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1039
+    },
+    {
+     "signature": "2skuvdsabqbMsKPWe4Era4V48Bzknx3U9YmHXidWVmMGks56RQnEKixzPzxJSh7p7HFS1LBnzTBpD6T63EHb2ogw",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 641
+    },
+    {
+     "signature": "4iAL37N5UcCadukJKY6BPgENqWYWPPmW1V8R6BHzQ55kD4EQr8W8cTw1rPe8iyoX5N6Hb2vAEKiUZM2Lv7aHtKud",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 476
+    },
+    {
+     "signature": "2JoRbsAXReBe3sgtm8KuzpGMR1PisTifMktcDnU79BvimVPMvVu3RuJhKcmecusSjsZwhiityJwX17G5kv2JKqgy",
+     "slot": 449436742,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 234
+    },
+    {
+     "signature": "4NCst1kDzM5MjgCazBW9HADcN6Ac6rnULvaLr2Ehhor9sBjyRGVU6CmKpioprSNFqxaG6h7Xg6iTdFjafZYXJtTP",
+     "slot": 449436741,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1675
+    },
+    {
+     "signature": "4YrFsoRSFhnfQk597ohE4hMQNcvfKuQdwNoBP1ucEeGeJmMhDEQtiTmMa5WAc9CNLCE7Ysr1F4xND1LUBpteZtuf",
+     "slot": 449436741,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1672
+    },
+    {
+     "signature": "3jF3wFGGqTFPQupVmq1L8nqhc7eMCbNAQcVYAWwZkxC2FgQYHjNqbtkVHF2DWMuDedaQR4iFN8YcTyP3BXqiJSN6",
+     "slot": 449436741,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1216
+    },
+    {
+     "signature": "5ead4rULzwta7gqYdfPztGMBPVojVGSVq9NkF7TENJM4BCn2pJCL4AeUqbGSVVW22x3StJcgk6huC5rQ965yZ2p5",
+     "slot": 449436741,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 1019
+    },
+    {
+     "signature": "3wVBX1Jq7m83sNq4aWkoANBsf6ZAjsxP4FJTLdoVYZYK2WXtZUdANMUWdxSV6BFopNuTC7SYzQTRrp14WghAhX8h",
+     "slot": 449436741,
+     "err": null,
+     "blockTime": 1790095580,
+     "transactionIndex": 723
+    },
+    {
+     "signature": "DwGTpeE8RMmdEnik1eeJtihJh3eLW2XxY6xMAzcWQxknj7vesdkoRgLm6N6WL1K1Y6f6xHYP3dLvous11jcY9WK",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1234
+    },
+    {
+     "signature": "2rBB9M6tsH1KZKPPsCXTUx1gyEgsLkp1zAFx5cEfi4WekKLpfvKJQ9rEXno8fWN1n9PYt3Ed9Y3f8prxBCsGwPME",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1086
+    },
+    {
+     "signature": "42HqtVapYXQm3SsutMNVoMzXe4RfY4iBper7HettAzi5fv3t3TmUVMAL6tdUii5ep85VQDvcb37uSE5dcjQoM46U",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1082
+    },
+    {
+     "signature": "EYVicFUChLdurdEFrGhe795h6NP3o9NoXZzL5LLMhYABCX3rYqNGTry2EupxjMgzuWDgL39NewhF32aYGZ3xB3v",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1076
+    },
+    {
+     "signature": "4THxGn7BTrrF7fZseHi2FvRfzN3LKobjG8dNcMNu68i4GWzEDNKp5tcweshjdqdxmr7DaW54293rsp2EoGeTon13",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1067
+    },
+    {
+     "signature": "21Hztw2AGNGuVvzNxXYfneDbYvoRohgm2YTBYZczMdpoMRLiLL3U4QdLseuM1EmyoA3UjaWbaP3Ua2BNTHKfJKAh",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1062
+    },
+    {
+     "signature": "FjtUxVSXCUTvtv9VU1vMEoj7t9X2FXxPtP6ZEJHrLfAJF8Thv5wwYyPRZnWXSXgHJCrzjrKKooqeEKyx9a42x93",
+     "slot": 449436740,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 1053
+    },
+    {
+     "signature": "5javPnWQu34xqFFo3UETJCz1qX4G8DL2vuWvrNnfAATxbHnDv9uQdW4vq5qpmqJi5NALsyeHuJbSBfkswDxYcDt4",
+     "slot": 449436737,
+     "err": null,
+     "blockTime": 1790095579,
+     "transactionIndex": 584
+    },
+    {
+     "signature": "ras4kLZazx3WxMkSWBGS94qcKwWAHVCToKkjgUZboCjnwUDp1wojovFEUUwnPcsa4kuh28oiuuKgbisW7SZYFom",
+     "slot": 449436735,
+     "err": null,
+     "blockTime": 1790095578,
+     "transactionIndex": 751
+    },
+    {
+     "signature": "5ry9GeSrbzurJbn2PS2AbbY7ZgXASjEZcw7iH5fRfXJciWEfiiVY5jF9SMz1M43SQeB3bKvLiqkTA6SJZMoAnrNF",
+     "slot": 449436732,
+     "err": null,
+     "blockTime": 1790095577,
+     "transactionIndex": 692
+    },
+    {
+     "signature": "31UgEsZpNNBfqRTAvAXWLvw4vUHLue3WmTBNAWbTQX5ht4RzxSnNgBooETJ4KGGXpu8nVcyXBC9WTjWxoajmGbp7",
+     "slot": 449436723,
+     "err": null,
+     "blockTime": 1790095575,
+     "transactionIndex": 1215
+    },
+    {
+     "signature": "5WRMeS9pAuaWEuyWXqFwiWpi5GSrqP41nqVByBGmTrxNHuEkqngFk91XoXgTKsbXL3A36ZTiwTc5dCJDYugn8TWC",
+     "slot": 449436723,
+     "err": null,
+     "blockTime": 1790095575,
+     "transactionIndex": 150
+    },
+    {
+     "signature": "bZo7rACA3D7oRk8AKmhPWVzvvmdfmYYiZ6JMhXf1zZM6JgUsN9ywrGWVw9wUZ2Jq4uy2W6N452pGinKz9vxtWgP",
+     "slot": 449436722,
+     "err": null,
+     "blockTime": 1790095575,
+     "transactionIndex": 1125
+    },
+    {
+     "signature": "3ngkTtcihXRtxsoBSW6QfUtJUHg6jKDJTgVecX5fdfoiZ9PnkDQWhhj11MHmgbDiSHc3SKer3z7bceXCgtiESfvW",
+     "slot": 449436722,
+     "err": null,
+     "blockTime": 1790095575,
+     "transactionIndex": 194
+    },
+    {
+     "signature": "3V8aay3ZPRnZfWfyvbCuzwbbvM5EkAQNtzVWYwXERxEk62fVUeus65Nht8mVb2NDpHLCoFVk3CjJEjBXs6fz4qdU",
+     "slot": 449436720,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 471
+    },
+    {
+     "signature": "KS69z5RdupGHtgVpeVtZeboY7RF3VxzuC4PoCKtuymdVWN1hms7D3RnA1Fu34iLwiXwDQYkxAbLvZDCTAj7r9Fw",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 1603
+    },
+    {
+     "signature": "5Hhk5q5RrSAGP5KWq1TSrxsu7Y1qmKRbQihtcf8Twhfaj27wktEUwuFhM2E6AiCg1xmgWDRHVmUYYJyU9ZJBmsDe",
+     "slot": 449436719,
+     "err": {
+      "InstructionError": [
+       3,
+       {
+        "Custom": 1
+       }
+      ]
+     },
+     "blockTime": 1790095574,
+     "transactionIndex": 1238
+    },
+    {
+     "signature": "2p3HY2rGmQbdsAkMDZd21VEgUgR73pfsm5NnnV2vA8E6Zv9rfVkGqc4LzCGFRrQivcBstiZVF82AXPxrzkk14bfE",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 1197
+    },
+    {
+     "signature": "BXNLG8iuTbTmMfgo723NhxoxyWujrofu4BadgwP5RrrFsDqiPQgUuJay3QbCXyDaLmR52PBWhqrvwCU9eAjTmQM",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 1112
+    },
+    {
+     "signature": "4G2gZMx6xitWoUeBpEJWBjxaMHcSizRTjZZ4nBtoZUoADjuzYsiajVaX2ouVUBu7DUgXGs2dcX5m4zi1DikK5Yu9",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 913
+    },
+    {
+     "signature": "2XiCoYkrx4rm1LqRoJKQ7QgCrxK3wYqUShEsnvB5rzwY9UviffKsKWrZJLRewTSLEnfwzWi1TC3S8X9w461aFUUQ",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 889
+    },
+    {
+     "signature": "PrhP6uJ8dgW3GKDeBjg3uomKgf32kjGLJB8Ge6gdJsLqg8PnCqDf5UR26PQe4HsBLCRakkFFnkavxR1CMUgvgVT",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 850
+    },
+    {
+     "signature": "PNbZA3EgKZFvM9XQcxVpPorR7aoXwhhGoAmd2MZXVDRNENNeiDL9wVQsrVG85SX1jvkSty6ZwcoyG3rz7oCJrTp",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 398
+    },
+    {
+     "signature": "5JVMrvRmXTmKqm9hLVfbtojjQQNYdHLgtxBjW5jLAQ4HShqtgwW75HoPtAPg5BbtLD36VSnPjiMraCMYXWSGB4hq",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 356
+    },
+    {
+     "signature": "5UigShRd4B8cFrFa7GY8nbe2j3GUM9rQyCATTW9fU2B4qFEB3ZVf1NydF53zUNrEXmwHkbvfDUWriuDZYVahxb15",
+     "slot": 449436719,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 136
+    },
+    {
+     "signature": "5txwBRrGEQmGdpzwkWy3L7TSZHnqHuBFMKz9MCtL8pnMZkkT1m1EN5QAJw778kgvptd1xNtgP6k7cCQUnii5jv2p",
+     "slot": 449436718,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 1413
+    },
+    {
+     "signature": "4Ks3wbYZYHWwbHAQ6hzXrf7Eo2ZsmtWB4qirKrsUbXoSSkSvYzLacHhPRTDHFMCLu9BBroxHwZ9MzzXedsCqmKhs",
+     "slot": 449436718,
+     "err": null,
+     "blockTime": 1790095574,
+     "transactionIndex": 284
+    },
+    {
+     "signature": "2sW4urVHiDUt8woR5dRm6PmmGGy1swCF2iVDFr2DcXoXHDznsMLr2qbbRF4tqEgBKrN7TxfaLsjHN43YGupWMiZs",
+     "slot": 449436717,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 1132
+    },
+    {
+     "signature": "4fi6tso4ZMxTDVszDfUuWsGoRQ2e7Y5w6bMatbGhWpmoVxv6SnhKGB1ssMdd4tBViXitgMWck4Y3gdCuA9YmsfUc",
+     "slot": 449436717,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 1128
+    },
+    {
+     "signature": "5Azp2pJq65KFP3H7QwkESZSV5aNgMxr9MffJ89JtvJj6wfznsc2XytbFE2ZX5aNhW3UbTrscY7LTXtPvpKdFvCu6",
+     "slot": 449436717,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 768
+    },
+    {
+     "signature": "AfdK6Tb7Y5P6hEroVo4twe8w9jsnEiMULHi9b9k5ZbppZVYYe3S7UWyQtxmLc2Xsw2qoWAwbyRVLEomNhQFL82L",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 826
+    },
+    {
+     "signature": "5BamGJdAXiBXeipAM7Hwk3izsJinAoMycGnCNzaAyBPkvoLdNY6wcXYyQqArFhWid3tBZkySTsP75L7wLRdGKW1v",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 821
+    },
+    {
+     "signature": "qt7q4ZZYDWnnV2ouQhZSBWjsQJhSVoDVJ5XyUtgh2WSf8Jr7gx96VvMQxpsJEM2GndWT8vjXs7yLHUSrTeK11pd",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 820
+    },
+    {
+     "signature": "2gtoUp1g1SekxqBYV39iV6XmSnHAJwsZbQifFBL2iqseZRMZGScuR3eVQ5u8KcLebmzWKDr7xZmEhWQ2JbGr8cCL",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 806
+    },
+    {
+     "signature": "4cQmaRZ1kE8joGKG5cbQeuoR3Ajom7LStstFsb7WpEgGx3z43YxN7x6RVhLSfPGuoAaDLoAKiaZrLWPzzxqFecFE",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 805
+    },
+    {
+     "signature": "2VVFLfq9VF58RPo9df56TCR2vx2Xia1vi4JxUpBsd39TxHKcLPhsZCHUY4ArD4KLPsJZRRGCxZs2E3t8km85hiXJ",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 803
+    },
+    {
+     "signature": "29oVFoGLuNRdqZ5yUqm9tJM5RoCh9XtvrZEwLKeLBbopzgctpwaUhCKDZtNpbvSrpkj3DtQP7qn51R6hPKakpUK2",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 799
+    },
+    {
+     "signature": "4SGP6DtKGFvCz6XWtRXq5mtbqh5sz96m2fBg7AuwU5fdJC8RusgV7Sgg4Se82k5hMWh8FFM96PZC1RmkfwMq11EQ",
+     "slot": 449436716,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 793
+    },
+    {
+     "signature": "4cGoTHwhPRrwbbJYiSDWXN3H6HqydL7HV5NuYW54ofZMeyz4H1PyjgQyfb61Pzqdt4UyJ8DKLtZzZKmeKmbfEv4x",
+     "slot": 449436714,
+     "err": null,
+     "blockTime": 1790095573,
+     "transactionIndex": 167
+    },
+    {
+     "signature": "YxntkjSojApNnbEUeruNVaZnByj2gpyweSK85BnA7QrkdeKgJMjxnkNJE59vkezLZXyAtQ2r7YpS95r3LM2RAfV",
+     "slot": 449436710,
+     "err": null,
+     "blockTime": 1790095572,
+     "transactionIndex": 629
+    },
+    {
+     "signature": "4uc238q1j8f6z2GtvMxFTNffYzWYx9F9RY62YMY4JrradjSZx5n8nB8cQ3UrYtyhUhiTicdDDTrXfGmP47hudMLF",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 1444
+    },
+    {
+     "signature": "54HtfRXLMATipECK54L3iqLx9CPfLJMxQryDDrE4hymyJRmtjCBBz5UQHjL2a7jaFgsEserL4D9MgasJJuCbywUS",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 1332
+    },
+    {
+     "signature": "2HgomVSqTg7gJhRQYAbVbSBPCM3sKZDaqdZhwebyzhV3LCQPPUQfCwPa93xcNK9hccXKTiKka9nUV4jhpfctaLYT",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 1328
+    },
+    {
+     "signature": "48vDnNPygirjrRYQXzKzicDExHDnSq7LZkAxakKqAPxko3mncH5yf8mGpNawhCePcUCiErTMo8schsE8HWUsPr7H",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 1264
+    },
+    {
+     "signature": "5Wz46oiDJRCxoH8GKGdPjEqRxD1ShhcUKtheWw1TzntWQTqEEVAng5SD6K2HLRKsoJiczYBbZw2an1dEGC8US9WS",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 829
+    },
+    {
+     "signature": "4UVnJXpVTU1XjN11ERxxoNoQAqtY7TFoySvWRA2vBgvwP8qLmkLRYEapWu8cByxN5Egc1wZXNas3sqRHvK1VidyS",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 505
+    },
+    {
+     "signature": "538q1YBLqxU983WKXsRmKoT1WiDUhngDuGdWTufMU8bdivBTshR1hkWQ7V9F9gWn7bVqR6qCSeUtKysvw6CbLJVQ",
+     "slot": 449436707,
+     "err": null,
+     "blockTime": 1790095571,
+     "transactionIndex": 327
+    },
+    {
+     "signature": "4muPMkEGwxRxgGnBduLKLN3fMyPzJPSiqpasQ4jEM3644fspKGsaJuAtBQ4tY2hZoV3dqPVfrNE4RJJ294sHqUWo",
+     "slot": 449436706,
+     "err": null,
+     "blockTime": 1790095570,
+     "transactionIndex": 1097
+    },
+    {
+     "signature": "sXqYtS3UdcL6dPYBeaKLvbuo4fsXV7mwhzpHDEF4T93jghCtXapyoGPiLFyQJsq6nudrTbdLcgttjBy5T6EXiUA",
+     "slot": 449436693,
+     "err": null,
+     "blockTime": 1790095567,
+     "transactionIndex": 438
+    }
+   ]
+  },
+  {
+   "position_id": 64492,
+   "handle": "probablyinsider",
+   "mint": "B4cqDdBWDf6hgy1rma8u4JpoTnoycDQyg33aR48mfFvE",
+   "fired_at": "2026-09-24T10:08:09.407155+00:00",
+   "audit_detail": "measured_state_still silence=30.6s",
+   "our_sale_sig": "2wSWEKjAcKWj2jFbMLBZ1CKP4L9UqyyfK5bHbTAMDB61yyySZbCrk7Bki9V4rHMUmM12xxBfjhc4XFYeKNqh7u2",
+   "expected": "mint_moving",
+   "signatures": [
+    {
+     "signature": "49ApEj16LbxL6nDUopg4RcgMHpB1b9LA11kbaoG5dYNE9fDRKRgaBtu1erZE6iSEwU78dC3RLKdGD6LeZmdCajfp",
+     "slot": 449997111,
+     "err": null,
+     "blockTime": 1790244494,
+     "transactionIndex": 1127
+    },
+    {
+     "signature": "SL9zVzCwAvVCq5jnyTJ33Cm3qTPC5P8XGGaUxTnB91uTD8j7kpNGpyxbXZRzG2BMjQGDtztqE3RqtXqFyQgXdZx",
+     "slot": 449997111,
+     "err": null,
+     "blockTime": 1790244494,
+     "transactionIndex": 1126
+    },
+    {
+     "signature": "2HZSnkK1bLAMWVLpxZbea3mnwn6F7xweboEn5ygLQYgRUT3w8KN8BG3Pwkb7A79Zg98zvsWKriGZ13i3aJpg7nH",
+     "slot": 449997104,
+     "err": null,
+     "blockTime": 1790244493,
+     "transactionIndex": 1274
+    },
+    {
+     "signature": "2CPacPKmcFybnH4c34ghKTp4rc1mP3JxLPBvJ1Xp2CgK6VSyzr3TyvCeLfU15uCCZ17shFsnQxLrabQCwnF8yfj3",
+     "slot": 449997102,
+     "err": null,
+     "blockTime": 1790244492,
+     "transactionIndex": 976
+    },
+    {
+     "signature": "5c2g7QKvGxPHiksh1SyaQ1xXJDbJ15vUKUgPkGgy5P5iUXa2aaiAJERCxvxWz1exRMvoVCc2oZoD3ZLLJv5BpkHZ",
+     "slot": 449997100,
+     "err": null,
+     "blockTime": 1790244492,
+     "transactionIndex": 0
+    },
+    {
+     "signature": "2wSWEKjAcKWj2jFbMLBZ1CKP4L9UqyyfK5bHbTAMDB61yyySZbCrk7Bki9V4rHMUmM12xxBfjhc4XFYeKNqh7u2",
+     "slot": 449997098,
+     "err": null,
+     "blockTime": 1790244491,
+     "transactionIndex": 128
+    },
+    {
+     "signature": "23DJRuXovDEMgJYQm4QtfNK1NJBqP6CjMSFaDi3vAUgKFTYURApSHkYFChEAWx2wWZrbJr3YdMUZZxzH7E5jgkj3",
+     "slot": 449997094,
+     "err": null,
+     "blockTime": 1790244490,
+     "transactionIndex": 263
+    },
+    {
+     "signature": "3gckXQbqNxnmWkhx3MSRr11nrU2fHqMe44jPsFcjnH7mRKkUP4mDdytx8t55tjN1UiKQdEbwSUHVCF63xay8ibxy",
+     "slot": 449997094,
+     "err": null,
+     "blockTime": 1790244490,
+     "transactionIndex": 240
+    },
+    {
+     "signature": "5tQeSHy4XMXNdHu17ELv75CWjqPpwYNFXnuewkWQoZqmG6fiBGCbsBQTTG9psaY14NQLNnKyDXcaRia3FSmwVe6p",
+     "slot": 449997088,
+     "err": null,
+     "blockTime": 1790244488,
+     "transactionIndex": 101
+    },
+    {
+     "signature": "3j88oBJFfpJEKhPV8Wg5kt12HKLCHqGmfxKamF73Bf7dUuDXiPkQ9WZvyBBqjBEyKPxB5f6jzMcypu2EVFj2f7sb",
+     "slot": 449997083,
+     "err": null,
+     "blockTime": 1790244487,
+     "transactionIndex": 443
+    },
+    {
+     "signature": "5tYMfXDMvcwojH6KGitJUWdJv7zz95LNmm5YrRJLjfsgGcehKPnx2j1gk85D2zvLwNUUWzfiCd222RGqSebZrUob",
+     "slot": 449997083,
+     "err": null,
+     "blockTime": 1790244487,
+     "transactionIndex": 271
+    },
+    {
+     "signature": "5DDQC16fUm7NTrqnAtZb4AxRPHmNfATvzYeRDAEMtnYTa7so97EufpDfSiibfnnutQjHGhXPjiAsPckgtukkWExZ",
+     "slot": 449997083,
+     "err": null,
+     "blockTime": 1790244487,
+     "transactionIndex": 270
+    },
+    {
+     "signature": "2DFvU16nKCEFnhctusFiEvrsjZzvQxjWW2AQXkdkSUg2cekLm6hJyPzWoapoNmqBpNqU5MAjQT3bU9Sm65RSyLoU",
+     "slot": 449997083,
+     "err": null,
+     "blockTime": 1790244487,
+     "transactionIndex": 269
+    },
+    {
+     "signature": "3FUmvmtifKQE5EogmfPeDuxnXjRYTuugsZ2hdN9y35tiPrAe938XBAPTc15yybS2iBwacuyi5NTWhAs77ZiavuyP",
+     "slot": 449997079,
+     "err": null,
+     "blockTime": 1790244486,
+     "transactionIndex": 910
+    },
+    {
+     "signature": "38zk4Ep3W8Q6Kq88E9U4XkKcSF6MbDFNLDeEQwj2z2jTMGhJVqoVZAxdPcHkQFdDfTyaoqs8M6r9w69sFuoqG1ue",
+     "slot": 449997077,
+     "err": null,
+     "blockTime": 1790244485,
+     "transactionIndex": 841
+    },
+    {
+     "signature": "453FyzQfSxgSsqLWN5Mi2ztYogJrowXs9LfLDtHkgoSXqtjJS62dHuNVrsSyAzobAMewhkSxQAumc7hGt6BvJbw7",
+     "slot": 449997075,
+     "err": null,
+     "blockTime": 1790244485,
+     "transactionIndex": 1121
+    },
+    {
+     "signature": "3Z8H7r9uig9WvLG6TTxTL2J5XQSimfXetqc3PAyMUUsHJ1unVCrJD3fV8vpjf5EHcgz8WmioRGpNSPboZVTiavf2",
+     "slot": 449997066,
+     "err": null,
+     "blockTime": 1790244482,
+     "transactionIndex": 139
+    },
+    {
+     "signature": "DwpEdsqWxxLVUgh9tJFBc9Qgkq9BpEvvdUYznjFWVxDLUxzSJp8ciSroY51Ts8Y6cibvnn4MaA34SwJ1QgizaDD",
+     "slot": 449997059,
+     "err": null,
+     "blockTime": 1790244481,
+     "transactionIndex": 983
+    },
+    {
+     "signature": "3ccWnZU35ER6p8S5uqTcyPsj8t3ZKFS7HyEDuqYjUeRSLXFK7NjqXakUAcMQLstfXPm576wPdHCU1yaAuXaETUYy",
+     "slot": 449997059,
+     "err": null,
+     "blockTime": 1790244481,
+     "transactionIndex": 328
+    },
+    {
+     "signature": "2iKCoNKg3CJGZpJpxnQrsrcbKXvbUxHBPEakgYJbEMqPmue5pWHXNVarSdRq2jPRCtYw6Hiq7hv9TVYgzTwFNVh",
+     "slot": 449997058,
+     "err": null,
+     "blockTime": 1790244481,
+     "transactionIndex": 832
+    },
+    {
+     "signature": "aeiNg7fDBMdRoftXKM52y83fdnCrGhUCbenfLHFrrkkwwPACpzSMn2A8njCUBcKzwMMQeSktmdFCFzHXPWCWU72",
+     "slot": 449997056,
+     "err": null,
+     "blockTime": 1790244480,
+     "transactionIndex": 551
+    },
+    {
+     "signature": "52baThFN9Mb3y3knpSb5GTo4Aq1Sxb8ZGuZxVjt5jzkFn3oNrs3aFBLbCCo3U3R2bf2MxxtzeeqzLgG3Lbfn2pCp",
+     "slot": 449997052,
+     "err": null,
+     "blockTime": 1790244479,
+     "transactionIndex": 646
+    },
+    {
+     "signature": "3dYRdq92Ur74cVbYr1gMf7XVmrbst3u1hDJak5s8EgipBJyqySoA8rM273uCW2ZXsc3n9SFnm5nV8ke3w21ae6n8",
+     "slot": 449997051,
+     "err": null,
+     "blockTime": 1790244479,
+     "transactionIndex": 490
+    },
+    {
+     "signature": "CCx5ZbjjxuDrxVYEK9SNai4QGhLjL9xCby1c5bAzFumxdeWpmJEJ4AAQnhqYoZeWmZUHxSzo9TNiGGZF5gS2qdG",
+     "slot": 449997045,
+     "err": null,
+     "blockTime": 1790244477,
+     "transactionIndex": 384
+    },
+    {
+     "signature": "4iRvxG9gFuWCGcn6JX1XnGogHTE33GUefEkdqzYweSXaqQVX4hWGbnXVSuMjxfoDhCUV36sPcxsM5hgrzRrSGoee",
+     "slot": 449997042,
+     "err": null,
+     "blockTime": 1790244476,
+     "transactionIndex": 830
+    },
+    {
+     "signature": "4HXYDSfagmgdWC9h82jYgghFUNip4ygyQZwrGik7ZFyWtUu2SuA4g4xp8CYEoAKAv5ieYe1tnGv467rTCA2WDidG",
+     "slot": 449997040,
+     "err": null,
+     "blockTime": 1790244476,
+     "transactionIndex": 945
+    },
+    {
+     "signature": "5G4Z9TxVHriFDMEb3gpQQsVjDkKbikJ891UQyM6VWpG3o3PyUg5FSLzio5aAL5tXrP7xnNZKUzXPjS4gbEBZcCa5",
+     "slot": 449997037,
+     "err": null,
+     "blockTime": 1790244475,
+     "transactionIndex": 711
+    },
+    {
+     "signature": "2NxYnx9K9LtEBP64zyxJYnvXL42trMt5mwLEMKREkQf6cT7ewgBu56jnr7tWTZh2CDD2Sd19wVWxG7E1ZMqCZyR8",
+     "slot": 449997035,
+     "err": null,
+     "blockTime": 1790244474,
+     "transactionIndex": 860
+    },
+    {
+     "signature": "uDUwaZfHVUpBfUQ2siVKT5TizLQasZNhm2MKnEpu4DsLWowSrv46vyeGgJqCDM7GxmGBLQZgKbiDBP3VCB5hw9S",
+     "slot": 449997033,
+     "err": null,
+     "blockTime": 1790244474,
+     "transactionIndex": 217
+    },
+    {
+     "signature": "4wu5iL3kHm8vTFEzQnQibLAxM9hJEEV7VNxz2khxs3nxYvupuddppwo4YbaMSr8MVxosXdtFVPEFE6VnoT6Li8f",
+     "slot": 449997030,
+     "err": null,
+     "blockTime": 1790244473,
+     "transactionIndex": 792
+    },
+    {
+     "signature": "2bHU5NRxpYWt32bwEvugW3feLXjnEAUDSoD6xR2BtcNYtvJur4UeaJhbBeKkAQaw7TXPJZ9eHx1jKrPzid8Edpzm",
+     "slot": 449997022,
+     "err": null,
+     "blockTime": 1790244471,
+     "transactionIndex": 333
+    },
+    {
+     "signature": "3zzriSiBUjfgmRmxCrqQ1jf6GHqerQQp5VoaJQYxeHABxP4XG1NtggEGmPPEkGpAmeYunZpu3iHDzKgKEtRj78Au",
+     "slot": 449997022,
+     "err": null,
+     "blockTime": 1790244471,
+     "transactionIndex": 161
+    },
+    {
+     "signature": "Rnw9AMxhSSxGioY6o58GhbqCGdKZS8Wi31KfDbjNAqKvL78cENMemdG7SYFcTLpDVpAsoQrN4eDZMjy7sstHdVh",
+     "slot": 449997017,
+     "err": null,
+     "blockTime": 1790244470,
+     "transactionIndex": 601
+    },
+    {
+     "signature": "tJ2Gi5BZHU8ypENsJz8ZzYK5R9QYKWHnkHhRUorAwhuX9TFFE1omhLgQcHpiLrwvHNmi5mbwnriu3j6LBmS3i4u",
+     "slot": 449997010,
+     "err": null,
+     "blockTime": 1790244468,
+     "transactionIndex": 493
+    },
+    {
+     "signature": "3SXgHcDkhiGEm3XWQ9g3BmqMKLuWEsXHsaM1WWhHwTSP1hGoCTX8oTuMyMRAM5g5pNkfTaKFaocS1fsxJuZa74KB",
+     "slot": 449997009,
+     "err": null,
+     "blockTime": 1790244468,
+     "transactionIndex": 172
+    },
+    {
+     "signature": "2So2NoJZUtmxB53ug28irXbp2XyBvo6tcwuz7wqxdRMujENteSTxLx4gV6DbZjVj8VRGDuo57dYCtwVCwymhVrfZ",
+     "slot": 449997007,
+     "err": null,
+     "blockTime": 1790244467,
+     "transactionIndex": 337
+    },
+    {
+     "signature": "5eGHKCjuGBUghQHHC5rhWY8NZYVbHZQCRcyHTAVyHhZBtRz7asJX6No5NmBPAegb5QyYGpdGrx8uhLR3SuU6r3VC",
+     "slot": 449997007,
+     "err": null,
+     "blockTime": 1790244467,
+     "transactionIndex": 330
+    },
+    {
+     "signature": "2dJCQREALFXAWGuWJHbCfDeUjxbuii5jNuZTwERwEFVMMXJNgNjH8D8yFVvBepFWm4fouChmDre2xaRXs6ervhMn",
+     "slot": 449997007,
+     "err": null,
+     "blockTime": 1790244467,
+     "transactionIndex": 307
+    },
+    {
+     "signature": "2Ujnydt7yZnhbgDRxw53RFaGp4YVpYfUEWPnTyKhWSKmPAiM7RrBGqZ6zHv31K7ZKDHerrRjCSnRtGFUGoXTZ83r",
+     "slot": 449997007,
+     "err": null,
+     "blockTime": 1790244467,
+     "transactionIndex": 57
+    },
+    {
+     "signature": "4KNxRN3MkDEqmB8u5HbYBmCbq8egBByHqFvWhwZ3ZxMwFhT5ERDsD1Tah59V93jp3fqQwJ4xM5KUrnVi2QLc8JAq",
+     "slot": 449997001,
+     "err": null,
+     "blockTime": 1790244466,
+     "transactionIndex": 568
+    },
+    {
+     "signature": "5EL4FkcC6wnZXdFibfoWr7kimHMKoXuJ4oN46NnvBbvBvRGDQ5HXruPEwTvxsT69MU3h8DAkHeLi7e1Jk6f9GRs3",
+     "slot": 449997001,
+     "err": null,
+     "blockTime": 1790244466,
+     "transactionIndex": 567
+    },
+    {
+     "signature": "2yzde6xmUnWbrsCpKaV6txzao8sir5yCixpE7vV2qneokNfWbVrZj17jLpZCLKZhjjGwK6hLkh7uGxWuugxFM4GH",
+     "slot": 449997001,
+     "err": null,
+     "blockTime": 1790244466,
+     "transactionIndex": 566
+    },
+    {
+     "signature": "2NQ1yHAXrb64Px8UbxmfPFzQPBBwdpt2fXB9qYj4Kvqe8jzFvqs7vmRS4quK5b5HpoQNoATUGaeigkXKnmU3AEKr",
+     "slot": 449997001,
+     "err": null,
+     "blockTime": 1790244466,
+     "transactionIndex": 565
+    },
+    {
+     "signature": "5jZR7oqWF1Gwrcj3ef3T3UGfuRbmUs1PPRme5YuxCnentAuapYFjqN6vUJuCKBq3jrjwQjxSeMT8PXeqwfqmxMLL",
+     "slot": 449996999,
+     "err": null,
+     "blockTime": 1790244465,
+     "transactionIndex": 93
+    },
+    {
+     "signature": "5Tk4PWav5sWkE2sVUfJaXdNepCUuSdfQV41y1zQ4hhcAK8aqwXa77Zu5VbLui1vtUkxBRSZhhAahcxqytGpu55TS",
+     "slot": 449996998,
+     "err": null,
+     "blockTime": 1790244465,
+     "transactionIndex": 59
+    },
+    {
+     "signature": "3gSVwKuMr2k14FcYeRERi3JpnyK4e57SVyNNhShE3DEnfi2X67Fdh3AtNBMsjasLBzxLoMBkKgnZqhTGnF2aXTmA",
+     "slot": 449996991,
+     "err": null,
+     "blockTime": 1790244463,
+     "transactionIndex": 275
+    },
+    {
+     "signature": "62Ls9tBavwFbGSR7pefECN8S3boQTRqDrU6iWQtoK6PDFV6FDMgyQi5wK1K73ymqkvc8sZEb51g244otQRDYuVPL",
+     "slot": 449996986,
+     "err": null,
+     "blockTime": 1790244462,
+     "transactionIndex": 795
+    },
+    {
+     "signature": "8JQaRs3W1gctzbGM4ZuDUcdsdPpez3CnJZdrSNgYSy9Bv4Xjq8byBvsNvURyGaWQXw7LMqeHQveoXhBct8p5sNB",
+     "slot": 449996985,
+     "err": null,
+     "blockTime": 1790244462,
+     "transactionIndex": 1048
+    },
+    {
+     "signature": "8s9rYTdV4nP1W2XLgnZsn9p8R54P6ooWGypAReraTvgjR8AAUxiCpogUBeT3kX6sW5d5vHLQNEprQyv3FbfZTUf",
+     "slot": 449996982,
+     "err": null,
+     "blockTime": 1790244461,
+     "transactionIndex": 1000
+    },
+    {
+     "signature": "efEzojPoRg8BhCXeSUatEjFEsaRDL22PBFsfQ3fcCtWqAgmZorn9GZDnkFP799jXfYWEPXQGzLSy15X2Pz7wFtP",
+     "slot": 449996978,
+     "err": null,
+     "blockTime": 1790244460,
+     "transactionIndex": 438
+    },
+    {
+     "signature": "4dKEiYKaonH76rCSsoc8Y2y6ZxvjXEHBGEumPQpSuS4AjgQMFkCKnZnVYzLFwBaRsE4WXBS8dFAci4kqVyFEUq39",
+     "slot": 449996974,
+     "err": null,
+     "blockTime": 1790244459,
+     "transactionIndex": 595
+    },
+    {
+     "signature": "2ZdQd4g7x8Ebg6pxvC9jsCjkbi6RLXbTeV4ZLAGan8EoWnRfFxPgZKVtWgN8g1HcAuciDW3nPtzTpePRdS2tXV6x",
+     "slot": 449996970,
+     "err": null,
+     "blockTime": 1790244458,
+     "transactionIndex": 359
+    },
+    {
+     "signature": "5LaC1UrmRKRFBqxd4LUypj5WMdWPQMtRhw6CAWX5y51LTSryL2WgdDa86mJb5LKcZD9Kt81idoPnu4Fx2nyWN1Yo",
+     "slot": 449996969,
+     "err": null,
+     "blockTime": 1790244457,
+     "transactionIndex": 408
+    },
+    {
+     "signature": "5DLn11a6ihH3wULydFJW9oEiC8LCrzL5ydjAAGcLhbVnhLka8oo5tDCdTWhQMRsTvLeG3yA1hLkQjyJUNwR87oYb",
+     "slot": 449996967,
+     "err": null,
+     "blockTime": 1790244457,
+     "transactionIndex": 34
+    },
+    {
+     "signature": "buknG4fsjs1L3CiMryTzAeiFSZoR4TWkpN7fSx1WnYePfAnSdMVo1JrHQsNJw6yKpccNGGqBQrPJMZwhLwbbPEJ",
+     "slot": 449996962,
+     "err": null,
+     "blockTime": 1790244456,
+     "transactionIndex": 1025
+    },
+    {
+     "signature": "4jV6eLLp5N7r6WDhqUuVsJqKDqPj7UhVmoq5mZTBkcAdRBd23V38DKK5KPEwsdrUUkHFaGS8AJMg2FRNa7oFhQyz",
+     "slot": 449996962,
+     "err": null,
+     "blockTime": 1790244456,
+     "transactionIndex": 642
+    },
+    {
+     "signature": "5ny9xYUzQ7kjGVFv8bsaqouNauXUvx8UZpsukg7Vx9dnyZ7m7yznm79KHNcUPbibbgg5J4hNmfEcZKraUBCrpbTQ",
+     "slot": 449996962,
+     "err": null,
+     "blockTime": 1790244456,
+     "transactionIndex": 641
+    },
+    {
+     "signature": "2im1SaQzUZt1LbRLAMaB3szNJkZ46hyxKYuKh2n549yZAK19PYGJCCfAp54DGR5GuYXsgwYCB4tVCVe4Euppuy6U",
+     "slot": 449996962,
+     "err": null,
+     "blockTime": 1790244456,
+     "transactionIndex": 93
+    },
+    {
+     "signature": "3x5eFF3GLYXDvJbamUuyjfLym5upSbxojzzUjwpUisc9JiWLTr9A4EsgQfFBPtjBARwBn99McRU7mD8KzudWuiwY",
+     "slot": 449996962,
+     "err": null,
+     "blockTime": 1790244456,
+     "transactionIndex": 92
+    },
+    {
+     "signature": "2nwPdNmMMDMnX7tbUgAHXh92ErvznZApUEDFXUf6VtoSbPz2SjmwWUi2cjf7eQZEy8AKrgeHbnpALp4t1DNmWAwT",
+     "slot": 449996960,
+     "err": null,
+     "blockTime": 1790244455,
+     "transactionIndex": 971
+    },
+    {
+     "signature": "5UwSoREagU54QeFyd58XkQ35M7es9QFBjfTgmPQeMDdVYuFGQE3W6gWhoUSAN52cmLaAG6LfnMc4VFjQNDyj2hPX",
+     "slot": 449996960,
+     "err": null,
+     "blockTime": 1790244455,
+     "transactionIndex": 96
+    },
+    {
+     "signature": "5HptbvFtSdy5MnrZEd6HniwhJGY12234QApaDHakrDGm3dfpfqg9m9mbWjU9NeMmpzfKGtsRMvUAFXTUq59oxrat",
+     "slot": 449996956,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 97
+    },
+    {
+     "signature": "4J6VpgipZewh3riTZaY9n9wwrpvfqMrvxzjdJG5KqvoPbhTF6F5oTPPEFJtm8rKnoFPH6rmC2eYSQ1XRTxQamZLq",
+     "slot": 449996955,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 159
+    },
+    {
+     "signature": "5TkrFUmXgVU7TPAWJ8z3XX5uHqTqAHVRGFf1oXvufYaQyYUmnvAehxL6pwCYTFW7s9RjesEnyTAn7NddX9c3pxkp",
+     "slot": 449996954,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 1057
+    },
+    {
+     "signature": "4BoMqA2Kb2B8osfp9tzrNxGKGxdEC8e4KRkyasx6Kx96H4enzrQxtsuTzWrzAD4f9gNQpcY3Ah11Kn63mu3TSMLZ",
+     "slot": 449996954,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 1053
+    },
+    {
+     "signature": "3F1tFfpSg542G7mAH5WqFp39rS1NHy2TeoQT6qaRqjsPSyZSRyznU74EeAeo2nyeHNMwYbxz6jW1LtNshvL8t5kr",
+     "slot": 449996954,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 929
+    },
+    {
+     "signature": "45fFjugwXKX3ZwiD3FLkFDq25fjFFZKFB1eXdvZYmXjpcMajCnJ1mSMomVpRk8Kwc1PhTwFuphwancCtMukyQ7hg",
+     "slot": 449996954,
+     "err": null,
+     "blockTime": 1790244454,
+     "transactionIndex": 863
+    },
+    {
+     "signature": "vozcSTh6wkUH4x24Nyj3s56XWWngpWZ19Eoq5BQzahs2h5M7xdG4zrCq36EUeJxJJt9kmohxR5VabD2uDTagRFJ",
+     "slot": 449996952,
+     "err": null,
+     "blockTime": 1790244453,
+     "transactionIndex": 641
+    },
+    {
+     "signature": "fefYeurRSbe12nKtLYVijb97hxUYEct4eLNRSqzrwuf76jqGJcNNFxxc2zDXRTFXz343ehLuzw66eKP1pXcQn7D",
+     "slot": 449996951,
+     "err": null,
+     "blockTime": 1790244453,
+     "transactionIndex": 486
+    },
+    {
+     "signature": "5wZvLHAwzsszqkKVbwQm69Rjv8CY3YPYBZesP1znmtCYPrTdHPVyocq5ejd9YV2xhCk3jdYu4pYRPKusrN9vNp1R",
+     "slot": 449996951,
+     "err": null,
+     "blockTime": 1790244453,
+     "transactionIndex": 485
+    },
+    {
+     "signature": "76hMXLENRH4ecEVhrYwoYqaFi4V9iKBfa5g3KBC6eyyVsJsRZGG6PRhezU6KatVHiyorNxVmQbrbnBioBCgbzDm",
+     "slot": 449996950,
+     "err": null,
+     "blockTime": 1790244452,
+     "transactionIndex": 627
+    },
+    {
+     "signature": "586ssRVYJrCLJsiR9qmbmBLcNhC2yEPn3tb6DsqFXEZgRka1kP83ogbB8nT9T2kvTBfgTTYmCz4as67wsQoHPZad",
+     "slot": 449996950,
+     "err": null,
+     "blockTime": 1790244452,
+     "transactionIndex": 626
+    },
+    {
+     "signature": "4jfhMMynoWkPkX4HMPE9znWVJbiESkVW3rbv6Ma29c1n1nFKuNjUZRtGZbpQtsQ6NhrUxtG7ihPpJDZRBt8DUjmF",
+     "slot": 449996950,
+     "err": null,
+     "blockTime": 1790244452,
+     "transactionIndex": 578
+    },
+    {
+     "signature": "3bswaYJJjLix4eDiEoydwMqVRt8MEx8VzACgM4fh6dGnQvmTGvZcthxBAb1eXKCRqqEvdVVJwaztvddXmE6mxxGm",
+     "slot": 449996950,
+     "err": null,
+     "blockTime": 1790244452,
+     "transactionIndex": 577
+    },
+    {
+     "signature": "2t5J3cPPUVfpPytVymnauWmdZqxwBectnywuYAMFNhxeiQqDb7f4X5H6jnuqE9epuqY1AVGXSPrsAWLZGeaQnSWQ",
+     "slot": 449996944,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 864
+    },
+    {
+     "signature": "4pATsGogUbk7JTQSLfmdhKDWsnw1h3ANZuCumjxc4PNWyHB4HHGoERxgSDrz2LhkgjTvfboyTjZGKBxrgjWDmtW",
+     "slot": 449996943,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 810
+    },
+    {
+     "signature": "67LQsxoLg6fR6yGajBu8Ueoeb8DW9X2NaBbkbrWPuXLHsav84DwePaG8e3RxsoQvdaf99AjrMBoK88pWgdos4Zth",
+     "slot": 449996943,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 771
+    },
+    {
+     "signature": "2PS5zzM5JtXN1zx87bSsombZS1hv6nB7maio3xuC27kULHpa3WNXwqdLsmpnt6ygqPRrrFATxs8NfJPHJp9AqDY8",
+     "slot": 449996943,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 770
+    },
+    {
+     "signature": "22MaEbtQFSzAdcFXXBGsAaRfczfb1Kt1enmWt6Tup3c5kmXX3Tzqa8TAFZFmxdmKfX375WgDhfL1XvD5FD4pXXdg",
+     "slot": 449996943,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 769
+    },
+    {
+     "signature": "2R4ZsnonrkFDMmBUgrjpRyMBDy9pLJkC3ykQbnfhtPTt9SfG5HbGunAUvhrLWsSFxa5k8FMpBQ9V4HzMLFuPA7Do",
+     "slot": 449996943,
+     "err": null,
+     "blockTime": 1790244451,
+     "transactionIndex": 768
+    },
+    {
+     "signature": "5UAzset5CxpFeH1yne9HREFgvft8DiGMLsv1fNdK5YLjHMZST31yW4nCMXLuXs5A3ZgG7USqxXE3xYUcadh5xhvB",
+     "slot": 449996941,
+     "err": null,
+     "blockTime": 1790244450,
+     "transactionIndex": 56
+    },
+    {
+     "signature": "3KGvCDKkmGne9VHyYKCAmjijz4njVFjhW6e4eg7C3VD8Wc8Nv8Q5MijfCERSxTvohBZ7GDcqZpttutWiDsctzc3t",
+     "slot": 449996938,
+     "err": null,
+     "blockTime": 1790244449,
+     "transactionIndex": 710
+    },
+    {
+     "signature": "3tFLU7oqmmWWLBaDMszysXExMzWVV3DPZV2YiSsQrfPTcTVr2bWuSyXhipGxMML3mu8EFed8aAS1r2RQeHgopoZq",
+     "slot": 449996937,
+     "err": null,
+     "blockTime": 1790244449,
+     "transactionIndex": 729
+    },
+    {
+     "signature": "ZkjcZPQWauMEDvwaWySjjx12cWvqLEMfoy5GhdGnXMQZRoeWsxcAkXtLgQpckMzpPzRVg9vTbsEprARGc8wYB4Z",
+     "slot": 449996937,
+     "err": null,
+     "blockTime": 1790244449,
+     "transactionIndex": 728
+    },
+    {
+     "signature": "3c4GfKumtyhLWegqW6D9jACw3SFLeSQ97tSepAgdTTzUR8HXJX4u2B7ATRgBRwoTgRbVibThpdB7tbEzGwwRTZAu",
+     "slot": 449996935,
+     "err": null,
+     "blockTime": 1790244448,
+     "transactionIndex": 111
+    },
+    {
+     "signature": "2r3daaLw3B4BkCVzZezeXdw5w3ETPsQzHUeZx8rnhXtS6jjyShdZyiNdZ39tmzMmCNjePuZ95j8a3PdsgzKMhUMy",
+     "slot": 449996935,
+     "err": null,
+     "blockTime": 1790244448,
+     "transactionIndex": 80
+    },
+    {
+     "signature": "c2kGwMrNLvr96k8UEdftwTLMUUi6huz1JcsMg2zvvxzGkD1Fw6opzjbvnR65NnxCbMdGBi7FWvTMVLZTCBaw5um",
+     "slot": 449996935,
+     "err": null,
+     "blockTime": 1790244448,
+     "transactionIndex": 79
+    },
+    {
+     "signature": "qSVg7sDU7kr7Gm8MQkuES9u9SofkKFf9trxANt9EkWyxhHmvYb5egy2aLAAkY7wh3UHkng6DAxH2FXRhCLYaLxf",
+     "slot": 449996935,
+     "err": null,
+     "blockTime": 1790244448,
+     "transactionIndex": 78
+    },
+    {
+     "signature": "2VuzgTpLhgMNaMuRXj2Tpt5d8RLxXeuVeGZmqp7mKw6gLFUWrP3JdvgiZrYpLh1PVxcLfwk43342K6YSbezTgfEZ",
+     "slot": 449996933,
+     "err": null,
+     "blockTime": 1790244448,
+     "transactionIndex": 43
+    },
+    {
+     "signature": "4w364z3Hpf5U4tqUXmq4SwzSstwRq3QmQqFpFnMsAWSfv6xpqRPNBx1KqhzMZx6sjAUf8amqRULUFDNoh5Wi8b2x",
+     "slot": 449996927,
+     "err": null,
+     "blockTime": 1790244446,
+     "transactionIndex": 122
+    },
+    {
+     "signature": "41LibJkw1q5jMpukNmmZsAFNzES6x3sguaQcrrdrrTcK6NJiBZzRKd8smxAdWnm2Kiv4spAW4ecoibryZmVYeFNN",
+     "slot": 449996927,
+     "err": null,
+     "blockTime": 1790244446,
+     "transactionIndex": 121
+    },
+    {
+     "signature": "gFf5MPAWwxQpFYmR9hRTnatsQAXQz8hiWEonUovSvArpC3cKFWjK5n216SdorGWbnSHWuoFg7FmcqVQQqrUgK7y",
+     "slot": 449996927,
+     "err": null,
+     "blockTime": 1790244446,
+     "transactionIndex": 120
+    },
+    {
+     "signature": "3MBMtt9TdE2jN7p27PY5w8QxdMEMPdKETgfPHs7syjbB54eGVZKzGYjpRXhnjdGZWteBJWKqvoY7fVCgTheAN8Jy",
+     "slot": 449996927,
+     "err": null,
+     "blockTime": 1790244446,
+     "transactionIndex": 119
+    },
+    {
+     "signature": "65AxVz1qC7J7XUhgS4AnzzYXc3pdFKbzATF9gZWwmoHnTbDom6YicHmTUe7WbA8LJUbwm2R1UeNHeDESnz6NzFED",
+     "slot": 449996922,
+     "err": null,
+     "blockTime": 1790244445,
+     "transactionIndex": 821
+    },
+    {
+     "signature": "41v44qiFLp8SQWFw1U3SzgBoPhDs5DGbbban9JVKqauLtVkCmzs34XeMRb6zSPC8jxeMkFvsDaN68FPEGS4R55Wh",
+     "slot": 449996921,
+     "err": null,
+     "blockTime": 1790244445,
+     "transactionIndex": 391
+    },
+    {
+     "signature": "2gPNXiH4KtxFGayxkTDVY9scpzh1LnQU6QskaMdPUB9P1j8kLm4CN21KDwXXJCg8pZBUpuvUd1xPtms4QRLqAngF",
+     "slot": 449996918,
+     "err": null,
+     "blockTime": 1790244444,
+     "transactionIndex": 436
+    },
+    {
+     "signature": "5VUWg6ic3eKYtNFL3UnntVHkogLdAYCDrBXpdTcZURy7WjKpF77kRgcxr1zbTks9dhwBUg1q3kiEZjfQN4cKMh9w",
+     "slot": 449996908,
+     "err": null,
+     "blockTime": 1790244441,
+     "transactionIndex": 172
+    },
+    {
+     "signature": "8j9x5Rrvy9xWb4YWzQnhGvcMWRJt2ZYR3aVzUWg7yAxgWZQuBGonaTVoCSe8T96ni5nBPbNhybdCRZvg3Gs4XbY",
+     "slot": 449996907,
+     "err": null,
+     "blockTime": 1790244441,
+     "transactionIndex": 588
+    },
+    {
+     "signature": "9hLvKykPpYcevrLjGSmhWBywuro5yAzV3TwbCQvyb5US7bWzAk5qZjutjnNfzxhdDZTWhvioX8Kr94BvoRiMwk5",
+     "slot": 449996905,
+     "err": null,
+     "blockTime": 1790244441,
+     "transactionIndex": 896
+    },
+    {
+     "signature": "58npw6JfxoNMa5txk53EwcKbFXHV5UwS5sWCybHeZutDv3ULWSp94NQLx8sS4ccfSA5CrQHsRU583MVA67CxwFwH",
+     "slot": 449996904,
+     "err": null,
+     "blockTime": 1790244440,
+     "transactionIndex": 947
+    },
+    {
+     "signature": "4ronJnhMufY1qvwrwxwfUD1KdfRMp878jpzEiV4Q1dAtMVAkHj82QERYgzeTan9gTnMAETjJDiiFocNrCKG856Ne",
+     "slot": 449996904,
+     "err": null,
+     "blockTime": 1790244440,
+     "transactionIndex": 667
+    },
+    {
+     "signature": "2c9dEb7xNFYj1cUsGbZ3RvnAnkiXs3q6E8ufmpfkCqfoPiGqJjzAigMQJiKxhJZXhxe2CFzy9Gimoy97646hPH2w",
+     "slot": 449996903,
+     "err": null,
+     "blockTime": 1790244440,
+     "transactionIndex": 44
+    },
+    {
+     "signature": "2TUkuDoPZSDtWmFuoRfVz6Yxs4MyZ16ugj1dM4tAAa7p5awvrPNZzYZvCs29JdfScyUgKr27xnmFV2XsSYu1vkgY",
+     "slot": 449996895,
+     "err": null,
+     "blockTime": 1790244438,
+     "transactionIndex": 1112
+    },
+    {
+     "signature": "5Nz3yvPY5i6wVaTVEyBB495bDPLE7AN1vRZ2r4L5NoQu4XTpY9ypdvUGuiBRYe8vfyc3KUGSuNocYrBgn46uhwGi",
+     "slot": 449996895,
+     "err": null,
+     "blockTime": 1790244438,
+     "transactionIndex": 120
+    },
+    {
+     "signature": "GQDzZ7pJvbeVLC6Kb31kbQFwvUY4Xxs3NWtMfhs7HQSZQ99VE7t4FJZXcJAE3mr7XxCLATTohUXCFkjDpLPaVE3",
+     "slot": 449996886,
+     "err": null,
+     "blockTime": 1790244436,
+     "transactionIndex": 369
+    },
+    {
+     "signature": "3odGiFLermo4bcK4z6MoNZZahXYk2d9GYCi7dpPN2sdVMvcc22NcKzyYTVS4qZ4rdrDStqks4T5Wsr3qoSb7C5Dp",
+     "slot": 449996884,
+     "err": null,
+     "blockTime": 1790244435,
+     "transactionIndex": 849
+    },
+    {
+     "signature": "292Tx1vrbm9D5zco9fPLFVvNqowGzzws2JrUz35xDp5AdLJK4ub6K4GhkuZp8viM78z34jsw1bxEN5C5ceJK4SM9",
+     "slot": 449996880,
+     "err": null,
+     "blockTime": 1790244434,
+     "transactionIndex": 89
+    },
+    {
+     "signature": "57NRRUiTdRio7WBjSQVRvUqz2m9xfNzve8UhMGDW4Mked87TQL9yroLM4VeG1saMUaBZ5jAZ7RMZh7VjZ7qBKEUY",
+     "slot": 449996876,
+     "err": null,
+     "blockTime": 1790244433,
+     "transactionIndex": 799
+    },
+    {
+     "signature": "2uwVM4KLZDfkTqPP3nhucrhDF1fyEQALJUiUag6rEyJyc8hYQxpXqH37aS2XC7zZDuM6vtXyuapD2TgpzfDXCX8V",
+     "slot": 449996876,
+     "err": null,
+     "blockTime": 1790244433,
+     "transactionIndex": 798
+    },
+    {
+     "signature": "4oX1skwkRk7f6VkeRq5vp83rGcGGMPJhxfAqwAnjXDwwruV72Xue41oxtEYAbzgSf9ZfDU9s9n3XKB4v3sJXPfQA",
+     "slot": 449996876,
+     "err": null,
+     "blockTime": 1790244433,
+     "transactionIndex": 797
+    },
+    {
+     "signature": "62aKtGjrWQYajWcW3zRdgMAPD6FPS8EWhvuyjTD1WcYdgQ4f8GbwkzkXYsBFy8R7XiFX9ysYuDENefrwdLF9w7SH",
+     "slot": 449996876,
+     "err": null,
+     "blockTime": 1790244433,
+     "transactionIndex": 796
+    },
+    {
+     "signature": "6324PwYu9PWTySoT79CFDtks14d9WhRVxRgd2rh1qJD6gQ4UPEZ5AbEk9xT6RdvTjfPec84ncSxaWY9yzNFoC6w3",
+     "slot": 449996865,
+     "err": null,
+     "blockTime": 1790244430,
+     "transactionIndex": 168
+    },
+    {
+     "signature": "4NRZtTaPz21cRzo2oHi3Ch4mi46JZiKpsMju9YmL6J3Snrh69qRS4UL7BoTQBWvfYR1BmE9ZvYH64imD53f68rx6",
+     "slot": 449996863,
+     "err": null,
+     "blockTime": 1790244429,
+     "transactionIndex": 245
+    }
+   ]
+  },
+  {
+   "position_id": 65090,
+   "handle": "trader_seks",
+   "mint": "4DJZDWyaEXgar3kXCKEQNxz8FWfr39CgmcrnnKFbAHK8",
+   "fired_at": "2026-09-25T16:22:15.771499+00:00",
+   "audit_detail": "measured_state_still silence=30.9s",
+   "our_sale_sig": "44Bbrs7akASLHgqXNnSMGqR8T9tY3Mo7HRN6H3HSiwT1bQtDmgEk3UB1BKFRoo9kRy7iHfwZa8SCtZrGRdoazdnC",
+   "expected": "mint_moving",
+   "signatures": [
+    {
+     "signature": "2eHyk2NnJX38wu4mvPrUG6GjWMZMQij9q4ZJvDPjwYKDyGNofGaYqx6ZyLnqwQx6fL3yE2ZaUKwxAiENN26DY9e7",
+     "slot": 450405090,
+     "err": null,
+     "blockTime": 1790353337,
+     "transactionIndex": 736
+    },
+    {
+     "signature": "44Bbrs7akASLHgqXNnSMGqR8T9tY3Mo7HRN6H3HSiwT1bQtDmgEk3UB1BKFRoo9kRy7iHfwZa8SCtZrGRdoazdnC",
+     "slot": 450405084,
+     "err": null,
+     "blockTime": 1790353336,
+     "transactionIndex": 216
+    },
+    {
+     "signature": "2mNM6Cv2AEmuzRAXHSoADmUfD9vEfpgycjSYd8fVzjJuiD8fFuVLFF5s6f6ncng5bx6rTAJyQh71pacVYohptYfe",
+     "slot": 450405071,
+     "err": null,
+     "blockTime": 1790353332,
+     "transactionIndex": 1069
+    },
+    {
+     "signature": "4eTy58u6116LHb8wXXKFZLLJpHkCGG5a4WCrTAqwEWc6FqMdPf6G2gtSJ14DwAWZCQEhurP2xtpXqQkSc4ELzc8K",
+     "slot": 450405058,
+     "err": null,
+     "blockTime": 1790353329,
+     "transactionIndex": 593
+    },
+    {
+     "signature": "4GMyxWNDmQW95GDbqnorj49XYGMktbmER9W6JqG9iDqMrBwRMS2C1mzuppqrZkGA6gW94KPXy2FzphGg82RH2uHh",
+     "slot": 450405053,
+     "err": null,
+     "blockTime": 1790353327,
+     "transactionIndex": 151
+    },
+    {
+     "signature": "4M4LuwLfrfxEFSbGWX8ZDGhgGKpX9R154oftCNWwa4rccAB9AxMWdR9BLWHEnKEQbE4u5pvubr7mK2C1ebFfqqtR",
+     "slot": 450405043,
+     "err": null,
+     "blockTime": 1790353325,
+     "transactionIndex": 1136
+    },
+    {
+     "signature": "qia77BKNeMM4GPhk5uLNN8MFp9pyLJGYU2oYLQ1dyoxktj5kMAj9wshLRJ76qaBvabNjc5GbMrRxi7MvY8fyFBF",
+     "slot": 450404979,
+     "err": null,
+     "blockTime": 1790353307,
+     "transactionIndex": 302
+    },
+    {
+     "signature": "4x811YEpC4Ho9AtJvKGJi12gSbJeHkT1hY4pdunuYQicnxwWMbuPmhpyB8yNLS4kuk5WhzBJS5DvTgNmajZJt5sa",
+     "slot": 450404966,
+     "err": null,
+     "blockTime": 1790353304,
+     "transactionIndex": 683
+    },
+    {
+     "signature": "5G1Kr29UuXJQejisr9uStssen694LKBG1BzsNCzDwbXcSCSLyvTeVrowqXiC5M5qYfuUfxYJzRFVw1W63CfXDFDY",
+     "slot": 450404960,
+     "err": null,
+     "blockTime": 1790353302,
+     "transactionIndex": 957
+    },
+    {
+     "signature": "2E3iqcn13sQNPZsvGNH7iwu6MJkCnkuV2csfeajPfD21PZqmqc6Nz5mYwKvFk7xgWLWmzPw87quNyvQ6DCuqAKDg",
+     "slot": 450404956,
+     "err": null,
+     "blockTime": 1790353301,
+     "transactionIndex": 394
+    },
+    {
+     "signature": "2Yf6nsUDLutg2dsjPKhM8mXrTbTcSk6akxuWjgk6CNdfMCJUpgz6LSKeFkVX1svfANmxkL56YYcmtEsxKSiyjhGQ",
+     "slot": 450404955,
+     "err": null,
+     "blockTime": 1790353301,
+     "transactionIndex": 693
+    }
+   ]
+  },
+  {
+   "position_id": 65543,
+   "handle": "Tekkerrss",
+   "mint": "3Xg3B1YdTrUYzKAjZ5Lo4J1FT1bnXp1CdGtUmpCCwJJH",
+   "fired_at": "2026-09-26T12:25:08.486467+00:00",
+   "audit_detail": "measured_state_still silence=30.7s",
+   "our_sale_sig": "49YNcTrJY3jqXXKMHbTtDryrnMXxLSsQsogEbNuymmiJq9HofNchHBpB5wDcM6zjoFdw77Ycy7jXcyNphrXzcYH7",
+   "expected": "mint_moving",
+   "signatures": [
+    {
+     "signature": "2dyXLgGsySRiD2LyX3NSeAPnbsf7GY4zUwVAvr7WA56cZYzfjAV84dtLcoYT5fk48EWpBQ3oNbDxi256evDmpaqp",
+     "slot": 450673918,
+     "err": null,
+     "blockTime": 1790425513,
+     "transactionIndex": 842
+    },
+    {
+     "signature": "49YNcTrJY3jqXXKMHbTtDryrnMXxLSsQsogEbNuymmiJq9HofNchHBpB5wDcM6zjoFdw77Ycy7jXcyNphrXzcYH7",
+     "slot": 450673914,
+     "err": null,
+     "blockTime": 1790425512,
+     "transactionIndex": 303
+    },
+    {
+     "signature": "4C3dw1BMbxMGHWQUAbLS3CE7Fx3kXa8dHpsTVADecEWuWZ4FdYYfZJhNoATQFQPgSj7Fy5fdxbeJRY1Ts73GYxDA",
+     "slot": 450673899,
+     "err": null,
+     "blockTime": 1790425508,
+     "transactionIndex": 488
+    },
+    {
+     "signature": "4uQGsRa7jkCSRTtMafzab5nxHhki5WjCAdHxtMRVB6Hsxex5Vy5zYCkVghFeN8R7MXhmvz9xyKgu1gfHMM9EQqgH",
+     "slot": 450673863,
+     "err": null,
+     "blockTime": 1790425499,
+     "transactionIndex": 16
+    },
+    {
+     "signature": "3frpiu11kpfGKAxvreoX9vBsNLNDGaiB7VXG4YpcoLJqsGbh4AKcjzNtJWuMANg2MRnSvWJSiq19duH9XVnbAkdt",
+     "slot": 450673783,
+     "err": null,
+     "blockTime": 1790425477,
+     "transactionIndex": 356
+    },
+    {
+     "signature": "4sedpKB9aqdYnzBYaYXZR92vvnaBzhbZs4oNdc1jL32e41sSq78TkPqeCotLd66AacikUwmn1neXYmP6cdZtrKYc",
+     "slot": 450673725,
+     "err": null,
+     "blockTime": 1790425461,
+     "transactionIndex": 165
+    }
+   ]
+  },
+  {
+   "position_id": 66467,
+   "handle": "DexGemsReal",
+   "mint": "3rLbP63g74ugwqpwqTpwsELmRkQR9wnR2fv5mhtGHNZi",
+   "fired_at": "2026-09-28T14:43:26.304687+00:00",
+   "audit_detail": "measured_state_still silence=33.4s",
+   "our_sale_sig": "2rCPiV2a7A7cQqgrTn5hsy981qyVhtwKsyrZyPTuNG73Z3PtY38EvUhJiJU4vfKqEf8qYLwJVbrFooGGe6Mu6sy3",
+   "expected": "fire",
+   "signatures": [
+    {
+     "signature": "5EK3odngUt1unZ654ZrVn7QYk1TJ2oPx7iHDzVYGpbZbRNFK9duihNey5txdNs77PcWhi7SMK6cj6ksntMRdGVuw",
+     "slot": 451349285,
+     "err": null,
+     "blockTime": 1790606610,
+     "transactionIndex": 813
+    },
+    {
+     "signature": "rNssnrcDgU2yPY2BdbPvXXEvqoBJHHCnte9KjXBbjAdde5QLN8qcgga5vkCdfVhFSpNyyRm4FPaGKQLVBZE1Xsk",
+     "slot": 451349276,
+     "err": null,
+     "blockTime": 1790606608,
+     "transactionIndex": 70
+    },
+    {
+     "signature": "5Kx1hhzR5ZjUFni8D9kkPe6SXy4UtrovWQ6xh14cK1yBvPmNMHeWXmM6jvkMKoKsZUhyf8TreEUNmJuVzKpQ7fTJ",
+     "slot": 451349273,
+     "err": null,
+     "blockTime": 1790606607,
+     "transactionIndex": 110
+    },
+    {
+     "signature": "2rCPiV2a7A7cQqgrTn5hsy981qyVhtwKsyrZyPTuNG73Z3PtY38EvUhJiJU4vfKqEf8qYLwJVbrFooGGe6Mu6sy3",
+     "slot": 451349271,
+     "err": null,
+     "blockTime": 1790606606,
+     "transactionIndex": 574
+    },
+    {
+     "signature": "2MGjWiieru4UFSLiNTn9AwJCTfqtao3yh3TKWUSqgiKaqV6RruTYJYECx5Az3DTPR7VLCBXdGJz7dEQy6SMZREdG",
+     "slot": 451349270,
+     "err": null,
+     "blockTime": 1790606606,
+     "transactionIndex": 617
+    },
+    {
+     "signature": "45zghnRwy6xuGyXRP3oQDRkTs13EKcEQAZ2ehNQyy5NfGDaUXZbMJjQp8jNvg1WUqHN43US2mSqc7S2rLCZgFR8k",
+     "slot": 451349269,
+     "err": null,
+     "blockTime": 1790606606,
+     "transactionIndex": 510
+    },
+    {
+     "signature": "2JRA5SQxXCMNRQ9YaXu2qvHLuaHF2RrPXUgPbH9upAPTwE7EznidWADDu1gqRYc3boNDorMW8QLwZPmFwkpLQQJJ",
+     "slot": 451349145,
+     "err": null,
+     "blockTime": 1790606574,
+     "transactionIndex": 1081
+    },
+    {
+     "signature": "3C36VhsubnETmH2gHK9QJq3Umsw1ftsG3mHx7j8oNRytENbqfNaF933eanKNWWTkVrWxWpSioBb49g3Y3vyWw1aA",
+     "slot": 451349138,
+     "err": null,
+     "blockTime": 1790606572,
+     "transactionIndex": 163
+    },
+    {
+     "signature": "DnrcFBA15zxcVye7Kmeacmn4XjdDP95kpahSzQ1ah26tZPrVdtverHK1CdrwUaa83dJLJ8EvN6XxghKXi3oTGVb",
+     "slot": 451349135,
+     "err": null,
+     "blockTime": 1790606571,
+     "transactionIndex": 55
+    },
+    {
+     "signature": "58nJEBvBeg7W2uw5yobwijmf42qHhsMSZ617hi9CRK9Nms1CQVGzx7ToFAwh5GuYQ1iYVKreWRUS5ocSJ5feNcdU",
+     "slot": 451349129,
+     "err": null,
+     "blockTime": 1790606569,
+     "transactionIndex": 463
+    },
+    {
+     "signature": "4Z6NAriheGd2Nx4vF92WCzvzc3vcG1ouTfnHhQRnvZwLTxk2VQbVi1uhfJBsjaYx9J3GMERfk8VUsVfE6r7sWe8",
+     "slot": 451349106,
+     "err": null,
+     "blockTime": 1790606563,
+     "transactionIndex": 780
+    },
+    {
+     "signature": "4SkdjBfjkr58PTqh97xzkfmwQigaA4i1r3jMNfPGoaFrKS2kbkVzwyBh3XPSJ91smV4uRhGyNWj7n9M1KwMEbnt5",
+     "slot": 451349095,
+     "err": null,
+     "blockTime": 1790606560,
+     "transactionIndex": 777
+    },
+    {
+     "signature": "4gMZDYTi3uq3GEsKMFBpG8aCu2dwNvZFKrbB8CzPKnVNyQfyPKsZw8vSmrdLtDNTweUgHqwF6TBbpRvEqLjnn81o",
+     "slot": 451349091,
+     "err": null,
+     "blockTime": 1790606559,
+     "transactionIndex": 659
+    }
+   ]
+  }
+ ]
+}

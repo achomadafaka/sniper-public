@@ -1,0 +1,14 @@
+{
+  "accounts": [
+    {
+      "id": "fake",
+      "can_access_with_session": true,
+      "workspace_backend_origin": "https://chatgpt.com",
+      "account_routing_override": "NO_CONSTRAINT"
+    }
+  ],
+  "account_ordering": [
+    "fake"
+  ],
+  "default_account_id": "fake"
+}

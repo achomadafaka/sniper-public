@@ -1,0 +1,66 @@
+{
+  "version": "limits-1",
+  "org_size_ceiling": 24,
+  "fixed_seats": [
+    "Risk",
+    "Postmortem"
+  ],
+  "min_pods": 2,
+  "max_pods": 4,
+  "judges_min_total": 3,
+  "judge_families_required": [
+    "claude",
+    "gpt"
+  ],
+  "head_forbidden_changes": [
+    "clip",
+    "cost_rule",
+    "eligible_universe",
+    "evidence",
+    "execution_bound_evidence",
+    "fill_model",
+    "guards",
+    "hard_filter",
+    "l_null",
+    "live_authority",
+    "metric_registry",
+    "null_arm",
+    "pod_reallocation_rule",
+    "risk_floors",
+    "scoring",
+    "shift_schedule",
+    "tool_contract",
+    "tools"
+  ],
+  "material_changes": [
+    "clip",
+    "cost_rule",
+    "eligible_universe",
+    "execution_bound_evidence",
+    "exit",
+    "fill_model",
+    "fire",
+    "hard_filter",
+    "hire",
+    "l_null",
+    "learning_rule",
+    "memory_promotion",
+    "model",
+    "null_arm",
+    "org",
+    "persona",
+    "pod_reallocation_discretionary",
+    "pod_reallocation_rule",
+    "prompt",
+    "restaff",
+    "shift_schedule",
+    "strategy",
+    "tool_contract"
+  ],
+  "immaterial_changes": [
+    "desk_chat_message",
+    "agenda_update",
+    "heartbeat",
+    "memory_write_unpromoted"
+  ]
+}

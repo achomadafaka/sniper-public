@@ -1,0 +1,10 @@
+{
+  "version": "pods-rule-v1",
+  "note": "Office pods frozen reallocation rule (spec 2026-10-28 §2.6, prereg Am3; docs/superpowers/specs/2026-10-29-office-pods-reallocation-rule.md). Crew-owned; any change is a new version and a new epoch.",
+  "score": {"metric": "realized_net_usd", "window_periods": 7, "min_closed": 5},
+  "step_pct": 10.0,
+  "floor_pct": 10.0,
+  "min_transfer_usd": 25.0,
+  "max_concurrent_total": 6,
+  "daily_loss_usd_total": 100.0
+}

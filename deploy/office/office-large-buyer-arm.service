@@ -1,0 +1,15 @@
+[Unit]
+Description=Office large-buyer paper arm, Gamma's frozen rule, no LLM, paper only
+
+[Service]
+Slice=app.slice
+Environment=SNIPER_STATE_ROOT=%h/Desktop/Sniper
+WorkingDirectory=/srv/sniper-office/release
+ExecStart=%h/.pyenv/versions/3.13.0/bin/python3 scripts/office_large_buyer_arm.py --db %h/Desktop/Sniper/data/office/v2/large-buyer-arm/arm.db --desk-dir %h/Desktop/Sniper/data/desk --heartbeat %h/Desktop/Sniper/data/office/v2/large-buyer-arm/heartbeat.json
+Restart=always
+RestartSec=10
+CPUQuota=25%
+Nice=15
+
+[Install]
+WantedBy=default.target

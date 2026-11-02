@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer — run Strategy Performance Reviewer agent twice weekly (Wed + Sat 15:00 UTC)
+Requires=sniper-agent-strategy-reviewer.service
+
+[Timer]
+OnCalendar=Wed *-*-* 15:00:00
+OnCalendar=Sat *-*-* 15:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

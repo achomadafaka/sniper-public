@@ -1,0 +1,366 @@
+# UI Live Audit Manifest
+# ---------------------
+# Defines truth mappings per dashboard tab:
+#   route          - the frontend hash route (e.g. #operator)
+#   endpoints      - API endpoints that feed the tab
+#   required_elements - human-readable elements the tab must render
+#   normalization  - rules for comparing API values against each other
+#   failure_severity - how bad a mismatch is (blocks, warning, info)
+#
+# Severity levels:
+#   critical  - data is wrong in a way that could cause bad trades
+#   high      - data is misleading or missing; user cannot trust the tab
+#   medium    - cosmetic / formatting inconsistency that causes confusion
+#   low       - minor or explainable divergence (rounding, staleness)
+
+version: "1.0"
+base_url: "http://188.166.91.20:8080"
+
+# Mismatch classification taxonomy
+classifications:
+  - UI_RENDER_BUG          # JS renders a value differently from what API returned
+  - API_CONTRACT_BUG       # API returns unexpected shape, missing fields, wrong types
+  - SOURCE_DATA_BUG        # Two APIs that should agree on a value do not
+  - EXPLAINABLE_FORMATTING_ONLY  # Rounding, $ vs raw, date format — not a real bug
+  - STALE_DATA_BLOCKER     # Data is present but too old to be useful
+
+tabs:
+  operator:
+    route: "#operator"
+    description: "System health, performance stats, equity curve, strategies overview"
+    endpoints:
+      - id: system_stats
+        path: /api/system-stats
+        method: GET
+        auth: false
+        required_fields:
+          - closed_trades
+          - win_rate
+          - total_pnl
+          - slip_pnl
+          - open_positions
+          - active_strategies
+          - monthly
+          - health_ok
+          - updated_at
+        failure_severity: critical
+
+      - id: agent_alerts
+        path: /api/agent/alerts
+        method: GET
+        auth: true
+        params:
+          status: "new,sent"
+          limit: 50
+        required_fields:
+          - count
+          - items
+          - updated_at
+        failure_severity: high
+
+      - id: ops_health
+        path: /api/ops/health
+        method: GET
+        auth: false
+        required_fields:
+          - ok
+          - ts
+          - issues
+          - db_mb
+          - wal_mb
+          - last_trade_ts
+          - trade_lag_min
+          - load_1min
+          - load_5min
+        failure_severity: critical
+
+    normalization_rules:
+      - name: "ops_health.ok must be true"
+        source_a: "ops_health.ok"
+        comparison: equals_true
+        severity: critical
+        classification: VPS_HEALTH_DEGRADED
+
+      - name: "system_stats.health_ok matches ops_health.ok"
+        source_a: "system_stats.health_ok"
+        source_b: "ops_health.ok"
+        comparison: equals
+        severity: high
+        classification: SOURCE_DATA_BUG
+
+      - name: "ops_health trade lag under 30 min"
+        source_a: "ops_health.trade_lag_min"
+        threshold: 30.0
+        comparison: less_than
+        severity: critical
+        classification: STALE_DATA_BLOCKER
+
+    required_elements:
+      - "Performance cards (closed trades, WR, PnL, slip PnL, open positions)"
+      - "Equity curve chart"
+      - "Monthly breakdown table"
+      - "Health status indicator"
+      - "Active strategies count"
+      - "Alert queue with pending alerts"
+
+  signals:
+    route: "#signals"
+    description: "Open position signals, thesis signals, convergence signals"
+    endpoints:
+      - id: open_position_signals
+        path: /api/open-position-signals
+        method: GET
+        auth: false
+        required_fields:
+          - count
+          - items
+          - updated_at
+        failure_severity: high
+
+      - id: thesis_signals
+        path: /api/thesis-signals
+        method: GET
+        auth: false
+        required_fields:
+          - count
+          - items
+        failure_severity: high
+
+      - id: convergence_signals
+        path: /api/convergence-signals
+        method: GET
+        auth: false
+        required_fields:
+          - count
+          - items
+          - updated_at
+        failure_severity: medium
+
+    normalization_rules:
+      - name: "open signals count matches items length"
+        source_a: "open_position_signals.count"
+        source_b: "len(open_position_signals.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "thesis signals count matches items length"
+        source_a: "thesis_signals.count"
+        source_b: "len(thesis_signals.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "convergence signals count matches items length"
+        source_a: "convergence_signals.count"
+        source_b: "len(convergence_signals.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+    required_elements:
+      - "Signal snapshot cards (count, top scores)"
+      - "Open position signals table with insider score, price, outcome"
+      - "Thesis signals section"
+      - "Convergence signals section"
+
+  positions:
+    route: "#positions"
+    description: "Unified paper + strategy positions, real trades"
+    endpoints:
+      - id: all_positions
+        path: /api/all-positions
+        method: GET
+        auth: false
+        required_fields:
+          - count
+          - items
+          - stats
+        failure_severity: critical
+
+      - id: real_trades
+        path: /api/real-trades
+        method: GET
+        auth: false
+        required_fields:
+          - open
+          - closed
+          - stats
+        failure_severity: high
+
+    normalization_rules:
+      - name: "all_positions count matches items length"
+        source_a: "all_positions.count"
+        source_b: "len(all_positions.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "all_positions open count matches system_stats open_positions"
+        source_a: "count_open(all_positions.items)"
+        source_b: "system_stats.open_positions"
+        comparison: equals
+        cross_tab: operator
+        severity: high
+        classification: SOURCE_DATA_BUG
+
+      - name: "all_positions closed PnL matches system_stats total_pnl"
+        source_a: "sum_pnl(all_positions.items)"
+        source_b: "system_stats.total_pnl"
+        comparison: approx_equals
+        tolerance: 1.0
+        cross_tab: operator
+        severity: high
+        classification: SOURCE_DATA_BUG
+
+    required_elements:
+      - "Stats cards (total open, total PnL, win rate)"
+      - "Positions table with source, entry/current price, PnL, status"
+      - "Real trades section"
+
+  wallets:
+    route: "#wallets"
+    description: "Followable wallet leaderboard, followed wallets list"
+    endpoints:
+      - id: wallet_leaderboard
+        path: /api/wallet-followable-leaderboard
+        method: GET
+        auth: false
+        required_fields:
+          - items
+          - meta
+        failure_severity: high
+
+      - id: followed_wallets
+        path: /api/followed-wallets
+        method: GET
+        auth: false
+        required_fields:
+          - items
+        failure_severity: high
+
+    normalization_rules:
+      - name: "leaderboard items all have required wallet fields"
+        source_a: "wallet_leaderboard.items"
+        required_item_fields:
+          - wallet
+          - insider_score
+          - win_rate
+          - pnl
+        comparison: items_have_fields
+        severity: high
+        classification: API_CONTRACT_BUG
+
+      - name: "followed wallets items have wallet field"
+        source_a: "followed_wallets.items"
+        required_item_fields:
+          - wallet
+        comparison: items_have_fields
+        severity: high
+        classification: API_CONTRACT_BUG
+
+    required_elements:
+      - "Wallet leaderboard table with scores, WR, PnL"
+      - "Classification badges"
+      - "Followed wallets list"
+
+  strategies:
+    route: "#strategies"
+    description: "Strategy list with performance, positions, configuration"
+    endpoints:
+      - id: strategies_list
+        path: /api/strategies
+        method: GET
+        auth: false
+        required_fields:
+          - count
+          - items
+        failure_severity: high
+
+    normalization_rules:
+      - name: "strategies count matches items length"
+        source_a: "strategies_list.count"
+        source_b: "len(strategies_list.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "active strategy count matches system_stats"
+        source_a: "count_active(strategies_list.items)"
+        source_b: "system_stats.active_strategies"
+        comparison: equals
+        cross_tab: operator
+        severity: medium
+        classification: SOURCE_DATA_BUG
+
+    required_elements:
+      - "Strategy cards with label, status, WR, PnL, open/closed counts"
+      - "Strategy detail panel"
+      - "Paper trader card"
+
+  intel:
+    route: "#intel"
+    description: "World context, trade ideas, news feed, market ticker"
+    endpoints:
+      - id: world_context
+        path: /api/world-context
+        method: GET
+        auth: false
+        required_fields:
+          - events
+          - updated_at
+        failure_severity: medium
+
+      - id: trade_ideas
+        path: /api/trade-ideas
+        method: GET
+        auth: false
+        required_fields:
+          - items
+          - count
+        failure_severity: high
+
+      - id: news_feed
+        path: /api/news-feed
+        method: GET
+        auth: false
+        required_fields:
+          - items
+          - count
+        failure_severity: medium
+
+      - id: ticker
+        path: /api/ticker
+        method: GET
+        auth: false
+        required_fields:
+          - ok
+          - symbols
+        failure_severity: low
+
+    normalization_rules:
+      - name: "trade ideas count matches items length"
+        source_a: "trade_ideas.count"
+        source_b: "len(trade_ideas.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "news feed count matches items length"
+        source_a: "news_feed.count"
+        source_b: "len(news_feed.items)"
+        comparison: equals
+        severity: medium
+        classification: API_CONTRACT_BUG
+
+      - name: "world context has events"
+        source_a: "world_context.events"
+        comparison: non_empty_list
+        severity: medium
+        classification: STALE_DATA_BLOCKER
+
+    required_elements:
+      - "World map with event markers"
+      - "Trade ideas panel with confidence, action buttons"
+      - "News feed grouped by domain"
+      - "Market ticker bar"

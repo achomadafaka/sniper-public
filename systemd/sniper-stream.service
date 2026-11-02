@@ -1,0 +1,32 @@
+[Unit]
+Description=Sniper Realtime Stream Ingest
+After=network.target
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=DB_PATH=sniper_tracker.db
+# Cap WebSocket subscriptions — each market adds ~1MB RSS over time.
+# 2026-03-18: reduced 500→300 to prevent stream+analyzer combined OOM on 2GB VPS.
+# 300 markets × ~1MB + base ~150MB ≈ 450MB peak; ceiling lowered to 500MB accordingly.
+Environment=MAX_WS_CONNECTIONS=300
+Environment=MAX_MARKET_PAGES=70
+ExecStart=/home/sniper/sniper/.venv/bin/python /home/sniper/sniper/stream_low_buys.py
+Restart=always
+RestartSec=10
+# Memory ceiling — WebSocket subscriptions accumulate RSS over days of runtime.
+# Observed VmPeak 1.1GB / 760MB swap after 24h on old config (1000 connections).
+# Reduced from 700M to match lower connection cap (300 connections ≈ 450MB peak).
+MemoryMax=500M
+MemorySwapMax=100M
+# Force daily restart to clear CPython RSS fragmentation from long-running event loop.
+# Code fix (evict closed markets from condition_meta/asset_to_condition on each hourly
+# refresh) addresses the dict growth leak. RuntimeMaxSec handles residual allocator
+# fragmentation that the GC can't return to the OS. ~5s reconnect gap, acceptable.
+RuntimeMaxSec=86400
+
+[Install]
+WantedBy=default.target

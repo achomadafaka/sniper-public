@@ -1,0 +1,65 @@
+{
+  "source": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump.json",
+  "idl_sha256": "7616681ea557975f9f623ac211080f22a93060781eaf4765b0a488d980997207",
+  "event": {
+    "name": "SetQuoteControlMintReservesEvent",
+    "discriminator": [
+      169,
+      67,
+      39,
+      109,
+      102,
+      134,
+      182,
+      232
+    ]
+  },
+  "layout": {
+    "name": "SetQuoteControlMintReservesEvent",
+    "type": {
+      "kind": "struct",
+      "fields": [
+        {
+          "name": "quote_control",
+          "type": "pubkey"
+        },
+        {
+          "name": "authority",
+          "type": "pubkey"
+        },
+        {
+          "name": "quote_mint",
+          "type": "pubkey"
+        },
+        {
+          "name": "old_initial_virtual_quote_reserves",
+          "type": "u64"
+        },
+        {
+          "name": "new_initial_virtual_quote_reserves",
+          "type": "u64"
+        },
+        {
+          "name": "timestamp",
+          "type": "i64"
+        }
+      ]
+    }
+  },
+  "signature": "3oB6zKPKT6vwdGE3zxPikFoWKXkZe7c2M2Xo7rt8GF7eVwMbqe64DwkiiRe23cnM7sQnSc5exrALGbQnNqV5U87y",
+  "slot": 460596792,
+  "payloads_b64": [
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8B+i0Oqr16L2rSknzKE0wSq7TFSU1ymr4VtEJwVRG4zePXEwQRwAAAGGk8eFHAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8B+i0BSHTPUv3mNsk+vjcEKxadicHFZDN6yVZ/CsdJSm0pYUOAwAAACufxRkDAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8BPQkEIC74GtL3PF2pe6D1lxNFdLyvIXge9hK5pFe4LbnwScAAAAAALNSJwAAAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8BTD8ArYykrgPo+jP3n86DQodmVIgxfTCHrKTsh4y6Ka3cAMHAAAAAJFv7AYAAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8Bn9ys8G6eb1WVzsHzEgsWU9IFj4lqa4mCNEtJe/O7CWDXsEeAAAAAB+8KR8AAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8Bn2Z0g1BQvatL1CjDVq0eyhlmogSqjRZxa7LrVxMAqYOCpEADwAAAOFlC9UOAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8Ar4qwy7/J1xWncO0jOWeMNE6OE8h4GFWMAS1QgMulobXsOzONzEAADCL8E2xMAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8rB4MwWEA2uBBMrxlwNUQDmV6/yxFqfO2sKVWpMSe8hv99Es9/QIAAKGsyT3nAgAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8tbal3xfz31V70JmxTlYNP/NyEhYk+eMekMz59lkj8zxrNWsAAAAAAEqpbgAAAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8f/Aws0P8o9hWgWlTui2gLhVP0dopCJItRz7zmCfC0D+t109BCgAAABMGvWoKAAAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8DADbzrjOqnNYlFpHW8qfACrQsubYsGPIJahYFkO59XVf0sFMNQIAAB83qzscAgAANdLbagAAAAA=",
+    "qUMnbWaGtuhY6n2uAJq/JZn175WcnSk5FDty0P/UR+xgddr5f50QInn2brMjTYlxEhZS6UXVGWW+fMcPXG9WjXue3VTMaPb8t8x+Kyx7YWuQoGaHEwQHNScMFq2hIDAX2gSD9BXMmdFU/q5EAAAAAPaTbEUAAAAANdLbagAAAAA="
+  ]
+}

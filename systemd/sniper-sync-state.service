@@ -1,0 +1,18 @@
+[Unit]
+Description=Sniper Brain Sync State (portfolio + cross-layer intelligence)
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+Environment=PYTHONPATH=/home/sniper/sniper
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/bot/supabase_helper.py sync-state
+StandardOutput=append:/home/sniper/sniper/logs/sync_state.log
+StandardError=append:/home/sniper/sniper/logs/sync_state.log
+TimeoutStartSec=60
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

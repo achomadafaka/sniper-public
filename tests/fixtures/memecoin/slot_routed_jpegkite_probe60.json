@@ -1,0 +1,169 @@
+{
+ "source": "owner_token_program_probe 60-minute run on the research key, 2026-09-27 09:18-10:18Z, processed: programSubscribe Token + Token-2022 (memcmp owner@32) and logsSubscribe mentions, one socket. Rows are the probe's own record of each frame, values unchanged; decimals were not recorded. jpegkite = owner Hv3a4PaP.",
+ "owner": "Hv3a4PaPvMPE5inwNoS27uFBRoeoJJMRSCJsKtExNH54",
+ "handle": "jpegkite",
+ "expected_buys": [
+  {
+   "slot": 450962730,
+   "usdc_spent_atomic": 2000000000,
+   "token_delta_atomic": 4693689843245
+  },
+  {
+   "slot": 450962792,
+   "usdc_spent_atomic": 2000000000,
+   "token_delta_atomic": 4287823509845
+  },
+  {
+   "slot": 450962920,
+   "usdc_spent_atomic": 500000000,
+   "token_delta_atomic": 911539953980
+  },
+  {
+   "slot": 450962987,
+   "usdc_spent_atomic": 100000000,
+   "token_delta_atomic": 193301457111
+  }
+ ],
+ "rows": [
+  {
+   "kind": "logs",
+   "slot": 450957960,
+   "recv": 1790501685.5192513,
+   "signature": "61AejQVuc8wi9kRxspqffgpRziDDGvkGW2GeTqfph95cGAszmpvH8vPwEULpY3obAB8HzB1H4BJjYsSgTKCR427u"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450957960,
+   "recv": 1790501685.5193,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "904876291977"
+  },
+  {
+   "kind": "token",
+   "slot": 450957960,
+   "recv": 1790501685.5193214,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "107647076658"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450958004,
+   "recv": 1790501696.9983323,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "0"
+  },
+  {
+   "kind": "token",
+   "slot": 450958004,
+   "recv": 1790501696.9983785,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "107845212562"
+  },
+  {
+   "kind": "logs",
+   "slot": 450958004,
+   "recv": 1790501696.9983923,
+   "signature": "5y29g8FdLgRzw5tBP26W1CiJNkXH142ysn8rtsuZC7QrEL9RGDjzQfbA69mA3YJCME9VdBozzjLs8f7KBoXL1Wiy"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450962730,
+   "recv": 1790502962.5318513,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "4693689843245"
+  },
+  {
+   "kind": "token",
+   "slot": 450962730,
+   "recv": 1790502962.531865,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "105845212562"
+  },
+  {
+   "kind": "logs",
+   "slot": 450962730,
+   "recv": 1790502962.5318751,
+   "signature": "3ufQ7KDHyR72vyZoftBRfpPbjirFiLjn2TuQLXkPqPm9UtePd7gaMQKNqrov61XmEerZaDPBzPc5TFyoP1LpQKAJ"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450962792,
+   "recv": 1790502979.2521422,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "8981513353090"
+  },
+  {
+   "kind": "token",
+   "slot": 450962792,
+   "recv": 1790502979.2521641,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "103845212562"
+  },
+  {
+   "kind": "logs",
+   "slot": 450962792,
+   "recv": 1790502979.2541246,
+   "signature": "53U1FzFKLjTK6RXnVmpMAuLM2X2KmvrLcWzViWxkMZBzw8dDL6XkSpyd2kX3K4ekqy77jqBhWqPCdjYXbbDzrAVr"
+  },
+  {
+   "kind": "token",
+   "slot": 450962894,
+   "recv": 1790503006.330155,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "103845592562"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450962920,
+   "recv": 1790503012.851787,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "9893053307070"
+  },
+  {
+   "kind": "token",
+   "slot": 450962920,
+   "recv": 1790503012.8518217,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "103345592562"
+  },
+  {
+   "kind": "logs",
+   "slot": 450962920,
+   "recv": 1790503012.8531325,
+   "signature": "2WEjDAGFfCWWRfFj2eLaMouPpQWdp7TRKghQoADJQc7LtDKDvV5a5eLUE4v3aAmZVAi8QD7xfFqcuSkY4rPz3moE"
+  },
+  {
+   "kind": "token2022",
+   "slot": 450962987,
+   "recv": 1790503030.397951,
+   "account": "HHagCSqcs9C5z4LFd4ohEJczN7VA5QVfqvUjFtxCYjfm",
+   "mint": "2iCpCQRKaFWjEgAgwUh2Bwvz9GyygAf2Wr8RXwKrnm6s",
+   "amount": "10086354764181"
+  },
+  {
+   "kind": "token",
+   "slot": 450962987,
+   "recv": 1790503030.3979893,
+   "account": "5A5XGcHtT55omjJvA6ag971eJdkd9LwKtYfWYn7rMTnM",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "amount": "103245592562"
+  },
+  {
+   "kind": "logs",
+   "slot": 450962987,
+   "recv": 1790503030.3980026,
+   "signature": "5b4mcb5xhBMG8KQWEHV2i9Qgq6H2An5Mitg4kxNozKcUU7YpoWSWdisWTqjSncW1nU315wEvJege21rLm1Co2P1B"
+  }
+ ]
+}

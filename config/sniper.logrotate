@@ -1,0 +1,11 @@
+"@SNIPER_ROOT@/logs/web.log" "@SNIPER_ROOT@/logs/memecoin_runner.log" "@SNIPER_ROOT@/.logs/hl_*.log" {
+    size 50M
+    rotate 4
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+    dateext
+    dateformat -%Y%m%dT%H%M%S
+}

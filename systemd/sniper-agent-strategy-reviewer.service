@@ -1,0 +1,17 @@
+[Unit]
+Description=Sniper Strategy Performance Reviewer Agent (plugin health + win_prob calibration)
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/scripts/run_strategy_agent.py strategy_reviewer --quiet
+StandardOutput=append:/home/sniper/sniper/logs/agent_strategy_reviewer.log
+StandardError=append:/home/sniper/sniper/logs/agent_strategy_reviewer.log
+TimeoutStartSec=900
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

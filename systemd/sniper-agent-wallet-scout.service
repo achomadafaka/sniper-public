@@ -1,0 +1,18 @@
+[Unit]
+Description=Sniper Wallet Scout Agent (discovery + strategy lifecycle)
+After=network.target
+
+[Service]
+Environment=CLAUDECODE=
+Type=oneshot
+WorkingDirectory=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/scripts/run_strategy_agent.py wallet_scout --quiet
+StandardOutput=append:/home/sniper/sniper/logs/agent_wallet_scout.log
+StandardError=append:/home/sniper/sniper/logs/agent_wallet_scout.log
+TimeoutStartSec=900
+TimeoutStopSec=30
+Restart=no
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,21 @@
+{
+ "schema": "office-tape-decoder-versions-v1",
+ "note": "Append one entry when the PumpSwap/curve decoder changes what the tape records (e.g. multi-hop buy legs). effective_from is the receipt time (UTC epoch s) of the first print written by the new decoder, or, when that print is not identifiable, the start_at of the new capture session with the cutover zone named as its own entry (ps-decode-v2, 2026-10-30). Entries are ordered by effective_from and never edited; outcome rows stamp the version their window was recorded under.",
+ "versions": [
+  {
+   "version": "ps-decode-v1",
+   "effective_from": 0,
+   "note": "baseline: multi_hop_swap buy events are not decoded (Gamma, 2026-10-30); outcome prints can under-count"
+  },
+  {
+   "version": "ps-decode-cutover-v1v2",
+   "effective_from": 1793400056.05985,
+   "note": "CUTOVER ZONE, not a decoder: the old capture session cbd0b41e ended (through_at) here and the new session 432be482 starts at 1793400064.1327717; the first print the v2 worker handled is not identifiable inside this 8.07 s (rows exist on both sides: last old-side row received 1793400060.906, first at/after the ps start 1793400061.070). A window or span inside or crossing the zone is labelled with this name or mixed:, never pooled with v1 or v2 (Gamma, Zeta)."
+  },
+  {
+   "version": "ps-decode-v2",
+   "effective_from": 1793400064.1327717,
+   "note": "BoostBuyAndBurn buys recorded when the same tx's BuyEvent proves the state (f399ad884). effective_from = start_at of the first capture interval of the v2 worker (release be1b4963755d, pid 3477475; ps lstart 1793400061 is a process fact, NOT a first-print receipt). Multi-hop legs, sweeps and v2-buy inconsistencies are still lost."
+  }
+ ]
+}

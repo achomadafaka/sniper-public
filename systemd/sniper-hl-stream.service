@@ -1,0 +1,20 @@
+[Unit]
+Description=Sniper Hyperliquid WebSocket Trade Streamer
+After=network.target
+# Crash-loop guard: stop restarting if it fails 5× in 5 minutes (config error or OOM).
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/sniper/sniper
+Environment=PYTHONPATH=/home/sniper/sniper
+EnvironmentFile=-/home/sniper/sniper/.env
+ExecStart=/home/sniper/sniper/.venv/bin/python3 /home/sniper/sniper/archive/legacy/hl_stream/stream_hyperliquid.py
+Restart=on-failure
+RestartSec=10
+MemoryMax=200M
+MemorySwapMax=50M
+
+[Install]
+WantedBy=default.target

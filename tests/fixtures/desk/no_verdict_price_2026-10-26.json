@@ -1,0 +1,649 @@
+{
+  "provenance": "Frozen no_verdict_price stages and exact signature/ordinal native-SOL tape rows; no outcomes.",
+  "records": [
+    {
+      "candidate": {
+        "band_entry_slot": 461665447,
+        "emitted_at": "2026-10-26T12:33:26.914134+00:00",
+        "gate_state": null,
+        "mint": "4Bef11LEjDfw1fS9nZ9SBJPvKyfEV2Z1U6rD1VRXpump",
+        "network_id": "solana",
+        "opportunity_id": "desk:U:016881da352d63bc06cf27af",
+        "pool": "Amr3J5ERPqhpu1D2g7qYCF6fFkEc2Wj4KTuvz1JMe9gg",
+        "producer": "U",
+        "schema": "desk-candidate/v1",
+        "snapshot": {
+          "emission_at": 1793018006.914134,
+          "fields": {
+            "age_s": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665211,
+              "source": "pumpfun_grpc:create_block_time",
+              "value": 50.9
+            },
+            "crawler_flags": {
+              "completeness": "absent",
+              "known_at": 1793018006.914134,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "crawler_intent": {
+              "completeness": "absent",
+              "known_at": 1793018006.914134,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "creator_prior_launches": {
+              "completeness": "partial",
+              "known_at": 1793018006.914134,
+              "slot": null,
+              "source": "pumpfun_grpc:creates_since_worker_start",
+              "value": 6
+            },
+            "curve_pct": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:real_token_reserves",
+              "value": 28.51
+            },
+            "flow_60s": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:swaps",
+              "value": {
+                "buy_n": 36,
+                "buy_usd": 3112.7162135150234,
+                "largest_buy": 500.2186127381953,
+                "makers": 6,
+                "sell_n": 20,
+                "sell_usd": 1648.388586170212
+              }
+            },
+            "liq_usd": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:real_quote_reserves",
+              "value": 1464.4
+            },
+            "mcap_usd": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:curve_reserves",
+              "value": 31739.75
+            },
+            "price_vs_60s_high_pct": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:swaps",
+              "value": 0.0
+            },
+            "price_vs_60s_low_pct": {
+              "completeness": "complete",
+              "known_at": 1793018006.914134,
+              "slot": 461665447,
+              "source": "pumpfun_grpc:swaps",
+              "value": 2696.38
+            }
+          },
+          "hash": "374e832b46e04659f51c6fd5bfbbaa488611e3fab6372ce9894e445ef6948a88",
+          "missing": [
+            "crawler_flags",
+            "crawler_intent",
+            "creator_prior_launches"
+          ]
+        },
+        "ticket_id": "desk:U:016881da352d63bc06cf27af",
+        "trigger_ordinal": 131076,
+        "trigger_signature": "37sygqdxTNp8UuSo1zn6SFtHbcP8FKKgX8dwB1WhQZRmBY1S8cBb9Qfh4yMhCsjHfi1JfooAbQiRXi2po8S1jW5Z"
+      },
+      "expected_liq_usd": 2072.46,
+      "meta": {
+        "as_of": 1793018008.34157,
+        "sol_age_s": 46.0,
+        "sol_usd": 101.735388,
+        "tape_heartbeat_age_s": 0.481
+      },
+      "stage_id": 3508,
+      "ticket_id": "desk:U:016881da352d63bc06cf27af",
+      "tip": {
+        "actor": "AwBU5VB19TFmmbn1Wn9E5jZdjcbMmsRqKeBqRyDHPedd",
+        "block_time": 1793018007,
+        "creator_fee_bps": 30,
+        "curve": "Amr3J5ERPqhpu1D2g7qYCF6fFkEc2Wj4KTuvz1JMe9gg",
+        "fee_bps": 95,
+        "is_buy": 1,
+        "mint": "4Bef11LEjDfw1fS9nZ9SBJPvKyfEV2Z1U6rD1VRXpump",
+        "ordinal": 65539,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 977777777,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 20371123185,
+        "real_token": 548963384642364,
+        "received_at": 1793018007.7237837,
+        "signature": "fFBe5wrwxBhDNuEjcHmVw1WrA9dx58Z8xABFZnZLEgu9t2sHK9UWir3M2GXkjNi9pS9pLfkjVbWoby3toPGHETS",
+        "slot": 461665451,
+        "token_atomic": 2317311544596,
+        "tx_index": 482,
+        "virtual_quote": 350712451448,
+        "virtual_token": 828863384642364
+      },
+      "trigger": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793018006,
+        "creator_fee_bps": 0,
+        "curve": "Amr3J5ERPqhpu1D2g7qYCF6fFkEc2Wj4KTuvz1JMe9gg",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "4Bef11LEjDfw1fS9nZ9SBJPvKyfEV2Z1U6rD1VRXpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 4916859537,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 14394229502,
+        "real_token": 567006813336272,
+        "received_at": 1793018006.9141343,
+        "signature": "37sygqdxTNp8UuSo1zn6SFtHbcP8FKKgX8dwB1WhQZRmBY1S8cBb9Qfh4yMhCsjHfi1JfooAbQiRXi2po8S1jW5Z",
+        "slot": 461665447,
+        "token_atomic": 23328693034047,
+        "tx_index": 72,
+        "virtual_quote": 264220888069,
+        "virtual_token": 846906813336272
+      }
+    },
+    {
+      "candidate": {
+        "band_entry_slot": 461677008,
+        "emitted_at": "2026-10-26T13:14:27.303651+00:00",
+        "gate_state": null,
+        "mint": "5ThKgeHZGKCXykqAVix4EfK2xeRw1DFy6HbsSvaJpump",
+        "network_id": "solana",
+        "opportunity_id": "desk:U:7187db0402996b1849897c80",
+        "pool": "5oEZB7vNHBNvjY1ri34k5ZZJEsdzaogUvW5H581jXFdK",
+        "producer": "U",
+        "schema": "desk-candidate/v1",
+        "snapshot": {
+          "emission_at": 1793020467.303651,
+          "fields": {
+            "age_s": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461676881,
+              "source": "pumpfun_grpc:create_block_time",
+              "value": 28.3
+            },
+            "crawler_flags": {
+              "completeness": "absent",
+              "known_at": 1793020467.303651,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "crawler_intent": {
+              "completeness": "absent",
+              "known_at": 1793020467.303651,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "creator_prior_launches": {
+              "completeness": "partial",
+              "known_at": 1793020467.303651,
+              "slot": null,
+              "source": "pumpfun_grpc:creates_since_worker_start",
+              "value": 7
+            },
+            "curve_pct": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:real_token_reserves",
+              "value": 7.65
+            },
+            "flow_60s": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:swaps",
+              "value": {
+                "buy_n": 36,
+                "buy_usd": 676.6571672861609,
+                "largest_buy": 86.82563656573588,
+                "makers": 11,
+                "sell_n": 21,
+                "sell_usd": 345.7484024623819
+              }
+            },
+            "liq_usd": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:real_quote_reserves",
+              "value": 330.92
+            },
+            "mcap_usd": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:curve_reserves",
+              "value": 32375.96
+            },
+            "price_vs_60s_high_pct": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:swaps",
+              "value": 0.0
+            },
+            "price_vs_60s_low_pct": {
+              "completeness": "complete",
+              "known_at": 1793020467.303651,
+              "slot": 461677008,
+              "source": "pumpfun_grpc:swaps",
+              "value": 1531.27
+            }
+          },
+          "hash": "e94843faadf318df1c98def5ab3c10b298f91f49d49c5634f6456f2e45730237",
+          "missing": [
+            "crawler_flags",
+            "crawler_intent",
+            "creator_prior_launches"
+          ]
+        },
+        "ticket_id": "desk:U:7187db0402996b1849897c80",
+        "trigger_ordinal": 131076,
+        "trigger_signature": "Hhn4YiBTaq4aeFzC8bopPzaQGtvbtgNH86YLECweu5ig3BnQwvE2W1b2sqbtwhc9VT51rY3PHJhFoAzuiqRWmep"
+      },
+      "expected_liq_usd": 349.85,
+      "meta": {
+        "as_of": 1793020468.621839,
+        "sol_age_s": 26.6,
+        "sol_usd": 101.269729,
+        "tape_heartbeat_age_s": 0.33
+      },
+      "stage_id": 3537,
+      "ticket_id": "desk:U:7187db0402996b1849897c80",
+      "tip": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793020467,
+        "creator_fee_bps": 0,
+        "curve": "5oEZB7vNHBNvjY1ri34k5ZZJEsdzaogUvW5H581jXFdK",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "5ThKgeHZGKCXykqAVix4EfK2xeRw1DFy6HbsSvaJpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 186914971,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 3454659223,
+        "real_token": 731867644788420,
+        "received_at": 1793020467.9434695,
+        "signature": "5GUXJC9NbjDwL8bs3wWjyd3Trx7H5UnFYvhoYUTMcBRdPvagZzAYicUAcadzjh3pfWWjseHv2jRXpndNKKtHD7L",
+        "slot": 461677011,
+        "token_atomic": 584319441659,
+        "tx_index": 384,
+        "virtual_quote": 341966436028,
+        "virtual_token": 1011767644788420
+      },
+      "trigger": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793020467,
+        "creator_fee_bps": 0,
+        "curve": "5oEZB7vNHBNvjY1ri34k5ZZJEsdzaogUvW5H581jXFdK",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "5ThKgeHZGKCXykqAVix4EfK2xeRw1DFy6HbsSvaJpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 857370089,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 3267744252,
+        "real_token": 732451964230079,
+        "received_at": 1793020467.3036513,
+        "signature": "Hhn4YiBTaq4aeFzC8bopPzaQGtvbtgNH86YLECweu5ig3BnQwvE2W1b2sqbtwhc9VT51rY3PHJhFoAzuiqRWmep",
+        "slot": 461677008,
+        "token_atomic": 3622873168296,
+        "tx_index": 34,
+        "virtual_quote": 323649200251,
+        "virtual_token": 1012351964230079
+      }
+    },
+    {
+      "candidate": {
+        "band_entry_slot": 461679576,
+        "emitted_at": "2026-10-26T13:23:36.296928+00:00",
+        "gate_state": null,
+        "mint": "7w5X81ZqsK7HAZi4PNRFBKQhwcjci16xRmZ6tF9qpump",
+        "network_id": "solana",
+        "opportunity_id": "desk:U:be0c99b87037ca0156b9b6c6",
+        "pool": "6Kfu557ycZXKbwP7Q1paKRAnSgzGjt5fimBCias1MVnw",
+        "producer": "U",
+        "schema": "desk-candidate/v1",
+        "snapshot": {
+          "emission_at": 1793021016.296928,
+          "fields": {
+            "age_s": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679069,
+              "source": "pumpfun_grpc:create_block_time",
+              "value": 110.3
+            },
+            "crawler_flags": {
+              "completeness": "absent",
+              "known_at": 1793021016.296928,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "crawler_intent": {
+              "completeness": "absent",
+              "known_at": 1793021016.296928,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "creator_prior_launches": {
+              "completeness": "partial",
+              "known_at": 1793021016.296928,
+              "slot": null,
+              "source": "pumpfun_grpc:creates_since_worker_start",
+              "value": 4
+            },
+            "curve_pct": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:real_token_reserves",
+              "value": 8.97
+            },
+            "flow_60s": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:swaps",
+              "value": {
+                "buy_n": 83,
+                "buy_usd": 1013.00319093284,
+                "largest_buy": 48.55797649698387,
+                "makers": 9,
+                "sell_n": 46,
+                "sell_usd": 776.981616989231
+              }
+            },
+            "liq_usd": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:real_quote_reserves",
+              "value": 243.18
+            },
+            "mcap_usd": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:curve_reserves",
+              "value": 33417.78
+            },
+            "price_vs_60s_high_pct": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:swaps",
+              "value": 0.0
+            },
+            "price_vs_60s_low_pct": {
+              "completeness": "complete",
+              "known_at": 1793021016.296928,
+              "slot": 461679576,
+              "source": "pumpfun_grpc:swaps",
+              "value": 2095.55
+            }
+          },
+          "hash": "c611419bee45209915560a9898e9e81c9affe299fcaa7b9aa4ec616b876262b7",
+          "missing": [
+            "crawler_flags",
+            "crawler_intent",
+            "creator_prior_launches"
+          ]
+        },
+        "ticket_id": "desk:U:be0c99b87037ca0156b9b6c6",
+        "trigger_ordinal": 131076,
+        "trigger_signature": "499bRu8LQX8NkLLvpRBHBSHEsw23YuxTgRqFWRuE2V3ZXQgFwyRJqf9kgFhRDet13eaHGfR2ZtnR7BZo6bWKafdS"
+      },
+      "expected_liq_usd": 216.81,
+      "meta": {
+        "as_of": 1793021018.763216,
+        "sol_age_s": 36.9,
+        "sol_usd": 101.131382,
+        "tape_heartbeat_age_s": 0.104
+      },
+      "stage_id": 3544,
+      "ticket_id": "desk:U:be0c99b87037ca0156b9b6c6",
+      "tip": {
+        "actor": "2LoGbtzpSc1qcehndnTk21wJkPyaEz35hWPGmZPjevJT",
+        "block_time": 1793021017,
+        "creator_fee_bps": 30,
+        "curve": "6Kfu557ycZXKbwP7Q1paKRAnSgzGjt5fimBCias1MVnw",
+        "fee_bps": 95,
+        "is_buy": 1,
+        "mint": "7w5X81ZqsK7HAZi4PNRFBKQhwcjci16xRmZ6tF9qpump",
+        "ordinal": 196614,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 98320987,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 2143799717,
+        "real_token": 722474166208865,
+        "received_at": 1793021018.0508883,
+        "signature": "67VD2swhvbLzvzBpuqgnSaG75VW7uoYF7N4Pz2j6AYrYWyM39Az4jzs2YNhwMrYqqpREGR7QN8ZgSfDqVzbw5qDK",
+        "slot": 461679585,
+        "token_atomic": 329121948686,
+        "tx_index": 426,
+        "virtual_quote": 299544823282,
+        "virtual_token": 1002374166208865
+      },
+      "trigger": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793021015,
+        "creator_fee_bps": 0,
+        "curve": "6Kfu557ycZXKbwP7Q1paKRAnSgzGjt5fimBCias1MVnw",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "7w5X81ZqsK7HAZi4PNRFBKQhwcjci16xRmZ6tF9qpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 480147463,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 2404586196,
+        "real_token": 721961412399584,
+        "received_at": 1793021016.2969277,
+        "signature": "499bRu8LQX8NkLLvpRBHBSHEsw23YuxTgRqFWRuE2V3ZXQgFwyRJqf9kgFhRDet13eaHGfR2ZtnR7BZo6bWKafdS",
+        "slot": 461679576,
+        "token_atomic": 1812341601820,
+        "tx_index": 265,
+        "virtual_quote": 331054325764,
+        "virtual_token": 1001861412399584
+      }
+    },
+    {
+      "candidate": {
+        "band_entry_slot": 461684253,
+        "emitted_at": "2026-10-26T13:40:10.600298+00:00",
+        "gate_state": null,
+        "mint": "Ai2VEujEUQZwWSkzapY2tMqLxCgxCQSnoQ6huBWgpump",
+        "network_id": "solana",
+        "opportunity_id": "desk:U:52ba62801fe3029a6b8f9376",
+        "pool": "7gX9y5L6pxw3uziKMJt85Ck6gukKmR2SqYnPhDgZZdo8",
+        "producer": "U",
+        "schema": "desk-candidate/v1",
+        "snapshot": {
+          "emission_at": 1793022010.600298,
+          "fields": {
+            "age_s": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684143,
+              "source": "pumpfun_grpc:create_block_time",
+              "value": 23.6
+            },
+            "crawler_flags": {
+              "completeness": "absent",
+              "known_at": 1793022010.600298,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "crawler_intent": {
+              "completeness": "absent",
+              "known_at": 1793022010.600298,
+              "slot": null,
+              "source": "crawler:none",
+              "value": null
+            },
+            "creator_prior_launches": {
+              "completeness": "partial",
+              "known_at": 1793022010.600298,
+              "slot": null,
+              "source": "pumpfun_grpc:creates_since_worker_start",
+              "value": 9
+            },
+            "curve_pct": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:real_token_reserves",
+              "value": 24.95
+            },
+            "flow_60s": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:swaps",
+              "value": {
+                "buy_n": 47,
+                "buy_usd": 4090.784593306645,
+                "largest_buy": 406.5418671405562,
+                "makers": 13,
+                "sell_n": 19,
+                "sell_usd": 2671.76519288646
+              }
+            },
+            "liq_usd": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:real_quote_reserves",
+              "value": 1417.44
+            },
+            "mcap_usd": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:curve_reserves",
+              "value": 33913.01
+            },
+            "price_vs_60s_high_pct": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:swaps",
+              "value": 0.0
+            },
+            "price_vs_60s_low_pct": {
+              "completeness": "complete",
+              "known_at": 1793022010.600298,
+              "slot": 461684253,
+              "source": "pumpfun_grpc:swaps",
+              "value": 1060.44
+            }
+          },
+          "hash": "bf8aef2edb0293d0dbc99992872ee6923edf24ffec58dc6f10bb0cf22d3d2b2b",
+          "missing": [
+            "crawler_flags",
+            "crawler_intent",
+            "creator_prior_launches"
+          ]
+        },
+        "ticket_id": "desk:U:52ba62801fe3029a6b8f9376",
+        "trigger_ordinal": 131076,
+        "trigger_signature": "5a6TBsCDFzabRR3Z6mdmZjNWUxzEoRk5JAhhyV6mbnobqtmjaQCWson1S9z9GF4FjomGnhqo28gZDPLeu4zAUxmd"
+      },
+      "expected_liq_usd": 1703.56,
+      "meta": {
+        "as_of": 1793022011.520653,
+        "sol_age_s": 9.4,
+        "sol_usd": 101.213851,
+        "tape_heartbeat_age_s": 0.361
+      },
+      "stage_id": 3572,
+      "ticket_id": "desk:U:52ba62801fe3029a6b8f9376",
+      "tip": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793022010,
+        "creator_fee_bps": 0,
+        "curve": "7gX9y5L6pxw3uziKMJt85Ck6gukKmR2SqYnPhDgZZdo8",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "Ai2VEujEUQZwWSkzapY2tMqLxCgxCQSnoQ6huBWgpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 2855301382,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 16831323810,
+        "real_token": 586892660944142,
+        "received_at": 1793022011.0237293,
+        "signature": "j5w4Bydmo7eoV4aJfgWa6buM9ryfaTqVfpiZw2VZoZ7CzXDrK6Tgy75FExHSxziz9FXb2b6uxj5QXB1vhEYnq41",
+        "slot": 461684255,
+        "token_atomic": 8441133253197,
+        "tx_index": 350,
+        "virtual_quote": 349859612069,
+        "virtual_token": 866792660944142
+      },
+      "trigger": {
+        "actor": "BwWK17cbHxwWBKZkUYvzxLcNQ1YVyaFezduWbtm2de6s",
+        "block_time": 1793022010,
+        "creator_fee_bps": 0,
+        "curve": "7gX9y5L6pxw3uziKMJt85Ck6gukKmR2SqYnPhDgZZdo8",
+        "fee_bps": 0,
+        "is_buy": 1,
+        "mint": "Ai2VEujEUQZwWSkzapY2tMqLxCgxCQSnoQ6huBWgpump",
+        "ordinal": 131076,
+        "q_amount": null,
+        "q_real": null,
+        "q_virtual": null,
+        "quote_atomic": 3166753031,
+        "quote_mint": "11111111111111111111111111111111",
+        "real_quote": 14004374631,
+        "real_token": 595249168457992,
+        "received_at": 1793022010.6002982,
+        "signature": "5a6TBsCDFzabRR3Z6mdmZjNWUxzEoRk5JAhhyV6mbnobqtmjaQCWson1S9z9GF4FjomGnhqo28gZDPLeu4zAUxmd",
+        "slot": 461684253,
+        "token_atomic": 12054748239446,
+        "tx_index": 209,
+        "virtual_quote": 293230012272,
+        "virtual_token": 875149168457992
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[Unit]
+Description=Office supervised paper trading floor
+ConditionPathExists=%h/Desktop/Sniper/.runtime/office/current/scripts/office_supervisor.py
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Desktop/Sniper/.runtime/office/current
+# bwrap owns the only mount namespace; keep secret masks and /tmp size inside it.
+ExecStart=/usr/bin/bwrap --unshare-user --unshare-pid --die-with-parent --new-session --ro-bind / / --proc /proc --dev /dev --size 268435456 --tmpfs /tmp --tmpfs %h/.codex --tmpfs %h/.claude --tmpfs %h/Desktop/Sniper/data/office-control --ro-bind %h/Desktop/Sniper/data/office-control/transport.json %h/Desktop/Sniper/data/office-control/transport.json --ro-bind %h/Desktop/Sniper/data/office-control/guard %h/Desktop/Sniper/data/office-control/guard --ro-bind %h/Desktop/Sniper/data/office-control/launcher-sock %h/Desktop/Sniper/data/office-control/launcher-sock --bind %h/Desktop/Sniper/data/office %h/Desktop/Sniper/data/office --bind %h/Desktop/Sniper/data/desk/codex_call.lock %h/Desktop/Sniper/data/desk/codex_call.lock --ro-bind-try /dev/null %h/Desktop/Sniper/.env --ro-bind-try /dev/null %h/Desktop/Sniper/.j7.env --ro-bind-try /dev/null %h/Desktop/Sniper/sniper_tracker.db --ro-bind-try /dev/null %h/Desktop/Sniper/sniper_tracker.db-wal --ro-bind-try /dev/null %h/Desktop/Sniper/sniper_tracker.db-shm --cap-drop ALL /usr/bin/env -i HOME=%h PATH=%h/.npm-global/bin:/usr/local/bin:/usr/bin:/bin SNIPER_STATE_ROOT=%h/Desktop/Sniper %h/.pyenv/versions/3.13.0/bin/python3 %h/Desktop/Sniper/.runtime/office/current/scripts/office_supervisor.py --store %h/Desktop/Sniper/data/office/office.db --ledger %h/Desktop/Sniper/data/office/ledger/ledger.db --config %h/Desktop/Sniper/config/office/runtime.json --guard %h/Desktop/Sniper/data/office-control/guard/guard.json
+Nice=19
+IOSchedulingClass=idle
+Slice=office.slice
+KillMode=control-group
+TimeoutStopSec=5
+Restart=on-failure
+RestartPreventExitStatus=75
+RestartSec=5
+# bwrap needs namespace setup first; payload sets NoNewPrivs=1 and drops all caps.
+NoNewPrivileges=no
+LimitNOFILE=256
+TasksMax=256
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+
+[Install]
+WantedBy=default.target

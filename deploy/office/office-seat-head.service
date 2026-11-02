@@ -1,0 +1,21 @@
+# Office v2 Head seat, host side. Install: copy to ~/.config/systemd/user/, then systemctl --user enable --now office-seat-head.
+# Runs from the published tree. After a publish, restart this unit: publishing replaces the files it imports.
+[Unit]
+Description=Office v2 Head seat host
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/sniper-office/release
+Environment=PYTHONPATH=/srv/sniper-office/release
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/bigpapi/.pyenv/versions/3.13.0/bin/python3 scripts/office_seat_host.py --config config/office/seat_head_v2.json
+Restart=on-failure
+RestartSec=30
+Nice=19
+IOSchedulingClass=idle
+MemoryMax=512M
+CPUQuota=100%
+
+[Install]
+WantedBy=default.target

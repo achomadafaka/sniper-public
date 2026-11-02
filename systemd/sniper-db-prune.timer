@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer — daily database pruning maintenance
+Requires=sniper-db-prune.service
+
+[Timer]
+# Run daily at 03:00 UTC — low-traffic window, well after any midnight market
+# resolution bursts and before the morning analysis cycle.
+OnCalendar=*-*-* 03:00:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target

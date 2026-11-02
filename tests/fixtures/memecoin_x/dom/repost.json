@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "kind": "repost",
+  "captured_at": "2026-07-14T01:57:21.550838+00:00",
+  "source_post_id": "2076734724178096374",
+  "expected_relationship": "repost",
+  "referenced_post_visible": false,
+  "reviewed_public_only": true
+}

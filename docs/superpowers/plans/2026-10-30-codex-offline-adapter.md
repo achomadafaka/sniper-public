@@ -1,0 +1,9 @@
+# Codex offline protocol adapter
+
+Authorized Delta/Codex slice against merged common contract c491bb5bb/dd111a4b2. Codex owns tools/crew/handover_codex.py and its tests; Delta owns Claude hooks, host transport and dedicated MCP writer. Brain CLI is not that writer. No hooks/settings/session installation.
+
+Implement a bounded pure frame normalizer and identity-bound wrappers around common context/gate decisions. Host supplies caller binding, current turn/window, observation time and semantics proof; no packet can authenticate itself. Pin testedCLI0.166.0. Latest inputTokens only; cumulative/cache totals never added. Unknown semantics/window/counts remain unknown. Compaction signals are bound hook or item notifications, not prose. PreToolUse notification alone is not a denial mechanism.
+
+Edges: no money/fill path, shared connections, SQL, credentials or disk writes. 64KiB frame cap, duplicate keys/NaN/malformed reject, wrong host/session/incarnation/permission/version/turn reject, stale or implausible telemetry delegated to common observer; exact host allowlist only and generic/nested code denied. No runtime capability auto-promotion. Rollback removes imports; nothing installed. No persisted data; probe fixtures are synthetic and bounded.
+
+RED tests first: latest usage thresholds/no double cache, missing semantic proof, all identity mismatches, malformed/oversize/duplicate input, unknown windows, bound compaction, exact writer allow/other tools deny, wrong caller cannot finish a note. Implement minimum pure helpers, run focused-n2 plus common context/gate tests. Send Delta/Gamma exactSHA for integration/review. Runtime denial, owned-process proof, fresh launch/permission parity, mail/effect reconciliation, SDK semantics and live canary remain unaccepted until separately probed/approved.

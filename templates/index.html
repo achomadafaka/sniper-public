@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Dark-app mobile chrome: match the browser UI bar to the page background,
+         render native controls (scrollbars, form pickers, autofill) in dark, and
+         make an iOS home-screen launch look app-like instead of a white Safari. -->
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Sniper">
+    <title>SNIPER - Polymarket Intelligence</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter,system-ui,sans-serif' font-size='34' font-weight='700' fill='%23f8fafc'%3ES%3C/text%3E%3C/svg%3E">
+    <!-- Self-hosted fonts (2026-08-17): the Google Fonts stylesheets were render-blocking, and a
+         flaky local resolver stalled first paint for seconds. Zero external requests now. -->
+    <link href="/static/vendor/fonts.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/office-floor.css?v={{ asset_v.office_floor_css }}">
+    <link rel="stylesheet" href="/static/styles.css?v={{ asset_v.styles }}">
+    <link rel="stylesheet" href="/static/wallet_universe.css?v={{ asset_v.wallet_universe_css }}">
+    <link rel="stylesheet" href="/static/css/mc-tokens.css?v={{ asset_v.mc_tokens }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- MAIN CONTENT — full width, topbar nav -->
+        <main class="main-content">
+            <!-- TOP NAV BAR -->
+            <header class="header-bar">
+                <div class="header-left">
+                    <div class="logo-mark">S</div>
+                    <span class="app-title">SNIPER</span>
+                    <div class="live-indicator warn" id="app-live-indicator" title="Connecting to live updates">
+                        <span class="live-dot" id="app-live-dot"></span>
+                        <span class="live-text" id="app-live-text">DELAYED</span>
+                    </div>
+                </div>
+                <nav class="venue-nav" id="venue-nav" aria-label="Venues">
+                    <a href="#" class="venue-item active" data-venue="solana"><span class="venue-label">Memecoin</span></a>
+                    <a href="#" class="venue-item" data-venue="polymarket"><span class="venue-label">Polymarket</span></a>
+                    <a href="#" class="venue-item" data-venue="hyperliquid"><span class="venue-label">Hyperliquid</span></a>
+                    <a href="#" class="venue-item disabled" data-venue="kalshi"><span class="venue-label">Kalshi</span><em class="venue-soon">soon</em></a>
+                    <span class="venue-spacer"></span>
+                    <a href="#" class="venue-item hub" data-venue="intel"><span class="venue-label">Intel</span></a>
+                </nav>
+                <div class="header-right">
+                    <div class="shell-cluster" id="shell-cluster">
+                        <span class="shell-chip" id="shell-alerts" title="Alert queue (new + sent)">
+                            <span class="shell-chip-icon">!</span>
+                            <span class="shell-chip-val">--</span>
+                        </span>
+                        <span class="shell-chip" id="shell-health" title="System health">
+                            <span class="shell-chip-icon">+</span>
+                            <span class="shell-chip-val">--</span>
+                        </span>
+                        <span class="shell-chip" id="shell-brain" title="Brain nightly status unavailable">
+                            <span class="shell-chip-icon">B</span>
+                            <span class="shell-chip-val">--</span>
+                        </span>
+                        <span class="shell-chip" id="shell-telegram" title="Telegram status">
+                            <span class="shell-chip-icon">T</span>
+                            <span class="shell-chip-val">--</span>
+                        </span>
+                    </div>
+                    <div class="current-time" id="current-time">--:-- UTC</div>
+                </div>
+            </header>
+
+            <!-- SECTION SUB-NAV (per active venue; venue-filtered by app.js). Hidden on mobile
+                 where the bottom nav takes over. -->
+            <nav class="topnav section-nav" id="section-nav" aria-label="Sections">
+                <a href="#" class="nav-item active" data-tab="memecoin" data-venue="solana"><span class="nav-label">Copy</span></a>
+                <a href="#" class="nav-item" data-tab="wallet-map" data-venue="solana"><span class="nav-label">Wallet Map</span></a>
+                <a href="#" class="nav-item" data-tab="desk" data-venue="solana"><span class="nav-label">Office</span></a>
+                <a href="#" class="nav-item" data-tab="operator" data-venue="polymarket"><span class="nav-label">Operations</span></a>
+                <a href="#" class="nav-item" data-tab="signals" data-venue="polymarket"><span class="nav-label">Signals</span></a>
+                <a href="#" class="nav-item" data-tab="strategies" data-venue="polymarket"><span class="nav-label">Strategies</span></a>
+                <a href="#" class="nav-item" data-tab="analyzer" data-venue="polymarket"><span class="nav-label">Analyzer</span></a>
+                <a href="#" class="nav-item" data-tab="hl-algo" data-venue="hyperliquid"><span class="nav-label">Edge Desk</span></a>
+                <a href="#" class="nav-item" data-tab="hl-analyzer" data-venue="hyperliquid"><span class="nav-label">Wallet Research</span></a>
+            </nav>
+
+            <!-- OPERATIONS SUB-NAV (Overview = dashboard widgets, Paper/Real = positions).
+                 Shown by app.js only when the active tab is operator or positions. -->
+            <nav class="ops-subnav is-hidden" id="ops-subnav" aria-label="Operations views">
+                <a href="#" class="ops-subnav-item active" data-opsview="overview">Overview</a>
+                <a href="#" class="ops-subnav-item" data-opsview="paper">Paper</a>
+                <a href="#" class="ops-subnav-item" data-opsview="real">Real</a>
+            </nav>
+
+
+            <!-- TAB PANELS -->
+            <div class="content-area">
+                <!-- OPERATOR TAB -->
+                <section id="tab-operator" class="tab-panel">
+                    <div class="panel-header">
+                        <h1 class="panel-title">Operations · Overview</h1>
+                        <p class="panel-subtitle">How the system and its bets are doing — health, alerts, and performance at a glance</p>
+                    </div>
+
+                    <!-- 1a: System Performance -->
+                    <div id="op-perf" class="op-section">
+                        <h2 class="section-heading">Performance</h2>
+                        <div id="op-perf-content" class="op-section-body">
+                            <div id="op-perf-cards" class="op-cards"></div>
+                        </div>
+                    </div>
+
+                    <!-- Equity Curve -->
+                    <div id="op-equity" class="op-section">
+                        <h2 class="section-heading">Profit Over Time</h2>
+                        <div id="op-equity-chart" style="height:220px;background:#0a0f0a;border:1px solid #00ff4122;border-radius:6px;overflow:hidden"></div>
+                    </div>
+
+                    <!-- 1a2: Market Domain Summary (compact) -->
+                    <div id="op-markets" class="op-section">
+                        <h2 class="section-heading">Where the Sharp Money Is (by topic)</h2>
+                        <div id="op-markets-domains" class="op-section-body op-domain-scroll"></div>
+                    </div>
+
+                    <!-- 1b: Alerts -->
+                    <div id="op-alerts" class="op-section">
+                        <h2 class="section-heading">Alerts Waiting to Send</h2>
+                        <div id="op-alerts-content" class="op-section-body"><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div>
+                    </div>
+
+                    <!-- 1c: Mutes -->
+                    <div id="op-mutes" class="op-section">
+                        <h2 class="section-heading">Silenced Alerts</h2>
+                        <div id="op-mutes-content" class="op-section-body"><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div>
+                    </div>
+
+                    <!-- 1d: Classification Diagnostics -->
+                    <div id="op-diag" class="op-section">
+                        <h2 class="section-heading">Signal Quality Check</h2>
+                        <div id="op-diag-content" class="op-section-body"><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div>
+                    </div>
+
+                    <!-- 1e: Strategy / Replay Snapshot -->
+                    <div id="op-strats" class="op-section">
+                        <h2 class="section-heading">Strategies &amp; Backtests</h2>
+                        <div id="op-strats-content" class="op-section-body"><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div><div class="skel-bar" style="height:14px;margin:6px 0"></div>
+                    </div>
+                </section>
+
+                <!-- SIGNALS TAB -->
+                <section id="tab-signals" class="tab-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h1 class="panel-title">Signals</h1>
+                            <p class="panel-subtitle">Open bets from analyzer-backed wallets, with a plain-English read of how each bet FITS that wallet's in-sample pattern. Not a score, not advice — hypotheses to forward-test.</p>
+                        </div>
+                    </div>
+                    <div id="live-signals-board" style="margin-bottom:18px"></div>
+                </section>
+
+                <!-- THESIS TAB -->
+
+
+                <!-- POSITIONS TAB -->
+                <section id="tab-positions" class="tab-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h1 class="panel-title">My Positions</h1>
+                            <p class="panel-subtitle">Paper and real positions</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-tabs" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                        <button class="sub-tab-btn active" data-subtab="paper">Paper Trades</button>
+                        <button class="sub-tab-btn" data-subtab="real">Real Positions</button>
+                        <span class="pipeline-inline" id="pipeline-inline-badge" style="display:none">
+                            <span class="pipeline-inline__dot"></span>
+                            <span id="pipeline-inline-text">--</span>
+                        </span>
+                        <button class="btn btn-secondary btn-sm" id="positions-refresh-btn" style="margin-left:auto" title="Reload positions data">↻ Refresh</button>
+                    </div>
+
+                    <!-- PAPER TRADES -->
+                    <div id="paper-subtab" class="subtab-content active">
+                        <div class="summary-stats">
+                            <div class="stat-card stat-card--activity">
+                                <span class="stat-label">Open Bets</span>
+                                <span class="stat-value" id="paper-total-open">0</span>
+                            </div>
+                            <div class="stat-card stat-card--performance">
+                                <span class="stat-label">Total Profit</span>
+                                <span class="stat-value" id="paper-total-pnl">$0</span>
+                            </div>
+                            <div class="stat-card stat-card--confidence">
+                                <span class="stat-label">Win Rate</span>
+                                <span class="stat-value" id="paper-win-rate">0%</span>
+                            </div>
+                            <div class="stat-card stat-card--performance">
+                                <span class="stat-label">Avg Return</span>
+                                <span class="stat-value" id="paper-avg-roi">—</span>
+                            </div>
+                            <div class="stat-card stat-card--activity">
+                                <span class="stat-label">Finished Trades</span>
+                                <span class="stat-value" id="paper-closed-count">0</span>
+                            </div>
+                            <!-- Signal Pipeline moved inline with sub-tabs -->
+                        </div>
+                        <p class="panel-subtitle" style="margin:0 0 0.9rem 0;">Source labels: <strong>Legacy / Unknown</strong> means older paper-trade history without reliable strategy attribution. <strong>Manual Copy</strong> means a user-triggered paper entry.</p>
+
+                        <!-- Section heading: Open Positions -->
+                        <div class="positions-section-heading positions-section-heading--open" id="paper-open-heading">
+                            OPEN POSITIONS <span class="count-badge" id="paper-open-count-badge">0</span>
+                        </div>
+
+                        <!-- Desktop tables (hidden on mobile) -->
+                        <div class="paper-table-wrap">
+                            <div class="table-wrapper">
+                                <table id="paper-table" class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Wallet</th>
+                                            <th>Market</th>
+                                            <th title="Strategy or source label for the paper trade. Legacy / Unknown means attribution was not captured for that row.">Strategy</th>
+                                            <th>Pick</th>
+                                            <th title="Entry / Entry Lag / Current price stacked">Price</th>
+                                            <th>Stake</th>
+                                            <th title="Profit, and return on the money staked">Profit / Return</th>
+                                            <th>Status</th>
+                                            <th>Opened</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="paper-tbody">
+                                        <!-- Populated by JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Mobile sort bar (visible on mobile only) -->
+                        <div class="mob-sort-bar" style="display:none;padding:8px 0;overflow-x:auto;white-space:nowrap">
+                            <span style="color:#00ff4188;font-size:0.72rem;margin-right:6px">Sort:</span>
+                            <button class="mob-sort-btn active" data-mob-sort="pnl" style="background:#0a2a0a;color:#00ff41;border:1px solid #00ff4133;border-radius:3px;padding:3px 10px;font-size:0.72rem;font-family:monospace;cursor:pointer;margin-right:4px">PnL</button>
+                            <button class="mob-sort-btn" data-mob-sort="roi" style="background:transparent;color:#00ff4188;border:1px solid #00ff4122;border-radius:3px;padding:3px 10px;font-size:0.72rem;font-family:monospace;cursor:pointer;margin-right:4px">ROI</button>
+                            <button class="mob-sort-btn" data-mob-sort="market" style="background:transparent;color:#00ff4188;border:1px solid #00ff4122;border-radius:3px;padding:3px 10px;font-size:0.72rem;font-family:monospace;cursor:pointer;margin-right:4px">Market</button>
+                            <button class="mob-sort-btn" data-mob-sort="opened" style="background:transparent;color:#00ff4188;border:1px solid #00ff4122;border-radius:3px;padding:3px 10px;font-size:0.72rem;font-family:monospace;cursor:pointer">Recent</button>
+                        </div>
+
+                        <!-- Mobile card layout (hidden on desktop) -->
+                        <div class="mob-positions-list" id="mob-open-positions">
+                            <!-- Populated by JS -->
+                        </div>
+
+                        <div class="paper-closed-section">
+                            <!-- Section heading: Closed Trades -->
+                            <div class="positions-section-heading positions-section-heading--closed" id="paper-closed-heading">
+                                CLOSED TRADES <span class="count-badge" id="paper-closed-count-badge">0</span>
+                            </div>
+                            <!-- Desktop table (hidden on mobile) -->
+                            <div class="paper-closed-wrap">
+                                <div class="table-wrapper">
+                                    <table id="paper-closed-table" class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Trader</th>
+                                                <th>Market</th>
+                                                <th title="Strategy or source label for the paper trade. Legacy / Unknown means attribution was not captured for that row.">Strategy</th>
+                                                <th>Pick</th>
+                                                <th title="Entry / Entry Lag / Exit price stacked">Price</th>
+                                                <th title="Profit, and return on the money staked">Profit / Return</th>
+                                                <th>Why Closed</th>
+                                                <th>Closed</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="paper-closed-tbody">
+                                            <!-- Populated by JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- Mobile closed cards (hidden on desktop) -->
+                            <div class="mob-positions-list" id="mob-closed-positions">
+                                <!-- Populated by JS -->
+                            </div>
+
+                            <!-- Intel-driven paper positions (Polymarket leg) -->
+                            <div class="positions-section-heading" style="margin-top:18px">
+                                INTEL PAPER <span class="count-badge" id="intel-paper-pm-count">0</span>
+                            </div>
+                            <div id="intel-paper-pm"></div>
+                        </div>
+                    </div>
+
+                    <!-- REAL POSITIONS -->
+                    <div id="real-subtab" class="subtab-content">
+                        <div class="summary-stats">
+                            <div class="stat-card stat-card--activity">
+                                <span class="stat-label">Open Bets</span>
+                                <span class="stat-value" id="real-total-open">0</span>
+                            </div>
+                            <div class="stat-card stat-card--exposure">
+                                <span class="stat-label">Claimable</span>
+                                <span class="stat-value" id="real-redeemable-count">0</span>
+                            </div>
+                            <div class="stat-card stat-card--exposure">
+                                <span class="stat-label">Settled Losses</span>
+                                <span class="stat-value" id="real-settled-loss-count">0</span>
+                            </div>
+                            <div class="stat-card stat-card--activity">
+                                <span class="stat-label">Finished Trades</span>
+                                <span class="stat-value" id="real-closed-count">0</span>
+                            </div>
+                            <div class="stat-card stat-card--performance">
+                                <span class="stat-label">Total Profit</span>
+                                <span class="stat-value" id="real-total-pnl">$0</span>
+                            </div>
+                            <div class="stat-card stat-card--confidence">
+                                <span class="stat-label">Win Rate</span>
+                                <span class="stat-value" id="real-win-rate">0%</span>
+                            </div>
+                            <div class="stat-card stat-card--exposure">
+                                <span class="stat-label">Total Invested</span>
+                                <span class="stat-value" id="real-invested">$0</span>
+                            </div>
+                            <div class="stat-card stat-card--performance">
+                                <span class="stat-label">Best Trade</span>
+                                <span class="stat-value" id="real-best-trade">-</span>
+                            </div>
+                            <div class="stat-card stat-card--performance">
+                                <span class="stat-label">Avg Return</span>
+                                <span class="stat-value" id="real-avg-roi">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Open Positions -->
+                        <h3 class="section-title">Open Positions</h3>
+                        <div class="table-wrapper">
+                            <table id="real-open-table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Market</th>
+                                        <th>Pick</th>
+                                        <th>Entry</th>
+                                        <th>Current</th>
+                                        <th>Invested</th>
+                                        <th>Current Value</th>
+                                        <th>Unrealized PnL</th>
+                                        <th>Opened</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="real-open-tbody"><tr><td colspan="9" class="table-empty text-muted">No open real positions on Polymarket. Open positions appear here as they fill.</td></tr></tbody>
+                            </table>
+                        </div>
+
+                        <!-- Claimable (winning resolved) -->
+                        <h3 class="section-title">Claimable</h3>
+                        <div class="table-wrapper">
+                            <table id="real-redeemable-table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Market</th>
+                                        <th>Pick</th>
+                                        <th>Entry</th>
+                                        <th>Settlement</th>
+                                        <th>Invested</th>
+                                        <th>Claim Value</th>
+                                        <th>Claim PnL</th>
+                                        <th>Resolved</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="real-redeemable-tbody"><tr><td colspan="9" class="table-empty text-muted">Nothing to claim right now. Winning resolved positions land here awaiting redemption.</td></tr></tbody>
+                            </table>
+                        </div>
+
+                        <!-- Settled Losses (losing resolved) -->
+                        <h3 class="section-title">Settled Losses</h3>
+                        <div class="table-wrapper">
+                            <table id="real-settled-loss-table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Market</th>
+                                        <th>Pick</th>
+                                        <th>Entry</th>
+                                        <th>Settlement</th>
+                                        <th>Invested</th>
+                                        <th>Final Value</th>
+                                        <th>Loss</th>
+                                        <th>Resolved</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="real-settled-loss-tbody"><tr><td colspan="9" class="table-empty text-muted">No settled losing positions on the books. They surface here after the market resolves against us.</td></tr></tbody>
+                            </table>
+                        </div>
+
+                        <!-- Closed Trades -->
+                        <h3 class="section-title">Closed Trades</h3>
+                        <div class="table-wrapper">
+                            <table id="real-closed-table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Market</th>
+                                        <th>Pick</th>
+                                        <th>Entry</th>
+                                        <th>Exit</th>
+                                        <th>Invested</th>
+                                        <th>Received</th>
+                                        <th>Realized PnL</th>
+                                        <th>Closed</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="real-closed-tbody"><tr><td colspan="8" class="table-empty text-muted">No closed real trades yet. Manual closes and mirror exits land here.</td></tr></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ANALYZER TAB -->
+                <section id="tab-analyzer" class="tab-panel">
+                    <div class="panel-header">
+                        <h1 class="panel-title">Analyzer</h1>
+                        <p class="panel-subtitle">Paste a wallet address to break down how it bets — what it's good at, where it loses, and what we can't measure</p>
+                    </div>
+
+                    <div class="analyzer-drop">
+                        <input id="analyzer-wallet-input" class="analyzer-input" type="text"
+                               placeholder="0x… Polymarket wallet address" autocomplete="off" spellcheck="false" />
+                        <button id="analyzer-analyze-btn" class="btn btn-primary">Analyze</button>
+                        <span id="analyzer-drop-status" class="analyzer-drop-status"></span>
+                    </div>
+                    <div id="analyzer-jobs" class="analyzer-jobs"></div>
+
+                    <div class="analyzer-layout">
+                        <div class="analyzer-reports-col">
+                            <div class="positions-section-heading">ANALYZED WALLETS <span class="count-badge" id="analyzer-count">0</span></div>
+                            <div id="analyzer-reports" class="analyzer-reports"><div class="text-muted">Loading reports…</div></div>
+                        </div>
+                        <div id="analyzer-detail" class="analyzer-detail">
+                            <div class="analyzer-detail-empty text-muted">Select an analyzed wallet, or drop a new one above.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WALLETS TAB (legacy leaderboard — not in nav; kept for now) -->
+                <section id="tab-wallets" class="tab-panel">
+                    <div class="panel-header">
+                        <h1 class="panel-title">Wallets</h1>
+                        <p class="panel-subtitle">Intelligence on tracked wallets — rankings, classifications, activity</p>
+                    </div>
+                    <div class="filter-bar" id="wallets-filters">
+                        <input type="text" class="filter-input" id="wallets-search" placeholder="Search wallet, username...">
+                        <div class="badge-filter-group">
+                            <button type="button" class="badge-chip active" data-wallets-filter="all">All</button>
+                            <button type="button" class="badge-chip" data-wallets-filter="followed">Followed</button>
+                            <button type="button" class="badge-chip" data-wallets-filter="emerging">Emerging</button>
+                            <button type="button" class="badge-chip" data-wallets-filter="high-wr">High WR</button>
+                            <button type="button" class="badge-chip" data-wallets-filter="flow">Spec Flow</button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table" id="wallets-table">
+                            <thead><tr>
+                                <th data-sort-key="wallet">Wallet</th>
+                                <th data-sort-key="insider_score">Legacy Score</th>
+                                <th data-sort-key="win_rate">WR</th>
+                                <th data-sort-key="classification">Class</th>
+                                <th data-sort-key="confidence_label">Confidence</th>
+                                <th data-sort-key="followability_score">Follow Score</th>
+                                <th>Followed</th>
+                                <th>Why Ranked</th>
+                                <th data-sort-key="analysis_updated_at">Updated</th>
+                            </tr></thead>
+                            <tbody id="wallets-tbody"></tbody>
+                        </table>
+                    </div>
+                    <!-- Wallet detail drawer -->
+                    <div class="drawer-overlay" id="wallet-drawer-overlay"></div>
+                    <aside class="drawer" id="wallet-drawer">
+                        <div class="drawer-header">
+                            <h2 class="drawer-title" id="wallet-drawer-title">Wallet Detail</h2>
+                            <button class="btn btn-ghost drawer-close" id="wallet-drawer-close" aria-label="Close drawer">&times;</button>
+                        </div>
+                        <div class="drawer-body" id="wallet-drawer-body"><div class="skel-bar" style="height:14px;margin:8px 0"></div><div class="skel-bar" style="height:14px;margin:8px 0"></div><div class="skel-bar" style="height:14px;margin:8px 0"></div><div class="skel-bar" style="height:14px;margin:8px 0"></div></div>
+                    </aside>
+                </section>
+
+
+
+                <!-- STRATEGIES TAB — 3-panel workspace -->
+                <section id="tab-strategies" class="tab-panel">
+                    <div class="strat-workspace" id="strat-workspace">
+                        <aside class="strat-rail" id="strat-rail">
+                            <div class="strat-rail-header">
+                                <h2>Strategies</h2>
+                                <div class="flex-row-wrap">
+                                    <button class="btn btn-accent btn-sm" id="open-analyzer-btn">Analyze</button>
+                                    <button class="btn btn-accent btn-sm" id="open-replay-btn">Replay</button>
+                                    <button class="btn btn-primary btn-sm" id="new-strategy-btn">+ New</button>
+                                </div>
+                            </div>
+                            <div class="strat-rail-filters">
+                                <div class="strat-status-chips" id="strat-status-chips">
+                                    <button class="badge chip-accent strat-status-chip" data-status="all">All</button>
+                                    <button class="badge chip-positive strat-status-chip active" data-status="active">Active</button>
+                                    <button class="badge chip-warning strat-status-chip" data-status="paused">Paused</button>
+                                    <button class="badge chip-negative strat-status-chip" data-status="stopped">Stopped</button>
+                                </div>
+                                <div class="strat-sort-chips" id="strat-sort-chips">
+                                    <span class="strat-sort-label">Sort:</span>
+                                    <button class="strat-sort-chip active" data-sort="updated">Updated</button>
+                                    <button class="strat-sort-chip" data-sort="created">Created</button>
+                                    <button class="strat-sort-chip" data-sort="pnl">Profit</button>
+                                    <button class="strat-sort-chip" data-sort="trades">Trades</button>
+                                    <button class="strat-sort-chip" data-sort="status">Status</button>
+                                </div>
+                            </div>
+                            <div id="strat-list" class="strat-list">
+                                <!-- JS-rendered strategy cards -->
+                            </div>
+                        </aside>
+                        <div class="strat-main" id="strat-main">
+                            <div class="strat-empty-state">
+                                <div class="strat-empty-icon">---</div>
+                                <h3>Select a strategy</h3>
+                                <p class="text-muted">Choose from the list or create a new one</p>
+                            </div>
+                        </div>
+                        <aside class="strat-builder" id="strat-builder" hidden>
+                            <!-- JS-rendered create/edit form -->
+                        </aside>
+                    </div>
+                </section>
+
+                <!-- 5m Binary maker tab ARCHIVED 2026-07-08 — crypto5m maker fleet retired (no realizable edge; naive-fill fantasy). Route unregistered, JS dormant. See finding-crypto5m-floor-endogeneity. -->
+
+                <!-- Hyperliquid Edge Desk — local, read-only truth for the active alt-short paper research. -->
+                <section id="tab-hl-algo" class="tab-panel">
+                    <div class="panel-header hl-edge-header">
+                        <div>
+                            <div class="hl-edge-kicker">HYPERLIQUID / PAPER RESEARCH</div>
+                            <h1 class="panel-title">HL Edge Desk</h1>
+                            <p class="panel-subtitle">One live test. Current arm only.</p>
+                        </div>
+                        <span id="hl-edge-updated" class="hl-edge-updated">Loading…</span>
+                    </div>
+                    <div id="hyperlive-board" class="hl-edge-desk">
+                        <section id="hl-edge-verdict" class="hl-edge-verdict" aria-live="polite"></section>
+                        <section id="hl-edge-metrics" class="hl-edge-metrics" aria-label="Current paper-test counts"></section>
+                        <section id="hl-edge-rule" class="hl-edge-rule" aria-label="Frozen paper-test rule"></section>
+                        <details id="hl-edge-audit" class="hl-edge-audit">
+                            <summary>Why not promoted <span>Evidence and runtime detail</span></summary>
+                            <div id="hl-edge-audit-body"></div>
+                        </details>
+                    </div>
+                    <div id="btc-algo-board" hidden></div>
+                </section>
+
+                <!-- HL ANALYZER TAB (mirrors the Polymarket Analyzer, for Hyperliquid traders) -->
+                <section id="tab-hl-analyzer" class="tab-panel">
+                    <div class="panel-header">
+                        <h1 class="panel-title">HL Wallet Research</h1>
+                        <p class="panel-subtitle">Audit and drill-down only. The Edge Desk is the decision surface; this store stays paged and searchable.</p>
+                    </div>
+                    <div class="hl-analyzer-console">
+                        <div class="hl-subtabs" role="tablist" aria-label="Hyperliquid analyzer views">
+                            <button type="button" class="hl-subtab active" data-hl-subtab="analyzer">Priority <span class="count-badge" id="hl-analyzer-count">0</span></button>
+                            <button type="button" class="hl-subtab" data-hl-subtab="open">Ledger evidence <span class="count-badge" id="hl-copy-open-count">0</span></button>
+                            <button type="button" class="hl-subtab" data-hl-subtab="closed">Closed <span class="count-badge" id="hl-copy-closed-count">0</span></button>
+                            <button type="button" class="hl-subtab" data-hl-subtab="scorecard">Scorecard</button>
+                            <button type="button" class="hl-subtab" data-hl-subtab="cleaner">Cleaner</button>
+                        </div>
+
+                        <div id="hl-analyzer-panel" class="hl-subtab-panel active" data-hl-panel="analyzer">
+                            <div class="analyzer-drop">
+                                <input id="hl-analyzer-input" class="analyzer-input" type="text"
+                                       placeholder="0x… Hyperliquid wallet address" autocomplete="off" spellcheck="false" />
+                                <button id="hl-analyzer-btn" class="btn btn-primary">Analyze</button>
+                                <span id="hl-analyzer-status" class="analyzer-drop-status"></span>
+                            </div>
+                            <div id="hl-analyzer-summary"></div>
+                            <div class="hl-analyzer-toolbar">
+                                <select id="hl-analyzer-view" class="hl-select" aria-label="Choose analyzer queue">
+                                    <option value="priority">Priority wallets</option>
+                                    <option value="watchlist">Active watchlist</option>
+                                    <option value="archive">Archive</option>
+                                    <option value="all">All evidence</option>
+                                </select>
+                                <input id="hl-analyzer-search" class="analyzer-input" type="search"
+                                       placeholder="Search wallet, verdict, reason, archetype" autocomplete="off" spellcheck="false" />
+                                <select id="hl-analyzer-verdict-filter" class="hl-select" aria-label="Filter screened traders">
+                                    <option value="all">All traders</option>
+                                    <option value="watch">Watch</option>
+                                    <option value="proven">Proven</option>
+                                    <option value="copying">Copy targets</option>
+                                    <option value="culled">Culled</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                                <span id="hl-analyzer-visible-count" class="text-muted"></span>
+                                <div class="hl-analyzer-pager" aria-label="Analyzer pages">
+                                    <button id="hl-analyzer-prev" type="button" class="btn btn-secondary btn-sm">Previous</button>
+                                    <span id="hl-analyzer-page" class="text-muted">Page 1</span>
+                                    <button id="hl-analyzer-next" type="button" class="btn btn-secondary btn-sm">Next</button>
+                                </div>
+                            </div>
+                            <div class="analyzer-layout hl-analyzer-layout">
+                                <div class="analyzer-reports-col">
+                                    <div class="positions-section-heading">WALLET QUEUE</div>
+                                    <div id="hl-analyzer-list" class="analyzer-reports"><div class="skel-bar" style="height:14px;margin:8px 0"></div><div class="skel-bar" style="height:14px;margin:8px 0"></div><div class="skel-bar" style="height:14px;margin:8px 0"></div></div>
+                                </div>
+                                <div id="hl-analyzer-detail" class="analyzer-detail">
+                                    <div class="analyzer-detail-empty text-muted">Select a trader, or paste an address above.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="hl-copy-open-panel" class="hl-subtab-panel" data-hl-panel="open">
+                            <div id="hl-copy-open-positions"></div>
+                        </div>
+
+                        <div id="hl-copy-closed-panel" class="hl-subtab-panel" data-hl-panel="closed">
+                            <div id="hl-copy-closed-positions"></div>
+                        </div>
+
+                        <div id="hl-copy-scorecard-panel" class="hl-subtab-panel" data-hl-panel="scorecard">
+                            <div class="hl-scorecard-toolbar" style="display:flex;gap:8px;align-items:center;margin-bottom:10px">
+                                <button id="hl-scorecard-refresh" class="btn btn-primary">Compute honest scorecard</button>
+                                <label class="text-muted" style="font-size:12px;display:flex;gap:5px;align-items:center">
+                                    <input type="checkbox" id="hl-scorecard-holdout" /> out-of-sample only
+                                </label>
+                                <span id="hl-scorecard-status" class="text-muted" style="font-size:12px"></span>
+                            </div>
+                            <div id="hl-copy-scorecard"><div class="text-muted" style="padding:0.8rem">Click “Compute honest scorecard” — total-book MTM, bootstrap CIs, concentration, beta-neutral alpha, per-wallet ranking, and edge decomposition. Read-only; fetches live marks.</div></div>
+                        </div>
+
+                        <div id="hl-cleaner-panel" class="hl-subtab-panel" data-hl-panel="cleaner">
+                            <div class="hl-cleaner-grid">
+                                <div>
+                                    <div class="positions-section-heading">MANUAL CLEANER</div>
+                                    <div class="hl-cleaner-form">
+                                        <input id="hl-cleaner-wallet" class="analyzer-input" type="text"
+                                               placeholder="0x… tracked wallet to cull" autocomplete="off" spellcheck="false" />
+                                        <input id="hl-cleaner-reason" class="analyzer-input" type="text"
+                                               placeholder="Reason" autocomplete="off" spellcheck="true" />
+                                        <button id="hl-cleaner-manual-btn" class="btn btn-secondary" type="button">Cull wallet</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="positions-section-heading">SYSTEM CLEANER</div>
+                                    <div class="hl-cleaner-form">
+                                        <button id="hl-cleaner-system-btn" class="btn btn-primary" type="button">Run lifecycle cleanup</button>
+                                        <span id="hl-cleaner-result" class="text-muted"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="hl-cleaner-targets"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HL LIQUIDATION TAB -->
+                <section id="tab-hl-liquidation" class="tab-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h1 class="panel-title">HL Liquidation Tracker</h1>
+                            <p class="panel-subtitle">Monitoring whale positions on Hyperliquid</p>
+                        </div>
+                    </div>
+                    <div id="hl-liq-threat" class="threat-banner threat--clear">
+                        <span class="threat-label">Loading...</span>
+                    </div>
+                    <div class="op-section">
+                        <h2 class="section-heading">Whale Positions</h2>
+                        <div class="op-section-body">
+                            <div id="hl-liq-table-wrap"></div>
+                        </div>
+                    </div>
+                    <div class="op-section">
+                        <h2 class="section-heading">Monitoring Status</h2>
+                        <div class="op-section-body" id="hl-liq-brain"></div>
+                    </div>
+                </section>
+
+                <!-- SOLANA — Memecoin copy-mirror (paper) -->
+                <section id="tab-memecoin" class="tab-panel active">
+                    <div id="memecoin-board"></div>
+                </section>
+
+                <!-- SOLANA — Wallet Map: herders (spec 2026-09-30-memecoin-wallet-map-overhaul-design.md; read-only) -->
+                <section id="tab-desk" class="tab-panel">
+                    <header class="office-heading"><div><h1>Office</h1><p>Paper only. Recorded work; unknown state stays still.</p></div><a href="/office" target="_blank" rel="noopener">Open the office</a></header>
+                </section>
+                <section id="tab-wallet-map" class="tab-panel">
+                    <header class="herd-head">
+                        <h2 class="herd-title">Wallet Map <span class="herd-dim">wallet dossiers, source-buy coverage and fast-move research</span></h2>
+                        <p class="herd-stamp herd-act-status" id="wallet-map-action-status" role="status" aria-live="polite"></p>
+                    </header>
+                    <div id="wallet-universe" aria-label="Per-chain wallet universe"></div>
+                    <section id="wallet-research-coverage" aria-label="Wallet research coverage"><p>Loading research coverage…</p></section>
+                    <details class="herd-archive"><summary>Live roster controls</summary>
+                    <p class="herd-stamp" id="follow-funnel-stamp" data-for="pipeline">Loading live authority…</p>
+                    <div class="herd-bar">
+                        <div class="herd-tabs" id="wallet-map-tabs" aria-label="Wallet Map views"></div>
+                        <input type="search" class="herd-find" id="wallet-map-find" placeholder="Find a wallet" aria-label="Find a wallet" autocomplete="off">
+                    </div>
+                    <div id="follow-funnel-body"></div>
+                    </details>
+                    <details class="herd-archive" id="wallet-legacy-diagnostics"><summary>Forensic paper archive · ineligible for strategy evidence</summary>
+                        <div id="wallet-legacy-body"></div>
+                    </details>
+                </section>
+
+                <!-- INTELLIGENCE TAB -->
+                <section id="tab-intelligence" class="tab-panel intel-density-compact">
+                    <!-- Bloomberg-style market ticker strip -->
+                    <div id="intel-ticker-bar" style="margin:-16px -16px 16px -16px;border-radius:8px 8px 0 0;overflow:hidden"></div>
+
+                    <!-- Intel sub-tabs + workspace controls -->
+                    <div class="intel-subtabs-bar">
+                        <div class="intel-subtabs">
+                            <button class="intel-subtab active" data-intel-view="geopolitics">Geopolitics</button>
+                            <button class="intel-subtab" data-intel-view="finance">Finance</button>
+                            <button class="intel-subtab" data-intel-view="x">X</button>
+                        </div>
+                    </div>
+
+                    <!-- Geopolitics view (default) -->
+                    <div id="intel-geo-view">
+                        <div class="panel-header" style="margin-top:0">
+                            <div>
+                                <h1 class="panel-title">Intelligence</h1>
+                                <p class="panel-subtitle">World events · Claude-powered market analysis</p>
+                            </div>
+                            <div class="panel-header-actions">
+                                <button class="btn btn-secondary btn-sm" id="intel-geo-detail-toggle">Expand details</button>
+                                <button class="btn btn-primary btn-sm" id="intel-refresh-btn">↻ Refresh</button>
+                            </div>
+                        </div>
+
+                        <div id="intel-geo-stale-banner" class="empty-state empty-state--warning" style="display:none;margin-bottom:12px"></div>
+
+                        <div id="intel-geo-brief" class="analyst-brief-shell">
+                            <p class="text-muted" style="font-size:0.8rem">Loading briefing…</p>
+                        </div>
+
+                        <!-- Top row: Trade Ideas (left) + Map (right) -->
+                        <div class="intel-top-row">
+                            <!-- Left panel: Trade Ideas -->
+                            <div class="intel-ideas-panel">
+                                <div class="section-header" style="margin-bottom:8px">
+                                    <h2 class="section-title" style="font-size:0.9rem">Research notes</h2>
+                                    <span class="section-meta" id="intel-ideas-count">—</span>
+                                </div>
+                                <div id="intel-no-brain" class="empty-state" style="display:none">
+                                    <p class="text-muted" style="font-size:0.75rem">Brain not set up yet.</p>
+                                </div>
+                                <div id="intel-ideas-container"></div>
+                            </div>
+                            <!-- Right panel: World Map -->
+                            <div class="intel-map-panel">
+                                <div class="section-header" style="margin-bottom:8px">
+                                    <h2 class="section-title" style="font-size:0.9rem">World Events</h2>
+                                    <span class="section-meta" id="intel-world-count">—</span>
+                                </div>
+                                <div id="intel-world-map" style="margin-bottom:0;border-radius:8px;overflow:hidden;min-height:260px;background:#0d1117"></div>
+                            </div>
+                        </div>
+
+                        <!-- Event filter chips -->
+                        <div class="intel-event-filters">
+                            <button class="intel-filter active" data-filter="all">All</button>
+                            <button class="intel-filter" data-filter="active">Active</button>
+                            <button class="intel-filter" data-filter="escalating">Escalating</button>
+                            <button class="intel-filter" data-filter="developing">Developing</button>
+                            <button class="intel-filter" data-filter="monitoring">Monitoring</button>
+                            <span class="intel-filter-sep"></span>
+                            <button class="intel-filter" data-region="all">All Regions</button>
+                            <button class="intel-filter" data-region="middle_east">Middle East</button>
+                            <button class="intel-filter" data-region="europe">Europe</button>
+                            <button class="intel-filter" data-region="north_america">Americas</button>
+                            <button class="intel-filter" data-region="east_asia">Asia</button>
+                            <button class="intel-filter" data-region="africa">Africa</button>
+                        </div>
+
+                        <!-- World Events Grid -->
+                        <div id="intel-world-empty" class="empty-state" style="display:none">
+                            <p class="text-muted">No world events tracked yet — they'll appear here after the next news intel run.</p>
+                        </div>
+                        <div id="intel-world-container" class="world-events-grid"></div>
+
+                        <!-- Recent News Feed -->
+                        <details class="intel-secondary-fold intel-news-fold" style="margin-top:24px">
+                            <summary class="intel-secondary-fold-summary">
+                                <span class="intel-secondary-fold-title">Recent News</span>
+                                <span class="intel-secondary-fold-meta" id="intel-news-count">—</span>
+                            </summary>
+                            <div id="intel-news-section" style="padding:4px 14px 14px">
+                                <p class="text-muted" style="font-size:0.8rem">Loading news…</p>
+                            </div>
+                        </details>
+
+                        <!-- Intel paper book — Hyperliquid leg. PM positions live in the
+                             Polymarket Paper Trades sub-tab; both read the same table. -->
+                        <details class="intel-secondary-fold" style="margin-top:24px" open>
+                            <summary class="intel-secondary-fold-summary">
+                                <span class="intel-secondary-fold-title">Paper positions (Hyperliquid)</span>
+                                <span class="intel-secondary-fold-meta" id="intel-paper-hl-meta">—</span>
+                            </summary>
+                            <div id="intel-paper-hl" style="padding:4px 14px 14px"></div>
+                        </details>
+                    </div>
+
+                    <!-- Finance view (hidden by default) -->
+                    <div id="intel-finance-view" style="display:none">
+                        <div class="panel-header" style="margin-top:0">
+                            <div>
+                                <h1 class="panel-title">Finance</h1>
+                                <p class="panel-subtitle">Macro brief · trade setups · market board · news flow</p>
+                            </div>
+                            <div class="panel-header-actions">
+                                <button class="btn btn-secondary btn-sm" id="intel-finance-detail-toggle">Expand details</button>
+                                <button class="btn btn-primary btn-sm" id="intel-finance-refresh-btn">↻ Refresh</button>
+                                <span id="intel-finance-updated" style="font-size:0.68rem;color:#00ff4155;margin-left:6px;font-family:monospace"></span>
+                            </div>
+                        </div>
+
+                        <div id="intel-finance-brief" class="analyst-brief-shell">
+                            <p class="text-muted" style="font-size:0.8rem">Loading briefing…</p>
+                        </div>
+
+                        <div class="intel-finance-shell">
+                            <div class="intel-finance-primary">
+                                <!-- Market Intelligence Report — analyst narrative -->
+                                <div class="section-block intel-finance-report-block" id="intel-finance-report-section">
+                                    <div class="section-header">
+                                        <h2 class="section-title">Market Intelligence</h2>
+                                        <span class="section-meta" id="intel-finance-report-age" style="font-size:0.72rem;opacity:0.6"></span>
+                                    </div>
+                                    <div id="intel-finance-report" style="padding:4px 0">
+                                        <p class="text-muted" style="font-size:0.8rem">Loading intelligence report…</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <aside class="intel-finance-side">
+                                <!-- Trade Ideas — most actionable content -->
+                                <div class="section-block intel-finance-side-block">
+                                    <div class="section-header">
+                                        <h2 class="section-title">Trade Setup</h2>
+                                        <span class="section-meta" id="intel-finance-ideas-count">—</span>
+                                    </div>
+                                    <div id="intel-finance-ideas" style="padding:4px 0">
+                                        <p class="text-muted">Finance trade ideas will appear when the finance analyst pipeline generates them.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Market Overview second — context strip -->
+                                <details class="intel-secondary-fold intel-finance-side-fold" data-collapse-mobile="true" open style="margin-top:20px">
+                                    <summary class="intel-secondary-fold-summary">
+                                        <span class="intel-secondary-fold-title">Market Board</span>
+                                        <span class="intel-secondary-fold-meta">Cross-asset context</span>
+                                    </summary>
+                                    <div id="intel-finance-tickers" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;padding:8px 14px 14px"></div>
+                                </details>
+                            </aside>
+                        </div>
+
+                        <!-- News last — reference material -->
+                        <details class="intel-secondary-fold intel-finance-news-fold" data-collapse-mobile="true" open style="margin-top:20px">
+                            <summary class="intel-secondary-fold-summary">
+                                <span class="intel-secondary-fold-title">News Flow</span>
+                                <span class="intel-secondary-fold-meta" id="intel-finance-news-count">—</span>
+                            </summary>
+                            <div id="intel-finance-news" style="padding:4px 14px 14px">
+                                <p class="text-muted" style="font-size:0.8rem">Loading finance news…</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div id="intel-x-view" style="display:none">
+                        <style>
+                            #intel-x-view .mc-x-badge{font:700 10px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#79c0ff;border:1px solid #1f6feb88;background:#0d419d22;border-radius:4px;padding:4px 7px}
+                            #intel-x-view .mc-x-filters{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+                            #intel-x-view .mc-x-filters label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.05em}
+                            #intel-x-view .mc-x-rail td:first-child{box-shadow:inset 3px 0 var(--rail,#6e7681)}
+                            #intel-x-view .mc-x-address{font:11px/1.4 ui-monospace,monospace;color:#79c0ff}
+                            @media(max-width:900px){ #intel-x-view .mc-x-grid{grid-template-columns:1fr!important}}
+                            @media(prefers-reduced-motion:reduce){ #intel-x-view *{scroll-behavior:auto!important}}
+                        </style>
+                        <div class="panel-header" style="margin-top:0">
+                            <div><h1 class="panel-title">X Intelligence</h1><p class="panel-subtitle">Curated accounts · structured cashtag evidence · display-only</p></div>
+                        </div>
+                        <div class="card mc-x-ledger" style="padding:14px 16px;margin-bottom:14px;border-color:#273447;background:#0d1117">
+                            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+                                <div><b>X source ledger</b><div class="text-muted" style="font-size:11px">Mentions are observations, not endorsements or trade instructions.</div></div>
+                                <div class="mc-x-filters"><span class="mc-x-badge">display-only</span>
+                                    <label>Window <select id="mc-x-window" class="analyzer-input"><option value="24h">24h</option><option value="7d">7d</option><option value="30d">30d</option></select></label>
+                                    <label>Network <select id="mc-x-network" class="analyzer-input"><option value="all">All observed</option><option value="solana">Solana</option><option value="4663">Robinhood 4663</option><option value="8453">Base 8453</option><option value="1">Ethereum 1</option><option value="56">BSC 56</option></select></label>
+                                </div>
+                            </div>
+                            <div id="mc-x-status" style="margin-top:12px"></div>
+                            <h2 class="section-title" style="margin-top:16px">Recent cashtag activity</h2>
+                            <div id="mc-x-events" class="table-wrapper"></div>
+                            <h2 class="section-title" style="margin-top:18px">Source performance</h2>
+                            <div id="mc-x-sources" class="table-wrapper"></div>
+                            <div class="mc-x-grid" style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:12px;margin-top:12px">
+                                <div><h2 class="section-title">LLM annotations <span class="mc-x-badge">LLM, display-only</span></h2><div id="mc-x-annotations" class="table-wrapper"></div></div>
+                                <div><h2 class="section-title">Review queue</h2><div id="mc-x-suggestions" class="table-wrapper"></div><h2 class="section-title" style="margin-top:12px">Official context</h2><div id="mc-x-context" class="table-wrapper"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- MOBILE BOTTOM NAV (shown only on mobile via CSS). Items are venue-filtered by
+                 app.js: data-venue matches the active venue; data-venue="*" is always shown. -->
+            <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Main navigation">
+                <a class="mob-nav-item" data-tab="desk" data-venue="solana" href="#" aria-label="Office">
+                    <span class="mob-nav-icon">▦</span><span class="mob-nav-label">Office</span>
+                </a>
+                <a class="mob-nav-item" data-tab="operator" data-venue="polymarket" href="#" aria-label="Operations">
+                    <span class="mob-nav-icon">⊕</span>
+                    <span class="mob-nav-label">Ops</span>
+                </a>
+                <a class="mob-nav-item" data-tab="strategies" data-venue="polymarket" href="#" aria-label="Strategies">
+                    <span class="mob-nav-icon">⊞</span>
+                    <span class="mob-nav-label">Strats</span>
+                </a>
+                <a class="mob-nav-item" data-tab="analyzer" data-venue="polymarket" href="#" aria-label="Analyzer">
+                    <span class="mob-nav-icon">◇</span>
+                    <span class="mob-nav-label">Analyzer</span>
+                </a>
+                <a class="mob-nav-item" data-tab="hl-algo" data-venue="hyperliquid" href="#" aria-label="HL Edge Desk">
+                    <span class="mob-nav-icon">⌁</span>
+                    <span class="mob-nav-label">Edge</span>
+                </a>
+                <a class="mob-nav-item" data-tab="hl-analyzer" data-venue="hyperliquid" href="#" aria-label="HL Analyzer">
+                    <span class="mob-nav-icon">H</span>
+                    <span class="mob-nav-label">Analyzer</span>
+                </a>
+                <a class="mob-nav-item" data-tab="intelligence" data-venue="*" href="#" aria-label="Intel">
+                    <span class="mob-nav-icon">◉</span>
+                    <span class="mob-nav-label">Intel</span>
+                </a>
+            </nav>
+        </main>
+    </div>
+
+    <!-- Dynamic modals (copy-modal, strategize-modal, portfolio-modal) are created by app.js -->
+
+    <!-- D3 + TopoJSON for world map (loaded before world-map.js) -->
+    <script defer src="/static/vendor/d3.min.js"></script>
+    <script defer src="/static/vendor/topojson-client.min.js"></script>
+    <script defer src="/static/world-map.js?v={{ asset_v.world_map }}"></script>
+    <script defer src="/static/ticker-bar.js?v={{ asset_v.ticker_bar }}"></script>
+    <script defer src="/static/mc-range.js?v={{ asset_v.mc_range }}"></script>
+    <script defer src="/static/wallet_universe.js?v={{ asset_v.wallet_universe }}"></script>
+    <script defer src="/static/wallet_map.js?v={{ asset_v.wallet_map }}"></script>
+    <script defer src="/static/desk.js?v={{ asset_v.desk }}"></script>
+    <script defer src="/static/vendor/lightweight-charts.standalone.production.js"></script>
+    <script defer src="/static/office-floor.js?v={{ asset_v.office_floor_js }}"></script>
+    <script defer src="/static/office-order-display.js?v={{ asset_v.office_v2_js }}"></script>
+    <script defer src="/static/office-charts.js?v={{ asset_v.office_v2_js }}"></script>
+    <script defer src="/static/office-communications.js?v={{ asset_v.office_communications_js }}"></script>
+    <script defer src="/static/office-network.js?v={{ asset_v.office_network_js }}"></script>
+    <script defer src="/static/office-v2.js?v={{ asset_v.office_v2_js }}"></script>
+            <!-- Mobile nav handlers moved to app.js -->
+    <script>window.__UI_BUILD = "{{ asset_v.app_js }}";</script>
+    <script src="/static/app.js?v={{ asset_v.app_js }}" defer></script>
+</body>
+</html>

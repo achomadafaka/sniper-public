@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "wallet": "0xdbade4c82fb72780a0db9a38f821d8671aba9c95",
+  "fetched_at": 1700000000,
+  "closed_positions": [
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "outcome": "Yes",
+      "size": 100.0,
+      "avgPrice": 0.4,
+      "currentPrice": 1.0,
+      "realizedPnl": -50.0,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-0",
+      "eventSlug": "synthetic-event-0"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000001",
+      "outcome": "No",
+      "size": 110.0,
+      "avgPrice": 0.45,
+      "currentPrice": 0.0,
+      "realizedPnl": -37.5,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-1",
+      "eventSlug": "synthetic-event-1"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000002",
+      "outcome": "Yes",
+      "size": 120.0,
+      "avgPrice": 0.5,
+      "currentPrice": 1.0,
+      "realizedPnl": -25.0,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-2",
+      "eventSlug": "synthetic-event-2"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000003",
+      "outcome": "No",
+      "size": 130.0,
+      "avgPrice": 0.55,
+      "currentPrice": 0.0,
+      "realizedPnl": -12.5,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-3",
+      "eventSlug": "synthetic-event-3"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000004",
+      "outcome": "Yes",
+      "size": 140.0,
+      "avgPrice": 0.6000000000000001,
+      "currentPrice": 1.0,
+      "realizedPnl": 0.0,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-4",
+      "eventSlug": "synthetic-event-4"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000005",
+      "outcome": "No",
+      "size": 150.0,
+      "avgPrice": 0.4,
+      "currentPrice": 0.0,
+      "realizedPnl": 12.5,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-5",
+      "eventSlug": "synthetic-event-5"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000006",
+      "outcome": "Yes",
+      "size": 160.0,
+      "avgPrice": 0.45,
+      "currentPrice": 1.0,
+      "realizedPnl": 25.0,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-6",
+      "eventSlug": "synthetic-event-6"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000007",
+      "outcome": "No",
+      "size": 170.0,
+      "avgPrice": 0.5,
+      "currentPrice": 0.0,
+      "realizedPnl": 37.5,
+      "endDate": "2026-01-15T00:00:00Z",
+      "title": "synthetic-event-7",
+      "eventSlug": "synthetic-event-7"
+    }
+  ],
+  "open_positions": [
+    {
+      "conditionId": "0xo0000000000000000000000000000000000000001",
+      "outcome": "Yes",
+      "size": 200.0,
+      "avgPrice": 0.55,
+      "currentPrice": 0.6,
+      "endDate": "2027-06-01T00:00:00Z",
+      "title": "synthetic-open-1"
+    }
+  ],
+  "activity_rows": [
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700000000,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000000",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700003600,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000001",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700007200,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000002",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700010800,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000003",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700014400,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000004",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700018000,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000005",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700021600,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000006",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700025200,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000007",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700028800,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000008",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700032400,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000009",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700036000,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000010",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700039600,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000011",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700043200,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000012",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700046800,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000013",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    },
+    {
+      "conditionId": "0xc0000000000000000000000000000000000000000",
+      "side": "BUY",
+      "price": 0.4,
+      "size": 100.0,
+      "timestamp": 1700050400,
+      "transactionHash": "0xt0000000000000000000000000000000000000000000000000000000000000014",
+      "type": "TRADE",
+      "asset": "1",
+      "outcome": "Yes"
+    }
+  ],
+  "activity_cap_hit": false,
+  "archetype_layer1": "directional_discretionary",
+  "execution_profile": null,
+  "capital_ledger": {
+    "wallet": "0xdbade4c82fb72780a0db9a38f821d8671aba9c95",
+    "n_splits": 4,
+    "n_merges": 2,
+    "n_redemptions": 1,
+    "total_deposits_usdc": 2500.0,
+    "total_withdrawals_usdc": 400.0,
+    "total_redemption_payout_usdc": 300.0,
+    "net_capital_funded_usdc": 2100.0,
+    "first_event_ts": 1699900000,
+    "last_event_ts": 1700000000,
+    "events": []
+  },
+  "portfolio_value_usdc": 120.0,
+  "fetch_quality_flags": [
+    "SYNTHETIC_FIXTURE"
+  ],
+  "subgraph_fallback_used": false
+}

@@ -1,0 +1,10 @@
+{
+ "fetched": "2026-10-07T07:22Z",
+ "headers": {
+  "Link": "<https://docs.relay.link/references/api/api_guides/migrating-to-requests-v3>; rel=\"deprecation\"; type=\"text/html\"",
+  "deprecation": "@1784678400",
+  "sunset": "Tue, 24 Nov 2026 00:00:00 GMT"
+ },
+ "order_id": "0x2dcf925a47d2b7b93e99b76e7573db0e1daf5e8796e03bbc858b0cb551121839",
+ "status": 200
+}

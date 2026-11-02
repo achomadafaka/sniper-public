@@ -1,0 +1,24 @@
+name: Offline review checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  focused-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-review.txt
+      - run: python -m pip install -r requirements-review.txt
+      - run: python -m pytest -n 2 tests/test_env_files.py tests/test_source_guard_helper.py tests/wallet_protocol/test_wallet_protocol_statistics.py -q

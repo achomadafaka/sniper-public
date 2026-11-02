@@ -1,0 +1,23 @@
+# Office v2 Head seat, host side. Install: copy to ~/.config/systemd/user/, then systemctl --user enable --now office-seat@head office-seat@judge office-seat@scout.
+# Runs from the published tree. After a publish, restart this unit: publishing replaces the files it imports.
+[Unit]
+Description=Office v2 %i seat host
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/sniper-office/release
+Environment=PYTHONPATH=/srv/sniper-office/release
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/bigpapi/.pyenv/versions/3.13.0/bin/python3 scripts/office_seat_host.py --config config/office/seat_%i_v2.json
+# On any exit, crash included: a wake unit runs under the office user's manager and a GPT child does not notice its client is gone.
+ExecStopPost=/home/bigpapi/.pyenv/versions/3.13.0/bin/python3 scripts/office_seat_host.py --config config/office/seat_%i_v2.json --stop-children
+Restart=on-failure
+RestartSec=30
+Nice=19
+IOSchedulingClass=idle
+MemoryMax=512M
+CPUQuota=100%
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,29 @@
+{
+ "assignment": "100% to the Office, single assignment; no other cost component",
+ "daily_charge": "800 / days_in_month(UTC month of that day)",
+ "day_basis": "completed UTC day",
+ "epoch_charge": {
+  "amount": "the full daily charge for each such day, no proration",
+  "days": "every UTC calendar day the EVALUATED epoch is open for any part of the day; ended_at is exclusive at exact midnight",
+  "discovery": "discovery books and discovery epochs are never charged",
+  "known_when": "the charge is a constant, so C is exact when the epoch closes at its look; only an epoch still open is pending",
+  "office_wide_reporting": "outside the verdict, each UTC day is charged exactly once",
+  "restart_or_new_epoch_id": "cannot drop a day; the charge attaches to the calendar day",
+  "shared_day": "a day shared by two consecutive evaluated epochs costs each of them in full"
+ },
+ "epoch_cost": "C = sum over the UTC days the evaluated epoch is open for any part of 800 / days_in_month(day)",
+ "monthly_usd": 800,
+ "no": [
+  "usage measurement",
+  "token weights",
+  "shadow prices",
+  "fee attestations",
+  "invoice or tariff proofs"
+ ],
+ "office_net": "trading net P&L minus C",
+ "ops_only": "usage fields may be recorded for operations visibility and never enter cost",
+ "prereg": "docs/audits/2026-10-28-office-readiness-preregistration.md section 4, Amendment 4",
+ "source": "operator order 2026-10-28 ~17:0xZ relayed by Alpha: Office costs are a flat 800 USD per month",
+ "unit": "USD",
+ "version": "office-cost-allocation-v3"
+}
