@@ -2,7 +2,7 @@
   "project": "Sniper",
   "source_commit": "10e529f77e8a94be2e9c506f1593a022877db97e",
   "snapshot_date": "2026-11-02",
-  "included_files": 6979,
+  "included_files": 6981,
   "omitted": [
     "Git history",
     "operational data and databases",

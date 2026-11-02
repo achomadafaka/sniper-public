@@ -14,7 +14,7 @@ This repository is a **public source snapshot for technical review**, exported o
 
 **The Brain** stores typed, entity-linked knowledge with provenance, verification states, contradiction candidates, supersession, and task/work records. Retrieval combines lexical and optional semantic signals; evidence checks distinguish a valid reference from an unverified or broken one. The engine, CLI, and schema are included; private memory contents and access credentials are not. Explore [`bot/brain_graph/`](bot/brain_graph/), [`scripts/brain_cli.py`](scripts/brain_cli.py), and [`migrations/`](migrations/).
 
-See [the architecture tour](docs/ARCHITECTURE.md) for the connections and specific code worth reviewing.
+See [the database structure map](docs/DATABASES.md) and [the architecture tour](docs/ARCHITECTURE.md) for the connections and specific code worth reviewing.
 
 ## What is here
 
