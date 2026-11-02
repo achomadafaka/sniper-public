@@ -68,7 +68,7 @@ Use Python 3.13. The commands below install a small dependency set and run offli
 
 ```bash
 git clone https://github.com/achomadafaka/sniper-research.git
-cd sniper-public
+cd sniper-research
 python3.13 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-review.txt
