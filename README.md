@@ -1,6 +1,6 @@
 # Sniper
 
-[![Offline review checks](https://github.com/achomadafaka/sniper-public/actions/workflows/review.yml/badge.svg)](https://github.com/achomadafaka/sniper-public/actions/workflows/review.yml)
+[![Offline review checks](https://github.com/achomadafaka/sniper-research/actions/workflows/review.yml/badge.svg)](https://github.com/achomadafaka/sniper-research/actions/workflows/review.yml)
 
 **Crypto research infrastructure: a multi-agent office, evidence-backed brain, on-chain forensics, and low-latency execution.**
 
@@ -67,7 +67,7 @@ For a closer tour, see [the review guide](docs/REVIEW_GUIDE.md). Design contract
 Use Python 3.13. The commands below install a small dependency set and run offline checks; they do not launch the dashboard, collectors, or trading services.
 
 ```bash
-git clone https://github.com/achomadafaka/sniper-public.git
+git clone https://github.com/achomadafaka/sniper-research.git
 cd sniper-public
 python3.13 -m venv .venv
 source .venv/bin/activate
