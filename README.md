@@ -1,5 +1,7 @@
 # Sniper
 
+[![Offline review checks](https://github.com/achomadafaka/sniper-public/actions/workflows/review.yml/badge.svg)](https://github.com/achomadafaka/sniper-public/actions/workflows/review.yml)
+
 **Crypto research infrastructure: a multi-agent office, evidence-backed brain, on-chain forensics, and low-latency execution.**
 
 Sniper is a Python and Rust research platform for understanding how wallets trade, how launch networks prepare and distribute inventory, and whether an observed pattern survives realistic execution constraints. It combines streaming blockchain data, wallet ledgers, statistical analysis, paper experiments, execution infrastructure, and an operator dashboard.
@@ -14,7 +16,24 @@ This repository is a **public source snapshot for technical review**, exported o
 
 **The Brain** stores typed, entity-linked knowledge with provenance, verification states, contradiction candidates, supersession, and task/work records. Retrieval combines lexical and optional semantic signals; evidence checks distinguish a valid reference from an unverified or broken one. The engine, CLI, and schema are included; private memory contents and access credentials are not. Explore [`bot/brain_graph/`](bot/brain_graph/), [`scripts/brain_cli.py`](scripts/brain_cli.py), and [`migrations/`](migrations/).
 
-See [the database structure map](docs/DATABASES.md) and [the architecture tour](docs/ARCHITECTURE.md) for the connections and specific code worth reviewing.
+### Explore the work
+
+- [Engineering highlights](docs/ENGINEERING_HIGHLIGHTS.md): durable execution, Rust transport, evidence-preserving streams, profiling, and immutable releases.
+- [Wallet universe and forensics](docs/WALLET_UNIVERSE_AND_FORENSICS.md): capital, transaction flow, funding graphs, launch preparation, supply distribution, and settlement.
+- [Providers and software](docs/PROVIDERS_AND_STACK.md): commercial on-chain services, market APIs, model subscriptions/transports, and the software stack.
+- [Architecture tour](docs/ARCHITECTURE.md), [database structure](docs/DATABASES.md), and [full repository map](docs/REPOSITORY_MAP.md).
+
+## Wallet universe and launch forensics
+
+A major part of the work is following **where money and inventory come from, how wallets prepare a launch, and where value goes afterward**. Wallet-universe observations measure capital and transaction-bound flow across supported venues. Campaign research connects funding, creation signers, fee beneficiaries, early buyers, token transfers, and later settlement with explicit evidence and knowledge times.
+
+The research questions include identifying repeat launch operators through wallet rotation, recognizing preparation before a launch, finding recurring early participants in runners, and separating independent demand from activity linked to the launch operation. That requires failed-launch controls, coverage accounting, fee/inventory reconciliation, and forward executable testing. [Read the full forensics guide](docs/WALLET_UNIVERSE_AND_FORENSICS.md).
+
+## Data infrastructure and integrations
+
+Implemented integrations include **Shyft/RabbitStream, Helius, dRPC, Alchemy, Chainstack, J7Tracker, Jupiter, LI.FI, Relay, KyberSwap, DexScreener, GeckoTerminal, CoinGecko, Goldsky, Polymarket, Hyperliquid, Binance, and Kraken**, with source-specific roles and boundaries. The Office supports **Claude and Codex** model transports; the Brain supports optional local embeddings. Recorded commercial-account usage is dated in [the provider inventory](docs/PROVIDERS_AND_STACK.md); service integration does not imply a current paid subscription.
+
+The software spans Python/Rust, gRPC/Protobuf, WebSockets, QUIC, SQLite/WAL, DuckDB, PostgreSQL/Supabase, browser capture, and an operator UI. Provider budgets, authenticated sessions, chain identity, original source time, and explicit unknown/failure states are part of the implementation.
 
 ## What is here
 
@@ -53,7 +72,19 @@ cd sniper-public
 python3.13 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-review.txt
-python -m pytest -n 2 tests/test_env_files.py tests/test_source_guard_helper.py tests/wallet_protocol/test_wallet_protocol_statistics.py tests/office/test_store.py tests/office/test_broker.py tests/test_brain_graph_contradict.py -q
+python -m pytest -n 2 \
+  tests/test_env_files.py \
+  tests/test_source_guard_helper.py \
+  tests/wallet_protocol/test_wallet_protocol_statistics.py \
+  tests/office/test_store.py \
+  tests/office/test_broker.py \
+  tests/test_brain_graph_contradict.py \
+  tests/test_wallet_universe_flow.py \
+  tests/test_wallet_universe_capital_reads.py \
+  tests/test_wallet_universe_source.py \
+  tests/office/test_wallet_network.py \
+  tests/office/test_wallet_launch_proof.py \
+  tests/office/test_wallet_campaign_history.py -q
 ```
 
 [`requirements.txt`](requirements.txt) contains the broader application dependencies. The focused review dependencies are separate so a reader can inspect and test core mechanisms without installing the full trading stack.
@@ -62,7 +93,7 @@ The public snapshot is not a turnkey deployment. Production state and historical
 
 ## Validation
 
-The public review workflow runs the same bounded offline tests shown above. Its scope covers environment loading, source inspection helpers, statistical primitives, Office storage and tool brokerage, and Brain contradiction candidates. It does not certify the entire application, blockchain connectivity, signing, trade execution, or profitability.
+The public review workflow runs the same bounded offline tests shown above. Its scope covers environment loading, source inspection helpers, statistical primitives, Office storage and tool brokerage, Brain contradiction candidates, wallet-universe flow/capital/source recovery, relationship graphs, launch proofs, and campaign history. It does not certify the entire application, blockchain connectivity, signing, trade execution, or profitability.
 
 ## Credentials and security
 
