@@ -21,4 +21,4 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-review.txt
       - run: python -m pip install -r requirements-review.txt
-      - run: python -m pytest -n 2 tests/test_env_files.py tests/test_source_guard_helper.py tests/wallet_protocol/test_wallet_protocol_statistics.py -q
+      - run: python -m pytest -n 2 tests/test_env_files.py tests/test_source_guard_helper.py tests/wallet_protocol/test_wallet_protocol_statistics.py tests/office/test_store.py tests/office/test_broker.py tests/test_brain_graph_contradict.py -q
